@@ -5,13 +5,13 @@
 		</div>
 		<div>
 			<div class="mb-4">
-				<span class="text-lg">👋 Hi. My name is Mahardika Kessuma Denie.</span>
+				<span class="text-sm">👋 Hi. My name is Mahardika Kessuma Denie.</span>
 			</div>
 			<div class="mb-4">
-				<span class="text-lg">A Software Developer From Bandung</span>
+				<span class="text-sm">A Software Developer From Bandung</span>
 			</div>
 			<div class="mb-4">
-				<span class="text-lg text-gray-700">
+				<span class="text-sm text-gray-700">
 					I've been working in software engineering for more than 3
 					years. I have good knowledge of frontend and backend. <br />
 					I always try my best when building or developing software,
@@ -20,7 +20,7 @@
 					so it's easier to read. My skillset includes:
 				</span>
 			</div>
-			<div class="text-lg text-gray-700">
+			<div class="text-sm text-gray-700">
 				<p class="mb-2">
 					<strong>Programming Languages:</strong>TypeScript,
 					JavaScript (ES6), SQL, PHP

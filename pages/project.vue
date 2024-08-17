@@ -47,7 +47,7 @@ const lists = ref<{ name: string, link: string,image: string ,description: strin
         name: 'Next Movie',
         link: 'Ofline',
         image: '/next-movie.png',
-        description: 'List Movie And Ratting',
+        description: 'List Movie And Ratting, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to browse movie listings and view detailed ratings and reviews.',
     },
     {
         name: 'Library Vue Button',

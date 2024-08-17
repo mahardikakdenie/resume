@@ -12,7 +12,7 @@
                     <h3>{{ list.name }}</h3>
                 </div>
                 <div class="overflow-hidden text-ellipsis whitespace-nowrap break-words">
-                    <span>Link: <a :href="list.link" class="hover:text-indigo-500" target="_blank">{{ list.link }}</a></span>
+                    <!-- <span>Link: <a :href="list.link" class="hover:text-indigo-500" target="_blank">{{ list.link }}</a></span> -->
                 </div>
                 <div class="mt-3">
                     <small class="text-ellipsis-multiline">

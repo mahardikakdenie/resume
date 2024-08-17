@@ -72,13 +72,13 @@ const lists = ref<{ name: string, link: string,image: string ,description: strin
         name: 'Store Vue',
         link: 'https://mahardika-store.vercel.app/',
         image: '/store-slicing.png',
-        description: 'Store',
+        description: 'this website is a ecoomerce website built with nuxtjs',
     },
     {
         name: 'Dikti Appplication',
         link: 'https://dikti.mahardikakdenie.my.id/',
         image: '/dikti.png',
-        description: 'Store',
+        description: 'this is a Dikti web company profile',
     },
 ]);
 </script>

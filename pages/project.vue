@@ -3,7 +3,7 @@
         <div>
             <span class="text-[30px]">My Portfolio</span>
         </div>
-        <div class="grid grid-cols-3 mt-5 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 mt-5 gap-6">
             <div v-for="(list, i) in lists" :key="i" class="border-2 p-3 rounded-md cursor-pointer">
                 <div class="flex justify-center">
                     <img :src="list.image" :width="list.type === 'mobile' ? '100' : '100%'"  alt="">

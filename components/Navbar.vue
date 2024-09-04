@@ -5,7 +5,7 @@
         </div>
         <div class="flex gap-3">
             <div v-for="(list, index) in lists" :key="index" class="cursor-pointer hover:text-purple-600">
-                <span :class="{ 'text-purple-600 font-bold': $route.path === list?.link }" class="text-[20px]" @click="$router.push(list?.link)">{{list?.label}}</span>
+                <span :class="{ 'text-purple-600 font-bold': $route.path === list?.link }" class="text-[15px]" @click="$router.push(list?.link)">{{list?.label}}</span>
             </div>
         </div>
     </div>

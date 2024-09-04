@@ -1,7 +1,7 @@
 <template>
     <div class="mt-4">
         <div class="flex sm:justify-start justify-center">
-            <span class="sm:text-[30px] text-xl font-bold">My Portfolio</span>
+            <span class="sm:text-[20px] text-xl font-bold">My Portfolio</span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 mt-5 gap-6">
             <div v-for="(list, i) in lists" :key="i" class="border-2 p-3 rounded-md cursor-pointer">

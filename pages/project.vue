@@ -80,6 +80,12 @@ const lists = ref<{ name: string, type?: string, link: string,image: string ,des
         image: '/dikti.png',
         description: 'this is a Dikti web company profile',
     },
+    {
+        name: 'PM TRICKS DASHBOARD',
+        link: '',
+        image: '/pm-trick.png',
+        description: 'PM TRICK is a web application E-LEARNING'
+    }
 ]);
 </script>
 

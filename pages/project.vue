@@ -30,7 +30,7 @@ useHead({
     title: 'Mahardikakdenie Portofolio - My project',
 });
 
-const lists = ref<{ name: string, link: string,image: string ,description: string }[]>([
+const lists = ref<{ name: string, type?: string, link: string,image: string ,description: string }[]>([
     {
         name: 'Ensiklotari',
         link: 'https://ensiklotari.id',

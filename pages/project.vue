@@ -85,6 +85,12 @@ const lists = ref<{ name: string, type?: string, link: string,image: string ,des
         link: '',
         image: '/pm-trick.png',
         description: 'PM TRICK is a web application E-LEARNING'
+    },
+    {
+        name: 'Web Absen - DPUTR INTERNAL',
+        link: '',
+        image: '/web-absen.png',
+        description: 'WEBSITE Human Resource System Application for Dinas Pekerjaan Umum dan Penataan Ruang',
     }
 ]);
 </script>

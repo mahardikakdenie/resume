@@ -1,11 +1,8 @@
 <template>
-    <div class="flex p-3 justify-between mt-3">
-        <div>
-            <span class="text-xl">Mahardikakdenie DEV</span>
-        </div>
-        <div class="flex gap-3">
+    <div class="flex p-3 justify-center mt-3 w-full">
+        <div class="border rounded-md flex gap-4 px-10 py-2 justify-center">
             <div v-for="(list, index) in lists" :key="index" class="cursor-pointer hover:text-purple-600">
-                <span :class="{ 'text-purple-600 font-bold': $route.path === list?.link }" class="text-[15px]" @click="$router.push(list?.link)">{{list?.label}}</span>
+                <span :class="{ 'text-purple-600 font-bold': $route.path === list?.link }" class="text-[13px]" @click="$router.push(list?.link)">{{list?.label}}</span>
             </div>
         </div>
     </div>
@@ -21,17 +18,21 @@ interface Navigator {
 
 const lists = ref<Array<Navigator>>([
     {
-        label: 'Home',
+        label: 'About Me',
         link: '/'
+    },
+    {
+        label: 'Work Experience',
+        link: '/project',
     },
     {
         label: 'Project',
         link: '/project',
     },
-    // {
-    //     label: 'Contact',
-    //     link: '/contact',
-    // }
+    {
+        label: 'Contact',
+        link: '/contact',
+    }
 ])
 
 </script>

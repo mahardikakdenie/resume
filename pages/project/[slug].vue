@@ -81,6 +81,18 @@ watch(projectDetail, (newValue) => {
 			ogDescription: newValue.description || '',
 			ogImage: newValue.image || '',
 		});
+
+		useHead({
+			title: newValue.name,
+			meta: [
+				{ name: 'description', content: newValue.description },
+				{ name: 'twitter:image', content: newValue.image }
+			],
+			bodyAttrs: {
+				class: newValue.description
+			},
+			script: [{ innerHTML: 'console.log(\'Hello world\')' }]
+		})
 	}
 });
 </script>

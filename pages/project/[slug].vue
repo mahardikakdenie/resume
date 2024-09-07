@@ -57,6 +57,8 @@ onMounted(() => {
 		// Set the currentSlider to the first image if available
 		if (projectDetail.value?.images?.length) {
 			currentSlider.value = projectDetail.value.images[0];
+		} else {
+			currentSlider.value = projectDetail.value.image;
 		}
 	} else if (error.value) {
 		console.error('Error fetching project details:', error.value);

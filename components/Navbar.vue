@@ -1,8 +1,8 @@
 <template>
 	<header
-        data-aos="flip-up"
-		class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
-		<nav class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+		class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900 dark:bg-slate-900">
+		<nav 
+        data-aos="flip-up" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
 			<div class="relative flex items-center justify-center py-[2.125rem]">
 				<div
 					class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
@@ -15,8 +15,9 @@
 							:class="{
 								'text-purple-600 font-bold':
 									$route.path === list?.link,
+                                    'dark:text-neutral-300': $route.path !== list.link,
 							}"
-							class="text-[13px]"
+							class="text-[13px] hover:text-purple-600"
 							@click="$router.push(list?.link)"
 							>{{ list?.label }}</span
 						>

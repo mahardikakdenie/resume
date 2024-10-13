@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<about />
-	</div>
+	<section class="flex justify-center bg-red-500">
+		<about-me />
+	</section>
 </template>
 
 <script setup lang="ts">

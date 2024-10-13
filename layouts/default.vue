@@ -1,5 +1,5 @@
 <template>
-	<div class="max-w-[1200px] mx-auto">
+	<div class="mx-auto">
 		<navbar />
         <nuxt-page />
 	</div>
@@ -12,14 +12,14 @@ useSeoMeta({
 	description: 'This is Mahardikakdenie Portofolio, let me tell you all about it.',
 	ogDescription: 'This is my amazing site, let me tell you all about it.',
 	ogImage: 'https://example.com/image.png',
-	twitterCard: 'Mahardikakdenie Portofolio',
+	// twitterCard: 'Mahardikakdenie Portofolio',
 })
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-	font-family: "Roboto Serif", serif;
+	font-family: "Poppins", sans-serif;
 }
 </style>

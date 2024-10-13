@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-4">
+	<div class="mt-4 px-10">
 		<div class="flex sm:justify-start justify-center">
 			<span class="sm:text-[20px] text-xl font-bold">My Portfolio</span>
 		</div>
@@ -75,7 +75,7 @@ function navigateToProject(link: string) {
 <style>
 .text-ellipsis-multiline {
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
+	/* -webkit-line-clamp: 2; */
 	/* Set the number of lines displayed */
 	-webkit-box-orient: vertical;
 	overflow: hidden;

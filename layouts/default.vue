@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-auto">
+	<div class="mx-auto dark:bg-slate-900">
 		<navbar />
         <nuxt-page />
 	</div>

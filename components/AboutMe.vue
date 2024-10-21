@@ -47,7 +47,7 @@
 				</ul>
 			</div>
 
-			<div class="mt-6 flex items-center space-x-4">
+			<div class="mt-6 grid grid-cols-2 space-x-4">
 				<button
 					class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
 					See My Experiences
@@ -57,6 +57,12 @@
 					Contact Me
 				</button>
 			</div>
+      <div class="mt-4">
+				<button
+					class="border w-full border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full dark:text-white transition-colors duration-300">
+					RESUME
+				</button>
+      </div>
 		</div>
 
 		<!-- Right: Image Section -->

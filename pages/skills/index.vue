@@ -10,7 +10,7 @@
         
         <div class="mt-9 px-3">
             <div class="grid grid-cols-6 px-2 gap-4">
-                <div v-for="(ability, index) in abilities" :key="index" class="border p-5 rounded-md cursor-pointer hover:border-purple-500">
+                <div v-for="(ability, index) in abilities" :key="index" class="border p-5 rounded-md cursor-pointer hover:border-purple-500" @click="$router.push('/skills/react')">
                     <div class="flex justify-center">
                         <img :src="ability.image" width="40" class="sc-cCYyox fnxLGg">
                     </div>

@@ -73,3 +73,59 @@ export const projects: Array<IProjects> = [
         images: []
     }
 ];
+
+export const skillDatas: Array<{
+    title: string;
+    key: string;
+    image: string;
+    description: string;
+    experienceSkill: string;
+    yearExperience: string;
+    projectRelated?: Array<{
+        image: string;
+        title: string;
+        description: string;
+        cta?: {
+            githubLink?: string;
+            previewLink?: string;
+        };
+    }>;
+    sertification?: Array<{
+        image: string;
+        title: string;
+        description: string;
+        cta?: {
+            githubLink?: string;
+            previewLink?: string;
+        };
+    }>;
+}> = [
+    {
+        title: 'ReactJS',
+        key: 'react',
+        image: 'https://media.licdn.com/dms/image/v2/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1672212317392?e=1735171200&v=beta&t=s_ZWHbnRfWAI0CYQ1gHCNUc8DBQjqeOmnP5NmG5OY8c',
+        description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
+        experienceSkill: 'Intermediate',
+        yearExperience: '1+',
+        projectRelated: [
+            {
+                title: 'NextJS Movie Project',
+                image: 'http://localhost:3000/next-movie.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Tic Tac Toe',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
+];

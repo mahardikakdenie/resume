@@ -2,6 +2,7 @@
 	<div class="mx-auto dark:bg-slate-900">
 		<navbar />
         <nuxt-page />
+		<Footer />
 	</div>
 </template>
 

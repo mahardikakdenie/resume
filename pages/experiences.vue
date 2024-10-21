@@ -166,7 +166,7 @@ div.flex-row-reverse {
 }
 
 .experience-wrapper {
-    @apply py-[10x] px-[50px] relative w-[50%];
+    @apply py-[10px] px-[50px] relative w-[50%];
 }
 
 .experience-icon-steps {

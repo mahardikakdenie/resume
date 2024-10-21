@@ -59,9 +59,9 @@
         data-aos="flip-up"
         class="md:w-1/3 md:mt-0 flex justify-center items-center p-6 md:p-0">
         <img
-          src="https://plus.unsplash.com/premium_photo-1673967831980-1d377baaded2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3VjaW5nfGVufDB8fDB8fHww"
+          src="https://media.licdn.com/dms/image/v2/D5603AQEe8aWoeg-VyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720014478846?e=1735171200&v=beta&t=lH94TQ-nSmmqtHO2yg9jzPBa-PTRVzz1EUGQ3VGMRNQ"
           alt="Mahardika Kessuma Denie"
-          class="shadow-lg object-cover rounded-full w-[80%] h-[80%] hover:scale-105 transition-transform duration-300" />
+          class="shadow-lg object-cover rounded-full hover:scale-105 transition-transform duration-300" />
       </div>
     </div>
   </template>

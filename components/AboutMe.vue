@@ -32,13 +32,15 @@
 						:key="index"
 						data-aos="flip-left"
 						class="flex items-center opacity-75 hover:opacity-100 cursor-pointer transition-opacity duration-300 ease-in-out"
-						@mouseover="onImageHover">
+						@mouseover="onImageHover(social.key, 'hover')"
+            @mouseleave="onImageHover(social.key, 'blur')"  
+          >
 						<img
 							:src="social.image"
 							width="20"
 							:alt="social.title" />
 						<span
-							class="text-gray-600 dark:text-white text-sm whitespace-nowrap flex">
+							class="text-gray-600 dark:text-white text-sm whitespace-nowrap flex hover:text-purple-600">
 							{{ social.title }}
 						</span>
 					</li>
@@ -51,7 +53,7 @@
 					See My Experiences
 				</button>
 				<button
-					class="border border-gray-400 text-gray-600 px-6 py-3 rounded-full hover:bg-gray-100 dark:text-white transition-colors duration-300">
+					class="border border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full dark:text-white transition-colors duration-300">
 					Contact Me
 				</button>
 			</div>
@@ -73,35 +75,47 @@
 import linkedinImage from '@/assets/linkedin.svg';
 import linkedinImageActive from '@/assets/linkedin-active.svg';
 import githubImage from '@/assets/github.svg';
+import githubImageActive from '@/assets/github-active.svg';
 import emailImage from '@/assets/email.svg';
+import emailImageActive from '@/assets/email-active.svg';
 import { ref } from 'vue';
 
 const socialMedia = ref<
 	{
+    key: string;
 		title: string;
 		image: string;
 		imageActive: string;
 	}[]
 >([
 	{
+    key: 'linkedin',
 		title: 'Mahardika Kessuma Denie',
 		image: linkedinImage,
-		imageActive: linkedinImageActive,
+		imageActive: linkedinImage,
 	},
 	{
+    key: 'github',
 		title: '@mahardikakdenie',
 		image: githubImage,
-		imageActive: linkedinImageActive,
+		imageActive: githubImage,
 	},
 	{
-		title: 'dikamahar884@gmail.co',
+    key: 'email',
+		title: 'dikamahar884@gmail.com',
 		image: emailImage,
-		imageActive: linkedinImageActive,
+		imageActive: emailImage,
 	},
 ]);
 
-const onImageHover = () => {
-	console.log('haloo');
+const onImageHover = (key: string, type: string): void => {
+  const index = socialMedia.value.findIndex(curr => curr?.key === key);
+	if (type === 'hover') {
+    const arr = [linkedinImageActive, githubImageActive, emailImageActive]
+    socialMedia.value[index].image = arr[index];
+  } else {
+    socialMedia.value[index].image = socialMedia.value[index].imageActive;
+  }
 };
 // Script logic (if needed) can be added here
 </script>

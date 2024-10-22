@@ -128,4 +128,32 @@ export const skillDatas: Array<{
             },  
         ],
     },
+    {
+        title: 'Vuejs',
+        key: 'vue',
+        image: 'https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/119058023_1791394821036070_6678793766601996160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=25d718&_nc_eui2=AeHIc-ijQN-hOSZtgGZoi63eRvwwu1TPEhhG_DC7VM8SGGY6M2PsTnxEDdeaqectOP17zt3xRRd4t07efYBbICgf&_nc_ohc=f0kXO3aRSA4Q7kNvgFbWC1E&_nc_zt=23&_nc_ht=scontent-sin6-1.xx&_nc_gid=AZ94VW9pWom6RHF__7-lvEU&oh=00_AYB9rUwwp18GnmklKzv1Z7mXNL9U4wiHGJ7fCz0n5AdvRA&oe=673E8B82',
+        description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
+        experienceSkill: 'Expert',
+        yearExperience: '4+',
+        projectRelated: [
+            {
+                title: 'Ensiklotari',
+                image: '/ensiklotari.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Bujangga Manik App Appoitment',
+                image: '/bujanggamanik.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
 ];

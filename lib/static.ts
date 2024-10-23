@@ -1,6 +1,4 @@
 import type { IProjects, ISkillDatas } from "./staticInterface";
-import reactImage from '@/assets/react.svg';
-import reactImageActive from '@/assets/react-active.svg';
 
 export const projects: Array<IProjects> = [
     {
@@ -81,8 +79,8 @@ export const skillDatas: Array<ISkillDatas> = [
         title: 'ReactJS',
         key: 'react',
         current_thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
-        thumb: reactImage,
-        thumb_active: reactImageActive,
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
+        thumb_active: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
         image: 'https://media.licdn.com/dms/image/v2/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1672212317392?e=1735171200&v=beta&t=s_ZWHbnRfWAI0CYQ1gHCNUc8DBQjqeOmnP5NmG5OY8c',
         description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
         experienceSkill: 'Intermediate',

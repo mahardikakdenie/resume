@@ -6,3 +6,34 @@ export interface IProjects {
 	description: string;
     images: Array<string>,
 }
+
+
+export interface ISkillDatas {
+    title: string;
+    key: string;
+    thumb?: string;
+	current_thumb?: string;
+    thumb_active?: string;
+    image: string;
+    description: string;
+    experienceSkill?: string;
+    yearExperience?: string;
+    projectRelated?: Array<{
+        image: string;
+        title: string;
+        description: string;
+        cta?: {
+            githubLink?: string;
+            previewLink?: string;
+        };
+    }>;
+    sertification?: Array<{
+        image: string;
+        title: string;
+        description: string;
+        cta?: {
+            githubLink?: string;
+            previewLink?: string;
+        };
+    }>;	
+}

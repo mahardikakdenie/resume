@@ -1,121 +1,120 @@
 <template>
     <div class="mt-4">
-        <div class="flex justify-center items-center gap-2">
-            <img src="https://cdn-icons-png.flaticon.com/512/10262/10262300.png" width="30" alt="">
-            <span class="text-2xl font-bold">
-                Skill &
-            </span>
-            <span class="text-purple-500 text-2xl font-bold">Abilities</span>
-        </div>
-        
-        <div class="mt-9 px-3">
-            <div class="grid grid-cols-6 px-2 gap-4">
-                <div v-for="(ability, index) in abilities" :key="index" class="border p-5 rounded-md cursor-pointer hover:border-purple-500" @click="$router.push('/skills/react')">
-                    <div class="flex justify-center">
-                        <img :src="ability.image" width="40" class="sc-cCYyox fnxLGg">
-                    </div>
-                    <div class="text-center mt-4">
-                        <span class="font-bold text-sm">
-                            {{ ability.title }}
-                        </span>
-                    </div>
-                </div>
+      <div class="flex justify-center items-center gap-2">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/10262/10262300.png"
+          width="30"
+          alt=""
+        />
+        <span class="text-2xl font-bold">
+          Skill &
+        </span>
+        <span class="text-purple-500 text-2xl font-bold">Abilities</span>
+      </div>
+  
+      <div class="mt-9 px-3">
+        <div class="grid grid-cols-6 px-2 gap-4">
+          <div
+            v-for="(ability, index) in abilities"
+            :key="index"
+            class="border p-5 rounded-md cursor-pointer border-wrapper"
+            @click="$router.push(`/skills/${ability.key}`)"
+            @mouseover="onMouseOver(ability.key, 'hover')"
+            @mouseleave="onMouseOver(ability.key, 'hover-leave')"
+          >
+            <div class="flex justify-center relative">
+              <img
+                v-if="ability.thumb"
+                :src="ability.thumb"
+                width="40"
+                class="ability-image"
+                alt="skill image"
+              />
+              <div v-else class="ability-image"></div>
             </div>
+            <div class="text-center mt-4">
+              <span class="font-bold text-sm">
+                {{ ability.title }}
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</template>
+  </template>
+  
+  <script setup lang="ts">
+  import { skillDatas } from '~/lib/static';
+  import { type ISkillDatas } from '@/lib/staticInterface';
 
-<script setup lang="ts">
-import { ref } from 'vue';
-import abilitiesImg from '@/assets/abilities.svg';
+  const abilities = ref<Array<ISkillDatas>>(skillDatas);
 
-const abilities = ref<{
-    title: string;
-    image: string;
-}[]>([
-    {
-        title: 'ReactJS',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
-    },
-    {
-        title: 'Vue',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-195946-VueJs.png',
-    },
-    {
-        title: 'NodeJS',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-192739-NodeJs.png',
-    },
-    {
-        title: 'ExpressJS',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-193735-ExpressJs.png',
-    },
-    {
-        title: 'HTML5',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201206-Html5.png',
-    },
-    {
-        title: 'Tailwind Css',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201654-TailwindCss.png',
-    },
-    {
-        title: 'Boostrap',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png'
-    },
-    {
-        title: 'SASS',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
-    },
-    {
-        title: 'CSS3',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
-    },
-    {
-        title: 'Javascript',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230329-221857-JavaScript.png',
-    },
-    {
-        title: 'Typescript',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
-    },
-    {
-        title: 'Python',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202434-Python.png',
-    },
-    {
-        title: 'PHP',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
-    },
-    {
-        title: 'CodeIgniter',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png'
-    },
-    {
-        title: 'Laravel',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
-    },
-    {
-        title: 'Mysql',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
-    },
-    {
-        title: 'PostgreSql',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
-    },
-    {
-        title: 'MongoDb',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
-    },
-    {
-        title: 'Docker',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
-    },
-    {
-        title: 'Heroku',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
-    },
-    {
-        title: 'Netlify',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
-    },
-]);
-</script>
+  const onMouseOver = (key: string, type: string) => {
+    const index = abilities.value.findIndex(curr => curr?.key === key);
+
+    if (type === 'hover') {
+        // abilities.value[index].thumb = abilities.value[index].thumb_active;
+    } else {
+        console.log(key);
+        
+        // console.log("🚀 ~ onMouseOver ~ abilities.value[index].thumb:", abilities.value[index].thumb)
+        // abilities.value[index].thumb = abilities.value[index].thumb;
+    }
+  };
+  </script>
+  
+  <style scoped lang="scss">
+  .border-wrapper {
+    @apply hover:border-purple-500;
+
+    &:hover {
+        span {
+            @apply text-purple-600;
+        }
+    }
+  }
+  .ability-image {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .ability-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+.ability-image:loading::after {
+    display: block;
+}
+
+.ability-image:loaded::after {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+        transform: translateY(0);
+    }
+    50% {
+        background-color: #f0f0f0;
+        transform: translateY(-10px); /* Move upwards */
+    }
+    100% {
+        background-color: #e0e0e0;
+        transform: translateY(0);
+    }
+}
+
+  </style>
+  

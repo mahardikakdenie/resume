@@ -15,23 +15,15 @@
                     <!-- Timeline indicator -->
                     <div
                         :class="{ 'experience-icon-steps-left': i % 2 !== 0, 'experience-icon-steps-right': i % 2 === 0 }">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                            height="22" width="22" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M336 80H176a16 16 0 00-16 16v16h192V96a16 16 0 00-16-16z"></path>
-                            <path
-                                d="M496 176a64.07 64.07 0 00-64-64h-48V96a48.05 48.05 0 00-48-48H176a48.05 48.05 0 00-48 48v16H80a64.07 64.07 0 00-64 64v48h480zm-144-64H160V96a16 16 0 0116-16h160a16 16 0 0116 16zm-16 152a24 24 0 01-24 24H200a24 24 0 01-24-24v-4a4 4 0 00-4-4H16v144a64 64 0 0064 64h352a64 64 0 0064-64V256H340a4 4 0 00-4 4z">
-                            </path>
-                        </svg>
+                        <img :src="calenderChecked" alt="">
                     </div>
 
                     <!-- Experience Card -->
                     <div class="experience-card">
                         <h3 class="text-lg font-bold text-white">{{ experience.name }}</h3>
-                        <p class="text-sm text-white font-semibold ">{{experience.job}} • {{ experience.type }}</p>
+                        <p class="text-sm text-white font-semibold ">{{ experience.job }} • {{ experience.type }}</p>
                         <p class="text-sm text-white ">{{ experience.since }} - {{ experience.until }}</p>
-                        <p class="mt-4 text-white">
-                            {{ experience.description }}
-                        </p>
+                        <div class="mt-4 experience-description" v-html="experience.description" />
                         <span :class="{ 'row-card-left': i % 2 !== 0, 'row-card-right': i % 2 === 0 }"></span>
                     </div>
                 </div>
@@ -42,6 +34,7 @@
 </template>
 
 <script setup lang="ts">
+import calenderChecked from '@/assets/calender-check.svg';
 const experiences = ref<{
     name: string;
     type: string;
@@ -56,11 +49,15 @@ const experiences = ref<{
         job: 'Fullstack Engineer',
         since: 'November 2022',
         until: 'Present',
-        description: `Revamping the Dashboard Funnel and Storefront Dashboard: Improved the dashboard funnel and storefront dashboard to enhance user engagement and increase user interest, resulting in a more intuitive and appealing user experience.
-        •Enhancing Orderonline Features for Better UI/UX: Revamped several features of Orderonline to ensure a superior user interface and user experience, making the platform more user-friendly and visually appealing.
-        •Assisting with E2E Testing using Cypress: Contributed to the end-to-end (E2E) testing process using Cypress, ensuring that all functionalities work seamlessly across the platform.
-        •Creating Unit Tests: Developed unit tests to verify the correctness of individual components and ensure the reliability and robustness of the platform.
-        •Developing Tools to Streamline Orderonline Development: Created various tools to simplify and expedite the development process for Orderonline, enhancing efficiency and productivity.`
+        description: `
+            <ul>
+                <li><strong>Revamping Dashboard Funnel and Storefront:</strong> Enhanced user engagement and interest by redesigning the dashboard funnel and storefront, creating a more intuitive and visually appealing user experience.</li>
+                <li><strong>Improving UI/UX for Orderonline:</strong> Revamped key features to provide a superior user interface and user experience, making the platform more user-friendly and aesthetically pleasing.</li>
+                <li><strong>E2E Testing with Cypress:</strong> Contributed to seamless functionality across the platform by assisting in end-to-end testing with Cypress.</li>
+                <li><strong>Unit Testing:</strong> Developed unit tests to ensure component reliability and maintain platform stability.</li>
+                <li><strong>Tool Development for Streamlining:</strong> Built tools to simplify and accelerate the Orderonline development process, improving overall efficiency and productivity.</li>
+            </ul>
+`
     },
     {
         name: 'Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Bandung',
@@ -68,11 +65,7 @@ const experiences = ref<{
         job: 'Fullstack Engineer',
         since: 'November 2023',
         until: 'Juny 2024',
-        description: `DPUTR Internal Web Report Absensi (Vue, Laravel, MySQL)
-        This web-based application, built using Vue, Laravel, and MySQL, is designed to facilitate reporting for partners working with the Department of Public Works and Spatial Planning of Bandung Regency. Vue powers a dynamic UI, Laravel handles backend logic, and MySQL serves as the database. The platform allows users to create, submit, and track reports in real-time, improving transparency, operational efficiency, and accountability in managing infrastructure projects.
-
-        DPUTR Silandak Dashboard (Vue, Laravel, MongoDB)
-        This web-based dashboard, developed using Vue, Laravel, and MongoDB, serves the Department of Public Works and Spatial Planning by visualizing infrastructure project data. It presents daily, monthly, and yearly reports, enabling real-time project tracking and analysis. Vue ensures an interactive UI, Laravel manages backend logic, and MongoDB supports scalable data storage. The dashboard offers interactive charts and tables for stakeholders to monitor progress, analyze trends, and make informed decisions, enhancing project management efficiency and strategic planning.`
+        description: `<ul><li><strong>DPUTR Internal Web Report Absensi (Vue, Laravel, MySQL):</strong> A web-based application for the Department of Public Works and Spatial Planning of Bandung Regency, built with Vue, Laravel, and MySQL. It enables partners to create, submit, and track reports in real-time, enhancing transparency and operational efficiency in infrastructure project management. </li><li><strong>DPUTR Silandak Dashboard (Vue, Laravel, MongoDB):</strong> This web-based dashboard visualizes infrastructure project data for the Department of Public Works and Spatial Planning. Developed with Vue, Laravel, and MongoDB, it provides daily, monthly, and yearly reports for real-time project tracking, featuring interactive charts and tables that enhance decision-making and strategic planning.</li></ul>`
     },
     {
         name: 'Icreativelabs - PT Idekreatif Menusa Teknologi',
@@ -121,7 +114,7 @@ const experiences = ref<{
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 /* Styling for flex reverse in even rows */
 div.flex-row-reverse {
     flex-direction: row-reverse;
@@ -161,7 +154,8 @@ div.flex-row-reverse {
     margin-left: -1px;
     /* Centering adjustment */
     z-index: 1;
-    border-left: 2px dashed #4c51bf;
+    border-left: 2px solid;
+    @apply border-purple-400;
     /* Dashed border color */
 }
 
@@ -197,6 +191,10 @@ div.flex-row-reverse {
         h3,
         p {
             @apply text-purple-700;
+        }
+
+        .experience-description {
+            @apply text-purple-600;
         }
     }
 }
@@ -240,5 +238,13 @@ div.flex-row-reverse {
 
 .pos-left {
     left: 50%;
+}
+
+.experience-description {
+    ul {
+        li {
+            font-size: 13px;
+        }
+    }
 }
 </style>

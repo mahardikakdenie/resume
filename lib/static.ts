@@ -1,4 +1,6 @@
-import type { IProjects } from "./staticInterface";
+import type { IProjects, ISkillDatas } from "./staticInterface";
+import reactImage from '@/assets/react.svg';
+import reactImageActive from '@/assets/react-active.svg';
 
 export const projects: Array<IProjects> = [
     {
@@ -74,35 +76,13 @@ export const projects: Array<IProjects> = [
     }
 ];
 
-export const skillDatas: Array<{
-    title: string;
-    key: string;
-    image: string;
-    description: string;
-    experienceSkill: string;
-    yearExperience: string;
-    projectRelated?: Array<{
-        image: string;
-        title: string;
-        description: string;
-        cta?: {
-            githubLink?: string;
-            previewLink?: string;
-        };
-    }>;
-    sertification?: Array<{
-        image: string;
-        title: string;
-        description: string;
-        cta?: {
-            githubLink?: string;
-            previewLink?: string;
-        };
-    }>;
-}> = [
+export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'ReactJS',
         key: 'react',
+        current_thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
+        thumb: reactImage,
+        thumb_active: reactImageActive,
         image: 'https://media.licdn.com/dms/image/v2/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1672212317392?e=1735171200&v=beta&t=s_ZWHbnRfWAI0CYQ1gHCNUc8DBQjqeOmnP5NmG5OY8c',
         description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
         experienceSkill: 'Intermediate',
@@ -131,6 +111,7 @@ export const skillDatas: Array<{
     {
         title: 'Vuejs',
         key: 'vue',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-195946-VueJs.png',
         image: 'https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/119058023_1791394821036070_6678793766601996160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=25d718&_nc_eui2=AeHIc-ijQN-hOSZtgGZoi63eRvwwu1TPEhhG_DC7VM8SGGY6M2PsTnxEDdeaqectOP17zt3xRRd4t07efYBbICgf&_nc_ohc=f0kXO3aRSA4Q7kNvgFbWC1E&_nc_zt=23&_nc_ht=scontent-sin6-1.xx&_nc_gid=AZ94VW9pWom6RHF__7-lvEU&oh=00_AYB9rUwwp18GnmklKzv1Z7mXNL9U4wiHGJ7fCz0n5AdvRA&oe=673E8B82',
         description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
         experienceSkill: 'Expert',
@@ -154,6 +135,615 @@ export const skillDatas: Array<{
                     previewLink: '',
                 }
             },  
+        ],
+    },
+    {
+        title: 'Nodejs',
+        key: 'nodejs',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-192739-NodeJs.png',
+        image: 'https://weebpal.com/sites/default/files/media-image/2020-06/nodejs-1.svg',
+        description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
+        experienceSkill: 'Intermediate',
+        yearExperience: '2+',
+        projectRelated: [
+            {
+                title: 'Ensiklotari',
+                image: '/ensiklotari.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Bujangga Manik App Appoitment',
+                image: '/bujanggamanik.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
+    {
+        title: 'Expressjs',
+        key: 'expressjs',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-193735-ExpressJs.png',
+        image: 'https://externlabs.com/blogs/wp-content/uploads/2021/11/ExpressJS-Library.jpg',
+        description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
+        experienceSkill: 'Intermediate',
+        yearExperience: '2+',
+        projectRelated: [
+            {
+                title: 'Ensiklotari',
+                image: '/ensiklotari.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Bujangga Manik App Appoitment',
+                image: '/bujanggamanik.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
+    {
+        title: 'Golang',
+        key: 'go-lang',
+        thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXE816VbDNBBKzwptMA1ZGW_SIYY03Bbw_kA&s',
+        image: 'https://externlabs.com/blogs/wp-content/uploads/2021/11/ExpressJS-Library.jpg',
+        description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
+        experienceSkill: 'Intermediate',
+        yearExperience: '2+',
+        projectRelated: [
+            {
+                title: 'Ensiklotari',
+                image: '/ensiklotari.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Bujangga Manik App Appoitment',
+                image: '/bujanggamanik.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
+    {
+        title: 'HTML5',
+        key: 'html5',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201206-Html5.png',
+        image: 'https://www.webdevelopmenthelp.net/wp-content/uploads/2015/09/HTML55.png',
+        description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
+        experienceSkill: 'Intermediate',
+        yearExperience: '2+',
+        projectRelated: [
+            {
+                title: 'Ensiklotari',
+                image: '/ensiklotari.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+            {
+                title: 'Bujangga Manik App Appoitment',
+                image: '/bujanggamanik.png',
+                description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },  
+        ],
+    },
+    {
+        title: 'Tailwind CSS',
+        key: 'tailwind-css',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201654-TailwindCss.png',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK0Eu0y1ONkIG7uPJeGGqq8uqeIOqp8IJOrg&s',
+        description: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom designs directly in your markup.',
+        experienceSkill: 'Intermediate',
+        yearExperience: '2+',
+        projectRelated: [
+            {
+                title: 'Tailwind CSS Project 1',
+                image: '/tailwind-project1.png',
+                description: 'A simple project using Tailwind CSS to create a responsive layout and fast design iteration.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'Tailwind CSS Project 2',
+                image: '/tailwind-project2.png',
+                description: 'An advanced project showcasing the flexibility and customization available with Tailwind CSS.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'Bootstrap',
+        key: 'bootstrap',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png',
+        description: 'Bootstrap is a popular CSS framework for developing responsive and mobile-first websites quickly.',
+        experienceSkill: 'Expert',
+        yearExperience: '4+',
+        projectRelated: [
+            {
+                title: 'Bootstrap Project 1',
+                image: '/bootstrap-project1.png',
+                description: 'A responsive e-commerce site built using Bootstrap for fast and reliable design.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'Bootstrap Project 2',
+                image: '/bootstrap-project2.png',
+                description: 'A portfolio site leveraging Bootstrap\'s grid system and components for ease of use.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'SASS',
+        key: 'sass',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
+        description: 'Sass is a CSS preprocessor that allows you to use variables, nested rules, and functions for efficient styling.',
+        experienceSkill: 'Intermediate',
+        yearExperience: '3+',
+        projectRelated: [
+            {
+                title: 'SASS Project 1',
+                image: '/sass-project1.png',
+                description: 'A project that uses Sass for scalable and maintainable CSS, featuring variables and mixins.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'SASS Project 2',
+                image: '/sass-project2.png',
+                description: 'A web app with a clean UI, utilizing Sass for optimized and organized styling.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'CSS3',
+        key: 'css3',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
+        description: 'CSS3 is the latest evolution of the Cascading Style Sheets language and allows for more complex layouts.',
+        experienceSkill: 'Advanced',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'CSS3 Project 1',
+                image: '/css3-project1.png',
+                description: 'A modern website showcasing CSS3 animations and transitions for enhanced user experience.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'CSS3 Project 2',
+                image: '/css3-project2.png',
+                description: 'A portfolio site using CSS3 grid and flexbox for responsive and accessible design.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'JavaScript',
+        key: 'javascript',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230329-221857-JavaScript.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230329-221857-JavaScript.png',
+        description: 'JavaScript is a versatile, high-level programming language primarily used to create dynamic and interactive content on websites.',
+        experienceSkill: 'Expert',
+        yearExperience: '6+',
+        projectRelated: [
+            {
+                title: 'JavaScript Project 1',
+                image: '/javascript-project1.png',
+                description: 'A browser-based game utilizing JavaScript for dynamic interactions and smooth gameplay.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'JavaScript Project 2',
+                image: '/javascript-project2.png',
+                description: 'A web application that leverages JavaScript for client-side form validation and dynamic UI elements.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'TypeScript',
+        key: 'typescript',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
+        description: 'TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types.',
+        experienceSkill: 'Advanced',
+        yearExperience: '3+',
+        projectRelated: [
+            {
+                title: 'TypeScript Project 1',
+                image: '/typescript-project1.png',
+                description: 'A complex web application utilizing TypeScript for enhanced code quality and type safety.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'TypeScript Project 2',
+                image: '/typescript-project2.png',
+                description: 'An API server implemented with TypeScript for scalable and maintainable backend code.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'Python',
+        key: 'python',
+        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202434-Python.png',
+        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202434-Python.png',
+        description: 'TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types.',
+        experienceSkill: 'Advanced',
+        yearExperience: '3+',
+        projectRelated: [
+            {
+                title: 'TypeScript Project 1',
+                image: '/typescript-project1.png',
+                description: 'A complex web application utilizing TypeScript for enhanced code quality and type safety.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'TypeScript Project 2',
+                image: '/typescript-project2.png',
+                description: 'An API server implemented with TypeScript for scalable and maintainable backend code.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'PHP',
+        key: 'php',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },    
+    {
+        title: 'CodeIgniter',
+        key: 'codeIgniter',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },  
+    {
+        title: 'Laravel',
+        key: 'laravel',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },  
+    {
+        title: 'Mysql',
+        key: 'mysql',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },  
+    {
+        title: 'Vercell',
+        key: 'vercell',
+        thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBqE3tRJO64QQSZUUu6OXKbFZtP4VQHOaYg&s',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBqE3tRJO64QQSZUUu6OXKbFZtP4VQHOaYg&s',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'PostgreSql',
+        key: 'pgsql',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'MongooDB',
+        key: 'mongoodb',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'Docker',
+        key: 'docker',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'Heroku',
+        key: 'heroku',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+        ],
+    },
+    {
+        title: 'Netlify',
+        key: 'netlify',
+        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
+        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
+        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+        experienceSkill: 'Expert',
+        yearExperience: '5+',
+        projectRelated: [
+            {
+                title: 'PHP Project 1',
+                image: '/php-project1.png',
+                description: 'A content management system built using PHP for a fast and dynamic website.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
+            {
+                title: 'PHP Project 2',
+                image: '/php-project2.png',
+                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                },
+            },
         ],
     },
 ];

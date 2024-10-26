@@ -1,15 +1,15 @@
 <template>
 	<div
-		class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center dark:bg-slate-900 bg-white rounded-lg p-10">
+		class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center bg-white rounded-lg p-10">
 		<!-- Left: Text Section -->
 		<div data-aos="fade-right" class="md:w-1/2 p-8 md:p-12">
 			<h2
-				class="text-2xl font-extrabold text-gray-900 dark:text-white mb-4">
+				class="text-2xl font-extrabold text-gray-900mb-4">
 				About
 				<span class="text-purple-600">Mahardika Kessuma Denie</span>
 			</h2>
 			<p
-				class="text-gray-600 dark:text-white leading-relaxed mb-6 text-sm text-justify">
+				class="text-gray-600leading-relaxed mb-6 text-sm text-justify">
 				Hello, my name is Mahardika Kessuma Denie. I am a software
 				engineer with over 3 years of experience in web application
 				development, both on the frontend and backend. Currently, I am
@@ -40,7 +40,7 @@
 							width="20"
 							:alt="social.title" />
 						<span
-							class="text-gray-600 dark:text-white text-sm whitespace-nowrap flex hover:text-purple-600">
+							class="text-gray-600 text-sm whitespace-nowrap flex hover:text-purple-600">
 							{{ social.title }}
 						</span>
 					</li>
@@ -53,7 +53,7 @@
 					See My Experiences
 				</button>
 				<button
-					class="border border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full dark:text-white transition-colors duration-300">
+					class="border border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full transition-colors duration-300">
 					Contact Me
 				</button>
 			</div>

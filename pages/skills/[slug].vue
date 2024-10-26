@@ -19,21 +19,21 @@
 						{{ currentSkill?.title }} Skill Details
 					</h2>
 					<p
-						class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+						class="text-neutral-600 leading-relaxed mb-4">
 						{{ currentSkill?.description }}
 					</p>
 
 					<!-- Info lainnya -->
 					<div
-						class="flex items-center justify-between text-gray-700 dark:text-gray-300">
-						<span class="font-semibold">Experience Level:</span>
-						<span class="text-lg">{{ currentSkill?.experienceSkill }}</span>
+						class="flex items-center justify-between dark:text-gray-300">
+						<span class="font-semibold text-neutral-900">Experience Level:</span>
+						<span class="text-lg text-neutral-900">{{ currentSkill?.experienceSkill }}</span>
 					</div>
 
 					<div
 						class="flex items-center justify-between mt-2 text-gray-700 dark:text-gray-300">
-						<span class="font-semibold">Years of Experience:</span>
-						<span class="text-lg">{{ currentSkill?.yearExperience }} years</span>
+						<span class="font-semibold text-neutral-700">Years of Experience:</span>
+						<span class="text-lg text-neutral-700">{{ currentSkill?.yearExperience }} years</span>
 					</div>
 				</div>
 
@@ -64,7 +64,8 @@
 								<button
                                     v-for="(i, key) in project.cta"
                                     :key="key"
-									class="w-full py-2 rounded-lg  capitalize btn bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm">
+									:disabled="project?.cta?.[key] === ''"
+									class="w-full py-2 rounded-lg  capitalize btn disabled:bg-purple-300 bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm">
 									{{ key.replace(/([A-Z])/g, ' $1').trim() }}
 								</button>
 							</div>

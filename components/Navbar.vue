@@ -1,13 +1,13 @@
 <template>
 	<header
-		class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900 dark:bg-slate-900">
+		class="relative z-50 w-full flex-none text-sm font-semibold leading-6 text-slate-900">
 		<nav
 			data-aos="flip-up"
 			class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
 			<div
 				class="relative flex items-center justify-center py-[2.125rem]">
 				<div
-					class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5 dark:bg-neutral-700"></div>
+					class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
 				<div class="flex gap-5">
 					<div
 						v-for="(list, index) in lists"
@@ -16,8 +16,8 @@
 						<span
 							:class="{
 								'text-purple-600 font-bold':
-									$route.path === list?.link,
-								'dark:text-neutral-300':
+									$route.path === list?.link || ($route.path.includes(list?.link) && list.link !== '/'),
+								'text-neutral-700':
 									$route.path !== list.link,
 							}"
 							class="text-[13px] hover:text-purple-600"

@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-auto dark:bg-slate-900">
+	<div class="mx-auto">
 		<navbar />
         <nuxt-page />
 		<Footer />

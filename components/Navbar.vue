@@ -53,6 +53,10 @@ const lists = ref<Array<Navigator>>([
 		link: '/experiences',
 	},
 	{
+		label: 'Educations',
+		link: '/experiences'
+	},
+	{
 		label: 'Project',
 		link: '/project',
 	},

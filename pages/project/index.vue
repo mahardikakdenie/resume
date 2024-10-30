@@ -7,9 +7,9 @@
 			<div
 				v-for="(list, i) in lists"
 				:key="i"
-				class="border-2 p-3 rounded-md cursor-pointer"
+				class="shadow-lg p-4 rounded-md cursor-pointer"
 				@click="navigateToProject(list.link)">
-				<div class="flex justify-center">
+				<div class="flex justify-center border rounded-md">
 					<img
 						:src="list.image"
 						:width="list.type === 'mobile' ? '100' : '100%'"

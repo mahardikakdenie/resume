@@ -6,20 +6,6 @@
 				<div class="text-md font-semibold mb-4 md:mb-0 flex gap-2">
 					<a href="#" class="text-purple-600 hover:text-gray-400">Mahardika Kessuma Denie</a>
 				</div>
-
-				<!-- Navigation Links -->
-				<!-- <div class="flex space-x-4 mb-4 md:mb-0">
-					<a href="#" class="text-gray-400 hover:text-purple-600">Home</a>
-					<a href="#" class="text-gray-400 hover:text-purple-600">About</a>
-					<a href="#" class="text-gray-400 hover:text-purple-600"
-						>Services</a
-					>
-					<a href="#" class="text-gray-400 hover:text-purple-600"
-						>Contact</a
-					>
-				</div> -->
-
-				<!-- Social Media Links -->
 				<div class="flex space-x-4">
 					<a href="#" class="text-gray-400 hover:text-purple-600 opacity-50 hover:opacity-100">
 						<img :src="linkedinImage" width="30" alt="linkedin-image">
@@ -36,7 +22,7 @@
 			<!-- Footer Bottom -->
 			<div class="mt-8 border-t border-gray-700 pt-4">
 				<p class="text-sm text-purple-600 text-center">
-					&copy; 2024 Mahardikakdenie. All rights reserved.
+					&copy; {{ new Date().getFullYear() }} Mahardikakdenie. All rights reserved.
 				</p>
 			</div>
 		</div>

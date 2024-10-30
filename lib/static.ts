@@ -132,7 +132,34 @@ export const skillDatas: Array<ISkillDatas> = [
                     githubLink: '',
                     previewLink: '',
                 }
-            },  
+            },
+            {
+                title: 'Web Absen - DPUTR INTERNAL',
+                image: '/web-absen.png',
+                description: 'WEBSITE Human Resource System Application for Dinas Pekerjaan Umum dan Penataan Ruang',
+                cta: {
+                    githubLink: '',
+                    previewLink: '',
+                }
+            },
+            {
+                title: 'Theme UI STORE VUE',
+                image: 'https://i.ibb.co/cQv7kP7/Mahardika-Store.jpg',
+                description: 'loremmmmmmmmm',
+                cta: {
+                    githubLink: 'https://github.com/mahardikakdenie/nuxt-catalog',
+                    previewLink: 'https://nuxt-catalog.mahardikakdenie.my.id',
+                }
+            },
+            {
+                title: 'PM Tricks Dashboard',
+                image: 'https://i.ibb.co/PsyMmbH/PM-Tricks.jpg',
+                description: 'loremmmmmmmmm',
+                cta: {
+                    githubLink: 'https://github.com/mahardikakdenie/nuxt-catalog',
+                    previewLink: 'https://nuxt-catalog.mahardikakdenie.my.id',
+                }
+            },
         ],
     },
     {
@@ -197,14 +224,14 @@ export const skillDatas: Array<ISkillDatas> = [
         title: 'Golang',
         key: 'go-lang',
         thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXE816VbDNBBKzwptMA1ZGW_SIYY03Bbw_kA&s',
-        image: 'https://externlabs.com/blogs/wp-content/uploads/2021/11/ExpressJS-Library.jpg',
+        image: 'https://cdn.prod.website-files.com/6100d0111a4ed76bc1b9fd54/62217e885f52b860da9f00cc_Apa%20Itu%20Golang%3F%20Apa%20Saja%20Fungsi%20Dan%20Keunggulannya%20-%20Binar%20Academy.jpeg',
         description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
         experienceSkill: 'Intermediate',
         yearExperience: '2+',
         projectRelated: [
             {
-                title: 'Ensiklotari',
-                image: '/ensiklotari.png',
+                title: 'Book Library API',
+                image: '',
                 description: `List Movie And Rating, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to...`,
                 cta: {
                     githubLink: '',

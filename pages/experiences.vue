@@ -1,11 +1,7 @@
 <template>
-    <section class="px-8 bg-neutral-300 flex items-center justify-center">
+    <section class="px-8 bg-neutral-100 flex items-center justify-center">
         <!-- Main container -->
         <div class="w-full max-w-6xl flex flex-col items-center mt-5">
-            <!-- Title Section -->
-            <h2 class="text-purple-400 text-2xl font-bold mb-12 flex items-center space-x-4">
-                <span>Experience</span>
-            </h2>
 
             <!-- Timeline Section -->
             <div class="relative max-w-[1200px] my-0 mx-auto direction">
@@ -155,7 +151,7 @@ div.flex-row-reverse {
     /* Centering adjustment */
     z-index: 1;
     border-left: 2px solid;
-    @apply border-purple-400;
+    @apply border-purple-400 bg-red-200;
     /* Dashed border color */
 }
 

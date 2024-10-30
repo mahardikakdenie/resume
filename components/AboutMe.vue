@@ -11,7 +11,7 @@
 			<p
 				class="text-gray-600leading-relaxed mb-6 text-sm text-justify">
 				Hello, my name is Mahardika Kessuma Denie. I am a software
-				engineer with over 3 years of experience in web application
+				engineer with over {{ calculateYear }} years of experience in web application
 				development, both on the frontend and backend. Currently, I am
 				actively developing various projects, ranging from Vue.js,
 				Laravel, to Next.js-based applications. <br />
@@ -113,6 +113,8 @@ const socialMedia = ref<
 		imageActive: emailImage,
 	},
 ]);
+
+const calculateYear = computed(() => new Date().getFullYear() - 2021);
 
 const onImageHover = (key: string, type: string): void => {
   const index = socialMedia.value.findIndex(curr => curr?.key === key);

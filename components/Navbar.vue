@@ -54,7 +54,7 @@ const lists = ref<Array<Navigator>>([
 	},
 	{
 		label: 'Educations',
-		link: '/experiences'
+		link: '/educations'
 	},
 	{
 		label: 'Project',

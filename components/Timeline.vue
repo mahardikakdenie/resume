@@ -31,6 +31,7 @@
 
 <script setup lang="ts">
 import calenderChecked from '@/assets/calender-check.svg';
+import type { DefineComponent } from 'vue';
 
 interface ExperienceData {
     name: string;
@@ -38,7 +39,7 @@ interface ExperienceData {
     job: string;
     since: string;
     until: string;
-    description: string;
+    description: string | DefineComponent;
     icon?: string;
 }
 

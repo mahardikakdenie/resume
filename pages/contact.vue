@@ -2,7 +2,7 @@
     <div class="mt-5 px-20">
         <div class="p-3">
             <contact-info />
-            <div class="mt-10 shadow-md p-5 rounded">
+            <div class="mt-10 border p-5 rounded">
                 <div>
                     <span>
                         Contact Me !!

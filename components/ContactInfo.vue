@@ -7,7 +7,7 @@
         </div>
 
         <div data-ao="fade-up" class="grid grid-cols-3 gap-3 mt-4">
-            <div v-for="(contact, i) in contacts" :key="i" class="shadow-lg rounded-md px-3 py-8 box-contact border-b-2 border-b-purple-500 hover:shadow-2xl">
+            <div v-for="(contact, i) in contacts" :key="i" class="border rounded-md px-3 py-8 box-contact border-b-2 border-b-purple-500 hover:shadow-2xl">
                 <div class="flex gap-4">
                     <div class="flex items-center">
                         <img :src="contact.img" width="50" alt="">

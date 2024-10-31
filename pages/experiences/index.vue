@@ -145,88 +145,96 @@ const experiences = ref<
 		since: 'July 2021',
 		until: 'July 2022',
 		description: `
-            <div class="p-2 mx-auto bg-white rounded-lg space-y-6">
-  <ul class="list-disc list-inside space-y-4 text-gray-700">
-    <li>
-      <strong class="text-indigo-600">1. Manajemen Konten:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Kemampuan untuk <strong>menambahkan konten baru</strong> (artikel, gambar, video).</li>
-        <li>Kemampuan untuk <strong>memperbarui konten yang ada</strong>.</li>
-        <li>Kemampuan untuk <strong>menghapus konten</strong>.</li>
-        <li><strong>Pratinjau</strong> perubahan konten sebelum diterbitkan.</li>
-        <li>Mengelola konten untuk <strong>halaman utama website</strong> dan <strong>aplikasi mobile</strong>.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">2. Pemantauan Aktivitas Pengguna:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Dasbor analitik <strong>real-time</strong> untuk <strong>memantau aktivitas pengguna</strong>.</li>
-        <li>Melihat <strong>log aktivitas pengguna</strong> (waktu login, tindakan yang diambil).</li>
-        <li>Menghasilkan laporan tentang <strong>keterlibatan pengguna</strong> dan <strong>kinerja konten</strong>.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">3. Navigasi Dasbor:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li><strong>Sidebar yang ramah pengguna</strong> untuk akses mudah ke berbagai bagian.</li>
-        <li>Desain <strong>responsif</strong> untuk <strong>perangkat seluler</strong> dan <strong>tablet</strong>.</li>
-        <li>Fitur <strong>pencarian</strong> untuk cepat menemukan konten atau pengguna.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">4. Notifikasi dan Peringatan:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Memberikan <strong>notifikasi kepada admin</strong> tentang pembaruan konten.</li>
-        <li>Mengeluarkan <strong>peringatan tentang aktivitas pengguna</strong> yang tidak biasa.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">5. Pengaturan dan Konfigurasi:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Mengelola <strong>pengaturan akun admin</strong>.</li>
-        <li>Mengonfigurasi <strong>pengaturan CMS</strong> (SEO, kunci API, dll.).</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">6. Keamanan:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Sistem <strong>autentikasi yang aman</strong> untuk akses admin.</li>
-        <li>Pengaturan <strong>izin untuk pengguna yang berbeda</strong> (admin, editor, dsb.).</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">7. User Experience:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Antarmuka yang <strong>intuitif</strong> dan mudah dinavigasi.</li>
-        <li>Penggunaan <strong>desain modern</strong> dan <strong>estetika visual</strong> yang menarik.</li>
-        <li><strong>Dokumentasi bantuan</strong> dan <strong>panduan pengguna</strong> untuk admin.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">8. Integrasi:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Kemampuan untuk mengintegrasikan dengan <strong>API eksternal</strong>.</li>
-        <li>Dukungan untuk <strong>plugin atau modul tambahan</strong>.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">9. Analisis Kinerja Konten:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Melacak <strong>metrik performa konten</strong> (views, likes, shares).</li>
-        <li>Menyediakan analitik yang mendalam tentang <strong>trends konten</strong>.</li>
-      </ul>
-    </li>
-    <li>
-      <strong class="text-indigo-600">10. Backup dan Pemulihan:</strong>
-      <ul class="list-disc list-inside space-y-2 ml-6 text-gray-600">
-        <li>Fitur untuk <strong>backup data</strong> secara teratur.</li>
-        <li>Opsi untuk <strong>memulihkan data</strong> dari cadangan jika terjadi kesalahan.</li>
-      </ul>
-    </li>
-  </ul>
-</div>
+             <div class="mx-auto p-2">
+        <ul class="space-y-4">
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Manajemen Konten</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Kemampuan untuk <strong>menambahkan konten baru</strong> (artikel, gambar, video).</li>
+                    <li>Kemampuan untuk <strong>memperbarui konten yang ada</strong>.</li>
+                    <li>Kemampuan untuk <strong>menghapus konten</strong>.</li>
+                    <li><strong>Pratinjau</strong> perubahan konten sebelum diterbitkan.</li>
+                    <li>Mengelola konten untuk <strong>halaman utama website</strong> dan <strong>aplikasi mobile</strong>.</li>
+                </ul>
+            </li>
 
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Pemantauan Aktivitas Pengguna</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Dasbor analitik <strong>real-time</strong> untuk <strong>memantau aktivitas pengguna</strong>.</li>
+                    <li>Melihat <strong>log aktivitas pengguna</strong> (waktu login, tindakan yang diambil).</li>
+                    <li>Menghasilkan laporan tentang <strong>keterlibatan pengguna</strong> dan <strong>kinerja konten</strong>.</li>
+                </ul>
+            </li>
 
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Navigasi Dasbor</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li><strong>Sidebar yang ramah pengguna</strong> untuk akses mudah ke berbagai bagian.</li>
+                    <li>Desain <strong>responsif</strong> untuk <strong>perangkat seluler</strong> dan <strong>tablet</strong>.</li>
+                    <li>Fitur <strong>pencarian</strong> untuk cepat menemukan konten atau pengguna.</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Notifikasi dan Peringatan</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Memberikan <strong>notifikasi kepada admin</strong> tentang pembaruan konten.</li>
+                    <li>Mengeluarkan <strong>peringatan tentang aktivitas pengguna</strong> yang tidak biasa.</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Pengaturan dan Konfigurasi</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Mengelola <strong>pengaturan akun admin</strong>.</li>
+                    <li>Mengonfigurasi <strong>pengaturan CMS</strong> (SEO, kunci API, dll.).</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Keamanan</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Sistem <strong>autentikasi yang aman</strong> untuk akses admin.</li>
+                    <li>Pengaturan <strong>izin untuk pengguna yang berbeda</strong> (admin, editor, dsb.).</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">User Experience</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Antarmuka yang <strong>intuitif</strong> dan mudah dinavigasi.</li>
+                    <li>Penggunaan <strong>desain modern</strong> dan <strong>estetika visual</strong> yang menarik.</li>
+                    <li><strong>Dokumentasi bantuan</strong> dan <strong>panduan pengguna</strong> untuk admin.</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Integrasi</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Kemampuan untuk mengintegrasikan dengan <strong>API eksternal</strong>.</li>
+                    <li>Dukungan untuk <strong>plugin atau modul tambahan</strong>.</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Analisis Kinerja Konten</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Melacak <strong>metrik performa konten</strong> (views, likes, shares).</li>
+                    <li>Menyediakan analitik yang mendalam tentang <strong>trends konten</strong>.</li>
+                </ul>
+            </li>
+
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Backup dan Pemulihan</h2>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Fitur untuk <strong>backup data</strong> secara teratur.</li>
+                    <li>Opsi untuk <strong>memulihkan data</strong> dari cadangan jika terjadi kesalahan.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+        
         `,
 	},
 	{
@@ -238,8 +246,8 @@ const experiences = ref<
 		description: `
              <div class="mx-auto p-2">
         <ul class="space-y-4">
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">1. Manajemen Konten</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Manajemen Konten</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Kemampuan untuk <strong>menambahkan konten baru</strong> (artikel, gambar, video).</li>
                     <li>Kemampuan untuk <strong>memperbarui konten yang ada</strong>.</li>
@@ -249,8 +257,8 @@ const experiences = ref<
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">2. Pemantauan Aktivitas Pengguna</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Pemantauan Aktivitas Pengguna</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Dasbor analitik <strong>real-time</strong> untuk <strong>memantau aktivitas pengguna</strong>.</li>
                     <li>Melihat <strong>log aktivitas pengguna</strong> (waktu login, tindakan yang diambil).</li>
@@ -258,8 +266,8 @@ const experiences = ref<
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">3. Navigasi Dasbor</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Navigasi Dasbor</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li><strong>Sidebar yang ramah pengguna</strong> untuk akses mudah ke berbagai bagian.</li>
                     <li>Desain <strong>responsif</strong> untuk <strong>perangkat seluler</strong> dan <strong>tablet</strong>.</li>
@@ -267,32 +275,32 @@ const experiences = ref<
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">4. Notifikasi dan Peringatan</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Notifikasi dan Peringatan</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Memberikan <strong>notifikasi kepada admin</strong> tentang pembaruan konten.</li>
                     <li>Mengeluarkan <strong>peringatan tentang aktivitas pengguna</strong> yang tidak biasa.</li>
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">5. Pengaturan dan Konfigurasi</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Pengaturan dan Konfigurasi</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Mengelola <strong>pengaturan akun admin</strong>.</li>
                     <li>Mengonfigurasi <strong>pengaturan CMS</strong> (SEO, kunci API, dll.).</li>
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">6. Keamanan</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Keamanan</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Sistem <strong>autentikasi yang aman</strong> untuk akses admin.</li>
                     <li>Pengaturan <strong>izin untuk pengguna yang berbeda</strong> (admin, editor, dsb.).</li>
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">7. User Experience</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">User Experience</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Antarmuka yang <strong>intuitif</strong> dan mudah dinavigasi.</li>
                     <li>Penggunaan <strong>desain modern</strong> dan <strong>estetika visual</strong> yang menarik.</li>
@@ -300,24 +308,24 @@ const experiences = ref<
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">8. Integrasi</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Integrasi</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Kemampuan untuk mengintegrasikan dengan <strong>API eksternal</strong>.</li>
                     <li>Dukungan untuk <strong>plugin atau modul tambahan</strong>.</li>
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">9. Analisis Kinerja Konten</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Analisis Kinerja Konten</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Melacak <strong>metrik performa konten</strong> (views, likes, shares).</li>
                     <li>Menyediakan analitik yang mendalam tentang <strong>trends konten</strong>.</li>
                 </ul>
             </li>
 
-            <li class="bg-white rounded-md p-4">
-                <h2 class="text-xl font-semibold text-gray-800">10. Backup dan Pemulihan</h2>
+            <li class="bg-white rounded-md">
+                <h2 class="text-md font-semibold text-gray-800">Backup dan Pemulihan</h2>
                 <ul class="list-disc list-inside mt-2">
                     <li>Fitur untuk <strong>backup data</strong> secara teratur.</li>
                     <li>Opsi untuk <strong>memulihkan data</strong> dari cadangan jika terjadi kesalahan.</li>

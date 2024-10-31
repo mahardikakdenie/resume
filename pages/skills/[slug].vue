@@ -58,7 +58,7 @@
 							class="shadow-lg p-4 rounded-lg flex flex-col justify-between h-full">
 							<div>
 								<img v-if="project.image" class="border p-2 rounded-md" :src="project.image" alt="" />
-								<div v-else class="w-[255px] bg-neutral-100 rounded-md h-[143px] flex justify-center items-center">
+								<div v-else class="w-full bg-neutral-100 rounded-md h-[143px] flex justify-center items-center">
 									<div class="border p-2 rounded-full shadow-xl absolute z-[999]">
 										<img src="@/assets/github-thumb.svg" alt="" srcset="">
 									</div>

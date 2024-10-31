@@ -70,9 +70,10 @@
 			data-aos="flip-up"
 			class="md:w-1/3 md:mt-0 flex justify-center items-center p-6 md:p-0">
 			<img
-				src="https://media.licdn.com/dms/image/v2/D5603AQEe8aWoeg-VyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720014478846?e=1735171200&v=beta&t=lH94TQ-nSmmqtHO2yg9jzPBa-PTRVzz1EUGQ3VGMRNQ"
+				src="https://i.ibb.co/PN11NM8/MAHARDIKA-KESSUMA-DENIE.jpg"
 				alt="Mahardika Kessuma Denie"
-				class="shadow-lg object-cover rounded-full hover:scale-105 transition-transform duration-300" />
+				width="410"
+				class="shadow-lg object-cover hover:scale-105 transition-transform duration-300 rounded-full" />
 		</div>
 	</div>
 </template>

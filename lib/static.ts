@@ -340,14 +340,14 @@ export const skillDatas: Array<ISkillDatas> = [
         title: 'SASS',
         key: 'sass',
         thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
+        image: 'https://css-irl.info/a-modern-front-end-workflow-03_01.png',
         description: 'Sass is a CSS preprocessor that allows you to use variables, nested rules, and functions for efficient styling.',
         experienceSkill: 'Intermediate',
         yearExperience: '3+',
         projectRelated: [
             {
                 title: 'SASS Project 1',
-                image: '/sass-project1.png',
+                image: '',
                 description: 'A project that uses Sass for scalable and maintainable CSS, featuring variables and mixins.',
                 cta: {
                     githubLink: '',
@@ -356,7 +356,7 @@ export const skillDatas: Array<ISkillDatas> = [
             },
             {
                 title: 'SASS Project 2',
-                image: '/sass-project2.png',
+                image: '',
                 description: 'A web app with a clean UI, utilizing Sass for optimized and organized styling.',
                 cta: {
                     githubLink: '',
@@ -376,7 +376,7 @@ export const skillDatas: Array<ISkillDatas> = [
         projectRelated: [
             {
                 title: 'CSS3 Project 1',
-                image: '/css3-project1.png',
+                image: '',
                 description: 'A modern website showcasing CSS3 animations and transitions for enhanced user experience.',
                 cta: {
                     githubLink: '',
@@ -385,7 +385,7 @@ export const skillDatas: Array<ISkillDatas> = [
             },
             {
                 title: 'CSS3 Project 2',
-                image: '/css3-project2.png',
+                image: '',
                 description: 'A portfolio site using CSS3 grid and flexbox for responsive and accessible design.',
                 cta: {
                     githubLink: '',

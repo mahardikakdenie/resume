@@ -2,7 +2,9 @@
 	<div class="mx-auto">
 		<navbar />
 		<PersonalInformationItem />
-        <nuxt-page />
+		<div class="px-10">
+			<nuxt-page />
+		</div>
 		<Footer />
 	</div>
 </template>

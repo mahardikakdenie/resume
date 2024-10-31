@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center bg-white rounded-lg p-10">
+		class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center bg-white rounded-lg">
 		<!-- Left: Text Section -->
 		<div data-aos="fade-right" class="md:w-1/2 p-8 md:p-12">
 			<h2

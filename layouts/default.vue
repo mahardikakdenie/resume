@@ -1,6 +1,7 @@
 <template>
 	<div class="mx-auto">
 		<navbar />
+		<PersonalInformationItem />
         <nuxt-page />
 		<Footer />
 	</div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex fixed flex-col left-5 bottom-52 z-10">
+    <div class="personal-items">
         <a
             v-for="(item, i) in personalItem"
             :key="item.key"
@@ -54,6 +54,8 @@ const personalItem = ref<Item[]>(
 );
 </script>
 
-<style scoped>
-/* Optional: Tambahkan style tambahan jika diperlukan */
+<style scoped lang="scss">
+.personal-items {
+    @apply flex fixed flex-col left-5 bottom-52 z-10;
+}
 </style>

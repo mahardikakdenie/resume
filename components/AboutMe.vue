@@ -70,7 +70,7 @@
 			data-aos="flip-up"
 			class="md:w-1/3 md:mt-0 flex justify-center items-center p-6 md:p-0">
 			<img
-				src="https://i.ibb.co/PN11NM8/MAHARDIKA-KESSUMA-DENIE.jpg"
+				src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/348734275_972459347224795_3893992442184013147_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=jYIK1XPyhF8Q7kNvgGr9dBU&_nc_ht=scontent-sin6-3.xx&uss=5c00ac50b058cc1f&odm=b3JkZXJvbmxpbmUud29ya3BsYWNlLmNvbQ&_nc_gid=AS4krmGpPMBHnfG12JBzuiy&oe2=673799AE&oh=00_AYAJPbmbXoZ-sOVOJj6hJy68hovmhQv_qbDqs3BV3IQ4-g&oe=6731CA2E"
 				alt="Mahardika Kessuma Denie"
 				width="410"
 				class="shadow-lg object-cover hover:scale-105 transition-transform duration-300 rounded-full" />

@@ -1,9 +1,9 @@
 <template>
     <div class="mt-5 px-4 md:px-20">
-        <div class="p-5 bg-gray-50 rounded-lg shadow-lg">
+        <div class="p-5 bg-gray-50 rounded-lg">
             <!-- Bagian Heading -->
             <contact-info />
-            <div class="mt-10 border border-gray-200 p-6 rounded-lg bg-white shadow-lg">
+            <div class="mt-10 border border-gray-200 p-6 rounded-lg bg-white">
                 <div class="mb-6">
                     <h2 class="text-2xl font-semibold text-gray-800">Hubungi Saya!</h2>
                     <p class="text-gray-600 mt-1">{{ description }}</p>

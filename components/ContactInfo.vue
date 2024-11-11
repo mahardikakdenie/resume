@@ -10,13 +10,13 @@
             <div
                 v-for="(contact, i) in contacts"
                 :key="i"
-                :class="['rounded-md p-6 text-white transition duration-300 transform hover:scale-105', contact.bgColor]"
+                :class="['rounded-md p-2 text-white transition duration-300 transform hover:scale-105', contact.bgColor]"
             >
                 <div class="flex flex-col items-center text-center">
                     <img :src="contact.img" :alt="contact.title" class="w-16 h-16 mb-4" />
                     <h3 class="text-xl font-semibold mb-2">{{ contact.title }}</h3>
                     <div class="text-base mb-4">{{ contact.value }}</div>
-                    <button class="bg-white text-gray-800 font-medium py-2 px-4 rounded-full hover:bg-gray-100">
+                    <button class="bg-white text-sm text-gray-800 font-medium py-2 px-10 rounded-full hover:bg-gray-100">
                         {{ contact.buttonText }}
                     </button>
                 </div>
@@ -41,7 +41,7 @@ const contacts = ref([
         value: 'dikamahar884@gmail.com',
         title: 'Email',
         buttonText: 'Kirim Email',
-        bgColor: 'bg-red-500',
+        bgColor: 'bg-red-800',
     },
     {
         img: 'https://farhan-gunawan.vercel.app/assets/svg/telegram.svg',

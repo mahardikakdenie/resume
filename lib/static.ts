@@ -372,7 +372,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
         description: 'CSS3 is the latest evolution of the Cascading Style Sheets language and allows for more complex layouts.',
         experienceSkill: 'Advanced',
-        yearExperience: '5+',
+        yearExperience: '4+',
         projectRelated: [
             {
                 title: 'CSS3 Project 1',
@@ -488,7 +488,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '4+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -517,7 +517,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '2+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -546,7 +546,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '4+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -575,7 +575,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '3+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -604,7 +604,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBqE3tRJO64QQSZUUu6OXKbFZtP4VQHOaYg&s',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '3+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -633,7 +633,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '3+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -662,7 +662,7 @@ export const skillDatas: Array<ISkillDatas> = [
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
-        yearExperience: '5+',
+        yearExperience: '3+',
         projectRelated: [
             {
                 title: 'PHP Project 1',
@@ -684,91 +684,91 @@ export const skillDatas: Array<ISkillDatas> = [
             },
         ],
     },
-    {
-        title: 'Docker',
-        key: 'docker',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
-        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
-        experienceSkill: 'Expert',
-        yearExperience: '5+',
-        projectRelated: [
-            {
-                title: 'PHP Project 1',
-                image: '/php-project1.png',
-                description: 'A content management system built using PHP for a fast and dynamic website.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-            {
-                title: 'PHP Project 2',
-                image: '/php-project2.png',
-                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-        ],
-    },
-    {
-        title: 'Heroku',
-        key: 'heroku',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
-        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
-        experienceSkill: 'Expert',
-        yearExperience: '5+',
-        projectRelated: [
-            {
-                title: 'PHP Project 1',
-                image: '/php-project1.png',
-                description: 'A content management system built using PHP for a fast and dynamic website.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-            {
-                title: 'PHP Project 2',
-                image: '/php-project2.png',
-                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-        ],
-    },
-    {
-        title: 'Netlify',
-        key: 'netlify',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
-        image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
-        description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
-        experienceSkill: 'Expert',
-        yearExperience: '5+',
-        projectRelated: [
-            {
-                title: 'PHP Project 1',
-                image: '/php-project1.png',
-                description: 'A content management system built using PHP for a fast and dynamic website.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-            {
-                title: 'PHP Project 2',
-                image: '/php-project2.png',
-                description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-        ],
-    },
+    // {
+    //     title: 'Docker',
+    //     key: 'docker',
+    //     thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
+    //     image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211426-Docker.png',
+    //     description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+    //     experienceSkill: 'Expert',
+    //     yearExperience: '5+',
+    //     projectRelated: [
+    //         {
+    //             title: 'PHP Project 1',
+    //             image: '/php-project1.png',
+    //             description: 'A content management system built using PHP for a fast and dynamic website.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //         {
+    //             title: 'PHP Project 2',
+    //             image: '/php-project2.png',
+    //             description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //     ],
+    // },
+    // {
+    //     title: 'Heroku',
+    //     key: 'heroku',
+    //     thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
+    //     image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211605-Heroku.png',
+    //     description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+    //     experienceSkill: 'Expert',
+    //     yearExperience: '5+',
+    //     projectRelated: [
+    //         {
+    //             title: 'PHP Project 1',
+    //             image: '/php-project1.png',
+    //             description: 'A content management system built using PHP for a fast and dynamic website.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //         {
+    //             title: 'PHP Project 2',
+    //             image: '/php-project2.png',
+    //             description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //     ],
+    // },
+    // {
+    //     title: 'Netlify',
+    //     key: 'netlify',
+    //     thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
+    //     image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-211644-Netlify.png',
+    //     description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
+    //     experienceSkill: 'Expert',
+    //     yearExperience: '5+',
+    //     projectRelated: [
+    //         {
+    //             title: 'PHP Project 1',
+    //             image: '/php-project1.png',
+    //             description: 'A content management system built using PHP for a fast and dynamic website.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //         {
+    //             title: 'PHP Project 2',
+    //             image: '/php-project2.png',
+    //             description: 'A RESTful API developed with PHP to handle data efficiently for a large-scale web application.',
+    //             cta: {
+    //                 githubLink: '',
+    //                 previewLink: '',
+    //             },
+    //         },
+    //     ],
+    // },
 ];

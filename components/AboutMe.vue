@@ -47,7 +47,7 @@
 			</div>
 			<div class="mt-4">
 				<button
-					class="border w-full border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full dark:text-white transition-colors duration-300">
+					class="border w-full text-slate-700 border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 px-6 py-3 rounded-full transition-colors duration-300">
 					RESUME
 				</button>
 			</div>

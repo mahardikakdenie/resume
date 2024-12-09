@@ -11,7 +11,7 @@
                     <!-- Timeline indicator -->
                     <div
                         :class="{ 'experience-icon-steps-left': i % 2 !== 0, 'experience-icon-steps-right': i % 2 === 0 }">
-                        <img :src="calenderChecked" alt="">
+                        <img class="" :src="calenderChecked" alt="">
                     </div>
 
                     <!-- Experience Card -->
@@ -89,12 +89,12 @@ div.flex-row-reverse {
     /* Centering adjustment */
     z-index: 1;
     border-left: 2px solid;
-    @apply border-purple-400 bg-red-200;
+    @apply border-purple-400 bg-red-200 hidden sm:block;
     /* Dashed border color */
 }
 
 .experience-wrapper {
-    @apply py-[10px] px-[50px] relative w-[50%];
+    @apply py-[10px] px-0 sm:px-[50px] relative w-full sm:w-[50%];
 }
 
 .experience-icon-steps {
@@ -103,12 +103,12 @@ div.flex-row-reverse {
 
 /* Class untuk posisi di kanan */
 .experience-icon-steps-right {
-    @apply absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid flex justify-center -right-[20px] text-purple-600 bg-white;
+    @apply relative sm:absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid hidden sm:flex justify-center -right-[20px] text-purple-600 bg-white;
 }
 
 /* Class untuk posisi di kiri */
 .experience-icon-steps-left {
-    @apply absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid flex justify-center -left-[20px] text-purple-600 bg-white;
+    @apply relative sm:absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid hidden sm:flex justify-center -left-[20px] text-purple-600 bg-white;
 }
 
 
@@ -162,16 +162,16 @@ div.flex-row-reverse {
     left: 34px;
     /* Posisi dari kiri */
     transition: 0.2s ease-in-out;
-    @apply h-0 w-0 absolute top-[37px] z-[1] border-r-white;
+    @apply h-0 w-0 absolute top-[37px] z-[1] border-r-white hidden sm:flex;
 }
 
 
 .pos-right {
-    left: 0;
+    @apply sm:left-0;
 }
 
 .pos-left {
-    left: 50%;
+    @apply sm:left-1/2;
 }
 
 .experience-description {

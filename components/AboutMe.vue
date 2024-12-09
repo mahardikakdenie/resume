@@ -1,7 +1,7 @@
 <template>
 	<div class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center bg-white rounded-lg">
 		<!-- Left: Text Section -->
-		<div data-aos="fade-right" class="sm:w-1/2 w-[400px] px-[40px] md:p-12">
+		<div data-aos="fade-right" class="sm:w-1/2 w-[400px] px-[40px] sm:p-12">
 			<h2 class="text-2xl font-extrabold text-gray-900mb-4">
 				About
 				<span class="text-purple-600">Mahardika Kessuma Denie</span>

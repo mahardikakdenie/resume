@@ -1,12 +1,12 @@
 <template>
 	<div class="flex pt-[50px] pb-[150px] flex-col md:flex-row justify-center items-center bg-white rounded-lg">
 		<!-- Left: Text Section -->
-		<div data-aos="fade-right" class="md:w-1/2 p-8 md:p-12">
+		<div data-aos="fade-right" class="sm:w-1/2 w-[400px] px-[40px] md:p-12">
 			<h2 class="text-2xl font-extrabold text-gray-900mb-4">
 				About
 				<span class="text-purple-600">Mahardika Kessuma Denie</span>
 			</h2>
-			<p class="text-gray-600leading-relaxed mb-6 text-sm text-justify">
+			<p class="text-gray-600 leading-relaxed mb-6 text-sm text-justify">
 				Hello, my name is Mahardika Kessuma Denie. I am a software
 				engineer with over {{ calculateYear }} years of experience in web application
 				development, both on the frontend and backend. Currently, I am
@@ -45,12 +45,12 @@
 					Contact Me
 				</nuxt-link>
 			</div>
-			<div class="mt-4">
+			<!-- <div class="mt-4">
 				<button
 					class="border w-full text-slate-700 border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 px-6 py-3 rounded-full transition-colors duration-300">
 					RESUME
 				</button>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- Right: Image Section -->

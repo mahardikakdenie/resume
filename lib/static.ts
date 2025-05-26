@@ -2,6 +2,17 @@ import type { IProjects, ISkillDatas } from "./staticInterface";
 
 export const projects: Array<IProjects> = [
     {
+        name: "Vue Page Builder",
+        link: '',
+        image: '/web-builder.png',
+        description: `A Web Builder built using Vue.js provides an intuitive and dynamic platform for creating websites without requiring users to write code manually. Leveraging Vue’s reactive data binding and component-based architecture, this web builder allows users to drag-and-drop UI elements, configure content, and customize styles in real time.
+
+The application offers a seamless user experience with fast rendering and efficient updates, thanks to Vue’s virtual DOM. It also supports reusable components, live preview features, and the ability to export clean, production-ready HTML/CSS/JS code.
+
+Whether for portfolios, landing pages, or small business sites, this Vue-powered web builder ensures flexibility, scalability, and a modern user interface that empowers both beginners and professionals to design beautiful websites effortlessly.`,
+        images: [],
+    },
+    {
         name: 'Ensiklotari',
         link: 'ensiklotari',
         image: '/ensiklotari.png',

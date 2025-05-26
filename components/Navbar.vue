@@ -60,13 +60,13 @@ const lists = ref<Array<Navigator>>([
 		label: 'Project',
 		link: '/project',
 	},
-	{
-		label: 'Blogs',
-		link: '/blogs',
-	},
-	{
-		label: 'Contact',
-		link: '/contact',
-	},
+	// {
+	// 	label: 'Blogs',
+	// 	link: '/blogs',
+	// },
+	// {
+	// 	label: 'Contact',
+	// 	link: '/contact',
+	// },
 ]);
 </script>

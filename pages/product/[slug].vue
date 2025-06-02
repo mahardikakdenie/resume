@@ -49,21 +49,16 @@
 					beatae reprehenderit?
 				</p>
 
-				<div>
-					<button
-						class="rounded-full bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold py-3 w-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-						<span class="flex items-center justify-center gap-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-5 w-5"
-								fill="currentColor"
-								viewBox="0 0 24 24">
-								<path
-									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15s-.767.966-.94 1.164c-.173.198-.347.223-.644.074-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.607.134-.133.297-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.614-.916-2.212-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.571-.011s-.521.075-.795.372c-.273.297-1.041 1.016-1.041 2.479s1.065 2.872 1.213 3.07c.148.198 2.1 3.206 5.08 4.492.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.086 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.075-.124-.272-.198-.57-.347z" />
-							</svg>
+				<div class="p-4 rounded-2xl bg-green-500">
+					<a
+						href="https://wa.me/62081226601858?text=Halo%20saya%20tertarik%20untuk%20order"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rounded-full">
+						<span class="flex items-center justify-center gap-2 text-white">
 							Order via WhatsApp
 						</span>
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -89,10 +89,10 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'ReactJS',
         key: 'react',
-        current_thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
-        thumb_active: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-195219-ReactJs.png',
-        image: 'https://media.licdn.com/dms/image/v2/D4D12AQH5dlcCSBp4cg/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1672212317392?e=1735171200&v=beta&t=s_ZWHbnRfWAI0CYQ1gHCNUc8DBQjqeOmnP5NmG5OY8c',
+        current_thumb: '/react.png',
+        thumb: '/react.png',
+        thumb_active: '/react.png',
+        image: '/react.png',
         description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
         experienceSkill: 'Intermediate',
         yearExperience: '1+',
@@ -120,7 +120,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Vuejs',
         key: 'vue',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-195946-VueJs.png',
+        thumb: 'vue.png',
         image: 'https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/119058023_1791394821036070_6678793766601996160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=25d718&_nc_eui2=AeHIc-ijQN-hOSZtgGZoi63eRvwwu1TPEhhG_DC7VM8SGGY6M2PsTnxEDdeaqectOP17zt3xRRd4t07efYBbICgf&_nc_ohc=f0kXO3aRSA4Q7kNvgFbWC1E&_nc_zt=23&_nc_ht=scontent-sin6-1.xx&_nc_gid=AZ94VW9pWom6RHF__7-lvEU&oh=00_AYB9rUwwp18GnmklKzv1Z7mXNL9U4wiHGJ7fCz0n5AdvRA&oe=673E8B82',
         description: `This section describes the details of your ReactJS skill. It provides information about the technologies you have mastered, your experience, and any notable projects where you have applied these skills.`,
         experienceSkill: 'Expert',
@@ -176,7 +176,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Nodejs',
         key: 'nodejs',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-192739-NodeJs.png',
+        thumb: 'node.png',
         image: 'https://weebpal.com/sites/default/files/media-image/2020-06/nodejs-1.svg',
         description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
         experienceSkill: 'Intermediate',
@@ -205,7 +205,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Expressjs',
         key: 'expressjs',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-193735-ExpressJs.png',
+        thumb: 'express.png',
         image: 'https://externlabs.com/blogs/wp-content/uploads/2021/11/ExpressJS-Library.jpg',
         description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
         experienceSkill: 'Intermediate',
@@ -263,7 +263,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'HTML5',
         key: 'html5',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201206-Html5.png',
+        thumb: 'html.png',
         image: 'https://www.webdevelopmenthelp.net/wp-content/uploads/2015/09/HTML55.png',
         description: `Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting`,
         experienceSkill: 'Intermediate',
@@ -292,7 +292,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Tailwind CSS',
         key: 'tailwind-css',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-201654-TailwindCss.png',
+        thumb: 'tailwindcss.png',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK0Eu0y1ONkIG7uPJeGGqq8uqeIOqp8IJOrg&s',
         description: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom designs directly in your markup.',
         experienceSkill: 'Intermediate',
@@ -321,7 +321,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Bootstrap',
         key: 'bootstrap',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png',
+        thumb: 'boostrap.png',
         image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png',
         description: 'Bootstrap is a popular CSS framework for developing responsive and mobile-first websites quickly.',
         experienceSkill: 'Expert',
@@ -350,7 +350,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'SASS',
         key: 'sass',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200915-Sass.png',
+        thumb: 'saas.png',
         image: 'https://css-irl.info/a-modern-front-end-workflow-03_01.png',
         description: 'Sass is a CSS preprocessor that allows you to use variables, nested rules, and functions for efficient styling.',
         experienceSkill: 'Intermediate',
@@ -379,7 +379,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'CSS3',
         key: 'css3',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
+        thumb: 'css3.png',
         image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
         description: 'CSS3 is the latest evolution of the Cascading Style Sheets language and allows for more complex layouts.',
         experienceSkill: 'Advanced',
@@ -408,7 +408,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'JavaScript',
         key: 'javascript',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230329-221857-JavaScript.png',
+        thumb: 'javascript.png',
         image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230329-221857-JavaScript.png',
         description: 'JavaScript is a versatile, high-level programming language primarily used to create dynamic and interactive content on websites.',
         experienceSkill: 'Expert',
@@ -437,37 +437,8 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'TypeScript',
         key: 'typescript',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
+        thumb: 'typescript.png',
         image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
-        description: 'TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types.',
-        experienceSkill: 'Advanced',
-        yearExperience: '3+',
-        projectRelated: [
-            {
-                title: 'TypeScript Project 1',
-                image: '/typescript-project1.png',
-                description: 'A complex web application utilizing TypeScript for enhanced code quality and type safety.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-            {
-                title: 'TypeScript Project 2',
-                image: '/typescript-project2.png',
-                description: 'An API server implemented with TypeScript for scalable and maintainable backend code.',
-                cta: {
-                    githubLink: '',
-                    previewLink: '',
-                },
-            },
-        ],
-    },
-    {
-        title: 'Python',
-        key: 'python',
-        thumb: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202434-Python.png',
-        image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202434-Python.png',
         description: 'TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types.',
         experienceSkill: 'Advanced',
         yearExperience: '3+',
@@ -495,7 +466,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'PHP',
         key: 'php',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
+        thumb: 'php.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
@@ -524,7 +495,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'CodeIgniter',
         key: 'codeIgniter',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
+        thumb: 'ci.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
@@ -553,7 +524,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Laravel',
         key: 'laravel',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
+        thumb: 'laravel.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
@@ -582,7 +553,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'Mysql',
         key: 'mysql',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
+        thumb: 'mysql.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
@@ -640,7 +611,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'PostgreSql',
         key: 'pgsql',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
+        thumb: 'pgsql.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',
@@ -669,7 +640,7 @@ export const skillDatas: Array<ISkillDatas> = [
     {
         title: 'MongooDB',
         key: 'mongoodb',
-        thumb: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
+        thumb: 'mongoo.png',
         image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
         description: 'PHP is a popular server-side scripting language designed for web development, powering many websites and web apps.',
         experienceSkill: 'Expert',

@@ -17,8 +17,7 @@
           <div
             v-for="(ability, index) in abilities"
             :key="index"
-            class="border p-5 rounded-md cursor-pointer border-wrapper"
-            @click="$router.push(`/skills/${ability.key}`)"
+            class="border p-5 rounded-md border-wrapper"
             @mouseover="onMouseOver(ability.key, 'hover')"
             @mouseleave="onMouseOver(ability.key, 'hover-leave')"
           >

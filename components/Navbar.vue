@@ -44,10 +44,10 @@ const lists = ref<Array<Navigator>>([
 		label: 'About Me',
 		link: '/',
 	},
-	{
-		label: 'Produk',
-		link: '/product',
-	},
+	// {
+	// 	label: 'Produk',
+	// 	link: '/product',
+	// },
 	{
 		label: 'Skils',
 		link: '/skills',

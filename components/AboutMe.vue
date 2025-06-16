@@ -35,14 +35,10 @@
 				</ul>
 			</div>
 
-			<div class="mt-6 grid grid-cols-2 space-x-4">
+			<div class="mt-6 grid grid-cols-1 space-x-4">
 				<nuxt-link to="/experiences"
 					class="bg-purple-600 text-center text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
 					See My Experiences
-				</nuxt-link>
-				<nuxt-link to="/contact"
-					class="border text-center border-gray-400 hover:border-purple-600 hover:text-white hover:bg-purple-600 text-gray-600 px-6 py-3 rounded-full transition-colors duration-300">
-					Contact Me
 				</nuxt-link>
 			</div>
 			<!-- <div class="mt-4">

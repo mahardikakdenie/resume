@@ -1,87 +1,86 @@
 <template>
-	<div class="mt-4 px-10">
-		<div class="flex sm:justify-start justify-center">
-			<span class="sm:text-[20px] text-xl font-bold">My Portfolio</span>
-		</div>
-		<div class="grid grid-cols-1 sm:grid-cols-3 mt-5 gap-6">
-			<div
-				v-for="(list, i) in lists"
-				:key="i"
-				class="shadow-lg p-4 rounded-md cursor-pointer">
-				<div class="flex justify-center border rounded-md">
-					<img
-						:src="list.image"
-						:width="list.type === 'mobile' ? '100' : '100%'"
-						alt="" />
-				</div>
-				<div class="mt-4">
-					<h3>{{ list.name }}</h3>
-				</div>
-				<div
-					class="overflow-hidden text-ellipsis whitespace-nowrap break-words"></div>
-				<div class="mt-3">
-					<small class="text-ellipsis-multiline">{{
-						list.description
-					}}</small>
-				</div>
-			</div>
-		</div>
-	</div>
-</template>
+    <section class="mt-8 px-6 md:px-10">
+        <div class="flex justify-center sm:justify-start">
+            <h2 class="text-2xl font-bold text-gray-800">My Portfolio</h2>
+        </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div
+                v-for="(list, i) in lists"
+                :key="i"
+                class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer group"
+                data-aos="fade-up"
+                :data-aos-delay="i * 100"
+                @click="navigateToProject(list.link)"
+            >
+                <!-- Image -->
+                <div class="relative overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+                    <img
+                        :src="list.image"
+                        alt=""
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                </div>
+
+                <!-- Content -->
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-800">{{ list.name }}</h3>
+                    <p class="mt-2 text-sm text-gray-600 line-clamp-3">
+                        {{ list.description }}
+                    </p>
+
+                    <div class="mt-4 flex justify-between items-center">
+                        <span v-if="list.type" class="text-xs font-medium text-purple-600 capitalize">
+                            {{ list.type }}
+                        </span>
+                        <button class="text-sm text-purple-600 font-medium hover:underline">
+                            View Project →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
 <script setup lang="ts">
 import { projects } from '@/lib/static';
 
 // Meta Information
 const META_DESCRIPTION: string = `👋 Hi. My name is Mahardika Kessuma Denie.
-  A Software Developer From Bandung
-  I've been working in software engineering since 2020. I have good knowledge of frontend and backend development.
-  I always strive to keep my code tidy and regularly refactor to improve readability. I enjoy breaking code into smaller, manageable chunks.`;
+A Software Developer From Bandung. I've been working in software engineering since 2020.
+I have good knowledge of frontend and backend development.`;
 
-// Title for the page
 const TITLE = 'MAHARDIKA KESSUMA DENIE - PROJECT';
 
-// Set up SEO metadata
 useSeoMeta({
-	title: TITLE,
-	ogTitle: TITLE,
-	description: META_DESCRIPTION,
-	ogDescription: META_DESCRIPTION,
+    title: TITLE,
+    ogTitle: TITLE,
+    description: META_DESCRIPTION,
+    ogDescription: META_DESCRIPTION,
 });
 
-// Project data
-const lists =
-	ref<
-		{
-			name: string;
-			type?: string;
-			link: string;
-			image: string;
-			description: string;
-		}[]
-	>(projects);
+const lists = ref(projects);
 
-// Navigation function to ensure client-side execution
 function navigateToProject(link: string) {
-	// Ensure the code runs only on the client side
-	if (process.client) {
-		// Use $router to navigate to the specific project link
-		useRouter().push(`/project/${link}`);
-	}
+    if (process.client) {
+        useRouter().push(`/project/${link}`);
+    }
 }
 </script>
+<style lang="scss">
+.line-clamp-3 {
+    display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 4.5em; // 3 lines
+}
 
-<style>
-.text-ellipsis-multiline {
-	display: -webkit-box;
-	/* -webkit-line-clamp: 2; */
-	/* Set the number of lines displayed */
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	line-height: 1.5;
-	/* Set line spacing */
-	max-height: 3em;
-	/* Set max height for two lines */
+/* Optional: Hover effect for better UX */
+.group:hover .line-clamp-3 {
+    // -webkit-line-clamp: 5;
+    max-height: 7.5em;
 }
 </style>

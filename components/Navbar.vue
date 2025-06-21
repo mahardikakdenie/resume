@@ -6,9 +6,7 @@
 			class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
 			<div
 				class="relative flex items-center justify-center py-[2.125rem]">
-				<div
-					class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
-				<div class="flex gap-5">
+				<div class="flex gap-5 bg-slate-200 px-4 py-1 rounded-3xl">
 					<div
 						v-for="(list, index) in lists"
 						:key="index"

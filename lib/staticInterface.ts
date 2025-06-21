@@ -5,6 +5,7 @@ export interface IProjects {
 	image: string;
 	description: string;
     images: Array<string>,
+    tools?: any[],
 }
 
 

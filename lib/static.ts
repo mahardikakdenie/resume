@@ -5,6 +5,12 @@ export const projects: Array<IProjects> = [
         name: "Vue Page Builder",
         link: 'vue-page-builder',
         image: '/web-builder.png',
+        type: 'Web App',
+        tools: [
+            'Vue3',
+            'Pinia',
+            'TailwindCss',
+        ],
         description: `A Web Builder built using Vue.js provides an intuitive and dynamic platform for creating websites without requiring users to write code manually. Leveraging Vue’s reactive data binding and component-based architecture, this web builder allows users to drag-and-drop UI elements, configure content, and customize styles in real time.
 
 The application offers a seamless user experience with fast rendering and efficient updates, thanks to Vue’s virtual DOM. It also supports reusable components, live preview features, and the ability to export clean, production-ready HTML/CSS/JS code.
@@ -18,26 +24,53 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         image: '/ensiklotari.png',
         description: 'Ensiklotari ini merupakan aplikasi yang bertujuan untuk menjembatani para seniman tari dan pembelajar tari dalam mengenal dan mempelajari tari tradisional Indonesia khususnya, dan tari internasional pada umumnya.',
         images: ['/ensiklotari.png', '/bujanggamanik.png'],
+        type: 'Web App',
+        tools: [
+            'Vue3',
+            'Laravel',
+            'Mysql',
+            'Pinia',
+            'TailwindCss',
+        ],
     },
     {
         name: 'BujanggaManik Appointment App',
         link: 'bujangga-manik',
         image: '/bujanggamanik.png',
         description: 'Bujangga Manik adalah aplikasi berbasis website yang dirancang khusus untuk mempermudah proses temu janji serta memperkenalkan profil perusahaan dalam sektor jasa konstruksi bangunan dan gedung. Dengan fitur-fitur yang intuitif dan user-friendly, aplikasi ini memungkinkan pengguna untuk menjadwalkan pertemuan dengan para profesional konstruksi, mengeksplorasi berbagai layanan yang ditawarkan, serta mendapatkan informasi mendetail mengenai pengalaman dan keahlian perusahaan. Bujangga Manik bertujuan untuk meningkatkan efisiensi komunikasi antara klien dan penyedia jasa, sekaligus memberikan transparansi dan kemudahan akses kepada semua pihak yang terlibat dalam proyek konstruksi.',
-        images: []
+        type: 'Web App',
+        images: [],
+        tools: [
+            'Vue3',
+            'Laravel',
+            'Mysql',
+            'Pinia',
+            'TailwindCss',
+        ],
     },
     {
         name: 'Next Movie',
         link: 'next-movie',
         image: '/next-movie.png',
         description: 'List Movie And Ratting, is a dynamic website built with Next.js, designed to provide users with a comprehensive platform to browse movie listings and view detailed ratings and reviews.',
+        type: 'Web App',
+        tools: [
+            'Nextjs13',
+            'Laravel',
+            'Typescript',
+        ],
         images: []
     },
     {
         name: 'Library Vue Button',
         link: 'vue-button',
         image: '/lib-btn.png',
+        type: 'Package Vue UI',
         description: 'Library Vue in Node Package Manager',
+        tools: [
+            'Vue3',
+            'npm',
+        ],
         images: []
     },
     {

@@ -1,47 +1,44 @@
 <template>
-    <div class="mt-4">
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/10262/10262300.png"
-          width="30"
-          alt=""
-        />
-        <span class="text-2xl font-bold">
-          Skill &
-        </span>
-        <span class="text-purple-500 text-2xl font-bold">Abilities</span>
-      </div>
-  
-      <div class="mt-9 px-3">
-        <div class="grid grid-cols-6 px-2 gap-4">
-          <div
-            v-for="(ability, index) in abilities"
-            :key="index"
-            class="border p-5 rounded-md border-wrapper"
-            @mouseover="onMouseOver(ability.key, 'hover')"
-            @mouseleave="onMouseOver(ability.key, 'hover-leave')"
-          >
-            <div class="flex justify-center relative">
-              <img
-                v-if="ability.thumb"
-                :src="ability.thumb"
-                width="40"
-                class="ability-image"
-                alt="skill image"
-              />
-              <div v-else class="ability-image"></div>
-            </div>
-            <div class="text-center mt-4">
-              <span class="font-bold text-sm">
-                {{ ability.title }}
-              </span>
-            </div>
+  <div class="mt-12">
+    <!-- Title -->
+    <div data-aos="fade-down" class="flex justify-center items-center gap-2">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/10262/10262300.png" 
+        width="30"
+        alt="Skill Icon"
+      />
+      <span class="text-3xl font-bold text-gray-800">Skill &</span>
+      <span class="text-purple-600 text-3xl font-bold">Abilities</span>
+    </div>
+
+    <!-- Grid of Skills -->
+    <div data-aos="fade-up" data-aos-delay="200" class="mt-9 px-3">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 px-2">
+        <div
+          v-for="(ability, index) in abilities"
+          :key="index"
+          class="border border-gray-200 rounded-lg p-5 flex flex-col items-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-purple-500"
+          @mouseover="onMouseOver(ability.key, 'hover')"
+          @mouseleave="onMouseOver(ability.key, 'hover-leave')"
+        >
+          <div class="relative w-16 h-16 flex justify-center">
+            <img
+              v-if="ability.thumb"
+              :src="ability.thumb"
+              width="40"
+              class="w-full h-full object-contain ability-image"
+              alt="skill image"
+            />
+            <div v-else class="w-full h-full bg-gray-200 rounded-md"></div>
+          </div>
+          <div class="text-center mt-4">
+            <span class="font-semibold text-sm text-gray-700">{{ ability.title }}</span>
           </div>
         </div>
       </div>
     </div>
-  </template>
-  
+  </div>
+</template>
   <script setup lang="ts">
   import { skillDatas } from '~/lib/static';
   import { type ISkillDatas } from '@/lib/staticInterface';

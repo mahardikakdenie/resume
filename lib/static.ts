@@ -2,6 +2,21 @@ import type { IProjects, ISkillDatas } from "./staticInterface";
 
 export const projects: Array<IProjects> = [
     {
+        name: "Floucloud Id",
+        link: 'floucloud',
+        image: '/floucloud.jpg',
+        type: 'Web App',
+        tools: [
+            'Vue3',
+            'Nuxt3',
+            'SEO',
+            'Pinia',
+            'TailwindCss',
+        ],
+        description: `Actively contributed to the development of this project by designing and implementing the admin content management system (CMS). This allowed non-technical users to easily create, update, and manage content through the admin dashboard. As a result, the frontend or landing page was able to display dynamic and up-to-date content based on the administrator's input, improving overall flexibility, user experience, and maintainability of the website`,
+        images: [],
+    },
+    {
         name: "Vue Page Builder",
         link: 'vue-page-builder',
         image: '/web-builder.png',

@@ -32,6 +32,33 @@ export const projects: Array<IProjects> = [
         images: ['/floucloud.jpg'],
     },
     {
+        name: 'Web-Based Attendance – DPUTR Internal Use Only',
+        link: 'dputrinternal-absen',
+        image: '/web-absen.png',
+        type: 'Web App',
+        tools: [
+            'Vue3',
+            'Laravel',
+            'Mysql',
+            'TailwindCss',
+        ],
+        description: `Contributed to the development of a Human Resource Management System (HRMS) web application tailored for the Department of Public Works and Spatial Planning (Dinas Pekerjaan Umum dan Penataan Ruang), aimed at streamlining employee data management, attendance tracking, payroll processing, and performance evaluation. Collaborated with cross-functional teams to design and implement key features using modern web technologies, ensuring a scalable, secure, and user-friendly system that supports efficient HR operations and reporting capabilities for government use.`,
+        images: []
+    },
+     {
+        name: 'PM TRICK – Learning Management System (LMS) Web Application',
+        link: 'pm-trics',
+        image: '/pm-trick.png',
+        type: 'Web App',
+        tools: [
+            'Vue3',
+            'Tailwind',
+            'Typescript'
+        ],
+        description: 'Developed "PM TRICK", a custom Learning Management System (LMS) web application as part of a freelance project for a client based in Saudi Arabia, sourced through Upwork. The platform was designed to support structured online learning and training delivery, featuring course management, user progress tracking, quiz assessments, and role-based access control. Built using modern web technologies, the system provides a scalable and intuitive solution tailored to the client’s educational needs, enhancing their digital training capabilities with a clean, responsive interface and seamless user experience.',
+        images: []
+    },
+    {
         name: "Vue Page Builder",
         link: 'vue-page-builder',
         image: '/web-builder.png',
@@ -93,11 +120,11 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         badge: 'personal'
     },
     {
-        name: 'Library Vue Button',
+        name: 'VueButton – Build with Vue 3',
         link: 'vue-button',
         image: '/lib-btn.png',
         type: 'Package Vue UI',
-        description: 'Library Vue in Node Package Manager',
+        description: `Developed a lightweight and reusable UI component library based on Vue.js 3, focused on creating a customizable and accessible Button component for internal design system usage. The library was built with scalability and developer experience in mind, following best practices in component architecture, prop-driven development, and theming capabilities to ensure seamless integration across multiple projects within the organization.`,
         tools: [
             'Vue3',
             'npm',
@@ -110,7 +137,7 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         type: 'mobile',
         link: 'uniqlo-theme',
         image: '/uniqlo-theme.png',
-        description: 'Slicing Uniqlo Theme',
+        description: 'Designed and developed a mobile-first website theme inspired by Uniqlo’s minimalist and user-centric design philosophy. The theme emphasizes clean aesthetics, intuitive navigation, and seamless product presentation to enhance the mobile shopping experience. Built with responsiveness and performance in mind, it ensures a smooth and engaging interface tailored for fashion retail brands aiming for a modern digital presence',
         images: [],
         badge: 'personal'
     },
@@ -136,20 +163,6 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         description: 'this is a Dikti web company profile',
         images: []
     },
-    {
-        name: 'PM TRICKS DASHBOARD',
-        link: 'pm-trics',
-        image: '/pm-trick.png',
-        description: 'PM TRICK is a web application E-LEARNING',
-        images: []
-    },
-    {
-        name: 'Web Absen - DPUTR INTERNAL',
-        link: 'dputrinternal-absen',
-        image: '/web-absen.png',
-        description: 'WEBSITE Human Resource System Application for Dinas Pekerjaan Umum dan Penataan Ruang',
-        images: []
-    }
 ];
 
 export const skillDatas: Array<ISkillDatas> = [

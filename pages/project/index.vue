@@ -14,7 +14,14 @@
 				@click="navigateToProject(list.link)">
 				<!-- Image -->
 				<div
-					class="relative overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+					class="relative overflow-hidden h-48 flex items-center justify-center bg-gray-100 group">
+					<!-- Badge -->
+					<div
+						class="absolute top-3 left-4 z-10 px-3 py-1 text-xs bg-purple-100 text-slate-700 rounded-full font-bold">
+						{{ list?.badge ?? 'Worked' }}
+					</div>
+
+					<!-- Gambar -->
 					<img
 						:src="list.image"
 						alt=""
@@ -36,7 +43,9 @@
 						Type Project : {{ list.type }}
 					</span>
 
-					<div v-if="list.tools && list.tools.length > 0" class="mt-3 flex flex-wrap gap-2">
+					<div
+						v-if="list.tools && list.tools.length > 0"
+						class="mt-3 flex flex-wrap gap-2">
 						<span
 							v-for="(tool, index) in list.tools"
 							:key="index"
@@ -46,7 +55,6 @@
 					</div>
 
 					<div class="mt-4 flex justify-between items-center">
-
 						<button
 							class="text-sm text-purple-600 font-medium hover:underline">
 							View Project →

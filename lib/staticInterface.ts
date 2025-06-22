@@ -6,6 +6,7 @@ export interface IProjects {
 	description: string;
     images: Array<string>,
     tools?: any[],
+    badge?: string;
 }
 
 

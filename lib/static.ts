@@ -14,7 +14,7 @@ export const projects: Array<IProjects> = [
             'TailwindCss',
         ],
         description: `Actively contributed to the development of this project by designing and implementing the admin content management system (CMS). This allowed non-technical users to easily create, update, and manage content through the admin dashboard. As a result, the frontend or landing page was able to display dynamic and up-to-date content based on the administrator's input, improving overall flexibility, user experience, and maintainability of the website`,
-        images: [],
+        images: ['/floucloud.jpg'],
     },
     {
         name: "Vue Page Builder",
@@ -74,7 +74,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
             'Laravel',
             'Typescript',
         ],
-        images: []
+        images: [],
+        badge: 'personal'
     },
     {
         name: 'Library Vue Button',
@@ -86,7 +87,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
             'Vue3',
             'npm',
         ],
-        images: []
+        images: [],
+        badge: 'Personal Package'
     },
     {
         name: 'Uniqlo Theme',
@@ -94,7 +96,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         link: 'uniqlo-theme',
         image: '/uniqlo-theme.png',
         description: 'Slicing Uniqlo Theme',
-        images: []
+        images: [],
+        badge: 'personal'
     },
     {
         name: 'Learning Management System Smile Learning Center',
@@ -108,7 +111,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         link: 'store-vue',
         image: '/store-slicing.png',
         description: 'this website is a ecoomerce website built with nuxtjs',
-        images: []
+        images: [],
+        badge: 'personal'
     },
     {
         name: 'Dikti Appplication',

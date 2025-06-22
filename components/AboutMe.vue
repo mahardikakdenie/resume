@@ -80,7 +80,7 @@
 						<div
 							class="bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-purple-100">
 							<div class="text-2xl font-bold text-purple-600">
-								{{ calculateYear }}
+								{{ `${calculateYear}+` }}
 							</div>
 							<div class="text-xs text-gray-500">
 								Years of Experience

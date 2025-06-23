@@ -12,6 +12,7 @@ export const projects: Array<IProjects> = [
             'SEO',
             'Pinia',
             'TailwindCss',
+            'MockAPI'
         ],
         description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
         images: [],

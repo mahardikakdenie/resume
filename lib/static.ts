@@ -18,6 +18,20 @@ export const projects: Array<IProjects> = [
         url: 'https://laukita-theme.mahardikakdenie.my.id'
     },
     {
+        name: "Customer Portal App",
+        link: 'customer-portal-app',
+        image: '/customer-portal-app.png',
+        type: 'Mobile App',
+        tools: [
+            'Flutter',
+            'Bloc Cubit',
+            'Material UI'
+        ],
+        description: `Developed a modern and responsive website theme tailored for Insurance Customer Portal, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
+        images: [],
+        url: 'https://laukita-theme.mahardikakdenie.my.id'
+    },
+    {
         name: "Floucloud Id",
         link: 'floucloud',
         image: '/floucloud.jpg',

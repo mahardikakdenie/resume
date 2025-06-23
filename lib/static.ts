@@ -15,6 +15,7 @@ export const projects: Array<IProjects> = [
         ],
         description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
         images: [],
+        url: 'https://laukita-theme.mahardikakdenie.my.id'
     },
     {
         name: "Floucloud Id",
@@ -27,6 +28,8 @@ export const projects: Array<IProjects> = [
             'SEO',
             'Pinia',
             'TailwindCss',
+            '.Net Core',
+            'PostgreeSQL'
         ],
         description: `Actively contributed to the development of this project by designing and implementing the admin content management system (CMS). This allowed non-technical users to easily create, update, and manage content through the admin dashboard. As a result, the frontend or landing page was able to display dynamic and up-to-date content based on the administrator's input, improving overall flexibility, user experience, and maintainability of the website`,
         images: ['/floucloud.jpg'],
@@ -139,13 +142,26 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
         image: '/uniqlo-theme.png',
         description: 'Designed and developed a mobile-first website theme inspired by Uniqlo’s minimalist and user-centric design philosophy. The theme emphasizes clean aesthetics, intuitive navigation, and seamless product presentation to enhance the mobile shopping experience. Built with responsiveness and performance in mind, it ensures a smooth and engaging interface tailored for fashion retail brands aiming for a modern digital presence',
         images: [],
+        tools: [
+            'Node Express',
+            'Vue3',
+            'Nuxt3',
+        ],
         badge: 'personal'
     },
     {
         name: 'Learning Management System Smile Learning Center',
         link: 'slc',
         image: '/lms.png',
-        description: 'Learning Management System',
+        description: 'Learning Management System is a project from Bimba AIUEO Management the purpose this project is to make efficiency ',
+        type: 'LMS Web App',
+        tools: [
+            'Nuxt3',
+            'Vue3',
+            'Laravel',
+            'PHP',
+            'Mysql'
+        ],
         images: []
     },
     {

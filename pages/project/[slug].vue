@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Live Demo Link -->
-                <a v-if="projectDetail && projectDetail.link" :href="projectDetail.link" target="_blank"
+                <a v-if="projectDetail && projectDetail.url" :href="projectDetail.url" target="_blank"
                     class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
                     View Live Project
                     <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24"

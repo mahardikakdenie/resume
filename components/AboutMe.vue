@@ -134,12 +134,21 @@
 						</a>
 					</div>
 
-					<!-- Button -->
-					<nuxt-link
-						to="/experiences"
-						class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
-						See My Experiences
-					</nuxt-link>
+					<div class="flex gap-2">
+						<!-- Button -->
+						<nuxt-link
+							to="/experiences"
+							class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
+							See My Experiences
+						</nuxt-link>
+						<!-- Button -->
+						<nuxt-link
+							to="/cv_mahardikakdenie.pdf"
+							target="_blank"
+							class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
+							RESUME
+						</nuxt-link>
+					</div>
 				</div>
 			</div>
 

@@ -26,7 +26,10 @@ export const projects: Array<IProjects> = [
         tools: [
             'Flutter',
             'Bloc Cubit',
-            'Material UI'
+            'Material UI',
+            'Typescript',
+            'Nestjs',
+            'Microservice API'
         ],
         description: `Developed a modern and responsive website theme tailored for Insurance Customer Portal, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
         images: [],

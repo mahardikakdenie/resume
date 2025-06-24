@@ -148,7 +148,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
             'npm',
         ],
         images: [],
-        badge: 'Personal Package'
+        badge: 'Personal Package',
+        url: 'https://www.npmjs.com/package/mahardikakdenie-vue-button',
     },
     {
         name: 'Uniqlo Theme',
@@ -162,7 +163,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
             'Vue3',
             'Nuxt3',
         ],
-        badge: 'personal'
+        badge: 'personal',
+        url: 'https://uniqlo-theme.mahardikakdenie.my.id/',
     },
     {
         name: 'Learning Management System Smile Learning Center',
@@ -177,7 +179,8 @@ Whether for portfolios, landing pages, or small business sites, this Vue-powered
             'PHP',
             'Mysql'
         ],
-        images: []
+        images: [],
+        url: 'https://lms.mahardikakdenie.my.id/',
     },
     {
         name: 'Store Vue',

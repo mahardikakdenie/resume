@@ -134,18 +134,18 @@
 						</a>
 					</div>
 
-					<div class="flex gap-2">
+					<div class="flex flex-col sm:flex-row gap-2">
 						<!-- Button -->
 						<nuxt-link
 							to="/experiences"
-							class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
+							class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
 							See My Experiences
 						</nuxt-link>
 						<!-- Button -->
 						<nuxt-link
 							to="/cv_mahardikakdenie.pdf"
 							target="_blank"
-							class="inline-block w-full md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
+							class="inline-block w-md md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
 							RESUME
 						</nuxt-link>
 					</div>
@@ -153,7 +153,7 @@
 			</div>
 
 			<!-- Right Side: Image -->
-			<div data-aos="fade-left" class="flex justify-center mt-8 md:mt-0">
+			<div data-aos="fade-left" class="flex justify-center mt-8 lg:mt-0">
 				<div class="relative group max-w-xs sm:max-w-sm md:max-w-none">
 					<img
 						src="https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg"

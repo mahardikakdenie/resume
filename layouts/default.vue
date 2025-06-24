@@ -2,7 +2,7 @@
 	<div class="mx-auto">
 		<navbar />
 		<PersonalInformationItem />
-		<div class="px-10">
+		<div class="px-0 sm:px-10">
 			<nuxt-page />
 		</div>
 		<Footer />

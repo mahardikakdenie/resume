@@ -12,6 +12,15 @@ export const projects: Array<IProjects> = [
 		url: 'https://laukita-theme.mahardikakdenie.my.id',
 	},
 	{
+		name: 'Point Of Sales (Dreams Theme)',
+		link: 'laukita-theme',
+		image: 'https://jam.dev/cdn-cgi/image/width=1600,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/a58ab27b92b27a46793582dd84a3484f/screenshot/99ea1a40-aa39-448b-b995-40fbba8bf136.png',
+		type: 'Web App',
+		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
+		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
+		images: ['https://jam.dev/cdn-cgi/image/width=1600,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/a58ab27b92b27a46793582dd84a3484f/screenshot/99ea1a40-aa39-448b-b995-40fbba8bf136.png'],
+	},
+	{
 		name: 'API Service - IMGDBB',
 		link: 'api-service-imgbb',
 		image: '/imgbb-api.png',

@@ -100,10 +100,10 @@
 						<div
 							class="bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-pink-100">
 							<div class="text-2xl font-bold text-pink-600">
-								1
+								{{ masteringTechStach.length }}+
 							</div>
 							<div class="text-xs text-gray-500">
-								Startups Founder
+								Mastering Tech Stack
 							</div>
 						</div>
 					</div>

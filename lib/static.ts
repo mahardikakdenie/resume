@@ -19,6 +19,17 @@ export const projects: Array<IProjects> = [
 		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
+		badge: 'Work In Progress [WIP]'
+	},
+	{
+		name: 'Dashboard Admin Theme',
+		link: 'dashboard-admin-theme',
+		image: 'https://jam.dev/cdn-cgi/image/width=1600,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/890f14769162dacdb44537794706b300/screenshot/7a4c494b-0f51-4139-933f-3b57adec20fc.png',
+		type: 'Web App',
+		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
+		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
+		images: [],
+		badge: 'Work In Progress [WIP]'
 	},
 	{
 		name: 'API Service - IMGDBB',

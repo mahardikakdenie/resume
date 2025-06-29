@@ -22,7 +22,7 @@ export const projects: Array<IProjects> = [
 		badge: 'Work In Progress [WIP]'
 	},
 	{
-		name: 'Dashboard Admin Theme',
+		name: 'Template - Dashboard Theme',
 		link: 'dashboard-admin-theme',
 		image: 'https://jam.dev/cdn-cgi/image/width=1600,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/890f14769162dacdb44537794706b300/screenshot/7a4c494b-0f51-4139-933f-3b57adec20fc.png',
 		type: 'Web App',

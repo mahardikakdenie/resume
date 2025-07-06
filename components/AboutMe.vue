@@ -210,7 +210,12 @@ const masteringTechStach = computed<string[]>(() => [
 	'Lumen',
 	'Node Express',
 	'Nestjs',
-	'Flutter'
+	'Flutter',
+	'Docker',
+	'RabbitMQ',
+	'Mysql',
+	'MongoDB',
+	'PostgreSQL'
 ])
 
 const calculateYear = computed(() => new Date().getFullYear() - 2021);

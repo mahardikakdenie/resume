@@ -73,7 +73,6 @@
 					</div>
 
 					<!-- Mini Stats -->
-					<!-- Mini Stats -->
 					<div
 						class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center mt-0 sm:mt-8">
 						<!-- Single Stat Card -->
@@ -88,9 +87,10 @@
 						</div>
 
 						<div
-							class="bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-indigo-100">
+							@click="$router.push('/project')"
+							class="bg-white/50 backdrop-blur-sm cursor-pointer p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-indigo-100">
 							<div class="text-2xl font-bold text-indigo-600">
-								15+
+								{{projects.length}}+
 							</div>
 							<div class="text-xs text-gray-500">
 								Projects Completed
@@ -98,7 +98,8 @@
 						</div>
 
 						<div
-							class="bg-white/50 backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-pink-100">
+							@click="$router.push('/skills')"
+							class="bg-white/50 backdrop-blur-sm p-4 rounded-xl cursor-pointer shadow-md hover:shadow-lg transition-shadow duration-300 border border-pink-100">
 							<div class="text-2xl font-bold text-pink-600">
 								{{ masteringTechStach.length }}+
 							</div>
@@ -176,6 +177,7 @@ import emailImage from '@/assets/email.svg';
 import emailImageActive from '@/assets/email-active.svg';
 import { ref } from 'vue';
 import { computed } from 'vue';
+import { projects } from '~/lib/static';
 
 const socialMedia = ref([
 	{

@@ -144,7 +144,7 @@
 						</nuxt-link>
 						<!-- Button -->
 						<nuxt-link
-							to="/cv_mahardikakdenie.pdf"
+							to="/CV_Mahardika_Kessuma_Denie _July_2025.pdf"
 							target="_blank"
 							class="inline-block w-md md:w-auto text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
 							RESUME

@@ -1,5 +1,5 @@
 <template>
-	<section class="flex justify-center dark:bg-slate-900">
+	<section class="flex justify-center">
 		<about-me />
 	</section>
 </template>

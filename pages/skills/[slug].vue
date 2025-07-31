@@ -15,7 +15,7 @@
 				<!-- Deskripsi skill -->
 				<div class="p-6">
 					<h2
-						class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+						class="text-2xl font-semibold text-gray-800 mb-4">
 						{{ currentSkill?.title }} Skill Details
 					</h2>
 					<p class="text-neutral-600 leading-relaxed mb-4">
@@ -24,7 +24,7 @@
 
 					<!-- Info lainnya -->
 					<div
-						class="flex items-center justify-between dark:text-gray-300">
+						class="flex items-center justify-between">
 						<span class="font-semibold text-neutral-900"
 							>Experience Level:</span
 						>
@@ -34,7 +34,7 @@
 					</div>
 
 					<div
-						class="flex items-center justify-between mt-2 text-gray-700 dark:text-gray-300">
+						class="flex items-center justify-between mt-2 text-gray-700">
 						<span class="font-semibold text-neutral-700"
 							>Years of Experience:</span
 						>
@@ -98,7 +98,6 @@
 				</div>
 
 				<!-- Tombol CTA -->
-				<!-- <div class="bg-gray-100 dark:bg-gray-700 p-4 flex justify-end">
             <button 
               class="px-5 capitalize py-4 w-full bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200 ease-in-out"
             >

@@ -98,6 +98,7 @@
 				</div>
 
 				<!-- Tombol CTA -->
+				<!-- <div class="bg-gray-100 dark:bg-gray-700 p-4 flex justify-end">
             <button 
               class="px-5 capitalize py-4 w-full bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200 ease-in-out"
             >

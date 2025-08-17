@@ -64,6 +64,20 @@ Integrates with IMGBB API for cloud image uploads.
 Modular and well-documented codebase for easy maintenance and extension`,
 	},
 	{
+		name: 'Maida Clinic Landing Page',
+		link: 'maida-clinic-landing-page',
+		image: '/maida-clinik-1.png',
+		type: 'web',
+		tools: [
+			'Nuxt3',
+			'Vue3',
+			'SEO'
+		],
+		url: 'https://maida-clinic.ensiklotari.id',
+		description: '',
+		images: ['/maida-clinik-1.png'],
+	},
+	{
 		name: 'Floucloud Id',
 		link: 'floucloud',
 		image: '/floucloud.jpg',

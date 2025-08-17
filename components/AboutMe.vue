@@ -217,7 +217,8 @@ const masteringTechStach = computed<string[]>(() => [
 	'RabbitMQ',
 	'Mysql',
 	'MongoDB',
-	'PostgreSQL'
+	'PostgreSQL',
+	'CodeMagic CI/CD'
 ])
 
 const calculateYear = computed(() => new Date().getFullYear() - 2021);

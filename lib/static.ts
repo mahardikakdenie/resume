@@ -19,7 +19,7 @@ export const projects: Array<IProjects> = [
 		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
-		badge: 'Work In Progress [WIP]'
+		badge: 'Work In Progress [WIP]',
 	},
 	{
 		name: 'Template - Dashboard Theme',
@@ -29,27 +29,7 @@ export const projects: Array<IProjects> = [
 		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
-		badge: 'Work In Progress [WIP]'
-	},
-	{
-		name: 'API Service - IMGDBB',
-		link: 'api-service-imgbb',
-		image: '/imgbb-api.png',
-		images: [],
-        type: 'SERVICE API',
-        tools: [
-            'IMGBB API SERVICE',
-            'NodeExpress',
-            'Typescript'
-        ],
-		url: 'https://github.com/mahardikakdenie/cloud-api-imgbb',
-		description: `Project Description
-A TypeScript-based Express.js application for uploading images to IMGBB cloud storage. The project provides a clean, modular structure with seamless integration to IMGBB’s API, enabling efficient and scalable image handling.
-
-Key Highlights:
-Built with Express.js and TypeScript for scalability and type safety.
-Integrates with IMGBB API for cloud image uploads.
-Modular and well-documented codebase for easy maintenance and extension`,
+		badge: 'Work In Progress [WIP]',
 	},
 	{
 		name: 'Customer Portal App',
@@ -66,7 +46,22 @@ Modular and well-documented codebase for easy maintenance and extension`,
 		],
 		description: `Developed a modern and responsive website theme tailored for Insurance Customer Portal, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
-		url: 'https://laukita-theme.mahardikakdenie.my.id',
+	},
+	{
+		name: 'API Service - IMGDBB',
+		link: 'api-service-imgbb',
+		image: '/imgbb-api.png',
+		images: [],
+		type: 'SERVICE API',
+		tools: ['IMGBB API SERVICE', 'NodeExpress', 'Typescript'],
+		url: 'https://github.com/mahardikakdenie/cloud-api-imgbb',
+		description: `Project Description
+A TypeScript-based Express.js application for uploading images to IMGBB cloud storage. The project provides a clean, modular structure with seamless integration to IMGBB’s API, enabling efficient and scalable image handling.
+
+Key Highlights:
+Built with Express.js and TypeScript for scalability and type safety.
+Integrates with IMGBB API for cloud image uploads.
+Modular and well-documented codebase for easy maintenance and extension`,
 	},
 	{
 		name: 'Floucloud Id',

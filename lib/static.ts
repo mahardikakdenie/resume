@@ -48,6 +48,19 @@ export const projects: Array<IProjects> = [
 		images: [],
 	},
 	{
+		name: 'CMS HAYS GALERY',
+		link: '',
+		image: '/cms-hays-login.png',
+		images: [],
+		tools: [
+			'REACT',
+			'NEXTJS',
+			
+		],
+		url: '',
+		description: '',
+	},
+	{
 		name: 'API Service - IMGDBB',
 		link: 'api-service-imgbb',
 		image: '/imgbb-api.png',

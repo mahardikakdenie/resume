@@ -9,7 +9,7 @@ export const projects: Array<IProjects> = [
 		tools: ['Vue3', 'Nuxt3', 'SEO', 'Pinia', 'TailwindCss', 'MockAPI'],
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: ['/laukita.png', '/dashboard-laukita.png'],
-		url: 'https://laukita-theme.mahardikakdenie.my.id',
+		url: 'https://laukita.mahardikakdenie.my.id',
 	},
 	{
 		name: 'Point Of Sales (Dreams Theme)',
@@ -20,6 +20,7 @@ export const projects: Array<IProjects> = [
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
 		badge: 'Work In Progress [WIP]',
+		url: "https://oddo-themes.mahardikakdenie.my.id/",
 	},
 	{
 		name: 'Template - Dashboard Theme',
@@ -30,6 +31,7 @@ export const projects: Array<IProjects> = [
 		description: `Developed a modern and responsive website theme tailored for Point of Sale (POS) systems, combining clean UI/UX design with intuitive navigation to support seamless transaction management. The theme was built with a focus on usability, performance, and adaptability across various devices, making it suitable for small businesses and retail environments looking to streamline their sales operations through a digital interface.`,
 		images: [],
 		badge: 'Work In Progress [WIP]',
+		url: "https://dashboard.ensiklotari.id/",
 	},
 	{
 		name: 'Customer Portal App',

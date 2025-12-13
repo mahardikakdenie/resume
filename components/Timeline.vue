@@ -1,205 +1,61 @@
 <template>
-	<section class="px-8 bg-neutral-100 flex items-center justify-center">
-		<!-- Main container -->
-		<div class="w-full max-w-6xl flex flex-col items-center mt-5">
-			<!-- Timeline Section -->
-			<div class="relative max-w-[1200px] my-0 mx-auto direction">
-				<!-- Experience 1 -->
-				<div
-					v-for="(experience, i) in experiences"
-					:key="i"
-					class="experience-wrapper"
-					:class="{
-						'pos-left': i % 2 !== 0,
-						'pos-right': i % 2 === 0,
-					}"
-					:data-aos="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-					data-aos-once="true"
-					:data-aos-delay="i * 100">
-					<!-- Timeline indicator -->
-					<div
-						:class="{
-							'experience-icon-steps-left': i % 2 !== 0,
-							'experience-icon-steps-right': i % 2 === 0,
-						}">
-						<img class="" :src="calenderChecked" alt="" />
-					</div>
+  <section class="py-16 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="max-w-7xl mx-auto">
 
-					<!-- Experience Card -->
-					<div class="experience-card">
-						<h3 class="text-lg font-bold text-white">
-							{{ experience.name }}
-						</h3>
-						<p class="text-sm text-white font-semibold">
-							{{ experience.job }} • {{ experience.type }}
-						</p>
-						<p class="text-sm text-white">
-							{{ experience.since }} - {{ experience.until }}
-						</p>
-						<div
-							class="mt-4 experience-description"
-							v-html="experience.description" />
-						<span
-							:class="{
-								'row-card-left': i % 2 !== 0,
-								'row-card-right': i % 2 === 0,
-							}"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="relative">
+        <!-- Garis tengah elegan -->
+        <div class="hidden sm:block absolute left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-purple-400 to-transparent -translate-x-1/2 z-0"></div>
+
+        <div
+          v-for="(exp, i) in experiences"
+          :key="i"
+          class="relative mb-16 sm:mb-20 z-10"
+          :data-aos="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+          data-aos-once="true"
+          :data-aos-delay="i * 150"
+        >
+          <div class="flex flex-col sm:flex-row items-center" :class="i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'">
+            <!-- Card -->
+            <div
+              class="w-full sm:w-5/12 p-6 rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
+              :class="i % 2 === 0 ? 'sm:mr-8 sm:text-left' : 'sm:ml-8 sm:text-left'"
+            >
+              <div class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-purple-700 bg-purple-100 rounded-full">
+                {{ exp.type }}
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">{{ exp.name }}</h3>
+              <p class="text-sm font-medium text-indigo-600 mb-2">{{ exp.job }}</p>
+              <p class="text-xs text-gray-500 mb-4">{{ exp.since }} – {{ exp.until }}</p>
+              <div class="text-gray-700 text-sm leading-relaxed opacity-90" v-html="exp.description"></div>
+            </div>
+
+            <!-- Icon connector -->
+            <div class="mt-4 sm:mt-0 w-10 h-10 flex items-center justify-center z-10"
+                 :class="i % 2 === 0 ? 'sm:ml-0' : 'sm:mr-0'">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-purple-500 flex items-center justify-center shadow-md">
+                <img :src="calenderChecked" alt="Timeline point" class="w-5 h-5 text-purple-600" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import calenderChecked from '@/assets/calender-check.svg';
-import type { DefineComponent } from 'vue';
 
 interface ExperienceData {
-	name: string;
-	type: string;
-	job: string;
-	since: string;
-	until: string;
-	description: string | DefineComponent;
-	icon?: string;
+  name: string;
+  job: string;
+  type: string;
+  since: string;
+  until: string;
+  description: string;
 }
 
-const props = defineProps<{
-	experiences: ExperienceData[];
+defineProps<{
+  experiences: ExperienceData[];
 }>();
 </script>
-
-<style lang="scss">
-/* Styling for flex reverse in even rows */
-div.flex-row-reverse {
-	flex-direction: row-reverse;
-}
-
-/* Timeline line */
-.relative.w-4::before {
-	content: '';
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 1px;
-	height: 100%;
-	background-color: gray;
-	top: 100%;
-}
-
-/* General spacing and positioning */
-.mb-12 {
-	margin-bottom: 3rem;
-}
-
-/* Hover effect and transform */
-.border-2 {
-	transition: transform 0.3s ease;
-}
-
-.direction::after {
-	content: '';
-	position: absolute;
-	width: 0;
-	/* Set width to 0 */
-	height: 100%;
-	/* Full height */
-	top: 0;
-	left: 50%;
-	margin-left: -1px;
-	/* Centering adjustment */
-	z-index: 1;
-	border-left: 2px solid;
-	@apply border-purple-400 bg-red-200 hidden sm:block;
-	/* Dashed border color */
-}
-
-.experience-wrapper {
-	@apply py-[10px] px-0 sm:px-[50px] relative w-full sm:w-[50%];
-}
-
-.experience-icon-steps {
-	@apply absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid flex justify-center -right-[20px] text-purple-600 bg-white;
-}
-
-/* Class untuk posisi di kanan */
-.experience-icon-steps-right {
-	@apply relative sm:absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid hidden sm:flex justify-center -right-[20px] text-purple-600 bg-white;
-}
-
-/* Class untuk posisi di kiri */
-.experience-icon-steps-left {
-	@apply relative sm:absolute w-[40px] h-[40px] top-[32px] p-[10px] z-[100] border border-purple-600 rounded-full border-solid hidden sm:flex justify-center -left-[20px] text-purple-600 bg-white;
-}
-
-.experience-card {
-	@apply py-[20px] px-[30px] text-sm text-neutral-700 border rounded-lg bg-white hover:bg-white cursor-pointer shadow-xl;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-	h3,
-	p {
-		@apply text-neutral-600;
-	}
-
-	&:hover {
-		h3,
-		p {
-			@apply text-purple-700;
-		}
-
-		.experience-description {
-			@apply text-purple-600;
-		}
-	}
-}
-
-/* Untuk runcingan di sebelah kanan */
-.row-card-right {
-	border-top: 15px solid transparent;
-	/* Batas atas dibuat transparan */
-	border-bottom: 15px solid transparent;
-	/* Batas bawah dibuat transparan */
-	border-left: 17px solid;
-	/* Runcingan di sebelah kiri */
-	border-right: none;
-	/* Tidak ada border di kanan */
-	right: 34px;
-	/* Posisi dari kanan */
-	transition: 0.2s ease-in-out;
-	@apply h-0 w-0 absolute top-[37px] z-[1] border-l-white;
-}
-
-/* Untuk runcingan di sebelah kiri */
-.row-card-left {
-	border-top: 15px solid transparent;
-	/* Batas atas dibuat transparan */
-	border-bottom: 15px solid transparent;
-	/* Batas bawah dibuat transparan */
-	border-right: 17px solid;
-	/* Runcingan di sebelah kanan */
-	border-left: none;
-	/* Tidak ada border di kiri */
-	left: 34px;
-	/* Posisi dari kiri */
-	transition: 0.2s ease-in-out;
-	@apply h-0 w-0 absolute top-[37px] z-[1] border-r-white hidden sm:flex;
-}
-
-.pos-right {
-	@apply sm:left-0;
-}
-
-.pos-left {
-	@apply sm:left-1/2;
-}
-
-.experience-description {
-	ul {
-		li {
-			font-size: 13px;
-		}
-	}
-}
-</style>

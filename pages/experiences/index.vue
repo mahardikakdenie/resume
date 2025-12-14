@@ -18,7 +18,7 @@ const experiences = ref<
 >([
 	{
 		name: 'PT Ordivo Technology Indonesia',
-		type: 'Contract',
+		type: 'Fulltime',
 		job: 'Fullstack Engineer',
 		since: 'November 2022',
 		until: 'Present',
@@ -52,7 +52,7 @@ const experiences = ref<
 	},
 	{
 		name: 'Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Bandung',
-		type: 'Contract',
+		type: 'Fulltime',
 		job: 'Fullstack Engineer',
 		since: 'November 2023',
 		until: 'Juny 2024',
@@ -78,7 +78,7 @@ const experiences = ref<
 	},
 	{
 		name: 'Icreativelabs - PT Idekreatif Menusa Teknologi',
-		type: 'Contract',
+		type: 'Fulltime',
 		job: 'Fullstack Engineer',
 		since: 'Mei 2022',
 		until: 'November 2022',
@@ -239,7 +239,7 @@ const experiences = ref<
 	},
 	{
 		name: 'CV Notiva Indonesia',
-		type: 'Magang',
+		type: 'Internship',
 		job: 'Frontend Engineer',
 		since: 'January 2021',
 		until: 'Juny 2021',

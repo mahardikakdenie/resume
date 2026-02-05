@@ -1,16 +1,19 @@
 <template>
-	<section class="flex justify-center">
-		<about-me />
-	</section>
+  <div class="overflow-hidden">
+    <HeroSection />
+    <TechStack />
+    <AboutSection />
+    <FeaturedProjects />
+    
+    <cta-section />
+  </div>
 </template>
 
 <script setup lang="ts">
-const META_DESCRIPTION: string = `👋 Hi. My name is Mahardika Kessuma Denie.
-A Software Developer From Bandung
-I've been working in software engineering for more than 3 years. I have good knowledge of frontend and backend.
-I always try my best when building or developing software, so I always keep my code as tidy as possible and refactor periodically. I prefer to break my code into smaller chunks so it's easier to read. My skillset includes:`;
+import CtaSection from '~/components/CtaSection.vue';
 
-const TITLE = 'MAHARDIKA KESSUMA DENIE - PROFILE';
+const META_DESCRIPTION = `Hi. My name is Mahardika Kessuma Denie. A Software Developer From Bandung specializing in Vue, Nuxt, and modern web technologies.`;
+const TITLE = 'Mahardika Kessuma Denie - Software Developer';
 
 useSeoMeta({
 	title: TITLE,

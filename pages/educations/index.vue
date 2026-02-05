@@ -1,86 +1,162 @@
 <template>
-    <div>
-        <Timeline :experiences="experiences" />
+  <div class="min-h-screen py-24 relative overflow-hidden bg-slate-50">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-300/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-[120px]"></div>
     </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-down">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-white/50 shadow-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Portfolio Archives</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Selected <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Works</span>
+        </h1>
+        <p class="text-slate-500 text-lg">
+            A collection of projects tailored to business needs, ranging from SaaS platforms to high-performance mobile applications.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="flex flex-wrap justify-center gap-2 bg-white/60 p-1.5 rounded-xl backdrop-blur-sm border border-slate-200">
+              <button 
+                v-for="cat in categories" 
+                :key="cat"
+                @click="selectedCategory = cat"
+                class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300"
+                :class="selectedCategory === cat ? 'bg-white text-purple-600 shadow-md scale-105' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'"
+              >
+                  {{ cat }}
+              </button>
+          </div>
+
+          <div class="relative w-full md:w-72">
+              <input 
+                v-model="searchQuery" 
+                type="text" 
+                placeholder="Search projects..." 
+                class="w-full pl-10 pr-4 py-3 bg-white/80 backdrop-blur-xl border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all shadow-sm text-sm"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          </div>
+      </div>
+
+      <div v-if="filteredProjects.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            v-for="(project, index) in filteredProjects" 
+            :key="index"
+            class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 flex flex-col h-full"
+            data-aos="fade-up"
+            :data-aos-delay="index * 100"
+          >
+              <div class="relative h-60 overflow-hidden bg-slate-100 group">
+                  <img 
+                    v-if="project.image"
+                    :src="project.image" 
+                    :alt="project.name" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    @error="handleImageError"
+                  />
+                  <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <button 
+                        @click="navigateToDetail(project.link)"
+                        class="px-6 py-3 bg-white/90 backdrop-blur text-slate-900 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-white"
+                      >
+                          View Case Study
+                      </button>
+                  </div>
+                  
+                  <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-wider rounded-lg text-slate-800 shadow-sm">
+                      {{ project.type }}
+                  </div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-grow">
+                  <div class="flex justify-between items-start mb-3">
+                      <h3 class="text-xl font-bold text-slate-900 group-hover:text-purple-600 transition-colors cursor-pointer" @click="navigateToDetail(project.link)">
+                          {{ project.name }}
+                      </h3>
+                  </div>
+                  
+                  <p class="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
+                      {{ project.description }}
+                  </p>
+
+                  <div v-if="project.tools" class="flex flex-wrap gap-2 pt-4 border-t border-slate-50">
+                      <span 
+                        v-for="tool in project.tools.slice(0, 4)" 
+                        :key="tool"
+                        class="px-2.5 py-1 bg-slate-50 text-slate-500 text-[11px] font-bold uppercase rounded-md border border-slate-100"
+                      >
+                          {{ tool }}
+                      </span>
+                      <span v-if="project.tools.length > 4" class="px-2 py-1 text-slate-400 text-[10px] font-bold">
+                          +{{ project.tools.length - 4 }}
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div v-else class="text-center py-24">
+          <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">No projects found</h3>
+          <p class="text-slate-500">Try adjusting your search or category filter.</p>
+          <button @click="resetFilter" class="mt-6 px-6 py-2 bg-purple-100 text-purple-700 font-bold rounded-lg hover:bg-purple-200 transition-colors">
+              Clear Filters
+          </button>
+      </div>
+
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-const experiences = ref<{
-    name: string;
-    type: string;
-    job: string;
-    since: string;
-    until: string;
-    description: string;
-    icon?:string;
-}[]>([
-    {
-        name: 'Adhirajasa Reswara Sanjaya University',
-        type: 'S1',
-        job: 'Teknik Informatika',
-        since: 'September 2020',
-        until: 'September 2024',
-        description: `
-            <ul>
-                <li><strong>Revamping Dashboard Funnel and Storefront:</strong> Enhanced user engagement and interest by redesigning the dashboard funnel and storefront, creating a more intuitive and visually appealing user experience.</li>
-                <li><strong>Improving UI/UX for Orderonline:</strong> Revamped key features to provide a superior user interface and user experience, making the platform more user-friendly and aesthetically pleasing.</li>
-                <li><strong>E2E Testing with Cypress:</strong> Contributed to seamless functionality across the platform by assisting in end-to-end testing with Cypress.</li>
-                <li><strong>Unit Testing:</strong> Developed unit tests to ensure component reliability and maintain platform stability.</li>
-                <li><strong>Tool Development for Streamlining:</strong> Built tools to simplify and accelerate the Orderonline development process, improving overall efficiency and productivity.</li>
-            </ul>
-`
-    },
-    {
-        name: 'Sekolah Menengah Atas Negeri 1 Sumedang',
-        type: 'SMA',
-        job: 'MIPA',
-        since: 'Juni 2017',
-        until: 'Juni 2020',
-        description: `<ul><li><strong>DPUTR Internal Web Report Absensi (Vue, Laravel, MySQL):</strong> A web-based application for the Department of Public Works and Spatial Planning of Bandung Regency, built with Vue, Laravel, and MySQL. It enables partners to create, submit, and track reports in real-time, enhancing transparency and operational efficiency in infrastructure project management. </li><li><strong>DPUTR Silandak Dashboard (Vue, Laravel, MongoDB):</strong> This web-based dashboard visualizes infrastructure project data for the Department of Public Works and Spatial Planning. Developed with Vue, Laravel, and MongoDB, it provides daily, monthly, and yearly reports for real-time project tracking, featuring interactive charts and tables that enhance decision-making and strategic planning.</li></ul>`
-    },
-    {
-        name: 'Sekolah Menengah Pertama Negeri 1 Sumedang',
-        type: 'SMP',
-        job: 'SMP',
-        since: 'Juni 2014',
-        until: 'Juni 2017',
-        description: `I work in an agency where I have been involved in significant projects for PT Pos Indonesia and Floucloud CMS.
-        Project PT Pos Indonesia:
-        •I developed a comprehensive Dashboard website to monitor the business growth and progress of PT Pos Indonesia. This included creating a detailed Dashboard Report Monitoring system to provide real-time insights and analytics, aiding in better decision-making and strategic planning.
-        Project Floucloud:
-        I built a CMS Dashboard website for managing landing page content, similar to WordPress. My responsibilities included ensuring the CMS operated smoothly and efficiently, providing a user-friendly platform for content management and updates.`
-    },
-    {
-        name: 'Sekolah Dasar Negeri Pasarean',
-        type: 'SD',
-        job: 'SD',
-        since: 'Juni 2010',
-        until: 'Juni 2014',
-        description: `I am the founder of Ensiklotari.id, a pioneering startup dedicated to preserving and promoting Indonesian dance. Our startup was recognized as one of the top ten in the IEEE 2021 startup competition and proudly won funding from the Matching Fund Kedaireka. You can find more about our journey in these articles:
-        •Viva Bandung: Melestarikan dan Merawat Tari Indonesia Lewat Ensiklotari (https://bandung.viva.co.id/fakta-unik/11354-melestarikan-dan-merawat-tari-indonesia-lewat-ensiklotari?page=2)
-        Republika: Ars University Lolos Pendanaan Matching Fund Kedaireka (https://republika.co.id/berita/rf92i0396/ars-university-lolos-pendanaan-matching-fund-kedaireka)
-        I am possibly the sole engineer responsible for developing this website, collaborating closely with two friends and our supervising professor. Our collective effort has made Ensiklotari.id a valuable digital platform for the cultural preservation of Indonesian dance.`
-    },
-    {
-        name: 'Sekolah Dasar Negeri JATIPAMOR',
-        type: 'SD',
-        job: 'SD',
-        since: 'Juni 2008',
-        until: 'Juni 2010',
-        description: `Develop a comprehensive Customer Management system to efficiently handle customer or contact information. This feature is crucial as the website functions as a checkout form tool designed to assist small and medium-sized enterprises (UMKM) in their digital marketing efforts. The system should streamline the process of managing customer data, ensuring seamless communication and improved customer relationships.
-        •Additionally, create a robust landing page editor that allows users to easily build and customize landing pages directly on the website. This editor should offer intuitive drag-and-drop functionality, a variety of templates, and flexible design options to accommodate the diverse needs of UMKMs in creating effective and attractive landing pages for their marketing campaigns.`
-    },
-    {
-        name: 'TK Trisula Sumedang',
-        type: 'TK',
-        job: 'TK',
-        since: 'Juni 2007',
-        until: 'Juni 2008',
-        description: `Develop an Admin Dashboard for the Notiva CMS, featuring comprehensive capabilities to add, update, and delete content.
-        This system should seamlessly automate content management for both the website landing page and the mobile app.
-        Additionally, create an Admin Dashboard to effectively monitor user activity, providing real-time insights and analytics.
-        The dashboard should be user-friendly, ensuring easy navigation and efficient management of all administrative tasks.`,
-    },
-]);
+import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
+import { projects } from '@/lib/static';
 
+const router = useRouter();
+const searchQuery = ref('');
+const selectedCategory = ref('All');
+
+// Ambil semua kategori unik dari data projects + 'All'
+const categories = computed(() => {
+    const cats = new Set(projects.map(p => p.type ? p.type.split(' ')[0] : 'Web')); // Ambil kata pertama (Web, Mobile, dll)
+    return ['All', ...Array.from(cats)];
+});
+
+const filteredProjects = computed(() => {
+    return projects.filter(project => {
+        // Filter by Category
+        const matchCategory = selectedCategory.value === 'All' || (project.type && project.type.includes(selectedCategory.value));
+        
+        // Filter by Search
+        const matchSearch = project.name.toLowerCase().includes(searchQuery.value.toLowerCase()) || 
+                            (project.description && project.description.toLowerCase().includes(searchQuery.value.toLowerCase())) ||
+                            project.tools?.some(t => t.toLowerCase().includes(searchQuery.value.toLowerCase()));
+
+        return matchCategory && matchSearch;
+    });
+});
+
+const navigateToDetail = (slug: string) => {
+    if (slug) router.push(`/project/${slug}`);
+};
+
+const handleImageError = (e: Event) => {
+    // Fallback to placeholder
+    (e.target as HTMLImageElement).src = 'https://placehold.co/800x600/f1f5f9/cbd5e1?text=No+Image';
+};
+
+const resetFilter = () => {
+    searchQuery.value = '';
+    selectedCategory.value = 'All';
+};
 </script>

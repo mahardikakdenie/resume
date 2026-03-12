@@ -47,5 +47,3 @@ Proyek ini dibangun menggunakan teknologi terkini:
 ├── public/          # File statis publik (CV PDF, Favicon, Fallback images)
 ├── server/          # API Routes (jika ada)
 └── nuxt.config.ts   # Konfigurasi utama Nuxt
-
-Halo

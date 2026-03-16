@@ -46,4 +46,4 @@ Proyek ini dibangun menggunakan teknologi terkini:
 │   └── skills/              # Halaman Skill
 ├── public/          # File statis publik (CV PDF, Favicon, Fallback images)
 ├── server/          # API Routes (jika ada)1
-└── nuxt.config.ts   # Konfigurasi utama Nuxt1
+└── nuxt.config.ts   # Konfigurasi utama Nuxt

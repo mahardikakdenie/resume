@@ -98,48 +98,31 @@ const { data, error } = await useFetch(
 );
 
 // Handle data once available
-onMounted(() => {
-	if (data.value) {
-		projectDetail.value = data.value;
-		// Set the currentSlider to the first image if available
-		if (projectDetail.value?.images?.length) {
-			currentSlider.value = projectDetail.value.images[0];
-		} else {
-			currentSlider.value = projectDetail.value.image;
-		}
-	} else if (error.value) {
-		console.error('Error fetching project details:', error.value);
+if (data.value) {
+	projectDetail.value = data.value;
+	if (projectDetail.value?.images?.length) {
+		currentSlider.value = projectDetail.value.images[0];
+	} else {
+		currentSlider.value = projectDetail.value.image;
 	}
-	isLoaded.value = true; // Mark as loaded to enable rendering
+}
+
+// SEO Meta Tags (SSR Friendly)
+useSeoMeta({
+	title: () => projectDetail.value?.name || 'Project Detail',
+	ogTitle: () => projectDetail.value?.name || 'Project Detail',
+	description: () => projectDetail.value?.description || '',
+	ogDescription: () => projectDetail.value?.description || '',
+	ogImage: () => projectDetail.value?.image || '',
+	twitterCard: 'summary_large_image',
+});
+
+onMounted(() => {
+	isLoaded.value = true;
 });
 
 // Compute the project name, defaulting if not available
 const projectDetailName = computed(
 	() => projectDetail.value?.name
 );
-
-// Watch for changes in projectDetail and update SEO meta tags
-watch(projectDetail, (newValue) => {
-	if (newValue) {
-		useSeoMeta({
-			title: newValue.name || '',
-			ogTitle: newValue.name || '',
-			description: newValue.description || '',
-			ogDescription: newValue.description || '',
-			ogImage: newValue.image || '',
-		});
-
-		useHead({
-			title: newValue.name,
-			meta: [
-				{ name: 'description', content: newValue.description },
-				{ name: 'twitter:image', content: newValue.image }
-			],
-			bodyAttrs: {
-				class: newValue.description
-			},
-			script: [{ innerHTML: 'console.log(\'Hello world\')' }]
-		})
-	}
-});
 </script>

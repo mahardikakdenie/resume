@@ -24,7 +24,7 @@
 					<!-- Gambar -->
 					<img
 						:src="list.image"
-						alt=""
+						:alt="list.name"
 						class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
 				</div>
 

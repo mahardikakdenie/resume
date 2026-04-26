@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex items-center overflow-hidden py-32">
+  <section class="relative min-h-screen flex items-center overflow-hidden py-32 text-left">
     <div class="absolute inset-0 bg-slate-50"></div>
     <div class="absolute top-0 right-0 w-[60vw] h-[60vw] bg-gradient-to-bl from-purple-200/40 via-blue-200/40 to-transparent rounded-full blur-[150px] translate-x-1/4 -translate-y-1/4 animate-pulse-slow"></div>
     
@@ -12,41 +12,39 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
-            <span class="text-sm font-bold text-slate-700 tracking-wide uppercase">Software Engineer (5+ Years Exp)</span>
+            <span class="text-[10px] font-black text-slate-700 tracking-widest uppercase">{{ $t('hero.role') }}</span>
           </div>
 
           <h1 class="text-6xl md:text-8xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
-            Building<br>
+            {{ $t('hero.title_1') }}<br>
             <span class="relative z-10 inline-block px-2">
-              Scalable
+              {{ $t('hero.title_3') }}
                <div class="absolute inset-0 bg-gradient-to-r from-purple-200/80 to-blue-200/80 -z-10 transform -rotate-2 rounded-lg scale-105"></div>
             </span><br>
-            Solutions.
+            {{ $t('hero.title_2') }}.
           </h1>
 
           <p class="text-xl text-slate-600 md:max-w-xl leading-relaxed mb-12 font-medium">
-            I'm <strong class="text-slate-900">Mahardika</strong>. I engineer high-performance 
-            <span class="text-purple-600 font-bold">Web & Mobile Apps</span> using Flutter, Vue.js, and Laravel. 
-            Proven track record in Insurance, E-commerce, and SaaS platforms.
+            {{ $t('hero.description', { name: 'Mahardika', apps: 'Web & Mobile Apps' }) }}
           </p>
           
           <div class="flex flex-wrap gap-6 items-center">
-            <button @click="$router.push('/project')" class="group relative px-8 py-4 bg-slate-900 text-white text-lg font-bold rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-900/30 transition-all duration-300 active:scale-95">
+            <button @click="$router.push('/project')" class="group relative px-8 py-4 bg-slate-900 text-white text-sm font-black rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-900/30 transition-all duration-300 active:scale-95 uppercase tracking-widest">
                <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                <span class="relative z-10 flex items-center gap-2">
-                 View Portfolio
+                 {{ $t('hero.view_portfolio') }}
                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                </span>
             </button>
-             <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="text-lg font-bold text-slate-600 hover:text-purple-600 transition-colors flex items-center gap-2 group">
-              Download CV
-               <div class="w-8 h-[2px] bg-slate-300 group-hover:bg-purple-600 group-hover:w-12 transition-all"></div>
+             <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="text-sm font-black text-slate-400 hover:text-purple-600 transition-colors flex items-center gap-2 group uppercase tracking-widest">
+              {{ $t('hero.download_cv') }}
+               <div class="w-8 h-[2px] bg-slate-200 group-hover:bg-purple-600 group-hover:w-12 transition-all"></div>
              </a>
           </div>
         </div>
 
         <div class="lg:col-span-5 relative hidden lg:block" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1200">
-           <div class="relative z-10 w-full aspect-square rounded-[3rem] bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-xl border border-white/50 shadow-2xl rotate-3 transform hover:rotate-0 transition-all duration-700 overflow-hidden p-3">
+           <div class="relative z-10 w-full aspect-square rounded-[3rem] bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-xl border border-white/50 shadow-2xl rotate-3 transform hover:rotate-0 transition-all duration-700 overflow-hidden p-3 text-left">
               <div class="w-full h-full rounded-[2.5rem] bg-slate-100 overflow-hidden relative group">
                    <img 
                     src="https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg" 
@@ -54,9 +52,9 @@
                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700" 
                    />
                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
-                   <div class="absolute bottom-6 left-6 right-6 p-4 bg-white/90 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg">
-                       <p class="font-bold text-slate-900">Clean Code &</p>
-                       <p class="text-purple-600 font-semibold">Intuitive UX</p>
+                   <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg">
+                       <p class="font-black text-slate-900 text-xs uppercase tracking-widest mb-1">{{ $t('hero.badge_1') }}</p>
+                       <p class="text-purple-600 font-black text-xs uppercase tracking-widest">{{ $t('hero.badge_2') }}</p>
                    </div>
               </div>
            </div>
@@ -68,6 +66,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+// useI18n is auto-imported
+</script>
 
 <style scoped>
 .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }

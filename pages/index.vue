@@ -12,13 +12,12 @@
 <script setup lang="ts">
 import CtaSection from '~/components/CtaSection.vue';
 
-const META_DESCRIPTION = `Hi. My name is Mahardika Kessuma Denie. A Software Developer From Bandung specializing in Vue, Nuxt, and modern web technologies.`;
-const TITLE = 'Mahardika Kessuma Denie - Software Developer';
+const { t } = useI18n();
 
 useSeoMeta({
-	title: TITLE,
-	ogTitle: TITLE,
-	description: META_DESCRIPTION,
-	ogDescription: META_DESCRIPTION,
+	title: () => t('hero.role'),
+	ogTitle: () => t('hero.role'),
+	description: () => t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '4 years' }),
+	ogDescription: () => t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '4 years' }),
 });
 </script>

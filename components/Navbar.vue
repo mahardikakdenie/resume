@@ -52,17 +52,29 @@
                                 ]"
                                 @click="handleLinkClick(list.link)"
                             >
-                                {{ list.label }}
+                                {{ $t(list.label) }}
                             </span>
                         </li>
                     </ul>
+
                     <div class="w-px h-5 bg-slate-200/60 mx-6 transition-all duration-500" :class="isScrolled ? 'h-3' : 'h-5'"></div>
+
+                    <!-- Language Switcher -->
+                    <button 
+                        @click="toggleLocale"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 hover:text-purple-600 hover:border-purple-200 transition-all mr-4 pointer-events-auto"
+                        :title="locale === 'en' ? 'Switch to Indonesia' : 'Switch to English'"
+                    >
+                        <span class="text-[10px] font-black uppercase">{{ locale }}</span>
+                    </button>
+
+                    <!-- Hire Me Button -->
                     <button 
                         class="group relative inline-flex items-center justify-center px-6 py-2.5 overflow-hidden rounded-full transition-all duration-500 active:scale-95 shadow-lg hover:shadow-purple-500/30"
                         @click="$router.push('/contact')"
                     >
                         <div class="absolute inset-0 bg-slate-900 group-hover:bg-purple-600 transition-colors duration-500"></div>
-                        <span class="relative z-10 text-[10px] font-black text-white uppercase tracking-[0.2em]">Hire Me</span>
+                        <span class="relative z-10 text-[10px] font-black text-white uppercase tracking-[0.2em]">{{ $t('nav.hire_me') }}</span>
                     </button>
                 </div>
 
@@ -99,7 +111,6 @@
                 leave-to-class="translate-y-full"
             >
                 <div class="absolute bottom-0 inset-x-0 bg-white rounded-t-[3rem] p-8 pb-12 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
-                    <!-- Handle bar -->
                     <div class="w-12 h-1.5 bg-slate-100 rounded-full mx-auto mb-10" @click="isMobileMenuOpen = false"></div>
                     
                     <div class="flex justify-between items-center mb-8">
@@ -118,19 +129,31 @@
                                 :class="isActive(list.link) ? 'text-slate-900 bg-slate-50' : 'text-slate-400'"
                                 @click="handleMobileLinkClick(list.link)"
                             >
-                                <span class="tracking-tight">{{ list.label }}</span>
+                                <span class="tracking-tight">{{ $t(list.label) }}</span>
                                 <svg v-if="isActive(list.link)" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                 </svg>
                             </span>
                         </li>
                     </ul>
-                    <div class="mt-8">
+                    <div class="grid grid-cols-2 gap-4 mt-6">
                         <button 
-                            class="w-full py-5 bg-slate-900 text-white font-black rounded-2xl text-sm uppercase tracking-[0.2em] shadow-xl shadow-slate-900/20 active:scale-95 transition-all"
+                            v-for="loc in locales" :key="loc.code"
+                            @click="setLocale(loc.code)"
+                            :class="[
+                                locale === loc.code ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-400',
+                                'py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all'
+                            ]"
+                        >
+                            {{ loc.name }}
+                        </button>
+                    </div>
+                    <div class="mt-6">
+                        <button 
+                            class="w-full py-5 bg-purple-600 text-white font-black rounded-2xl text-sm uppercase tracking-[0.2em] shadow-xl shadow-purple-900/20 active:scale-95 transition-all"
                             @click="handleMobileLinkClick('/contact')"
                         >
-                            Get In Touch
+                            {{ $t('nav.hire_me') }}
                         </button>
                     </div>
                 </div>
@@ -150,17 +173,23 @@ interface Navigator {
 
 const router = useRouter()
 const route = useRoute()
+const { locale, locales, setLocale } = useI18n()
 const isMobileMenuOpen = ref(false)
 const scrollProgress = ref(0)
 const isScrolled = ref(false)
 
 const lists = ref<Array<Navigator>>([
-    { label: 'About', link: '/' },
-    { label: 'Skills', link: '/skills' },
-    { label: 'Experience', link: '/experiences' },
-    { label: 'Projects', link: '/project' },
-    { label: 'Docs', link: '/documentation' },
+    { label: 'nav.about', link: '/' },
+    { label: 'nav.skills', link: '/skills' },
+    { label: 'nav.experience', link: '/experiences' },
+    { label: 'nav.projects', link: '/project' },
+    { label: 'nav.docs', link: '/documentation' },
 ])
+
+const toggleLocale = async () => {
+    const nextLocale = locale.value === 'en' ? 'id' : 'en'
+    await setLocale(nextLocale)
+}
 
 const activeHighlightIndex = ref(-1)
 

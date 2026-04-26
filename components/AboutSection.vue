@@ -1,5 +1,5 @@
 <template>
-  <section class="py-32 relative z-10 overflow-hidden">
+  <section class="py-32 relative z-10 overflow-hidden text-left">
     <div class="container mx-auto px-6 md:px-12 lg:px-24">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -16,18 +16,18 @@
 
         <div class="lg:col-span-7 relative z-20 lg:-ml-12" data-aos="fade-up" data-aos-delay="200">
           <div class="p-8 md:p-12 bg-white/90 backdrop-blur-xl rounded-3xl border border-white/50 shadow-xl">
-              <h4 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-bold uppercase tracking-widest mb-4 text-sm">About Me</h4>
-              <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-                More than code.<br>
-                <span class="text-slate-400">I build <span class="italic text-purple-600">Impact.</span></span>
+              <h4 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-black uppercase tracking-[0.3em] mb-4 text-[10px]">{{ $t('about.badge') }}</h4>
+              <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tighter">
+                {{ $t('about.title_1') }}<br>
+                <span class="text-slate-400">{{ $t('about.title_2') }} <span class="italic text-purple-600">{{ $t('about.title_italic') }}</span></span>
               </h2>
               
-              <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+              <div class="space-y-6 text-lg text-slate-500 leading-relaxed font-medium">
                 <p>
-                  Hi, I'm <strong>Mahardika Kessuma Denie</strong>. With over <strong class="text-purple-600">4 years of experience</strong>, I specialize in building complex ecosystems—from multi-tenant insurance platforms to real-time e-commerce dashboards.
+                  {{ $t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '4 years' }) }}
                 </p>
                 <p>
-                  My journey includes boosting seller productivity by <strong class="text-slate-900">35%</strong> at <em>Ordivo</em> and founding <strong class="text-slate-900">Ensiklotari</strong> (Top 10 IEEE 2021 Startup).
+                  {{ $t('about.description_2', { percent: '35%' }) }}
                 </p>
               </div>
               
@@ -35,17 +35,17 @@
                 
                 <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg shadow-purple-500/30 transform hover:-translate-y-2 transition-all duration-300">
                     <h3 class="text-4xl font-black mb-1">5+</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider opacity-80">Years Exp.</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest opacity-80">{{ $t('about.stats_years') }}</p>
                 </div>
 
                 <div class="p-6 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/30 transform hover:-translate-y-2 transition-all duration-300 delay-100">
                     <h3 class="text-4xl font-black mb-1">19+</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider opacity-80">Projects</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest opacity-80">{{ $t('about.stats_projects') }}</p>
                 </div>
 
                 <div class="p-6 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/30 transform hover:-translate-y-2 transition-all duration-300 delay-200">
                     <h3 class="text-4xl font-black mb-1">3.84</h3>
-                    <p class="text-xs font-bold uppercase tracking-wider opacity-80">GPA Score</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest opacity-80">{{ $t('about.stats_gpa') }}</p>
                 </div>
 
               </div>
@@ -56,6 +56,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+const { t } = useI18n()
+</script>
 
 <style scoped>
 .animate-pulse-slow {

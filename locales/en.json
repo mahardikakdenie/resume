@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "docs": "Docs",
+    "hire_me": "Hire Me"
+  },
+  "hero": {
+    "role": "Software Engineer (5+ Years Exp)",
+    "title_1": "Building",
+    "title_2": "Solutions",
+    "title_3": "Scalable",
+    "description": "I'm {name}. I engineer high-performance {apps} using Flutter, Vue.js, and Laravel. Proven track record in Insurance, E-commerce, and SaaS platforms.",
+    "view_portfolio": "View Portfolio",
+    "download_cv": "Download CV",
+    "badge_1": "Clean Code &",
+    "badge_2": "Intuitive UX"
+  },
+  "about": {
+    "badge": "About Me",
+    "title_1": "More than code.",
+    "title_2": "I build ",
+    "title_italic": "Impact.",
+    "description_1": "Hi, I'm {name}. With over {years}, I specialize in building complex ecosystems—from multi-tenant insurance platforms to real-time e-commerce dashboards.",
+    "description_2": "My journey includes boosting seller productivity by {percent} at Ordivo and founding Ensiklotari (Top 10 IEEE 2021 Startup).",
+    "stats_years": "Years Exp.",
+    "stats_projects": "Projects",
+    "stats_gpa": "GPA Score"
+  },
+  "common": {
+    "back": "Back",
+    "read_more": "Read More",
+    "published_on": "Published on",
+    "technical_library": "Technical Library",
+    "knowledge_base": "Knowledge Base",
+    "read_analysis": "Read Analysis",
+    "briefing": "Briefing",
+    "about_this_work": "About this work",
+    "technologies": "Technologies",
+    "live_preview": "Live Preview",
+    "case_study": "Case Study",
+    "technical_deep_dive": "Technical Deep Dive",
+    "technical_challenges": "Technical Challenges",
+    "key_features": "Key Features",
+    "next_case_study": "Next Case Study",
+    "view_project": "VIEW PROJECT",
+    "initializing": "Initializing",
+    "analysis": "Analysis"
+  },
+  "documentation": {
+    "hero_title": "Documentation",
+    "hero_description": "Documenting what I've done so I don't forget and others know what I've accomplished."
+  },
+  "footer": {
+    "description": "Crafting digital experiences with clean code and modern aesthetics. Let's build something amazing together.",
+    "quick_links": "Quick Links",
+    "services": "Services",
+    "get_in_touch": "Get in Touch",
+    "rights_reserved": "All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "web_dev": "Web Development",
+    "mobile_dev": "Mobile App Development",
+    "ui_ux": "UI/UX Design",
+    "system_arch": "System Architecture"
+  },
+  "project_content": {
+    "laukita-theme": {
+      "description": "A sophisticated POS solution featuring a high-fidelity dashboard. This project highlights a clean, data-driven UI with elegant visualization cards and a streamlined sidebar, engineered to transform complex transaction data into a seamless user experience.",
+      "challenges": "Building an inventory system that stays responsive while handling thousands of SKUs required extremely tight state management optimization using Pinia and virtual scrolling techniques.",
+      "features": {
+        "0": "Real-time Inventory Tracking System",
+        "1": "Multi-payment Gateway Integration",
+        "2": "Advanced Sales Analytics Dashboard",
+        "3": "Responsive Thermal Printer Optimization",
+        "4": "High-performance Local Storage Caching"
+      }
+    },
+    "dreams-theme": {
+      "description": "An aesthetically-driven POS theme that prioritizes visual clarity and modern interaction patterns. The interface utilizes a balanced color palette and spacious layout to minimize cognitive load.",
+      "challenges": "Balancing high-level animations with hardware limitations on mid-range POS tablets required CSS GPU acceleration optimization.",
+      "features": {
+        "0": "Dynamic Component Layout Engine",
+        "1": "Specialized Retail Widgets",
+        "2": "Ultra-low Latency Transaction Flow",
+        "3": "Seamless Dark/Light Mode Transition"
+      }
+    },
+    "dashboard-admin-theme": {
+      "description": "A comprehensive administrative powerhouse designed for high-level data oversight. The dashboard integrates complex analytical charts and status indicators into a cohesive layout.",
+      "challenges": "Managing complex multi-tenant data state while maintaining render performance on tables with thousands of rows.",
+      "features": {
+        "0": "Role-Based Access Control (RBAC)",
+        "1": "Dynamic Real-time Data Streaming",
+        "2": "Modular Analytics Widget System",
+        "3": "Exportable Data Tables (CSV/PDF)"
+      }
+    },
+    "customer-portal-app": {
+      "description": "A mobile-first insurance portal that bridges the gap between complex policy management and user-friendly mobile interfaces.",
+      "challenges": "Offline data synchronization in Flutter to ensure users can still access policy details even in low signal conditions.",
+      "features": {
+        "0": "Digital Claim Submission Pipeline",
+        "1": "Policy Document Vault with Biometrics",
+        "2": "Real-time Support Chat Integration",
+        "3": "Automated Renewal Reminders"
+      }
+    },
+    "api-service-imgbb": {
+      "description": "A developer-centric cloud storage solution that streamlines image management. This TypeScript-based API service provides a robust bridge to IMGBB storage.",
+      "challenges": "Handling rate limiting from third-party APIs by implementing a smart queue system so no data is lost.",
+      "features": {
+        "0": "Secure JWT Authentication",
+        "1": "Automated Image Compression Pipeline",
+        "2": "Modular Provider Architecture",
+        "3": "Global Error Handling & Logging"
+      }
+    },
+    "floucloud": {
+      "description": "An innovative cloud services platform where I architected the core Content Management System. This project showcases the power of dynamic content delivery.",
+      "challenges": "Integration between Nuxt 3 frontend and .Net Core backend requiring extremely strict API format standardization.",
+      "features": {
+        "0": "Headless CMS Architecture",
+        "1": "Dynamic Content Versioning",
+        "2": "Multi-language Support Engine",
+        "3": "Integrated SEO Metadata Manager"
+      }
+    },
+    "ticketing-portal-automation": {
+      "description": "An automation system connecting developer workflows on GitHub with internal ticket management systems in real-time.",
+      "challenges": "Building accurate sub-task detection logic based on developer branch activity without disrupting their main workflow.",
+      "features": {
+        "0": "Smart Ticket Mapping (Anti-Salah Kamar)",
+        "1": "Automated PR Status Syncing",
+        "2": "Real-time Activity Mirroring",
+        "3": "Webhook Signature Validation Security"
+      }
+    },
+    "vue-button": {
+      "description": "A developer-focused UI library simplifying design system implementation. Focused on customizable and accessible Button components.",
+      "challenges": "Ensuring the library remains flexible for various design themes while having the smallest possible footprint.",
+      "features": {
+        "0": "Zero Dependency Architecture",
+        "1": "Full TypeScript Definition Support",
+        "2": "ARIA-compliant Accessibility",
+        "3": "Extremely Small Bundle Size (< 2KB)"
+      }
+    },
+    "zoom-oauth-integration": {
+      "description": "A full implementation of the Zoom API Authorization Code Grant flow designed for scalability and user data security.",
+      "challenges": "The biggest challenge was taming strict security policies from Zoom that require very precise Basic Auth encoding.",
+      "features": {
+        "0": "High-Security OAuth 2.0 Handshake Implementation",
+        "1": "Automated Token Refresh & Lifecycle Management",
+        "2": "Orkestrasi Lingkungan Dinamis (Dev vs Prod)",
+        "3": "Base64 Header Optimization for Enterprise APIs",
+        "4": "Seamless Ngrok Tunneling for Local Webhooks"
+      }
+    },
+    "ensiklotari": {
+      "description": "A digital bridge for cultural preservation, connecting traditional dance artists with a global audience through a rich visual experience.",
+      "challenges": "Delivering heavy multimedia content (dance videos) while maintaining page loading speed.",
+      "features": {
+        "0": "Immersive Cultural Content Delivery",
+        "1": "Interactive Artist Directory",
+        "2": "Educational Dance Learning Portal",
+        "3": "Integrated Booking System"
+      }
+    }
+  },
+  "skills_content": {
+    "react": "Expert-level proficiency in building scalable React applications using modern patterns like Hooks, Context API, and Server-Side Rendering.",
+    "vue": "Deep expertise in the Vue.js ecosystem, including Nuxt 3, Pinia, and Vue Router.",
+    "node": "Node.js is a cross-platform, open-source JavaScript runtime environment.",
+    "express": "Fast, unopinionated, minimalist web framework for Node.js.",
+    "golang": "An open-source programming language supported by Google.",
+    "html5": "The latest standard for HTML.",
+    "tailwind": "A utility-first CSS framework for rapidly building custom designs.",
+    "bootstrap": "A popular CSS framework for developing responsive websites.",
+    "sass": "A CSS preprocessor for efficient styling.",
+    "css3": "The latest evolution of CSS.",
+    "js": "A versatile, high-level programming language for the web.",
+    "ts": "A strongly typed programming language built on JavaScript.",
+    "php": "A popular server-side scripting language.",
+    "ci": "A lightweight yet powerful PHP framework.",
+    "laravel": "An elegant PHP web framework.",
+    "mysql": "The most popular open-source RDBMS.",
+    "pgsql": "An advanced, open-source object-relational database.",
+    "mongodb": "A scalable and flexible document-based NoSQL database.",
+    "vercel": "A cloud platform for ultra-fast deployment.",
+    "shared_project_desc": {
+        "nextjs_movie": "List Movie And Rating built with Next.js.",
+        "tic_tac_toe": "A simple Tic Tac Toe game with React.",
+        "ensiklotari": "A cultural platform built with Vue 3.",
+        "bujanggamanik": "Appointment app for the construction sector.",
+        "web_absen": "Internal HR system for Public Works.",
+        "store_vue": "E-commerce UI theme built with Nuxt.js.",
+        "pm_tricks": "LMS dashboard for digital training.",
+        "book_api": "Simple RESTful API for book library."
+    }
+  },
+  "projects": {
+    "hero_title": "Portfolio",
+    "hero_description": "A collection of selected works showcasing my dedication.",
+    "selected_works": "Selected Works",
+    "featured_projects": "Featured Projects.",
+    "view_all_archives": "View All Archives"
+  },
+  "contact": {
+    "title": "Let's build something visionary.",
+    "description": "I'm available for freelance and full-time roles.",
+    "chat_title": "Chat with me",
+    "office_title": "Office",
+    "connect_title": "Connect with me",
+    "form_title": "Send a Message",
+    "form_description": "Got a technical issue? Let me know.",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email_address": "Email Address",
+    "your_message": "Your Message",
+    "send_message": "Send Message",
+    "sending": "Sending...",
+    "success_msg": "Message sent!"
+  },
+  "cta": {
+    "badge": "Open for Opportunities",
+    "title_1": "Have a project in mind?",
+    "title_2": "Let's build it together.",
+    "description_1": "I'm available for freelance and full-time roles.",
+    "description_2": "Turn your ideas into {reality}.",
+    "reality": "digital reality.",
+    "start_conversation": "Start a Conversation",
+    "email_directly": "Or email me directly"
+  }
+}

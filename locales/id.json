@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "docs": "Dokumentasi",
+    "hire_me": "Hubungi Saya"
+  },
+  "hero": {
+    "role": "Software Engineer (5+ Tahun Pengalaman)",
+    "title_1": "Membangun",
+    "title_2": "Solusi",
+    "title_3": "Scalable",
+    "description": "Saya {name}. Saya membangun {apps} performa tinggi menggunakan Flutter, Vue.js, dan Laravel. Rekam jejak terbukti di platform Asuransi, E-commerce, dan SaaS.",
+    "view_portfolio": "Lihat Portofolio",
+    "download_cv": "Unduh CV",
+    "badge_1": "Kode Bersih &",
+    "badge_2": "UX Intuitif"
+  },
+  "about": {
+    "badge": "Tentang Saya",
+    "title_1": "Lebih dari sekadar kode.",
+    "title_2": "Saya membangun ",
+    "title_italic": "Dampak.",
+    "description_1": "Halo, saya {name}. Dengan pengalaman lebih dari {years}, saya ahli dalam membangun ekosistem kompleks—mulai dari platform asuransi multi-tenant hingga dashboard e-commerce real-time.",
+    "description_2": "Perjalanan saya mencakup peningkatan produktivitas penjual sebesar {percent} di Ordivo dan mendirikan Ensiklotari (Top 10 IEEE 2021 Startup).",
+    "stats_years": "Tahun Pengal.",
+    "stats_projects": "Proyek",
+    "stats_gpa": "Skor IPK"
+  },
+  "common": {
+    "back": "Kembali",
+    "read_more": "Baca Selengkapnya",
+    "published_on": "Diterbitkan pada",
+    "technical_library": "Perpustakaan Teknis",
+    "knowledge_base": "Basis Pengetahuan",
+    "read_analysis": "Baca Analisis",
+    "briefing": "Ringkasan",
+    "about_this_work": "Tentang karya ini",
+    "technologies": "Teknologi",
+    "live_preview": "Pratinjau Langsung",
+    "case_study": "Studi Kasus",
+    "technical_deep_dive": "Pendalaman Teknis",
+    "technical_challenges": "Tantangan Teknis",
+    "key_features": "Fitur Utama",
+    "next_case_study": "Studi Kasus Berikutnya",
+    "view_project": "LIHAT PROYEK",
+    "initializing": "Memulai",
+    "analysis": "Analisis"
+  },
+  "documentation": {
+    "hero_title": "Dokumentasi",
+    "hero_description": "Mendokumentasikan apa yang pernah saya kerjakan agar saya bisa tidak lupa dan orang lain tahu apa yang telah saya kerjakan."
+  },
+  "footer": {
+    "description": "Membangun pengalaman digital dengan kode yang bersih dan estetika modern. Mari bangun sesuatu yang luar biasa bersama.",
+    "quick_links": "Tautan Langsung",
+    "services": "Layanan",
+    "get_in_touch": "Hubungi Saya",
+    "rights_reserved": "Seluruh hak cipta dilindungi.",
+    "privacy_policy": "Kebijakan Privasi",
+    "terms_of_service": "Ketentuan Layanan",
+    "web_dev": "Pengembangan Web",
+    "mobile_dev": "Pengembangan Aplikasi Mobile",
+    "ui_ux": "Desain UI/UX",
+    "system_arch": "Arsitektur Sistem"
+  },
+  "project_content": {
+    "laukita-theme": {
+      "description": "Solusi POS canggih dengan dashboard fidelitas tinggi. Proyek ini menonjolkan UI bersih berbasis data dengan kartu visualisasi elegan dan sidebar yang ramping, dirancang untuk mengubah data transaksi kompleks menjadi pengalaman pengguna yang mulus.",
+      "challenges": "Membangun sistem inventaris yang tetap responsif meskipun menangani ribuan SKU memerlukan optimasi state management yang sangat ketat menggunakan Pinia dan teknik virtual scrolling.",
+      "features": {
+        "0": "Sistem Pelacakan Inventaris Real-time",
+        "1": "Integrasi Multi-payment Gateway",
+        "2": "Dashboard Analitik Penjualan Lanjutan",
+        "3": "Optimasi Printer Thermal Responsif",
+        "4": "Caching Penyimpanan Lokal Performa Tinggi"
+      }
+    },
+    "dreams-theme": {
+      "description": "Tema POS yang didorong secara estetika, memprioritaskan kejelasan visual dan pola interaksi modern. Antarmuka menggunakan palet warna seimbang dan tata letak luas untuk meminimalkan beban kognitif.",
+      "challenges": "Menyeimbangkan animasi tingkat tinggi dengan batasan hardware pada tablet POS kelas menengah memerlukan optimasi CSS GPU acceleration.",
+      "features": {
+        "0": "Mesin Tata Letak Komponen Dinamis",
+        "1": "Widget Ritel Khusus",
+        "2": "Alur Transaksi Latensi Sangat Rendah",
+        "3": "Transisi Mode Gelap/Terang yang Mulus"
+      }
+    },
+    "dashboard-admin-theme": {
+      "description": "Pusat administrasi komprehensif yang dirancang untuk pengawasan data tingkat tinggi. Dashboard ini mengintegrasikan grafik analitik kompleks dan indikator status ke dalam tata letak yang kohesif.",
+      "challenges": "Mengelola state data multi-tenant yang kompleks sambil menjaga performa render pada tabel dengan ribuan baris data.",
+      "features": {
+        "0": "Role-Based Access Control (RBAC)",
+        "1": "Streaming Data Real-time Dinamis",
+        "2": "Sistem Widget Analitik Modular",
+        "3": "Tabel Data yang Dapat Diekspor (CSV/PDF)"
+      }
+    },
+    "customer-portal-app": {
+      "description": "Portal asuransi yang berfokus pada mobile, menjembatani kesenjangan antara manajemen polis yang kompleks dan antarmuka seluler yang ramah pengguna.",
+      "challenges": "Sinkronisasi data offline di Flutter untuk memastikan user tetap bisa mengakses detail polis meskipun dalam kondisi sinyal lemah.",
+      "features": {
+        "0": "Alur Pengajuan Klaim Digital",
+        "1": "Gudang Dokumen Polis dengan Biometrik",
+        "2": "Integrasi Chat Dukungan Real-time",
+        "3": "Pengingat Perpanjangan Otomatis"
+      }
+    },
+    "api-service-imgbb": {
+      "description": "Solusi penyimpanan cloud yang berpusat pada pengembang untuk merampingkan manajemen gambar. Layanan API berbasis TypeScript ini menyediakan jembatan kuat ke penyimpanan IMGBB.",
+      "challenges": "Menangani rate limiting dari API pihak ketiga dengan mengimplementasikan queue system yang cerdas agar tidak ada data yang hilang.",
+      "features": {
+        "0": "Autentikasi JWT yang Aman",
+        "1": "Alur Kompresi Gambar Otomatis",
+        "2": "Arsitektur Provider Modular",
+        "3": "Penanganan Error Global & Logging"
+      }
+    },
+    "floucloud": {
+      "description": "Platform layanan cloud inovatif di mana saya mengarsiteki sistem manajemen konten (CMS) inti. Proyek ini menunjukkan kekuatan pengiriman konten dinamis.",
+      "challenges": "Integrasi antara frontend Nuxt 3 dengan backend .Net Core yang memerlukan standarisasi format API yang sangat ketat.",
+      "features": {
+        "0": "Arsitektur Headless CMS",
+        "1": "Versioning Konten Dinamis",
+        "2": "Mesin Dukungan Multi-bahasa",
+        "3": "Manajer Metadata SEO Terintegrasi"
+      }
+    },
+    "ticketing-portal-automation": {
+      "description": "Sistem otomatisasi yang menghubungkan alur kerja developer di GitHub dengan sistem manajemen tiket internal secara real-time.",
+      "challenges": "Membangun logika deteksi sub-task yang akurat berdasarkan aktivitas branch developer tanpa mengganggu workflow utama mereka.",
+      "features": {
+        "0": "Pemetaan Tiket Cerdas (Anti-Salah Kamar)",
+        "1": "Sinkronisasi Status PR Otomatis",
+        "2": "Mirroring Aktivitas Real-time",
+        "3": "Keamanan Validasi Webhook Signature"
+      }
+    },
+    "vue-button": {
+      "description": "Library UI developer-focused yang menyederhanakan implementasi sistem desain. Berfokus pada komponen Button yang dapat disesuaikan dan diakses.",
+      "challenges": "Memastikan library tetap fleksibel untuk berbagai tema desain namun memiliki footprint yang sekecil mungkin.",
+      "features": {
+        "0": "Arsitektur Tanpa Dependensi",
+        "1": "Dukungan Definisi TypeScript Penuh",
+        "2": "Aksesibilitas Sesuai ARIA",
+        "3": "Ukuran Bundle Sangat Kecil (< 2KB)"
+      }
+    },
+    "zoom-oauth-integration": {
+      "description": "Implementasi penuh flow Authorization Code Grant Zoom API yang dirancang untuk skalabilitas dan keamanan data pengguna.",
+      "challenges": "Tantangan terbesar adalah menjinakkan strict security policy dari Zoom yang memerlukan encoding Basic Auth yang sangat presisi.",
+      "features": {
+        "0": "Implementasi Handshake OAuth 2.0 Keamanan Tinggi",
+        "1": "Manajemen Lifecycle & Refresh Token Otomatis",
+        "2": "Orkestrasi Lingkungan Dinamis (Dev vs Prod)",
+        "3": "Optimasi Header Base64 untuk API Enterprise",
+        "4": "Tunneling Ngrok Mulus untuk Webhook Lokal"
+      }
+    },
+    "ensiklotari": {
+      "description": "Jembatan digital untuk pelestarian budaya, menghubungkan seniman tari tradisional dengan audiens global melalui pengalaman visual yang kaya.",
+      "challenges": "Menyajikan konten multimedia yang berat (video tari) dengan tetap menjaga kecepatan loading halaman.",
+      "features": {
+        "0": "Pengiriman Konten Budaya Imersif",
+        "1": "Direktori Seniman Interaktif",
+        "2": "Portal Pembelajaran Tari Edukatif",
+        "3": "Sistem Pemesanan Terintegrasi"
+      }
+    }
+  },
+  "skills_content": {
+    "react": "Keahlian tingkat ahli dalam membangun aplikasi React yang skalabel menggunakan pola modern seperti Hooks, Context API, dan Server-Side Rendering. Berfokus pada penciptaan antarmuka pengguna yang sangat interaktif dan performa tinggi dengan prinsip kode bersih.",
+    "vue": "Keahlian mendalam dalam ekosistem Vue.js, termasuk Nuxt 3, Pinia, dan Vue Router. Terampil dalam mengarsiteki aplikasi web performa tinggi dengan fokus pada SEO, reaktivitas, dan desain komponen modular.",
+    "node": "Node.js adalah runtime environment JavaScript lintas platform, open-source yang dapat berjalan di Windows, Linux, Unix, macOS, dan lainnya.",
+    "express": "Framework web minimalis untuk Node.js yang mempermudah pembuatan API yang kuat dan skalabel.",
+    "golang": "Bahasa pemrograman open-source yang didukung oleh Google untuk membangun software yang sederhana, handal, dan efisien.",
+    "html5": "Standar terbaru untuk HTML, bahasa markup utama untuk web.",
+    "tailwind": "Framework CSS utility-first untuk membangun desain kustom dengan cepat.",
+    "bootstrap": "Framework CSS populer untuk pengembangan website responsif.",
+    "sass": "Preprocessor CSS untuk penataan gaya yang efisien.",
+    "css3": "Evolusi terbaru dari bahasa Cascading Style Sheets.",
+    "js": "Bahasa pemrograman tingkat tinggi yang serbaguna untuk web.",
+    "ts": "Bahasa pemrograman yang diketik secara kuat (TypeScript).",
+    "php": "Bahasa scripting sisi server populer.",
+    "ci": "Framework PHP yang ringan namun kuat.",
+    "laravel": "Framework web PHP yang elegan.",
+    "mysql": "Sistem manajemen database relasional.",
+    "pgsql": "Sistem database objek-relasional canggih.",
+    "mongodb": "Database NoSQL berbasis dokumen.",
+    "vercel": "Platform cloud untuk deployment aplikasi web.",
+    "shared_project_desc": {
+        "nextjs_movie": "Daftar Film dan Rating dengan Next.js.",
+        "tic_tac_toe": "Permainan Tic Tac Toe sederhana dengan React.",
+        "ensiklotari": "Platform budaya yang dibangun dengan Vue 3.",
+        "bujanggamanik": "Aplikasi temu janji sektor konstruksi.",
+        "web_absen": "Sistem HR internal Dinas Pekerjaan Umum.",
+        "store_vue": "Tema UI E-commerce dengan Nuxt.js.",
+        "pm_tricks": "Dashboard LMS untuk pelatihan digital.",
+        "book_api": "RESTful API manajemen perpustakaan."
+    }
+  },
+  "projects": {
+    "hero_title": "Portofolio",
+    "hero_description": "Kumpulan karya pilihan yang menunjukkan dedikasi saya.",
+    "selected_works": "Karya Terpilih",
+    "featured_projects": "Proyek Unggulan.",
+    "view_all_archives": "Lihat Semua Arsip"
+  },
+  "contact": {
+    "title": "Mari bangun sesuatu yang visioner.",
+    "description": "Saya saat ini tersedia untuk proyek freelance.",
+    "chat_title": "Obrol dengan saya",
+    "office_title": "Kantor",
+    "connect_title": "Terhubung dengan saya",
+    "form_title": "Kirim Pesan",
+    "form_description": "Ada masalah teknis? Beritahu saya.",
+    "first_name": "Nama Depan",
+    "last_name": "Nama Belakang",
+    "email_address": "Alamat Email",
+    "your_message": "Pesan Anda",
+    "send_message": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "success_msg": "Pesan terkirim!"
+  },
+  "cta": {
+    "badge": "Terbuka untuk Peluang",
+    "title_1": "Punya proyek dalam pikiran?",
+    "title_2": "Mari bangun bersama.",
+    "description_1": "Saya tersedia untuk freelance dan penuh waktu.",
+    "description_2": "Ubah ide Anda menjadi {reality}.",
+    "reality": "realitas digital.",
+    "start_conversation": "Mulai Obrolan",
+    "email_directly": "Atau email saya langsung"
+  }
+}

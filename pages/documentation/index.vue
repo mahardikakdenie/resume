@@ -1,30 +1,30 @@
 <template>
   <div class="relative min-h-screen bg-white overflow-x-hidden">
-    <!-- Background Decor (Optimized for performance and mobile) -->
+    <!-- Background Decor -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden -z-10">
       <div class="absolute top-0 left-0 w-32 h-32 md:w-96 md:h-96 bg-purple-100/40 blur-[60px] md:blur-[150px] rounded-full"></div>
       <div class="absolute bottom-20 right-0 w-48 h-48 md:w-[500px] md:h-[500px] bg-blue-100/30 blur-[60px] md:blur-[150px] rounded-full"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-10 md:py-32 text-left">
-      <!-- Hero Section: Precision Scaled for Small Devices -->
+      <!-- Hero Section -->
       <div class="relative mb-12 md:mb-32 px-2 md:px-0">
         <div data-aos="fade-down" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100 mb-4 md:mb-8 transition-transform active:scale-95">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
           </span>
-          <span class="text-[9px] font-black text-slate-500 uppercase tracking-[0.2em]">Archive</span>
+          <span class="text-[9px] font-black text-slate-500 uppercase tracking-[0.2em]">{{ $t('common.knowledge_base') }}</span>
         </div>
         
         <h1 data-aos="fade-right" class="font-black leading-[1.1] text-slate-900 tracking-tighter">
-          <span class="text-3xl md:text-6xl block mb-1 opacity-20">My</span>
-          <span class="text-[11vw] sm:text-7xl md:text-9xl block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 break-words leading-none">
-            Documentation
+          <span class="text-3xl md:text-6xl block mb-1 opacity-20 uppercase">My</span>
+          <span class="text-[11vw] sm:text-7xl md:text-9xl block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-600 break-words leading-none uppercase">
+            {{ $t('documentation.hero_title') }}
           </span>
         </h1>
         <p data-aos="fade-up" data-aos-delay="200" class="mt-6 text-slate-500 max-w-2xl text-base md:text-2xl font-medium leading-relaxed">
-          Logika, arsitektur, dan perjalanan belajar dalam dunia software engineering.
+          {{ $t('documentation.hero_description') }}
         </p>
       </div>
 
@@ -44,14 +44,12 @@
                 : 'bg-white border border-slate-100 shadow-xl shadow-slate-200/50'
             ]"
           >
-            <!-- Hover Glow -->
-            <div 
-              class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
               :class="index === 0 ? 'bg-gradient-to-br from-purple-600/10 to-transparent' : 'bg-gradient-to-br from-purple-500/5 to-transparent'"
             ></div>
 
-            <div class="relative z-10">
-              <div class="flex items-center justify-between mb-8 md:mb-10">
+            <div class="relative z-10 text-left">
+              <div class="flex items-center justify-between mb-8 md:mb-10 text-left">
                 <span 
                   :class="[
                     'px-3 py-1 text-[9px] md:text-[10px] font-black uppercase tracking-widest rounded-full border',
@@ -67,7 +65,7 @@
 
               <h2 
                 :class="[
-                  'font-black mb-4 md:mb-6 transition-colors duration-300 leading-tight tracking-tight',
+                  'font-black mb-4 md:mb-6 transition-colors duration-300 leading-tight tracking-tight text-left',
                   index === 0 ? 'text-2xl sm:text-4xl md:text-6xl text-white group-hover:text-purple-400' : 'text-xl md:text-4xl text-slate-900 group-hover:text-purple-600'
                 ]"
               >
@@ -75,7 +73,7 @@
               </h2>
               <p 
                 :class="[
-                  'text-sm md:text-xl leading-relaxed mb-8 md:mb-10 line-clamp-3',
+                  'text-sm md:text-xl leading-relaxed mb-8 md:mb-10 line-clamp-3 text-left',
                   index === 0 ? 'text-slate-400' : 'text-slate-500 font-medium'
                 ]"
               >
@@ -84,7 +82,7 @@
             </div>
 
             <div class="relative z-10 flex items-center justify-between mt-auto pt-6 md:pt-8 border-t" :class="index === 0 ? 'border-white/10' : 'border-slate-50'">
-              <span class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Analysis</span>
+              <span class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">{{ $t('common.analysis') }}</span>
               
               <NuxtLink 
                 :to="article._path"
@@ -106,6 +104,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const formatDate = (date: string) => {
   if (!date) return ''
   return new Date(date).toLocaleDateString('en-US', {
@@ -125,6 +124,7 @@ useSeoMeta({
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }

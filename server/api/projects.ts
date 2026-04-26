@@ -1,38 +1,29 @@
-import { projects } from '~/lib/static';
-import { IProjects } from '~/lib/staticInterface';
+import { projects } from '../../lib/static';
 
 export default defineEventHandler((event) => {
-	const query = getQuery<{ slug?: string }>(event);
-	const { slug } = query;
+    const query = getQuery(event);
+    const slug = query.slug;
 
-	// Define the response type with the correct data type
-	const response: {
-		data: IProjects | IProjects[] | null;
-		message: string;
-		code: number;
-	} = {
-		data: [], // Set default type to an empty array which matches IProjects[]
-		message: 'success',
-		code: 200,
-	};
+    if (slug) {
+        // Cari project dengan perbandingan yang lebih aman (case-insensitive)
+        const foundProject = projects.find(p => p.link.toLowerCase() === String(slug).toLowerCase());
 
-	try {
-		// If slug is provided, find the matching project; otherwise, return all projects
-		response.data = slug
-			? projects.find((project) => project.link === slug) || null // Fallback to null if undefined
-			: projects;
+        if (foundProject) {
+            return {
+                data: foundProject,
+                message: 'success'
+            };
+        }
 
-		// If a slug was provided but no project was found, adjust the response
-		if (slug && response.data === null) {
-			response.message = 'Project not found';
-			response.code = 404;
-		}
-	} catch (error) {
-		// Catch any errors and adjust the response accordingly
-		response.message = 'An error occurred';
-		response.code = 500;
-		response.data = null; // Set data to null on error
-	}
+        return {
+            data: null,
+            message: `Project not found for slug: ${slug}`,
+            code: 404
+        };
+    }
 
-	return response;
+    return {
+        data: projects,
+        message: 'success'
+    };
 });

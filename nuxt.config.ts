@@ -21,5 +21,23 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-aos"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-aos", "@nuxt/content"],
+  tailwindcss: {
+    config: {
+      plugins: [require('@tailwindcss/typography')],
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  },
+  content: {
+    highlight: {
+      theme: 'github-light',
+      langs: ['ts', 'js', 'json', 'vue', 'bash', 'html', 'css']
+    }
+  }
 })

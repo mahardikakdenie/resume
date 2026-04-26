@@ -1,128 +1,183 @@
 <template>
-    <div v-if="isLoaded" class="container mx-auto px-4 py-8">
-        <!-- Header -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-            <h1 class="text-3xl font-extrabold text-gray-900">{{ projectDetailName }}</h1>
-            <span v-if="projectDetail?.badge"
-                class="mt-2 md:mt-0 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                {{ projectDetail.badge }}
-            </span>
-        </div>
-
-        <!-- Project Detail Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Left Side: Image Gallery -->
-            <div class="lg:col-span-2 space-y-4">
-                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
-                    <img :src="currentSlider" alt="Project Image" class="w-full h-full object-cover" />
+    <div class="min-h-screen pb-20 bg-slate-50/50 transition-all duration-700">
+        <div v-if="projectDetail && isLoaded">
+            <!-- Hero Section -->
+            <div class="relative pt-32 pb-20 overflow-hidden bg-white border-b border-slate-100">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none -z-10">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full animate-pulse"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full animate-pulse" style="animation-delay: 2s;"></div>
                 </div>
 
-                <!-- Thumbnail Navigation -->
-                <div v-if="projectDetail?.images?.length" class="flex space-x-4 overflow-x-auto pb-2">
-                    <div v-for="(image, index) in projectDetail.images" :key="index"
-                        @click="currentSlider = image"
-                        class="w-20 h-20 rounded-md cursor-pointer border-2 transition-all duration-300"
-                        :class="[
-                            currentSlider === image ? 'border-blue-500' : 'border-transparent'
-                        ]">
-                        <img :src="image" alt="Thumbnail" class="w-full h-full object-cover rounded-md" />
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left text-nowrap">
+                    <div class="max-w-5xl mx-auto">
+                        <NuxtLink 
+                            to="/project" 
+                            class="inline-flex items-center text-sm font-black text-slate-400 hover:text-purple-600 transition-all mb-12 group uppercase tracking-widest"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                            Back to Archive
+                        </NuxtLink>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3">
+                                <span class="px-4 py-1.5 rounded-full bg-purple-600 text-white text-[10px] font-black uppercase tracking-[0.2em]">
+                                    {{ projectDetail.type }}
+                                </span>
+                            </div>
+                            <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tighter">
+                                {{ projectDetail.name }}
+                            </h1>
+                        </div>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-slate-100 text-left">
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 text-nowrap">Role</p>
+                                <p class="text-sm font-bold text-slate-900">{{ projectDetail.role || 'Software Engineer' }}</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Timeline</p>
+                                <p class="text-sm font-bold text-slate-900">{{ projectDetail.year || '2024' }}</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Service</p>
+                                <p class="text-sm font-bold text-slate-900">{{ projectDetail.type }}</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Tech Stack</p>
+                                <p class="text-sm font-bold text-purple-600">{{ projectDetail.tools?.slice(0, 2).join(', ') }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Info & Description -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">About This Project</h2>
-                <p v-if="projectDetail?.description" class="text-gray-700 leading-relaxed mb-6">
-                    {{ projectDetail.description }}
-                </p>
+            <!-- Content Section -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10 text-left">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        <div class="lg:col-span-8 space-y-20">
+                            <div class="relative group">
+                                <div class="absolute -inset-4 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+                                <div class="relative bg-white p-3 rounded-[3rem] shadow-2xl shadow-slate-900/10 border border-slate-100 overflow-hidden">
+                                    <img :src="currentSlider" alt="Project Image" class="w-full aspect-video object-cover rounded-[2.5rem]" />
+                                </div>
+                            </div>
 
-                <!-- Tools / Tech Stack -->
-                <div v-if="projectDetail && projectDetail.tools && projectDetail.tools.length" class="mb-6">
-                    <h3 class="text-sm font-medium text-gray-600 mb-2">Tech Used</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span v-for="(tool, i) in projectDetail.tools" :key="i"
-                            class="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
-                            {{ tool }}
-                        </span>
+                            <div v-if="projectDetail.features?.length" class="space-y-10 text-left">
+                                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Key Features</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                                    <div v-for="(feature, i) in projectDetail.features" :key="i" 
+                                        class="p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
+                                        <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="text-lg font-black text-slate-900 mb-2 leading-tight">{{ feature }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-if="projectDetail.challenges" class="relative group text-left">
+                                <div class="relative p-10 md:p-16 bg-slate-900 rounded-[3rem] text-white overflow-hidden shadow-2xl">
+                                    <div class="absolute top-0 right-0 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full"></div>
+                                    <h3 class="text-3xl font-black mb-8">Technical Challenges</h3>
+                                    <p class="text-xl text-slate-400 leading-relaxed italic">"{{ projectDetail.challenges }}"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 text-left">
+                            <div class="sticky top-32 space-y-8">
+                                <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl shadow-slate-900/5 border border-slate-100 text-left">
+                                    <h3 class="text-[10px] font-black text-purple-600 uppercase tracking-[0.3em] mb-6">About</h3>
+                                    <p class="text-slate-500 leading-relaxed mb-10 font-medium">{{ projectDetail.description }}</p>
+                                    <div class="space-y-8">
+                                        <div>
+                                            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Technologies</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span v-for="tool in projectDetail.tools" :key="tool" class="px-4 py-2 text-[11px] font-black bg-slate-900 text-white rounded-xl uppercase">{{ tool }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="pt-8 border-t border-slate-50 space-y-4 text-nowrap">
+                                            <a v-if="projectDetail.url" :href="projectDetail.url" target="_blank" class="flex items-center justify-center gap-3 w-full py-5 bg-purple-600 text-white font-black rounded-2xl hover:bg-slate-900 transition-all uppercase tracking-widest text-[10px]">Preview Live</a>
+                                            <NuxtLink v-if="projectDetail.documentationLink" :to="projectDetail.documentationLink" class="flex items-center justify-center gap-3 w-full py-5 bg-white text-slate-900 font-black rounded-2xl border-2 border-slate-900 uppercase tracking-widest text-[10px]">Case Study</NuxtLink>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Live Demo Link -->
-                <a v-if="projectDetail && projectDetail.url" :href="projectDetail.url" target="_blank"
-                    class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
-                    View Live Project
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                </a>
             </div>
         </div>
-    </div>
 
-    <!-- Loading State -->
-    <div v-else class="flex justify-center items-center h-64">
-        <svg class="animate-spin h-8 w-8 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-            </path>
-        </svg>
+        <!-- Not Found -->
+        <div v-else-if="isLoaded && !projectDetail" class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+            <h1 class="text-9xl font-black text-slate-100 mb-8">404</h1>
+            <p class="text-xl font-bold text-slate-600 uppercase tracking-widest mb-12">Project Not Found</p>
+            <NuxtLink to="/project" class="px-10 py-5 bg-purple-600 text-white font-black rounded-2xl shadow-xl shadow-purple-200">
+                Back to Archive
+            </NuxtLink>
+        </div>
+
+        <!-- Loading -->
+        <div v-else class="flex flex-col items-center justify-center h-screen gap-4">
+            <div class="w-16 h-16 border-4 border-slate-100 border-t-purple-600 rounded-full animate-spin"></div>
+            <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] animate-pulse">Initializing</p>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
-import { useRoute } from 'vue-router'; // Import route for accessing URL parameters
-import { useFetch } from '#app'; // Import useFetch from Nuxt 3
-import type { IProjects } from '@/lib/staticInterface';
+import { ref, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { useFetch } from '#app'
+import type { IProjects } from '@/lib/staticInterface'
 
-// Initialize reactive state variables
-const projectDetail = ref<IProjects | null>(null);
-const currentSlider = ref<string>('');
-const isLoaded = ref(false); // Flag to check if data is loaded
+const projectDetail = ref<IProjects | null>(null)
+const currentSlider = ref('')
+const isLoaded = ref(false)
+const route = useRoute()
 
-// Fetch data using useFetch, which is SSR-friendly
-const route = useRoute();
+// Gunakan async data agar SSR friendly dan lebih stabil
+const { data: response, refresh } = await useFetch(`/api/projects?slug=${route.params.slug}`, {
+    key: `project-${route.params.slug}`, // Tambahkan key unik agar tidak tertukar cache
+})
 
-// Correctly typing the useFetch request and options
-const { data, error } = await useFetch(
-	`/api/projects?slug=${route.params.slug}`,
-	{
-		method: 'GET', // Ensure that you specify the correct HTTP method
-		transform: (response) => response.data as IProjects | null, // Safely cast the response
-	}
-);
-
-// Handle data once available
-if (data.value) {
-	projectDetail.value = data.value;
-	if (projectDetail.value?.images?.length) {
-		currentSlider.value = projectDetail.value.images[0];
-	} else {
-		currentSlider.value = projectDetail.value.image;
-	}
+const updateData = () => {
+    if (response.value && response.value.data) {
+        projectDetail.value = response.value.data as IProjects
+        currentSlider.value = projectDetail.value.images?.[0] || projectDetail.value.image
+    } else {
+        projectDetail.value = null
+    }
 }
 
-// SEO Meta Tags (SSR Friendly)
-useSeoMeta({
-	title: () => projectDetail.value?.name || 'Project Detail',
-	ogTitle: () => projectDetail.value?.name || 'Project Detail',
-	description: () => projectDetail.value?.description || '',
-	ogDescription: () => projectDetail.value?.description || '',
-	ogImage: () => projectDetail.value?.image || '',
-	twitterCard: 'summary_large_image',
-});
+// Jalankan update data di awal
+updateData()
+
+// Pantau perubahan route jika user pindah project tanpa reload
+watch(() => route.params.slug, () => {
+    refresh()
+    updateData()
+})
 
 onMounted(() => {
-	isLoaded.value = true;
-});
+    setTimeout(() => {
+        isLoaded.value = true
+    }, 500)
+})
 
-// Compute the project name, defaulting if not available
-const projectDetailName = computed(
-	() => projectDetail.value?.name
-);
+useSeoMeta({
+    title: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
+    description: () => projectDetail.value?.description || ''
+})
 </script>
+
+<style scoped>
+.custom-scrollbar::-webkit-scrollbar { height: 6px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-slate-200 rounded-full; }
+</style>

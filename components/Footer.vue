@@ -32,6 +32,7 @@
                         <li><router-link to="/skills" class="hover:text-purple-400 transition-colors">My Skills</router-link></li>
                         <li><router-link to="/project" class="hover:text-purple-400 transition-colors">Portfolios</router-link></li>
                         <li><router-link to="/experiences" class="hover:text-purple-400 transition-colors">Experience</router-link></li>
+                        <li><router-link to="/documentation" class="hover:text-purple-400 transition-colors">Documentation</router-link></li>
                     </ul>
                 </div>
 

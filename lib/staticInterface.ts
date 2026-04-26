@@ -8,6 +8,11 @@ export interface IProjects {
     tools?: any[],
     badge?: string;
     url?: string;
+    features?: string[];
+    challenges?: string;
+    documentationLink?: string;
+    role?: string;
+    year?: string;
 }
 
 

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'id'
+        lang: 'en'
       },
       title: 'Mahardika Kessuma Denie | Software Engineer Portfolio',
       meta: [
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'id', iso: 'id-ID', file: 'id.json', name: 'Bahasa Indonesia' }
     ],
-    defaultLocale: 'id',
+    defaultLocale: 'en',
     lazy: true,
     langDir: 'locales/',
     strategy: 'no_prefix',
@@ -69,4 +69,3 @@ export default defineNuxtConfig({
     highlight: false
   }
 })
-

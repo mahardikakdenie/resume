@@ -38,14 +38,13 @@ export default defineNuxtConfig({
     transpile: ['shiki']
   },
   nitro: {
-    externals: {
-      inline: ['shiki', 'oniguruma']
+    experimental: {
+      wasm: true
     }
   },
   content: {
     highlight: {
-      theme: 'github-light',
-      langs: ['ts', 'js', 'json', 'vue', 'bash', 'html', 'css']
+      theme: 'github-light'
     }
   }
 })

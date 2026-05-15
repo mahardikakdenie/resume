@@ -8,25 +8,25 @@
     "hire_me": "Hire Me"
   },
   "hero": {
-    "role": "Software Engineer (5+ Years Exp)",
-    "title_1": "Building",
-    "title_2": "Solutions",
+    "role": "Senior Software Engineer & SaaS Architect",
+    "title_1": "Engineering",
+    "title_2": "Business Growth",
     "title_3": "Scalable",
-    "description": "I'm {name}. I engineer high-performance {apps} using Flutter, Vue.js, and Laravel. Proven track record in Insurance, E-commerce, and SaaS platforms.",
-    "view_portfolio": "View Portfolio",
-    "download_cv": "Download CV",
-    "badge_1": "Clean Code &",
-    "badge_2": "Intuitive UX"
+    "description": "I'm {name}. I help businesses transform complex requirements into high-performance {apps}. Specializing in multi-tenant SaaS, real-time dashboards, and enterprise-grade systems.",
+    "view_portfolio": "Review Case Studies",
+    "download_cv": "Technical Resume",
+    "badge_1": "Strategic Tech Partner",
+    "badge_2": "ROI-Driven Engineering"
   },
   "about": {
-    "badge": "About Me",
-    "title_1": "More than code.",
-    "title_2": "I build ",
-    "title_italic": "Impact.",
-    "description_1": "Hi, I'm {name}. With over {years}, I specialize in building complex ecosystems—from multi-tenant insurance platforms to real-time e-commerce dashboards.",
-    "description_2": "My journey includes boosting seller productivity by {percent} at Ordivo and founding Ensiklotari (Top 10 IEEE 2021 Startup).",
+    "badge": "Strategic Partner",
+    "title_1": "Solving Business Challenges.",
+    "title_2": "I deliver ",
+    "title_italic": "Results.",
+    "description_1": "Hi, I'm {name}. With over {years} of experience, I don't just write code—I architect systems that scale. From multi-tenant insurance platforms to automated payroll ecosystems, I focus on performance, security, and long-term maintainability.",
+    "description_2": "My expertise has helped startups and established enterprises alike, including increasing operational productivity by {percent} at Ordivo and launching cultural preservation platforms like Ensiklotari.",
     "stats_years": "Years Exp.",
-    "stats_projects": "Projects",
+    "stats_projects": "Projects Delivered",
     "stats_gpa": "GPA Score"
   },
   "common": {
@@ -168,6 +168,109 @@
         "2": "Educational Dance Learning Portal",
         "3": "Integrated Booking System"
       }
+    },
+    "web-builder": {
+      "description": "A high-performance drag-and-drop web builder designed for speed and flexibility. This tool empowers users to create modern layouts effortlessly using a modular component system.",
+      "features": {
+        "0": "Intuitive Drag-and-Drop Interface",
+        "1": "Real-time Preview & Live Editing",
+        "2": "Responsive Grid-based Layout System",
+        "3": "Modular Component Library Support"
+      },
+      "challenges": "Implementing a robust drag-and-drop mechanism with nested components while maintaining optimal performance and state synchronization across the application."
+    },
+    "attendance-saas": {
+      "description": "A comprehensive multi-tenant SaaS application for real-time attendance management, timesheet tracking, and automated payroll processing.",
+      "features": {
+        "0": "Multi-tenant Architecture",
+        "1": "Real-time Attendance Tracking",
+        "2": "Automated Payroll Calculation",
+        "3": "Comprehensive Timesheet Reports"
+      },
+      "challenges": "Implementing a scalable multi-tenant architecture with real-time data synchronization while ensuring data isolation and security for each tenant."
+    },
+    "cms-hays-gallery": {
+      "description": "A specialized Content Management System (CMS) built for a gallery environment, focusing on efficient asset management and presentation.",
+      "features": {
+        "0": "Dynamic Media Asset Management",
+        "1": "Customized Gallery Layouts"
+      },
+      "challenges": "Developing a flexible system that allows for easy reorganization of gallery items without compromising page performance."
+    },
+    "maida-clinic": {
+      "description": "A high-performance landing page for Maida Clinic, optimized for search engines and user experience to drive patient engagement.",
+      "features": {
+        "0": "SEO-Optimized Performance",
+        "1": "Responsive Healthcare Interface"
+      },
+      "challenges": "Ensuring high scores in Web Vitals while maintaining a rich, visually appealing medical interface."
+    },
+    "pm-tricks-lms": {
+      "description": "A custom Learning Management System (LMS) designed for project management training, featuring interactive progress tracking.",
+      "features": {
+        "0": "Interactive Learning Modules",
+        "1": "Student Progress Tracking"
+      },
+      "challenges": "Implementing a complex progress-saving mechanism that persists across various types of learning content."
+    },
+    "store-vue-catalog": {
+      "description": "An elegant e-commerce catalog built with Nuxt.js, prioritizing speed and SEO for a seamless shopping experience.",
+      "features": {
+        "0": "Dynamic Product Catalog",
+        "1": "Optimized Shopping Workflow"
+      },
+      "challenges": "Synchronizing large product datasets with the frontend while maintaining a near-instantaneous search experience."
+    },
+    "dikti-company": {
+      "description": "A professional company profile application for DIKTI, showcasing institutional achievements and information.",
+      "features": {
+        "0": "Institutional Information Management"
+      },
+      "challenges": "Designing a clean, authoritative interface that adheres to government accessibility standards."
+    },
+    "uniqlo-slicing": {
+      "description": "A high-precision UI slicing project based on the Uniqlo design language, demonstrating expert-level CSS layout skills.",
+      "features": {
+        "0": "Pixel-Perfect Responsive Slicing"
+      },
+      "challenges": "Achieving perfect visual fidelity across all screen sizes using only custom CSS and semantic HTML."
+    },
+    "next-movie-app": {
+      "description": "A dynamic movie exploration application leveraging the TMDB API to provide real-time ratings, reviews, and discovery.",
+      "features": {
+        "0": "Real-time TMDB Data Integration",
+        "1": "Advanced Search & Filtering"
+      },
+      "challenges": "Managing asynchronous API calls and large media assets to ensure a smooth scrolling and discovery experience."
+    },
+    "bujangga-manik-app": {
+      "description": "An appointment booking and company profile platform for the construction sector, streamlining client-provider communication.",
+      "features": {
+        "0": "Appointment Scheduling System",
+        "1": "Construction Service Catalog"
+      },
+      "challenges": "Designing a transparent and easy-to-use communication bridge between construction professionals and potential clients."
+    },
+    "slc-lms": {
+      "description": "A comprehensive Learning Management System for Smile Learning Center, managing educational resources and student records.",
+      "features": {
+        "0": "Centralized Educational Resource Management"
+      },
+      "challenges": "Building a secure and scalable backend to handle concurrent student access and large educational files."
+    },
+    "tic-tac-toe": {
+      "description": "A clean and interactive Tic Tac Toe game built with React, focusing on state management and game logic implementation.",
+      "features": {
+        "0": "Real-time Game State Logic"
+      },
+      "challenges": "Implementing an efficient win-detection algorithm while maintaining a responsive UI."
+    },
+    "book-library-api": {
+      "description": "A robust RESTful API for a book library system, built with Golang for high performance and reliability.",
+      "features": {
+        "0": "Scalable RESTful Endpoints"
+      },
+      "challenges": "Designing an optimized database schema to handle complex relationships between books, authors, and categories."
     }
   },
   "skills_content": {
@@ -191,6 +294,8 @@
     "mongodb": "A scalable and flexible document-based NoSQL database.",
     "vercel": "A cloud platform for ultra-fast deployment.",
     "shared_project_desc": {
+        "attendance_saas": "Multi-tenant Attendance & Payroll SaaS platform.",
+        "web_builder": "A high-performance drag-and-drop web builder built with React.",
         "nextjs_movie": "List Movie And Rating built with Next.js.",
         "tic_tac_toe": "A simple Tic Tac Toe game with React.",
         "ensiklotari": "A cultural platform built with Vue 3.",

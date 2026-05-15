@@ -24,10 +24,10 @@
               
               <div class="space-y-6 text-lg text-slate-500 leading-relaxed font-medium">
                 <p>
-                  {{ $t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '4 years' }) }}
+                  {{ $t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '5+' }) }}
                 </p>
                 <p>
-                  {{ $t('about.description_2', { percent: '35%' }) }}
+                  {{ $t('about.description_2', { percent: '40%' }) }}
                 </p>
               </div>
               
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="p-6 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/30 transform hover:-translate-y-2 transition-all duration-300 delay-100">
-                    <h3 class="text-4xl font-black mb-1">19+</h3>
+                    <h3 class="text-4xl font-black mb-1">{{ projects.length }}+</h3>
                     <p class="text-[10px] font-black uppercase tracking-widest opacity-80">{{ $t('about.stats_projects') }}</p>
                 </div>
 
@@ -58,6 +58,7 @@
 </template>
 
 <script setup>
+import { projects } from '~/lib/static'
 const { t } = useI18n()
 </script>
 

@@ -8,25 +8,25 @@
     "hire_me": "Hubungi Saya"
   },
   "hero": {
-    "role": "Software Engineer (5+ Tahun Pengalaman)",
+    "role": "Senior Software Engineer & SaaS Architect",
     "title_1": "Membangun",
-    "title_2": "Solusi",
-    "title_3": "Scalable",
-    "description": "Saya {name}. Saya membangun {apps} performa tinggi menggunakan Flutter, Vue.js, dan Laravel. Rekam jejak terbukti di platform Asuransi, E-commerce, dan SaaS.",
-    "view_portfolio": "Lihat Portofolio",
-    "download_cv": "Unduh CV",
-    "badge_1": "Kode Bersih &",
-    "badge_2": "UX Intuitif"
+    "title_2": "Bisnis Anda",
+    "title_3": "Skalabilitas",
+    "description": "Saya {name}. Saya membantu bisnis mengubah kebutuhan kompleks menjadi {apps} performa tinggi. Spesialis dalam SaaS multi-tenant, dashboard real-time, dan sistem skala enterprise.",
+    "view_portfolio": "Lihat Studi Kasus",
+    "download_cv": "Resume Teknis",
+    "badge_1": "Mitra Teknis Strategis",
+    "badge_2": "Rekayasa Berbasis ROI"
   },
   "about": {
-    "badge": "Tentang Saya",
-    "title_1": "Lebih dari sekadar kode.",
-    "title_2": "Saya membangun ",
-    "title_italic": "Dampak.",
-    "description_1": "Halo, saya {name}. Dengan pengalaman lebih dari {years}, saya ahli dalam membangun ekosistem kompleks—mulai dari platform asuransi multi-tenant hingga dashboard e-commerce real-time.",
-    "description_2": "Perjalanan saya mencakup peningkatan produktivitas penjual sebesar {percent} di Ordivo dan mendirikan Ensiklotari (Top 10 IEEE 2021 Startup).",
+    "badge": "Mitra Strategis",
+    "title_1": "Menyelesaikan Tantangan Bisnis.",
+    "title_2": "Saya memberikan ",
+    "title_italic": "Hasil.",
+    "description_1": "Halo, saya {name}. Dengan pengalaman lebih dari {years}, saya tidak hanya menulis kode—saya merancang sistem yang berkembang. Mulai dari platform asuransi hingga ekosistem payroll otomatis, fokus saya adalah performa, keamanan, dan pemeliharaan jangka panjang.",
+    "description_2": "Keahlian saya telah membantu startup dan perusahaan mapan, termasuk meningkatkan produktivitas operasional sebesar {percent} di Ordivo dan mendirikan Ensiklotari.",
     "stats_years": "Tahun Pengal.",
-    "stats_projects": "Proyek",
+    "stats_projects": "Proyek Selesai",
     "stats_gpa": "Skor IPK"
   },
   "common": {
@@ -168,6 +168,109 @@
         "2": "Portal Pembelajaran Tari Edukatif",
         "3": "Sistem Pemesanan Terintegrasi"
       }
+    },
+    "web-builder": {
+      "description": "Aplikasi pembangun web drag-and-drop berperforma tinggi yang dirancang untuk kecepatan dan fleksibilitas. Alat ini memungkinkan pengguna membuat tata letak modern dengan mudah menggunakan sistem komponen modular.",
+      "features": {
+        "0": "Antarmuka Drag-and-Drop yang Intuitif",
+        "1": "Pratinjau Real-time & Pengeditan Langsung",
+        "2": "Sistem Tata Letak Berbasis Grid Responsif",
+        "3": "Dukungan Library Komponen Modular"
+      },
+      "challenges": "Mengimplementasikan mekanisme drag-and-drop yang kuat dengan komponen bersarang sambil tetap menjaga performa optimal dan sinkronisasi state di seluruh aplikasi."
+    },
+    "attendance-saas": {
+      "description": "Aplikasi SaaS multi-tenant komprehensif untuk manajemen absensi realtime, pelacakan timesheet, dan perhitungan payroll otomatis.",
+      "features": {
+        "0": "Arsitektur Multi-tenant",
+        "1": "Pelacakan Absensi Real-time",
+        "2": "Perhitungan Payroll Otomatis",
+        "3": "Laporan Timesheet Komprehensif"
+      },
+      "challenges": "Mengimplementasikan arsitektur multi-tenant yang skalabel dengan sinkronisasi data real-time sambil memastikan isolasi data dan keamanan untuk setiap tenant."
+    },
+    "cms-hays-gallery": {
+      "description": "Sistem Manajemen Konten (CMS) khusus yang dibangun untuk lingkungan galeri, berfokus pada manajemen aset dan presentasi yang efisien.",
+      "features": {
+        "0": "Manajemen Aset Media Dinamis",
+        "1": "Tata Letak Galeri yang Dapat Disesuaikan"
+      },
+      "challenges": "Mengembangkan sistem fleksibel yang memungkinkan pengaturan ulang item galeri dengan mudah tanpa mengurangi performa halaman."
+    },
+    "maida-clinic": {
+      "description": "Landing page berperforma tinggi untuk Maida Clinic, dioptimalkan untuk mesin pencari dan pengalaman pengguna untuk meningkatkan keterlibatan pasien.",
+      "features": {
+        "0": "Performa Teroptimasi SEO",
+        "1": "Antarmuka Layanan Kesehatan Responsif"
+      },
+      "challenges": "Memastikan skor tinggi di Web Vitals sambil mempertahankan antarmuka medis yang kaya dan menarik secara visual."
+    },
+    "pm-tricks-lms": {
+      "description": "Sistem Manajemen Pembelajaran (LMS) khusus yang dirancang untuk pelatihan manajemen proyek, menampilkan pelacakan kemajuan interaktif.",
+      "features": {
+        "0": "Modul Pembelajaran Interaktif",
+        "1": "Pelacakan Kemajuan Siswa"
+      },
+      "challenges": "Mengimplementasikan mekanisme penyimpanan kemajuan kompleks yang bertahan di berbagai jenis konten pembelajaran."
+    },
+    "store-vue-catalog": {
+      "description": "Katalog e-commerce elegan yang dibangun dengan Nuxt.js, mengutamakan kecepatan dan SEO untuk pengalaman belanja yang mulus.",
+      "features": {
+        "0": "Katalog Produk Dinamis",
+        "1": "Alur Kerja Belanja Teroptimasi"
+      },
+      "challenges": "Sinkronisasi dataset produk besar dengan frontend sambil mempertahankan pengalaman pencarian yang hampir instan."
+    },
+    "dikti-company": {
+      "description": "Aplikasi profil perusahaan profesional untuk DIKTI, menampilkan pencapaian dan informasi institusi.",
+      "features": {
+        "0": "Manajemen Informasi Institusional"
+      },
+      "challenges": "Merancang antarmuka yang bersih dan berwibawa yang mematuhi standar aksesibilitas pemerintah."
+    },
+    "uniqlo-slicing": {
+      "description": "Proyek slicing UI presisi tinggi berdasarkan bahasa desain Uniqlo, menunjukkan keahlian layout CSS tingkat ahli.",
+      "features": {
+        "0": "Slicing Responsif Pixel-Perfect"
+      },
+      "challenges": "Mencapai fidelitas visual yang sempurna di semua ukuran layar hanya menggunakan CSS kustom dan HTML semantik."
+    },
+    "next-movie-app": {
+      "description": "Aplikasi eksplorasi film dinamis yang memanfaatkan API TMDB untuk menyediakan rating, ulasan, dan penemuan film secara real-time.",
+      "features": {
+        "0": "Integrasi Data TMDB Real-time",
+        "1": "Pencarian & Pemfilteran Lanjutan"
+      },
+      "challenges": "Mengelola panggilan API asinkron dan aset media besar untuk memastikan pengalaman scrolling dan penemuan yang mulus."
+    },
+    "bujangga-manik-app": {
+      "description": "Platform pemesanan janji temu dan profil perusahaan untuk sektor konstruksi, merampingkan komunikasi antara klien dan penyedia jasa.",
+      "features": {
+        "0": "Sistem Penjadwalan Janji Temu",
+        "1": "Katalog Layanan Konstruksi"
+      },
+      "challenges": "Merancang jembatan komunikasi yang transparan dan mudah digunakan antara profesional konstruksi dan calon klien."
+    },
+    "slc-lms": {
+      "description": "Sistem Manajemen Pembelajaran komprehensif untuk Smile Learning Center, mengelola sumber daya pendidikan dan catatan siswa.",
+      "features": {
+        "0": "Manajemen Sumber Daya Pendidikan Terpusat"
+      },
+      "challenges": "Membangun backend yang aman dan skalabel untuk menangani akses siswa secara bersamaan dan file pendidikan besar."
+    },
+    "tic-tac-toe": {
+      "description": "Permainan Tic Tac Toe yang bersih dan interaktif yang dibangun dengan React, berfokus pada manajemen state dan implementasi logika permainan.",
+      "features": {
+        "0": "Logika State Permainan Real-time"
+      },
+      "challenges": "Mengimplementasikan algoritma deteksi kemenangan yang efisien sambil mempertahankan UI yang responsif."
+    },
+    "book-library-api": {
+      "description": "API RESTful yang kuat untuk sistem perpustakaan buku, dibangun dengan Golang untuk performa dan keandalan tinggi.",
+      "features": {
+        "0": "Endpoint RESTful yang Skalabel"
+      },
+      "challenges": "Merancang skema database yang dioptimalkan untuk menangani hubungan kompleks antara buku, penulis, dan kategori."
     }
   },
   "skills_content": {
@@ -191,6 +294,8 @@
     "mongodb": "Database NoSQL berbasis dokumen.",
     "vercel": "Platform cloud untuk deployment aplikasi web.",
     "shared_project_desc": {
+        "attendance_saas": "Platform SaaS Absensi & Payroll Multi-tenant.",
+        "web_builder": "Aplikasi drag-and-drop web builder berperforma tinggi yang dibangun dengan React.",
         "nextjs_movie": "Daftar Film dan Rating dengan Next.js.",
         "tic_tac_toe": "Permainan Tic Tac Toe sederhana dengan React.",
         "ensiklotari": "Platform budaya yang dibangun dengan Vue 3.",

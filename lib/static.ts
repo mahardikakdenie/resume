@@ -2,6 +2,45 @@ import type { IProjects, ISkillDatas } from './staticInterface';
 
 export const projects: Array<IProjects> = [
 	{
+		name: 'Attendance & Payroll SaaS',
+		link: 'attendance-saas',
+		image: '/web-absen.png',
+		type: 'SaaS Platform',
+		tools: ['Next.js', 'Golang', 'PostgreSQL', 'Redis', 'Docker', 'Tailwind CSS'],
+		description: 'project_content.attendance-saas.description',
+		images: ['/web-absen.png'],
+		url: 'https://landing-page-attendance.mahardikakdenie.my.id/',
+		role: 'Fullstack Developer',
+		year: '2024',
+		features: [
+			'project_content.attendance-saas.features.0',
+			'project_content.attendance-saas.features.1',
+			'project_content.attendance-saas.features.2',
+			'project_content.attendance-saas.features.3'
+		],
+		challenges: 'project_content.attendance-saas.challenges',
+		documentationLink: '/documentation/go-attendance-api'
+	},
+	{
+		name: 'Drag & Drop Web Builder',
+		link: 'web-builder',
+		image: '/web-builder.png',
+		type: 'Web App',
+		tools: ['React', 'TypeScript', 'Vite', 'Zustand', 'TailwindCss'],
+		description: 'project_content.web-builder.description',
+		images: ['/web-builder.png'],
+		url: 'https://web-builder.mahardikakdenie.my.id/',
+		role: 'Frontend Engineer',
+		year: '2024',
+		features: [
+			'project_content.web-builder.features.0',
+			'project_content.web-builder.features.1',
+			'project_content.web-builder.features.2',
+			'project_content.web-builder.features.3'
+		],
+		challenges: 'project_content.web-builder.challenges'
+	},
+	{
 		name: 'Point Of Sales (Laukita Theme)',
 		link: 'laukita-theme',
 		image: '/laukita.png',
@@ -213,6 +252,177 @@ export const projects: Array<IProjects> = [
         ],
         challenges: 'project_content.ensiklotari.challenges'
 	},
+    {
+		name: 'CMS HAYS GALLERY',
+		link: 'cms-hays-gallery',
+		image: '/cms-hays-login.png',
+		description: 'project_content.cms-hays-gallery.description',
+		images: ['/cms-hays-login.png'],
+		type: 'Web App',
+		tools: ['React', 'Next.js', 'Tailwind CSS'],
+        role: 'Frontend Developer',
+        year: '2023',
+        features: [
+            'project_content.cms-hays-gallery.features.0',
+            'project_content.cms-hays-gallery.features.1'
+        ],
+        challenges: 'project_content.cms-hays-gallery.challenges'
+	},
+    {
+		name: 'Maida Clinic Landing Page',
+		link: 'maida-clinic',
+		image: '/maida-clinik-1.png',
+		description: 'project_content.maida-clinic.description',
+		images: ['/maida-clinik-1.png'],
+		type: 'Landing Page',
+		tools: ['Nuxt 3', 'Vue 3', 'SEO'],
+        role: 'Frontend Developer',
+        year: '2023',
+        features: [
+            'project_content.maida-clinic.features.0',
+            'project_content.maida-clinic.features.1'
+        ],
+        challenges: 'project_content.maida-clinic.challenges'
+	},
+    {
+		name: 'PM TRICK – LMS Web App',
+		link: 'pm-tricks-lms',
+		image: '/pm-trick.png',
+		description: 'project_content.pm-tricks-lms.description',
+		images: ['/pm-trick.png'],
+		type: 'Web App',
+		tools: ['Vue 3', 'Tailwind', 'Typescript'],
+        role: 'Fullstack Developer',
+        year: '2023',
+        features: [
+            'project_content.pm-tricks-lms.features.0',
+            'project_content.pm-tricks-lms.features.1'
+        ],
+        challenges: 'project_content.pm-tricks-lms.challenges'
+	},
+    {
+		name: 'Store Vue - Ecommerce',
+		link: 'store-vue-catalog',
+		image: '/store-slicing.png',
+		description: 'project_content.store-vue-catalog.description',
+		images: ['/store-slicing.png'],
+		type: 'Web App',
+		tools: ['Nuxt.js', 'Vue', 'Tailwind CSS'],
+        role: 'Frontend Developer',
+        year: '2023',
+        features: [
+            'project_content.store-vue-catalog.features.0',
+            'project_content.store-vue-catalog.features.1'
+        ],
+        challenges: 'project_content.store-vue-catalog.challenges'
+	},
+    {
+		name: 'Dikti Application Profile',
+		link: 'dikti-company',
+		image: '/dikti.png',
+		description: 'project_content.dikti-company.description',
+		images: ['/dikti.png'],
+		type: 'Web App',
+		tools: ['Web', 'CSS'],
+        role: 'Frontend Developer',
+        year: '2022',
+        features: [
+            'project_content.dikti-company.features.0'
+        ],
+        challenges: 'project_content.dikti-company.challenges'
+	},
+    {
+		name: 'Uniqlo Theme Slicing',
+		link: 'uniqlo-slicing',
+		image: '/uniqlo-theme.png',
+		description: 'project_content.uniqlo-slicing.description',
+		images: ['/uniqlo-theme.png'],
+		type: 'Slicing UI',
+		tools: ['HTML', 'CSS', 'Slicing'],
+        role: 'UI Developer',
+        year: '2022',
+        features: [
+            'project_content.uniqlo-slicing.features.0'
+        ],
+        challenges: 'project_content.uniqlo-slicing.challenges'
+	},
+    {
+		name: 'Next Movie App',
+		link: 'next-movie-app',
+		image: '/next-movie.png',
+		description: 'project_content.next-movie-app.description',
+		images: ['/next-movie.png'],
+		type: 'Web App',
+		tools: ['Next.js', 'React', 'TMDB API'],
+        role: 'Frontend Developer',
+        year: '2022',
+        features: [
+            'project_content.next-movie-app.features.0',
+            'project_content.next-movie-app.features.1'
+        ],
+        challenges: 'project_content.next-movie-app.challenges'
+	},
+    {
+		name: 'BujanggaManik Appointment',
+		link: 'bujangga-manik-app',
+		image: '/bujanggamanik.png',
+		description: 'project_content.bujangga-manik-app.description',
+		images: ['/bujanggamanik.png'],
+		type: 'Web App',
+		tools: ['Web', 'PHP'],
+        role: 'Fullstack Developer',
+        year: '2022',
+        features: [
+            'project_content.bujangga-manik-app.features.0',
+            'project_content.bujangga-manik-app.features.1'
+        ],
+        challenges: 'project_content.bujangga-manik-app.challenges'
+	},
+    {
+		name: 'Smile Learning Center LMS',
+		link: 'slc-lms',
+		image: '/lms.png',
+		description: 'project_content.slc-lms.description',
+		images: ['/lms.png'],
+		type: 'Web App',
+		tools: ['Web', 'PHP', 'MySQL'],
+        role: 'Fullstack Developer',
+        year: '2022',
+        features: [
+            'project_content.slc-lms.features.0'
+        ],
+        challenges: 'project_content.slc-lms.challenges'
+	},
+    {
+		name: 'Tic Tac Toe - Interactive',
+		link: 'tic-tac-toe',
+		image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png',
+		description: 'project_content.tic-tac-toe.description',
+		images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png'],
+		type: 'Game',
+		tools: ['React', 'JavaScript'],
+        role: 'Frontend Developer',
+        year: '2022',
+        features: [
+            'project_content.tic-tac-toe.features.0'
+        ],
+        challenges: 'project_content.tic-tac-toe.challenges'
+	},
+    {
+		name: 'RESTful Book Library API',
+		link: 'book-library-api',
+		image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop',
+		description: 'project_content.book-library-api.description',
+		images: ['https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop'],
+		type: 'Backend API',
+		tools: ['Golang', 'PostgreSQL'],
+        role: 'Backend Engineer',
+        year: '2023',
+        features: [
+            'project_content.book-library-api.features.0'
+        ],
+        challenges: 'project_content.book-library-api.challenges'
+	},
 ];
 
 export const skillDatas: Array<ISkillDatas> = [
@@ -224,9 +434,27 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb_active: '/react.png',
 		image: '/react.png',
 		description: 'skills_content.react',
-		experienceSkill: 'Intermediate',
-		yearExperience: '1+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [
+			{
+				title: 'Attendance & Payroll SaaS',
+				image: '/web-absen.png',
+				description: 'skills_content.shared_project_desc.attendance_saas',
+				cta: {
+					githubLink: '',
+					previewLink: 'https://landing-page-attendance.mahardikakdenie.my.id/',
+				},
+			},
+			{
+				title: 'Drag & Drop Web Builder',
+				image: '/web-builder.png',
+				description: 'skills_content.shared_project_desc.web_builder',
+				cta: {
+					githubLink: 'https://github.com/mahardikakdenie/WebBuilder',
+					previewLink: 'https://web-builder.mahardikakdenie.my.id/',
+				},
+			},
 			{
 				title: 'NextJS Movie Project',
 				image: 'http://localhost:3000/next-movie.png',
@@ -254,7 +482,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/119058023_1791394821036070_6678793766601996160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=25d718&_nc_eui2=AeHIc-ijQN-hOSZtgGZoi63eRvwwu1TPEhhG_DC7VM8SGGY6M2PsTnxEDdeaqectOP17zt3xRRd4t07efYBbICgf&_nc_ohc=f0kXO3aRSA4Q7kNvgFbWC1E&_nc_zt=23&_nc_ht=scontent-sin6-1.xx&_nc_gid=AZ94VW9pWom6RHF__7-lvEU&oh=00_AYB9rUwwp18GnmklKzv1Z7mXNL9U4wiHGJ7fCz0n5AdvRA&oe=673E8B82',
 		description: 'skills_content.vue',
 		experienceSkill: 'Expert',
-		yearExperience: '4+',
+		yearExperience: '5+',
 		projectRelated: [
 			{
 				title: 'Ensiklotari',
@@ -311,8 +539,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'node.png',
 		image: 'https://weebpal.com/sites/default/files/media-image/2020-06/nodejs-1.svg',
 		description: 'skills_content.node',
-		experienceSkill: 'Intermediate',
-		yearExperience: '2+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [
 			{
 				title: 'Ensiklotari',
@@ -340,8 +568,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'express.png',
 		image: 'https://externlabs.com/blogs/wp-content/uploads/2021/11/ExpressJS-Library.jpg',
 		description: 'skills_content.express',
-		experienceSkill: 'Intermediate',
-		yearExperience: '2+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [
 			{
 				title: 'Ensiklotari',
@@ -369,9 +597,18 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXE816VbDNBBKzwptMA1ZGW_SIYY03Bbw_kA&s',
 		image: 'https://cdn.prod.website-files.com/6100d0111a4ed76bc1b9fd54/62217e885f52b860da9f00cc_Apa%20Itu%20Golang%3F%20Apa%20Saja%20Fungsi%20Dan%20Keunggulannya%20-%20Binar%20Academy.jpeg',
 		description: 'skills_content.golang',
-		experienceSkill: 'Intermediate',
-		yearExperience: '2+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [
+			{
+				title: 'Attendance & Payroll SaaS',
+				image: '/web-absen.png',
+				description: 'skills_content.shared_project_desc.attendance_saas',
+				cta: {
+					githubLink: '',
+					previewLink: 'https://landing-page-attendance.mahardikakdenie.my.id/',
+				},
+			},
 			{
 				title: 'Book Library API',
 				image: '',
@@ -389,8 +626,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'html.png',
 		image: 'https://www.webdevelopmenthelp.net/wp-content/uploads/2015/09/HTML55.png',
 		description: 'skills_content.html5',
-		experienceSkill: 'Intermediate',
-		yearExperience: '2+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -399,8 +636,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'tailwindcss.png',
 		image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK0Eu0y1ONkIG7uPJeGGqq8uqeIOqp8IJOrg&s',
 		description: 'skills_content.tailwind',
-		experienceSkill: 'Intermediate',
-		yearExperience: '2+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -410,7 +647,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-200522-Bootstrap.png',
 		description: 'skills_content.bootstrap',
 		experienceSkill: 'Expert',
-		yearExperience: '4+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -419,8 +656,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'saas.png',
 		image: 'https://css-irl.info/a-modern-front-end-workflow-03_01.png',
 		description: 'skills_content.sass',
-		experienceSkill: 'Intermediate',
-		yearExperience: '3+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -429,8 +666,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'css3.png',
 		image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-202042-Css3.png',
 		description: 'skills_content.css3',
-		experienceSkill: 'Advanced',
-		yearExperience: '4+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -449,8 +686,8 @@ export const skillDatas: Array<ISkillDatas> = [
 		thumb: 'typescript.png',
 		image: 'https://api-portfolio.bhaktibuana.com/images/skills/20230427-194450-TypeScript.png',
 		description: 'skills_content.ts',
-		experienceSkill: 'Advanced',
-		yearExperience: '3+',
+		experienceSkill: 'Expert',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -460,7 +697,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-202703-Php.png',
 		description: 'skills_content.php',
 		experienceSkill: 'Expert',
-		yearExperience: '4+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -470,7 +707,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203051-CodeIgniter.png',
 		description: 'skills_content.ci',
 		experienceSkill: 'Expert',
-		yearExperience: '2+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -480,7 +717,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-203233-Laravel.png',
 		description: 'skills_content.laravel',
 		experienceSkill: 'Expert',
-		yearExperience: '4+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -490,7 +727,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204749-MySql.png',
 		description: 'skills_content.mysql',
 		experienceSkill: 'Expert',
-		yearExperience: '3+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -500,7 +737,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBqE3tRJO64QQSZUUu6OXKbFZtP4VQHOaYg&s',
 		description: 'skills_content.vercel',
 		experienceSkill: 'Expert',
-		yearExperience: '3+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -510,7 +747,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204931-PostgreSql.png',
 		description: 'skills_content.pgsql',
 		experienceSkill: 'Expert',
-		yearExperience: '3+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 	{
@@ -520,7 +757,7 @@ export const skillDatas: Array<ISkillDatas> = [
 		image: 'http://api-portfolio.bhaktibuana.com/images/skills/20230427-204441-MongoDb.png',
 		description: 'skills_content.mongodb',
 		experienceSkill: 'Expert',
-		yearExperience: '3+',
+		yearExperience: '5+',
 		projectRelated: [],
 	},
 ];

@@ -46,16 +46,8 @@ export default defineNuxtConfig({
     }
   },
   tailwindcss: {
-    config: {
-      plugins: [require('@tailwindcss/typography')],
-      theme: {
-        extend: {
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-          },
-        },
-      },
-    }
+    exposeConfig: true,
+    viewer: true,
   },
   build: {
     transpile: ['shiki']

@@ -9,8 +9,8 @@
         <div class="lg:col-span-7" data-aos="fade-right" data-aos-duration="1200">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-slate-200 shadow-sm mb-8">
             <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-600"></span>
             </span>
             <span class="text-[10px] font-black text-slate-700 tracking-widest uppercase">{{ $t('hero.role') }}</span>
           </div>
@@ -18,25 +18,25 @@
           <h1 class="text-6xl md:text-8xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
             {{ $t('hero.title_1') }}<br>
             <span class="relative z-10 inline-block px-2">
-              {{ $t('hero.title_3') }}
-               <div class="absolute inset-0 bg-gradient-to-r from-purple-200/80 to-blue-200/80 -z-10 transform -rotate-2 rounded-lg scale-105"></div>
+              {{ $t('hero.title_2') }}
+               <span class="absolute inset-0 bg-gradient-to-r from-purple-200/80 to-blue-200/80 -z-10 transform -rotate-2 rounded-lg scale-105 block"></span>
             </span><br>
-            {{ $t('hero.title_2') }}.
+            {{ $t('hero.title_3') }}.
           </h1>
 
           <p class="text-xl text-slate-600 md:max-w-xl leading-relaxed mb-12 font-medium">
-            {{ $t('hero.description', { name: 'Mahardika', apps: 'Web & Mobile Apps' }) }}
+            {{ $t('hero.description', { name: 'Mahardika', apps: 'Business Applications' }) }}
           </p>
           
           <div class="flex flex-wrap gap-6 items-center">
-            <button @click="$router.push('/project')" class="group relative px-8 py-4 bg-slate-900 text-white text-sm font-black rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-900/30 transition-all duration-300 active:scale-95 uppercase tracking-widest">
+            <button @click="$router.push('/project')" class="group relative px-10 py-5 bg-slate-900 text-white text-[10px] font-black rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-900/30 transition-all duration-300 active:scale-95 uppercase tracking-[0.2em]">
                <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                <span class="relative z-10 flex items-center gap-2">
                  {{ $t('hero.view_portfolio') }}
                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                </span>
             </button>
-             <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="text-sm font-black text-slate-400 hover:text-purple-600 transition-colors flex items-center gap-2 group uppercase tracking-widest">
+             <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="text-[10px] font-black text-slate-400 hover:text-purple-600 transition-colors flex items-center gap-2 group uppercase tracking-[0.2em]">
               {{ $t('hero.download_cv') }}
                <div class="w-8 h-[2px] bg-slate-200 group-hover:bg-purple-600 group-hover:w-12 transition-all"></div>
              </a>
@@ -75,7 +75,7 @@
 .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 .animate-float-slow { animation: float 6s ease-in-out infinite; }
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate)); }
-    50% { transform: translateY(-20px) rotate(var(--tw-rotate)); }
+    0%, 100% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+    50% { transform: translateY(-20px) rotate(var(--tw-rotate, 0deg)); }
 }
 </style>

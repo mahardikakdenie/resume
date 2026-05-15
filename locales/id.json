@@ -314,13 +314,14 @@
     "view_all_archives": "Lihat Semua Arsip"
   },
   "contact": {
+    "badge": "Mari Terhubung",
     "title": "Mari bangun sesuatu yang visioner.",
     "description": "Saya saat ini tersedia untuk proyek freelance.",
     "chat_title": "Obrol dengan saya",
     "office_title": "Kantor",
     "connect_title": "Terhubung dengan saya",
     "form_title": "Kirim Pesan",
-    "form_description": "Ada masalah teknis? Beritahu saya.",
+    "form_description": "Punya proyek? Saya akan senang membantu Anda mewujudkannya.",
     "first_name": "Nama Depan",
     "last_name": "Nama Belakang",
     "email_address": "Alamat Email",

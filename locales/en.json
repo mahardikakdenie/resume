@@ -314,13 +314,14 @@
     "view_all_archives": "View All Archives"
   },
   "contact": {
+    "badge": "Let's Connect",
     "title": "Let's build something visionary.",
     "description": "I'm available for freelance and full-time roles.",
     "chat_title": "Chat with me",
     "office_title": "Office",
     "connect_title": "Connect with me",
     "form_title": "Send a Message",
-    "form_description": "Got a technical issue? Let me know.",
+    "form_description": "Have a project? I'd love to help you bring it to life.",
     "first_name": "First Name",
     "last_name": "Last Name",
     "email_address": "Email Address",

@@ -172,12 +172,20 @@ onMounted(() => {
     }, 500)
 })
 
+const getAbsoluteImageUrl = (url?: string) => {
+    if (!url) return 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' // Default fallback
+    if (url.startsWith('http')) return url
+    return `https://mahardikakdenie.my.id${url.startsWith('/') ? '' : '/'}${url}`
+}
+
 useSeoMeta({
     title: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
     ogTitle: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
     description: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
     ogDescription: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
-    ogImage: () => projectDetail.value?.image || '',
+    ogImage: () => getAbsoluteImageUrl(projectDetail.value?.image),
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
     twitterCard: 'summary_large_image',
 })
 </script>

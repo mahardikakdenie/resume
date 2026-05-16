@@ -119,13 +119,21 @@ const { t } = useI18n()
 const route = useRoute()
 const { data: doc } = await useAsyncData(`content-${route.path}`, () => queryContent(route.path).findOne())
 
+const getAbsoluteImageUrl = (url?: string) => {
+    if (!url) return 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' // Default fallback
+    if (url.startsWith('http')) return url
+    return `https://mahardikakdenie.my.id${url.startsWith('/') ? '' : '/'}${url}`
+}
+
 useSeoMeta({
   title: () => `${doc.value?.title || 'Documentation'} | Mahardika Portfolio`,
   ogTitle: () => `${doc.value?.title || 'Documentation'} | Mahardika Portfolio`,
   description: () => doc.value?.description || 'Technical documentation and articles by Mahardika Kessuma Denie',
   ogDescription: () => doc.value?.description || 'Technical documentation and articles by Mahardika Kessuma Denie',
   ogType: 'article',
-  ogImage: () => doc.value?.image || 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg',
+  ogImage: () => getAbsoluteImageUrl(doc.value?.image),
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   twitterCard: 'summary_large_image',
 })
 

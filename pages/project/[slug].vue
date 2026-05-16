@@ -173,7 +173,8 @@ onMounted(() => {
 })
 
 const getAbsoluteImageUrl = (url?: string) => {
-    if (!url) return 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' // Default fallback
+    const fallback = 'https://i.ibb.co/8mSD7K6/og-image-mahardika.png'
+    if (!url) return fallback
     if (url.startsWith('http')) return url
     return `https://mahardikakdenie.my.id${url.startsWith('/') ? '' : '/'}${url}`
 }
@@ -181,12 +182,17 @@ const getAbsoluteImageUrl = (url?: string) => {
 useSeoMeta({
     title: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
     ogTitle: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
-    description: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
-    ogDescription: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
+    description: () => projectDetail.value?.description ? t(projectDetail.value.description) : 'Professional Software Engineer Project Portfolio',
+    ogDescription: () => projectDetail.value?.description ? t(projectDetail.value.description) : 'Professional Software Engineer Project Portfolio',
     ogImage: () => getAbsoluteImageUrl(projectDetail.value?.image),
-    ogImageWidth: 1200,
-    ogImageHeight: 630,
+    ogImageSecureUrl: () => getAbsoluteImageUrl(projectDetail.value?.image),
+    ogImageWidth: '1200',
+    ogImageHeight: '630',
+    ogImageType: 'image/png',
     twitterCard: 'summary_large_image',
+    twitterTitle: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
+    twitterDescription: () => projectDetail.value?.description ? t(projectDetail.value.description) : 'Professional Software Engineer Project Portfolio',
+    twitterImage: () => getAbsoluteImageUrl(projectDetail.value?.image),
 })
 </script>
 

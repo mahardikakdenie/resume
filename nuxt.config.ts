@@ -10,28 +10,30 @@ export default defineNuxtConfig({
         lang: 'en'
       },
       titleTemplate: '%s | Mahardika Kessuma Denie',
-      title: 'Senior Software Engineer | Building Scalable SaaS',
+      title: 'Senior Software Engineer | Building Scalable SaaS & Enterprise APIs',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'apple-mobile-web-app-title', content: 'Mahardika' },
-        { name: 'description', content: 'Senior Software Engineer with 5+ years experience building high-performance multi-tenant SaaS applications using Go, Vue.js, and Flutter.' },
+        { name: 'description', content: 'Senior Software Engineer with 5+ years of expertise in building high-performance multi-tenant SaaS applications using Go, Vue.js, Flutter, and Laravel.' },
         
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Mahardika Kessuma Denie' },
         { property: 'og:url', content: 'https://mahardikakdenie.my.id' },
-        { property: 'og:title', content: 'Mahardika Kessuma Denie | Senior Software Engineer' },
-        { property: 'og:description', content: 'Senior Software Engineer specializing in scalable SaaS architectures, high-performance APIs, and modern frontend ecosystems.' },
-        { property: 'og:image', content: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg' },
+        { property: 'og:title', content: 'Mahardika Kessuma Denie | Senior Software Engineer & SaaS Expert' },
+        { property: 'og:description', content: 'Expert Senior Software Engineer building scalable SaaS architectures and enterprise systems with modern technology stacks.' },
+        { property: 'og:image', content: 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
 
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@mahardikakdenie' },
-        { name: 'twitter:title', content: 'Mahardika Kessuma Denie | Software Engineer Portfolio' },
-        { name: 'twitter:description', content: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel.' },
-        { name: 'twitter:image', content: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg' },
+        { name: 'twitter:title', content: 'Mahardika Kessuma Denie | Senior Software Engineer' },
+        { name: 'twitter:description', content: 'Senior Software Engineer specializing in scalable SaaS architectures and high-performance applications.' },
+        { name: 'twitter:image', content: 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' },
 
         // Additional SEO
         { name: 'author', content: 'Mahardika Kessuma Denie' },

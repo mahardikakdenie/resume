@@ -124,7 +124,9 @@ useSeoMeta({
   ogTitle: () => `${doc.value?.title || 'Documentation'} | Mahardika Portfolio`,
   description: () => doc.value?.description || 'Technical documentation and articles by Mahardika Kessuma Denie',
   ogDescription: () => doc.value?.description || 'Technical documentation and articles by Mahardika Kessuma Denie',
-  ogType: 'article'
+  ogType: 'article',
+  ogImage: () => doc.value?.image || 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg',
+  twitterCard: 'summary_large_image',
 })
 
 const formatDate = (date: string) => {

@@ -174,7 +174,11 @@ onMounted(() => {
 
 useSeoMeta({
     title: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
-    description: () => projectDetail.value?.description || ''
+    ogTitle: () => `${projectDetail.value?.name || 'Project'} | Mahardika Portfolio`,
+    description: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
+    ogDescription: () => projectDetail.value?.description ? t(projectDetail.value.description) : '',
+    ogImage: () => projectDetail.value?.image || '',
+    twitterCard: 'summary_large_image',
 })
 </script>
 

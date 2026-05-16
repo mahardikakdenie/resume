@@ -42,6 +42,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const showBackToTop = ref(false)
+const { locale } = useI18n()
 
 const checkScroll = () => {
     showBackToTop.value = window.scrollY > 300
@@ -59,12 +60,51 @@ onUnmounted(() => {
     window.removeEventListener('scroll', checkScroll)
 })
 
+// Dynamic HTML lang and Structured Data
+useHead({
+  htmlAttrs: {
+    lang: () => locale.value
+  },
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mahardika Kessuma Denie",
+        "url": "https://mahardikakdenie.my.id",
+        "jobTitle": "Senior Software Engineer",
+        "alumniOf": "Universitas Dian Nuswantoro",
+        "knowsAbout": ["Software Engineering", "Go", "Vue.js", "Flutter", "Laravel", "PostgreSQL", "Redis", "Cloud Computing"],
+        "sameAs": [
+          "https://github.com/mahardikakdenie",
+          "https://www.linkedin.com/in/mahardikakdenie/",
+          "https://twitter.com/mahardikakdenie"
+        ],
+        "image": "https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg"
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mahardika Kessuma Denie Portfolio",
+        "url": "https://mahardikakdenie.my.id",
+        "description": "Portfolio of Mahardika Kessuma Denie, a Senior Software Engineer specializing in building scalable web and mobile applications."
+      })
+    }
+  ]
+})
+
 useSeoMeta({
-	title: 'Mahardika Kessuma Denie - Software Developer',
+	title: 'Software Developer Portfolio',
 	ogTitle: 'Mahardika Kessuma Denie - Portfolio',
-	description: 'Professional Portfolio of Mahardika Kessuma Denie, a Software Developer specializing in modern web technologies.',
-	ogDescription: 'Discover my projects, skills, and professional journey in software development.',
+	description: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel. Explore technical documentations and professional projects.',
+	ogDescription: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel.',
     themeColor: '#9333ea',
+    ogImage: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg',
+    twitterCard: 'summary_large_image',
 })
 </script>
 

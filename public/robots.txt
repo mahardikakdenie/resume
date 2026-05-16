@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemaps (Optional but recommended if you have one later)
-# Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap
+Sitemap: https://mahardikakdenie.my.id/sitemap.xml
+
+# Performance
+Crawl-delay: 10

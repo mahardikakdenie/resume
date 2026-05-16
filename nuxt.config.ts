@@ -9,21 +9,37 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'Mahardika Kessuma Denie | Software Engineer Portfolio',
+      titleTemplate: '%s | Mahardika Kessuma Denie',
+      title: 'Software Engineer Portfolio',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'apple-mobile-web-app-title', content: 'Mahardika' },
-        { name: 'description', content: 'Software Engineer specializing in building high-performance applications using Flutter, Vue.js, and Laravel.' },
+        { name: 'description', content: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel. Explore technical documentations and professional projects.' },
+        
+        // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Mahardika Kessuma Denie' },
         { property: 'og:url', content: 'https://mahardikakdenie.my.id' },
+        { property: 'og:title', content: 'Mahardika Kessuma Denie | Software Engineer Portfolio' },
+        { property: 'og:description', content: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel.' },
+        { property: 'og:image', content: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg' },
+
+        // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@mahardikakdenie' },
+        { name: 'twitter:title', content: 'Mahardika Kessuma Denie | Software Engineer Portfolio' },
+        { name: 'twitter:description', content: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel.' },
+        { name: 'twitter:image', content: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg' },
+
+        // Additional SEO
+        { name: 'author', content: 'Mahardika Kessuma Denie' },
+        { name: 'robots', content: 'index, follow' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://mahardikakdenie.my.id' }
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' },

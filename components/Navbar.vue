@@ -62,10 +62,26 @@
                     <!-- Language Switcher -->
                     <button 
                         @click="toggleLocale"
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 hover:text-purple-600 hover:border-purple-200 transition-all mr-4 pointer-events-auto"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 hover:text-purple-600 hover:border-purple-200 transition-all mr-4 pointer-events-auto group/lang"
                         :title="locale === 'en' ? 'Switch to Indonesia' : 'Switch to English'"
                     >
-                        <span class="text-[10px] font-black uppercase">{{ locale }}</span>
+                        <div class="w-5 h-5 rounded-full overflow-hidden transition-transform duration-300 group-hover/lang:scale-110">
+                            <template v-if="locale === 'en'">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="#00247d" d="M0 0h512v512H0z"/>
+                                    <path fill="#fff" d="m512 0-192 192h192V0zM0 0l192 192H0V0zm0 512 192-192H0v192zm512 0-192-192h192v192z"/>
+                                    <path fill="#cf142b" d="m512 0-128 128h128V0zM0 0l128 128H0V0zm0 512 128-128H0v128zm512 0-128-128h128v128z"/>
+                                    <path fill="#fff" d="M213 0v213H0v86h213v213h86V299h213v-86H299V0h-86z"/>
+                                    <path fill="#cf142b" d="M235 0v235H0v42h235v235h42V277h235v-42H277V0h-42z"/>
+                                </svg>
+                            </template>
+                            <template v-else>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="#f0f0f0" d="M0 256h512v256H0z"/>
+                                    <path fill="#d80027" d="M0 0h512v256H0z"/>
+                                </svg>
+                            </template>
+                        </div>
                     </button>
 
                     <!-- Hire Me Button -->
@@ -141,10 +157,27 @@
                             v-for="loc in locales" :key="loc.code"
                             @click="setLocale(loc.code)"
                             :class="[
-                                locale === loc.code ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-400',
-                                'py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all'
+                                locale === loc.code ? 'bg-slate-900 text-white border-slate-900' : 'bg-slate-50 text-slate-400 border-slate-100',
+                                'py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all flex flex-col items-center gap-3 border group/mobile-lang'
                             ]"
                         >
+                            <div class="w-6 h-6 rounded-full overflow-hidden transition-transform duration-300 group-hover/mobile-lang:scale-110">
+                                <template v-if="loc.code === 'en'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="#00247d" d="M0 0h512v512H0z"/>
+                                        <path fill="#fff" d="m512 0-192 192h192V0zM0 0l192 192H0V0zm0 512 192-192H0v192zm512 0-192-192h192v192z"/>
+                                        <path fill="#cf142b" d="m512 0-128 128h128V0zM0 0l128 128H0V0zm0 512 128-128H0v128zm512 0-128-128h128v128z"/>
+                                        <path fill="#fff" d="M213 0v213H0v86h213v213h86V299h213v-86H299V0h-86z"/>
+                                        <path fill="#cf142b" d="M235 0v235H0v42h235v235h42V277h235v-42H277V0h-42z"/>
+                                    </svg>
+                                </template>
+                                <template v-else>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="#f0f0f0" d="M0 256h512v256H0z"/>
+                                        <path fill="#d80027" d="M0 0h512v256H0z"/>
+                                    </svg>
+                                </template>
+                            </div>
                             {{ loc.name }}
                         </button>
                     </div>

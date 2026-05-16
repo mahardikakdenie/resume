@@ -24,11 +24,11 @@ export const projects: Array<IProjects> = [
 	{
 		name: 'Drag & Drop Web Builder',
 		link: 'web-builder',
-		image: '/web-builder.png',
+		image: 'https://jam.dev/cdn-cgi/image/width=2560,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/e5ed9efb9cb1aa4507117938f41e78f8/screenshot/748f726e-f672-46b9-b36c-94cd8e733593.png',
 		type: 'Web App',
 		tools: ['React', 'TypeScript', 'Vite', 'Zustand', 'TailwindCss'],
 		description: 'project_content.web-builder.description',
-		images: ['/web-builder.png'],
+		images: ['https://jam.dev/cdn-cgi/image/width=2560,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/e5ed9efb9cb1aa4507117938f41e78f8/screenshot/748f726e-f672-46b9-b36c-94cd8e733593.png'],
 		url: 'https://web-builder.mahardikakdenie.my.id/',
 		role: 'Frontend Engineer',
 		year: '2024',
@@ -448,7 +448,7 @@ export const skillDatas: Array<ISkillDatas> = [
 			},
 			{
 				title: 'Drag & Drop Web Builder',
-				image: '/web-builder.png',
+				image: 'https://jam.dev/cdn-cgi/image/width=2560,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/e5ed9efb9cb1aa4507117938f41e78f8/screenshot/748f726e-f672-46b9-b36c-94cd8e733593.png',
 				description: 'skills_content.shared_project_desc.web_builder',
 				cta: {
 					githubLink: 'https://github.com/mahardikakdenie/WebBuilder',

@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://mahardikakdenie.my.id' },
         { property: 'og:title', content: 'Mahardika Kessuma Denie | Senior Software Engineer & SaaS Expert' },
         { property: 'og:description', content: 'Expert Senior Software Engineer building scalable SaaS architectures and enterprise systems with modern technology stacks.' },
-        { property: 'og:image', content: 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' },
+        { property: 'og:image', content: 'https://i.ibb.co/8mSD7K6/og-image-mahardika.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
 
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         { name: 'twitter:site', content: '@mahardikakdenie' },
         { name: 'twitter:title', content: 'Mahardika Kessuma Denie | Senior Software Engineer' },
         { name: 'twitter:description', content: 'Senior Software Engineer specializing in scalable SaaS architectures and high-performance applications.' },
-        { name: 'twitter:image', content: 'https://i.ibb.co.com/8mSD7K6/og-image-mahardika.png' },
+        { name: 'twitter:image', content: 'https://i.ibb.co/8mSD7K6/og-image-mahardika.png' },
 
         // Additional SEO
         { name: 'author', content: 'Mahardika Kessuma Denie' },

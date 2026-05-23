@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mahardikakdenie/agent-skills": "^1.0.1",
     "@nuxt/content": "^2.13.4",
     "@nuxtjs/i18n": "^8.5.5",
     "@nuxtjs/robots": "^4.1.1",

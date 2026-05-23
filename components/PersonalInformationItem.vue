@@ -31,7 +31,7 @@
             </span>
         </a>
 
-        <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="group relative mt-2">
+        <a href="/MAHARDIKA_KESSUMA_DENIE_CV_25_MEI_2026.pdf" target="_blank" class="group relative mt-2">
              <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/40 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 animate-pulse-slow">
                 <span class="font-bold text-xs">CV</span>
             </div>

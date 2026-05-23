@@ -36,7 +36,7 @@
                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                </span>
             </button>
-             <a href="/CV_MAHARDIKA_KESSUMA_DENIE_07_DESEMBER_2025.pdf" target="_blank" class="text-[10px] font-black text-slate-400 hover:text-purple-600 transition-colors flex items-center gap-2 group uppercase tracking-[0.2em]">
+             <a href="/MAHARDIKA_KESSUMA_DENIE_CV_25_MEI_2026.pdf" target="_blank" class="text-[10px] font-black text-slate-400 hover:text-purple-600 transition-colors flex items-center gap-2 group uppercase tracking-[0.2em]">
               {{ $t('hero.download_cv') }}
                <div class="w-8 h-[2px] bg-slate-200 group-hover:bg-purple-600 group-hover:w-12 transition-all"></div>
              </a>

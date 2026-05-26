@@ -271,6 +271,16 @@
         "0": "Endpoint RESTful yang Skalabel"
       },
       "challenges": "Merancang skema database yang dioptimalkan untuk menangani hubungan kompleks antara buku, penulis, dan kategori."
+    },
+    "monis-workspace": {
+      "description": "Konfigurator Produk Visual 3D canggih yang memungkinkan pengguna e-commerce untuk memvisualisasikan produk secara interaktif dalam 3D fidelitas tinggi. Platform ini menawarkan kustomisasi real-time, memungkinkan pelanggan untuk mengeksplorasi variasi dan detail secara dinamis, sehingga meningkatkan pengalaman belanja digital secara signifikan.",
+      "features": {
+        "0": "Visualisasi Produk 3D Fidelitas Tinggi",
+        "1": "Konfigurasi Interaktif Real-time",
+        "2": "Integrasi E-commerce yang Mulus",
+        "3": "Rendering 3D Teroptimasi Performa"
+      },
+      "challenges": "Tantangan utamanya adalah mengoptimalkan aset 3D yang berat untuk memastikan performa yang mulus di berbagai perangkat dan browser tanpa mengurangi kualitas visual."
     }
   },
   "skills_content": {
@@ -303,7 +313,8 @@
         "web_absen": "Sistem HR internal Dinas Pekerjaan Umum.",
         "store_vue": "Tema UI E-commerce dengan Nuxt.js.",
         "pm_tricks": "Dashboard LMS untuk pelatihan digital.",
-        "book_api": "RESTful API manajemen perpustakaan."
+        "book_api": "RESTful API manajemen perpustakaan.",
+        "monis_workspace": "Konfigurator Produk Visual 3D canggih dengan React dan Three.js."
     }
   },
   "projects": {

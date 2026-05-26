@@ -22,6 +22,25 @@ export const projects: Array<IProjects> = [
 		documentationLink: '/documentation/go-attendance-api'
 	},
 	{
+		name: 'Monis Workspace - 3D Visual Product Configurator',
+		link: 'monis-workspace',
+		image: '/preview-studio.png',
+		type: '3D Visual Products',
+		tools: ['React', 'Three.js', 'React Three Fiber', 'Tailwind CSS', 'TypeScript'],
+		description: 'project_content.monis-workspace.description',
+		images: ['/preview-studio.png'],
+		url: 'https://monis-studio.mahardikakdenie.my.id/',
+		role: 'Frontend Engineer & 3D Developer',
+		year: '2024',
+		features: [
+			'project_content.monis-workspace.features.0',
+			'project_content.monis-workspace.features.1',
+			'project_content.monis-workspace.features.2',
+			'project_content.monis-workspace.features.3'
+		],
+		challenges: 'project_content.monis-workspace.challenges'
+	},
+	{
 		name: 'Drag & Drop Web Builder',
 		link: 'web-builder',
 		image: 'https://jam.dev/cdn-cgi/image/width=2560,quality=100,dpr=1/https://cdn-jam-screenshots.jam.dev/e5ed9efb9cb1aa4507117938f41e78f8/screenshot/748f726e-f672-46b9-b36c-94cd8e733593.png',
@@ -438,6 +457,15 @@ export const skillDatas: Array<ISkillDatas> = [
 		yearExperience: '5+',
 		projectRelated: [
 			{
+				title: 'Monis Workspace - 3D Visual Product Configurator',
+				image: '/preview-studio.png',
+				description: 'skills_content.shared_project_desc.monis_workspace',
+				cta: {
+					githubLink: '',
+					previewLink: 'https://monis-studio.mahardikakdenie.my.id/',
+				},
+			},
+			{
 				title: 'Attendance & Payroll SaaS',
 				image: '/web-absen.png',
 				description: 'skills_content.shared_project_desc.attendance_saas',
@@ -638,7 +666,17 @@ export const skillDatas: Array<ISkillDatas> = [
 		description: 'skills_content.tailwind',
 		experienceSkill: 'Expert',
 		yearExperience: '5+',
-		projectRelated: [],
+		projectRelated: [
+			{
+				title: 'Monis Workspace - 3D Visual Product Configurator',
+				image: '/preview-studio.png',
+				description: 'skills_content.shared_project_desc.monis_workspace',
+				cta: {
+					githubLink: '',
+					previewLink: 'https://monis-studio.mahardikakdenie.my.id/',
+				},
+			},
+		],
 	},
 	{
 		title: 'Bootstrap',
@@ -688,7 +726,17 @@ export const skillDatas: Array<ISkillDatas> = [
 		description: 'skills_content.ts',
 		experienceSkill: 'Expert',
 		yearExperience: '5+',
-		projectRelated: [],
+		projectRelated: [
+			{
+				title: 'Monis Workspace - 3D Visual Product Configurator',
+				image: '/preview-studio.png',
+				description: 'skills_content.shared_project_desc.monis_workspace',
+				cta: {
+					githubLink: '',
+					previewLink: 'https://monis-studio.mahardikakdenie.my.id/',
+				},
+			},
+		],
 	},
 	{
 		title: 'PHP',

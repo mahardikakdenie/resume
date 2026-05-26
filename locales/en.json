@@ -271,6 +271,16 @@
         "0": "Scalable RESTful Endpoints"
       },
       "challenges": "Designing an optimized database schema to handle complex relationships between books, authors, and categories."
+    },
+    "monis-workspace": {
+      "description": "An advanced 3D Visual Product Configurator that empowers e-commerce users to interactively visualize products in high-fidelity 3D. This platform offers real-time customization, allowing customers to explore variations and details dynamically, significantly enhancing the digital shopping experience.",
+      "features": {
+        "0": "High-Fidelity 3D Product Visualization",
+        "1": "Real-time Interactive Configuration",
+        "2": "Seamless E-commerce Integration",
+        "3": "Performance-Optimized 3D Rendering"
+      },
+      "challenges": "The primary challenge was optimizing heavy 3D assets to ensure smooth performance across various devices and browsers without compromising visual quality."
     }
   },
   "skills_content": {
@@ -303,7 +313,8 @@
         "web_absen": "Internal HR system for Public Works.",
         "store_vue": "E-commerce UI theme built with Nuxt.js.",
         "pm_tricks": "LMS dashboard for digital training.",
-        "book_api": "Simple RESTful API for book library."
+        "book_api": "Simple RESTful API for book library.",
+        "monis_workspace": "Advanced 3D Visual Product Configurator with React and Three.js."
     }
   },
   "projects": {

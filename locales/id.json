@@ -47,7 +47,17 @@
     "next_case_study": "Lihat Proyek Lainnya",
     "view_project": "LIHAT PROYEK",
     "initializing": "Memulai",
-    "analysis": "Analisis"
+    "analysis": "Analisis",
+    "live_demo": "Demo Langsung",
+    "detail_project": "Detail Proyek",
+    "private_project": "Proyek Privat",
+    "no_preview": "Tanpa Pratinjau"
+  },
+  "skills": {
+    "built_with": "Dibangun dengan {title}",
+    "no_projects": "Belum ada proyek spesifik untuk keahlian ini.",
+    "not_found": "Keahlian Tidak Ditemukan",
+    "browse_all": "Lihat semua keahlian"
   },
   "documentation": {
     "hero_title": "Dokumentasi",
@@ -306,15 +316,28 @@
     "shared_project_desc": {
         "attendance_saas": "Platform SaaS Absensi & Payroll Multi-tenant.",
         "web_builder": "Aplikasi drag-and-drop web builder berperforma tinggi yang dibangun dengan React.",
-        "nextjs_movie": "Daftar Film dan Rating dengan Next.js.",
+        "next_movie_app": "Daftar Film dan Rating dengan Next.js.",
         "tic_tac_toe": "Permainan Tic Tac Toe sederhana dengan React.",
         "ensiklotari": "Platform budaya yang dibangun dengan Vue 3.",
-        "bujanggamanik": "Aplikasi temu janji sektor konstruksi.",
-        "web_absen": "Sistem HR internal Dinas Pekerjaan Umum.",
-        "store_vue": "Tema UI E-commerce dengan Nuxt.js.",
-        "pm_tricks": "Dashboard LMS untuk pelatihan digital.",
-        "book_api": "RESTful API manajemen perpustakaan.",
-        "monis_workspace": "Konfigurator Produk Visual 3D canggih dengan React dan Three.js."
+        "bujangga_manik_app": "Aplikasi temu janji sektor konstruksi.",
+        "store_vue_catalog": "Tema UI E-commerce dengan Nuxt.js.",
+        "pm_tricks_lms": "Dashboard LMS untuk pelatihan digital.",
+        "book_library_api": "RESTful API manajemen perpustakaan.",
+        "monis_workspace": "Konfigurator Produk Visual 3D canggih dengan React dan Three.js.",
+        "laukita_theme": "Solusi POS canggih dengan dashboard fidelitas tinggi.",
+        "dreams_theme": "Tema POS yang didorong secara estetika dengan interaksi modern.",
+        "dashboard_admin_theme": "Pusat administrasi komprehensif untuk pengawasan data.",
+        "customer_portal_app": "Portal asuransi mobile-first untuk manajemen polis.",
+        "api_service_imgbb": "API penyimpanan cloud untuk manajemen gambar.",
+        "floucloud": "Platform layanan cloud inovatif dan CMS.",
+        "ticketing_portal_automation": "Otomatisasi real-time yang menghubungkan GitHub ke tiket internal.",
+        "vue_button": "Library UI untuk tombol yang dapat disesuaikan dan diakses.",
+        "zoom_oauth_integration": "Implementasi penuh flow OAuth 2.0 Zoom API.",
+        "cms_hays_gallery": "CMS khusus untuk manajemen aset galeri yang efisien.",
+        "maida_clinic": "Landing page performa tinggi untuk klinik kesehatan.",
+        "dikti_company": "Profil perusahaan profesional untuk institusi pemerintah.",
+        "uniqlo_slicing": "Proyek slicing UI presisi tinggi menggunakan desain Uniqlo.",
+        "slc_lms": "Manajemen sumber daya pendidikan untuk pusat pembelajaran."
     }
   },
   "projects": {

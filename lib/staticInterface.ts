@@ -6,6 +6,7 @@ export interface IProjects {
 	description: string;
     images: Array<string>,
     tools?: any[],
+    skillKeys?: string[],
     badge?: string;
     url?: string;
     features?: string[];
@@ -31,7 +32,7 @@ export interface ISkillDatas {
         title: string;
         description: string;
         cta?: {
-            githubLink?: string;
+            detailLink?: string;
             previewLink?: string;
         };
     }>;

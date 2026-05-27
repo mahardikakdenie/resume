@@ -55,7 +55,7 @@
 
             <div class="lg:col-span-8 text-left" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-4 mb-10">
-                    <h3 class="text-2xl font-black text-slate-900 tracking-tight">Built with {{ currentSkill.title }}</h3>
+                    <h3 class="text-2xl font-black text-slate-900 tracking-tight">{{ $t('skills.built_with', { title: currentSkill.title }) }}</h3>
                     <div class="h-px bg-slate-100 flex-grow"></div>
                 </div>
 
@@ -75,14 +75,14 @@
                              />
                              <div v-else class="w-full h-full flex flex-col items-center justify-center bg-slate-50 text-slate-300">
                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                 <span class="text-[10px] font-black uppercase tracking-widest">No Preview</span>
+                                 <span class="text-[10px] font-black uppercase tracking-widest">{{ $t('common.no_preview') }}</span>
                              </div>
                         </div>
 
                         <div class="flex-grow text-left">
                             <h4 class="font-black text-xl text-slate-900 mb-3 group-hover:text-purple-600 transition-colors tracking-tight">{{ project.title }}</h4>
                             <p class="text-slate-500 text-sm line-clamp-3 leading-relaxed font-medium">
-                                {{ project.description }}
+                                {{ $t(project.description) }}
                             </p>
                         </div>
 
@@ -93,25 +93,24 @@
                                 class="flex items-center justify-center gap-2 py-4 rounded-xl bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest hover:bg-purple-600 transition-all active:scale-95 shadow-lg shadow-slate-900/10"
                                 v-if="project.cta?.previewLink"
                              >
-                                Live Demo
+                                {{ $t('common.live_demo') }}
                              </a>
-                             <a 
-                                :href="project.cta?.githubLink" 
-                                target="_blank"
+                             <NuxtLink 
+                                :to="project.cta?.detailLink" 
                                 class="flex items-center justify-center gap-2 py-4 rounded-xl bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-widest hover:bg-slate-100 hover:text-slate-900 transition-all active:scale-95"
-                                v-if="project.cta?.githubLink"
+                                v-if="project.cta?.detailLink"
                              >
-                                View Code
-                             </a>
-                             <span v-if="!project.cta?.previewLink && !project.cta?.githubLink" class="col-span-2 text-center text-[10px] font-black uppercase tracking-widest text-slate-300 py-2">
-                                 Private Project
+                                {{ $t('common.detail_project') }}
+                             </NuxtLink>
+                             <span v-if="!project.cta?.previewLink && !project.cta?.detailLink" class="col-span-2 text-center text-[10px] font-black uppercase tracking-widest text-slate-300 py-2">
+                                 {{ $t('common.private_project') }}
                              </span>
                         </div>
                     </div>
                 </div>
 
                 <div v-else class="text-center py-20 bg-white rounded-[2.5rem] border-2 border-dashed border-slate-100">
-                     <p class="text-slate-400 font-bold uppercase tracking-widest text-xs italic">No specific projects listed for this skill yet.</p>
+                     <p class="text-slate-400 font-bold uppercase tracking-widest text-xs italic">{{ $t('skills.no_projects') }}</p>
                 </div>
             </div>
 
@@ -119,8 +118,8 @@
       </div>
 
       <div v-else class="min-h-[50vh] flex flex-col items-center justify-center">
-         <h2 class="text-3xl font-black text-slate-200 tracking-widest uppercase">Skill Not Found</h2>
-         <NuxtLink to="/skills" class="mt-8 px-10 py-5 bg-purple-600 text-white font-black rounded-2xl shadow-xl shadow-purple-200">Browse all skills</NuxtLink>
+         <h2 class="text-3xl font-black text-slate-200 tracking-widest uppercase">{{ $t('skills.not_found') }}</h2>
+         <NuxtLink to="/skills" class="mt-8 px-10 py-5 bg-purple-600 text-white font-black rounded-2xl shadow-xl shadow-purple-200">{{ $t('skills.browse_all') }}</NuxtLink>
       </div>
 
     </div>
@@ -130,14 +129,33 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { skillDatas } from '@/lib/static';
+import { skillDatas, projects } from '@/lib/static';
 
 const { t } = useI18n();
 const route = useRoute();
 
-const currentSkill = computed(() =>
-	skillDatas.find((curr) => curr?.key === route?.params.slug)
-);
+const currentSkill = computed(() => {
+	const skill = skillDatas.find((curr) => curr?.key === route?.params.slug);
+    if (!skill) return null;
+
+    // Relational lookup: filter projects that use this skill
+    const related = projects
+        .filter(project => project.skillKeys?.includes(skill.key))
+        .map(project => ({
+            title: project.name,
+            image: project.image,
+            description: `skills_content.shared_project_desc.${project.link.replace(/-/g, '_')}`,
+            cta: {
+                detailLink: `/project/${project.link}`,
+                previewLink: project.url
+            }
+        }));
+
+    return {
+        ...skill,
+        projectRelated: related
+    };
+});
 
 useSeoMeta({
   title: () => `${currentSkill.value?.title || 'Skill'} | Mahardika Portfolio`,

@@ -47,7 +47,17 @@
     "next_case_study": "View More Projects",
     "view_project": "VIEW PROJECT",
     "initializing": "Initializing",
-    "analysis": "Analysis"
+    "analysis": "Analysis",
+    "live_demo": "Live Demo",
+    "detail_project": "Detail Project",
+    "private_project": "Private Project",
+    "no_preview": "No Preview"
+  },
+  "skills": {
+    "built_with": "Built with {title}",
+    "no_projects": "No specific projects listed for this skill yet.",
+    "not_found": "Skill Not Found",
+    "browse_all": "Browse all skills"
   },
   "documentation": {
     "hero_title": "Documentation",
@@ -306,15 +316,28 @@
     "shared_project_desc": {
         "attendance_saas": "Multi-tenant Attendance & Payroll SaaS platform.",
         "web_builder": "A high-performance drag-and-drop web builder built with React.",
-        "nextjs_movie": "List Movie And Rating built with Next.js.",
+        "next_movie_app": "List Movie And Rating built with Next.js.",
         "tic_tac_toe": "A simple Tic Tac Toe game with React.",
         "ensiklotari": "A cultural platform built with Vue 3.",
-        "bujanggamanik": "Appointment app for the construction sector.",
-        "web_absen": "Internal HR system for Public Works.",
-        "store_vue": "E-commerce UI theme built with Nuxt.js.",
-        "pm_tricks": "LMS dashboard for digital training.",
-        "book_api": "Simple RESTful API for book library.",
-        "monis_workspace": "Advanced 3D Visual Product Configurator with React and Three.js."
+        "bujangga_manik_app": "Appointment app for the construction sector.",
+        "store_vue_catalog": "E-commerce UI theme built with Nuxt.js.",
+        "pm_tricks_lms": "LMS dashboard for digital training.",
+        "book_library_api": "Simple RESTful API for book library.",
+        "monis_workspace": "Advanced 3D Visual Product Configurator with React and Three.js.",
+        "laukita_theme": "Sophisticated POS solution with high-fidelity dashboard.",
+        "dreams_theme": "Aesthetically-driven POS theme with modern interactions.",
+        "dashboard_admin_theme": "Comprehensive administrative powerhouse for data oversight.",
+        "customer_portal_app": "Mobile-first insurance portal for policy management.",
+        "api_service_imgbb": "Developer-centric cloud storage API for image management.",
+        "floucloud": "Innovative cloud services platform and CMS.",
+        "ticketing_portal_automation": "Real-time automation connecting GitHub to internal tickets.",
+        "vue_button": "Developer-focused UI library for accessible buttons.",
+        "zoom_oauth_integration": "Full implementation of Zoom API OAuth 2.0 flow.",
+        "cms_hays_gallery": "Specialized CMS for efficient gallery asset management.",
+        "maida_clinic": "High-performance landing page for healthcare engagement.",
+        "dikti_company": "Professional company profile for government institution.",
+        "uniqlo_slicing": "High-precision UI slicing project using Uniqlo design.",
+        "slc_lms": "Educational resource management for learning centers."
     }
   },
   "projects": {

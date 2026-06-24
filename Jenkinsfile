@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Fail') {
             steps {
-                echo 'Hello From GitHub from testing'
+                error('Testing Failure')
             }
         }
     }

@@ -2,21 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Install') {
+        stage('Hello') {
             steps {
-                echo 'Installing dependencies'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building application'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests'
+                echo 'Hello From GitHub'
             }
         }
     }

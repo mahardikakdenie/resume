@@ -1,7 +1,7 @@
 <template>
     <header 
         class="fixed top-0 z-50 w-full flex justify-center transition-all duration-1000 pointer-events-none"
-        :class="[isScrolled ? 'pt-4 md:pt-6' : 'pt-0']"
+        :class="[isScrolled ? 'pt-3 md:pt-5' : 'pt-0']"
     >
         <nav 
             data-aos="zoom-out" 
@@ -9,23 +9,30 @@
             class="relative flex items-center transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] pointer-events-auto"
             :class="[
                 isScrolled 
-                ? 'w-[95%] md:w-[92%] max-w-[750px] px-2 py-2 rounded-full bg-white/80 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] saturate-[1.8]' 
+                ? 'w-[95%] md:w-[90%] max-w-[730px] px-3 md:px-5 py-2 md:py-2.5 rounded-full bg-white/85 backdrop-blur-2xl border border-white/40 shadow-[0_15px_35px_rgba(15,23,42,0.08)] saturate-[1.8] ring-1 ring-slate-900/5' 
                 : 'w-full max-w-7xl px-4 md:px-8 py-6 md:py-10 bg-transparent'
             ]"
         >
             <div class="flex w-full items-center justify-between relative z-20">
                 <!-- Logo -->
                 <div 
-                    class="flex-shrink-0 cursor-pointer group flex items-center gap-3 pl-2" 
+                    class="flex-shrink-0 cursor-pointer group flex items-center transition-all duration-300"
+                    :class="[isScrolled ? 'gap-0 pl-1' : 'gap-3 pl-2']"
                     @click="$router.push('/')"
                 >
-                    <div class="relative w-8 h-8 md:w-9 md:h-9 flex items-center justify-center transition-all duration-500 group-hover:scale-110 active:scale-90">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-600 to-blue-600 rounded-xl rotate-45 group-hover:rotate-[225deg] transition-transform duration-700 shadow-lg shadow-purple-500/20"></div>
-                        <span class="relative text-white font-black text-xs">M</span>
+                    <div 
+                        class="relative flex items-center justify-center transition-all duration-500 group-hover:scale-105 active:scale-95"
+                        :class="[isScrolled ? 'w-7 h-7 md:w-8 md:h-8' : 'w-8 h-8 md:w-9 md:h-9']"
+                    >
+                        <img 
+                            src="/logo.svg" 
+                            alt="Mahardika Logo" 
+                            class="w-full h-full object-contain rounded-xl shadow-md shadow-purple-500/25 group-hover:shadow-purple-500/40 transition-all duration-500" 
+                        />
                     </div>
                     <span 
                         class="font-black tracking-tighter transition-all duration-500 whitespace-nowrap text-xl md:text-2xl text-slate-900"
-                        :class="[isScrolled ? 'hidden md:block' : 'block']"
+                        :class="[isScrolled ? 'hidden' : 'block']"
                     >
                         Mahardika
                     </span>
@@ -33,7 +40,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center">
-                    <ul class="flex items-center gap-1 relative px-1 py-1 rounded-full bg-slate-900/[0.03]">
+                    <ul class="flex items-center gap-0.5 relative px-1 py-1 rounded-full bg-slate-900/[0.03]">
                         <div 
                             class="absolute h-[85%] bg-slate-900 shadow-[0_10px_20px_rgba(15,23,42,0.3)] transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] rounded-full z-0"
                             :style="highlightStyle"
@@ -48,7 +55,8 @@
                             <span
                                 :class="[
                                     activeHighlightIndex === index ? 'text-white' : 'text-slate-500 hover:text-slate-900',
-                                    'px-5 py-2 text-[10px] font-black cursor-pointer transition-colors duration-500 uppercase tracking-[0.2em] block relative'
+                                    isScrolled ? 'px-3.5 md:px-4 py-1.5' : 'px-5 py-2',
+                                    'text-[10px] font-black cursor-pointer transition-all duration-500 uppercase tracking-[0.2em] block relative'
                                 ]"
                                 @click="handleLinkClick(list.link)"
                             >
@@ -57,15 +65,19 @@
                         </li>
                     </ul>
 
-                    <div class="w-px h-5 bg-slate-200/60 mx-6 transition-all duration-500" :class="isScrolled ? 'h-3' : 'h-5'"></div>
+                    <div 
+                        class="w-px bg-slate-200/60 transition-all duration-500" 
+                        :class="[isScrolled ? 'h-4 mx-3 md:mx-4' : 'h-5 mx-6']"
+                    ></div>
 
                     <!-- Language Switcher -->
                     <button 
                         @click="toggleLocale"
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 hover:text-purple-600 hover:border-purple-200 transition-all mr-4 pointer-events-auto group/lang"
+                        class="flex items-center justify-center rounded-full bg-slate-50 border border-slate-100 text-slate-500 hover:text-purple-600 hover:border-purple-200 transition-all pointer-events-auto group/lang"
+                        :class="[isScrolled ? 'w-8 h-8 md:w-9 md:h-9 mr-2 md:mr-3' : 'w-10 h-10 mr-4']"
                         :title="locale === 'en' ? 'Switch to Indonesia' : 'Switch to English'"
                     >
-                        <div class="w-5 h-5 rounded-full overflow-hidden transition-transform duration-300 group-hover/lang:scale-110">
+                        <div class="w-4 h-4 md:w-5 md:h-5 rounded-full overflow-hidden transition-transform duration-300 group-hover/lang:scale-110">
                             <template v-if="locale === 'en'">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="#00247d" d="M0 0h512v512H0z"/>
@@ -86,7 +98,8 @@
 
                     <!-- Hire Me Button -->
                     <button 
-                        class="group relative inline-flex items-center justify-center px-6 py-2.5 overflow-hidden rounded-full transition-all duration-500 active:scale-95 shadow-lg hover:shadow-purple-500/30"
+                        class="group relative inline-flex items-center justify-center overflow-hidden rounded-full transition-all duration-500 active:scale-95 shadow-lg hover:shadow-purple-500/30"
+                        :class="[isScrolled ? 'px-4 md:px-5 py-2' : 'px-6 py-2.5']"
                         @click="$router.push('/contact')"
                     >
                         <div class="absolute inset-0 bg-slate-900 group-hover:bg-purple-600 transition-colors duration-500"></div>
@@ -97,9 +110,10 @@
                 <!-- Mobile Toggle -->
                 <button 
                     @click="isMobileMenuOpen = true" 
-                    class="md:hidden w-10 h-10 flex items-center justify-center rounded-full transition-all bg-slate-900 text-white mr-2"
+                    class="md:hidden flex items-center justify-center rounded-full transition-all bg-slate-900 text-white"
+                    :class="[isScrolled ? 'w-8 h-8 mr-0' : 'w-10 h-10 mr-2']"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 8h16M4 16h16" />
                     </svg>
                 </button>

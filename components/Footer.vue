@@ -5,8 +5,8 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
 				<div class="col-span-1 md:col-span-1">
-                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                        <img src="/logo.svg" alt="Mahardika Logo" class="w-8 h-8 rounded-lg shadow-md shadow-purple-500/30" />
                         Mahardika
                     </h3>
                     <p class="text-sm leading-relaxed text-slate-400 mb-6">

@@ -220,7 +220,7 @@ const copied = ref(false);
 const contactMethods = [
   {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/whatsapp/whatsapp-original.svg', 
-    value: '+62 851-5087-9310',
+    value: '+62 812-2660-1858',
     title: 'WhatsApp',
     iconBg: 'bg-green-100/50',
     type: 'whatsapp'

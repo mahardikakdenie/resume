@@ -12,10 +12,10 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
             </span>
-            <span class="text-sm font-bold text-slate-600 tracking-wider uppercase">Career Journey</span>
+            <span class="text-sm font-bold text-slate-600 tracking-wider uppercase">{{ $t('experience_page.badge') }}</span>
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-           Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Experience</span>
+           {{ $t('experience_page.title_1') }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">{{ $t('experience_page.title_2') }}</span>
         </h2>
       </div>
 

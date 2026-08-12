@@ -364,6 +364,16 @@
     "sending": "Sending...",
     "success_msg": "Message sent!"
   },
+  "experience_page": {
+    "badge": "Career Journey",
+    "title_1": "Professional",
+    "title_2": "Experience",
+    "whos_next_badge": "Open for New Opportunities",
+    "whos_next_title": "Who's Next?",
+    "whos_next_subtitle": "The Next Chapter Starts Here",
+    "whos_next_philosophy": "Careers are full of unexpected turns, but every setback is just a setup for a greater comeback. My journey isn't finished—I'm ready for the next ambitious team to write the next chapter together.",
+    "whos_next_cta": "Let's Build Together"
+  },
   "cta": {
     "badge": "Open for Opportunities",
     "title_1": "Have a project in mind?",

@@ -364,6 +364,16 @@
     "sending": "Mengirim...",
     "success_msg": "Pesan terkirim!"
   },
+  "experience_page": {
+    "badge": "Perjalanan Karir",
+    "title_1": "Pengalaman",
+    "title_2": "Profesional",
+    "whos_next_badge": "Terbuka Untuk Peluang Baru",
+    "whos_next_title": "Who's Next?",
+    "whos_next_subtitle": "Babak Berikutnya Dimulai Di Sini",
+    "whos_next_philosophy": "Karir selalu memiliki dinamika tak terduga, tetapi setiap tantangan adalah pijakan untuk kebangkitan yang lebih kuat. Perjalanan saya belum selesai—siap untuk perusahaan berikutnya dalam mengukir karya luar biasa bersama.",
+    "whos_next_cta": "Mari Berkolaborasi"
+  },
   "cta": {
     "badge": "Terbuka untuk Peluang",
     "title_1": "Punya proyek dalam pikiran?",

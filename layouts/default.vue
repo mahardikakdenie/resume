@@ -73,9 +73,9 @@ useHead({
         "@type": "Person",
         "name": "Mahardika Kessuma Denie",
         "url": "https://mahardikakdenie.my.id",
-        "jobTitle": "Senior Software Engineer",
-        "alumniOf": "Universitas Dian Nuswantoro",
-        "knowsAbout": ["Software Engineering", "Go", "Vue.js", "Flutter", "Laravel", "PostgreSQL", "Redis", "Cloud Computing"],
+        "jobTitle": "Software Engineer",
+        "alumniOf": "ARS University",
+        "knowsAbout": ["Software Engineering", "React", "Next.js", "Vue.js", "NestJS", "Flutter", "Laravel", "Docker", "Kubernetes", "PostgreSQL", "Redis"],
         "sameAs": [
           "https://github.com/mahardikakdenie",
           "https://www.linkedin.com/in/mahardikakdenie/",
@@ -91,7 +91,7 @@ useHead({
         "@type": "WebSite",
         "name": "Mahardika Kessuma Denie Portfolio",
         "url": "https://mahardikakdenie.my.id",
-        "description": "Portfolio of Mahardika Kessuma Denie, a Senior Software Engineer specializing in building scalable web and mobile applications."
+        "description": "Portfolio of Mahardika Kessuma Denie, a Software Engineer specializing in building scalable web and mobile applications."
       })
     }
   ]
@@ -100,8 +100,8 @@ useHead({
 useSeoMeta({
 	title: 'Software Developer Portfolio',
 	ogTitle: 'Mahardika Kessuma Denie - Portfolio',
-	description: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel. Explore technical documentations and professional projects.',
-	ogDescription: 'Senior Software Engineer specializing in high-performance applications with Go, Vue.js, Flutter, and Laravel.',
+	description: 'Software Engineer specializing in high-performance web and mobile applications with React, Next.js, Vue, NestJS, Flutter, and Laravel.',
+	ogDescription: 'Software Engineer with 5 years of experience building high-performance web and mobile applications.',
     themeColor: '#9333ea',
     ogImage: 'https://i.ibb.co.com/WyyBVHy/348734275-972459347224795-3893992442184013147-n.jpg',
     twitterCard: 'summary_large_image',

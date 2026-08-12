@@ -8,11 +8,11 @@
     "hire_me": "Hubungi Saya"
   },
   "hero": {
-    "role": "Senior Software Engineer | Membangun SaaS Skalabel",
+    "role": "Software Engineer | Membangun Aplikasi Web & Mobile Skalabel",
     "title_1": "Membangun",
     "title_2": "Bisnis Anda",
     "title_3": "Skalabilitas",
-    "description": "Saya {name}. Saya membantu bisnis mengubah kebutuhan kompleks menjadi {apps} performa tinggi. Spesialis dalam SaaS multi-tenant, dashboard real-time, dan sistem skala enterprise.",
+    "description": "Saya {name}. Software Engineer berpengalaman 5 tahun dalam membangun aplikasi web & mobile performa tinggi menggunakan React, Next.js, Flutter, NestJS, dan arsitektur backend skalabel.",
     "view_portfolio": "Lihat Studi Kasus",
     "download_cv": "Resume Teknis",
     "badge_1": "Mitra Teknis Strategis",
@@ -23,8 +23,8 @@
     "title_1": "Menyelesaikan Tantangan Bisnis.",
     "title_2": "Saya memberikan ",
     "title_italic": "Hasil.",
-    "description_1": "Halo, saya {name}. Dengan pengalaman lebih dari {years}, saya tidak hanya menulis kode—saya merancang sistem yang berkembang. Mulai dari platform asuransi hingga ekosistem payroll otomatis, fokus saya adalah performa, keamanan, dan pemeliharaan jangka panjang.",
-    "description_2": "Keahlian saya telah membantu startup dan perusahaan mapan, termasuk meningkatkan produktivitas operasional sebesar {percent} di Ordivo dan mendirikan Ensiklotari.",
+    "description_1": "Halo, saya {name}. Software Engineer serbaguna dengan pengalaman 5 tahun membangun aplikasi web dan mobile berkinerja tinggi menggunakan React, Next.js, Flutter, dan arsitektur backend yang dapat ditingkatkan. Spesialis dalam menghadirkan platform SaaS multi-tenant, mengoptimalkan sistem real-time (meningkatkan produktivitas hingga 50%), dan mendirikan startup kultural-teknologi peraih penghargaan.",
+    "description_2": "Berdedikasi tinggi pada infrastruktur yang kuat, kode yang bersih, dan pengalaman pengguna yang intuitif.",
     "stats_years": "Tahun Pengal.",
     "stats_projects": "Proyek Selesai",
     "stats_gpa": "Skor IPK"

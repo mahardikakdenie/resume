@@ -8,11 +8,11 @@
     "hire_me": "Hire Me"
   },
   "hero": {
-    "role": "Senior Software Engineer | Building Scalable SaaS",
+    "role": "Software Engineer | Building Scalable Web & Mobile Apps",
     "title_1": "Engineering",
     "title_2": "Business Growth",
     "title_3": "Scalable",
-    "description": "I'm {name}. I help businesses transform complex requirements into high-performance {apps}. Specializing in multi-tenant SaaS, real-time dashboards, and enterprise-grade systems.",
+    "description": "I'm {name}. Versatile Software Engineer with 5 years of experience building high-performance web and mobile applications using React, Next.js, Flutter, NestJS, and scalable backend architectures.",
     "view_portfolio": "Review Case Studies",
     "download_cv": "Technical Resume",
     "badge_1": "Strategic Tech Partner",
@@ -23,8 +23,8 @@
     "title_1": "Solving Business Challenges.",
     "title_2": "I deliver ",
     "title_italic": "Results.",
-    "description_1": "Hi, I'm {name}. With over {years} of experience, I don't just write code—I architect systems that scale. From multi-tenant insurance platforms to automated payroll ecosystems, I focus on performance, security, and long-term maintainability.",
-    "description_2": "My expertise has helped startups and established enterprises alike, including increasing operational productivity by {percent} at Ordivo and launching cultural preservation platforms like Ensiklotari.",
+    "description_1": "Hi, I'm {name}. Versatile Software Engineer with 5 years of experience building high-performance web and mobile applications using React, Next.js, Flutter, and scalable backend architectures. Specialized in delivering multi-tenant SaaS platforms, optimizing real-time systems (boosting productivity by 50%), and founding an award-winning cultural-tech startup.",
+    "description_2": "Passionate about robust infrastructure, clean code, and intuitive user experiences.",
     "stats_years": "Years Exp.",
     "stats_projects": "Projects Delivered",
     "stats_gpa": "GPA Score"

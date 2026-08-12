@@ -154,91 +154,115 @@ const slug = route.params.slug as string;
 // Kita definisikan ulang data experience di sini agar bisa di-link-kan dengan keyword project
 const experiencesMap: Record<string, any> = {
     'friendsure': {
-        name: 'PT Friendsure Indonesia',
+        name: 'PT Friendsure Technology Indonesia',
         type: 'Fulltime',
         job: 'Fullstack Engineer',
-        since: 'Feb 2025',
+        since: '02/2025',
         until: 'Present',
         location: 'Jakarta, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/3061/3061341.png',
         description: [
-            'Developing a cross-platform insurance application using <strong>Flutter</strong>.',
-            'Integrating backend services (NestJS) for real-time updates.',
-            'Developing CMS Dashboard using Strapi & Python for AI video generation.',
+            'Engineered real-time ticket management portal using <strong>Next.js, TypeScript, WebSockets, Redis</strong>.',
+            'Architected scalable backend microservices using <strong>NestJS</strong> and optimized SQL queries.',
+            'Developed cross-platform mobile insurance app using <strong>Flutter</strong>.',
+            'Built SEO-friendly web apps using React & Next.js.',
+            'Containerized services with <strong>Docker & Kubernetes</strong>.',
+            'Designed <strong>AI Monitoring Dashboard</strong> tracking LLM latency, tokens, and operational costs.',
+            'Automated developer workflows with <strong>GitHub Apps & Webhooks</strong>.'
         ],
-        // Keywords untuk mencari project di static.ts
-        projectKeywords: ['Customer Portal', 'Friendsure', 'CMS AI'] 
+        projectKeywords: ['Customer Portal', 'Friendsure', 'Ticket', 'AI', 'Insurance'] 
     },
     'ordivo': {
-        name: 'PT Ordivo Teknologi Indonesia',
+        name: 'PT ORDIVO TEKNOLOGI INDONESIA (ordeonline.id)',
         type: 'Fulltime',
         job: 'Fullstack Engineer',
-        since: 'Nov 2022',
-        until: 'Dec 2024',
+        since: '11/2022',
+        until: '12/2024',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/3094/3094918.png',
         description: [
-            'Increased seller productivity by 35% via real-time dashboard.',
-            'Redesigned UI/UX for Funnel and Storefronts (20% engagement boost).',
-            'Implemented E2E Testing with Cypress.',
-            'Created 10+ Storefront Themes (e.g. Uniqlo, Laukita, Dreams).',
+            'Engineered real-time seller dashboard using Vue.js & Nuxt.js (+40% productivity).',
+            'Spearheaded UI/UX revamps driving 30% higher user engagement.',
+            'Implemented E2E automated testing with Cypress (slashing bug resolution time by 50%).',
+            'Developed 10+ storefront themes including TikTok-inspired layout (+25% adoption).',
+            'Led development of Wholesale Order System (B2B) growing average order value by 20%.',
+            'Scaled Ostock Admin Dashboard & Customer Portal (Vue.js, Laravel, MongoDB) reducing latency by 30%.'
         ],
-        projectKeywords: ['Laukita', 'Dreams', 'Uniqlo', 'Orderonline', 'Storefront']
+        projectKeywords: ['Laukita', 'Dreams', 'Uniqlo', 'Orderonline', 'Storefront', 'Ostock']
+    },
+    'dpupr': {
+        name: 'Dinas Pekerjaan Umum dan Penataan Ruang Kab. Bandung',
+        type: 'Contract',
+        job: 'Fullstack Engineer',
+        since: '11/2023',
+        until: '01/2024',
+        location: 'Bandung, Indonesia',
+        logo: 'https://cdn-icons-png.flaticon.com/512/2942/2942544.png',
+        description: [
+            'Built real-time web attendance app using Vue.js, Laravel, MySQL (75% faster data processing).',
+            'Developed Silandak Dashboard for infrastructure monitoring with Vue.js, Laravel, MongoDB.',
+            'Delivered interactive reports & backend optimizations boosting data retrieval speed by 70%.'
+        ],
+        projectKeywords: ['Attendance', 'Silandak', 'Dinas']
     },
     'icreativelabs': {
-        name: 'Icreativelabs',
+        name: 'Icreativelabs - PT Idekreatif Menusa Teknologi',
         type: 'Fulltime',
         job: 'Fullstack Engineer',
-        since: 'May 2022',
-        until: 'Nov 2022',
+        since: '05/2022',
+        until: '11/2022',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/4205/4205106.png',
         description: [
-            'PT Pos Indonesia Dashboard Reporting System.',
-            'Floucloud CMS implementation (WordPress-like).',
+            'Developed real-time Dashboard Reporting System for PT Pos Indonesia (+70% reporting efficiency).',
+            'Built Floucloud CMS dashboard using Vue & Laravel with WordPress-like capabilities.',
+            'Optimized backend architecture reducing page load times by 70%.'
         ],
         projectKeywords: ['Floucloud', 'Pos Indonesia']
     },
     'ensiklotari': {
         name: 'Ensiklotari',
-        type: 'Founder',
-        job: 'Fullstack Engineer',
-        since: 'July 2021',
-        until: 'Sept 2023',
+        type: 'Founder & Builder',
+        job: 'Full-Stack Engineer',
+        since: '07/2021',
+        until: '09/2023',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/3665/3665939.png',
         description: [
-            'Founder & Builder of Ensiklotari.id (Top 10 IEEE 2021).',
-            'Built full platform using Vue.js & Laravel.',
-            'Secured funding from Kedaireka Matching Fund.',
+            'Founded Ensiklotari.id digital cultural preservation platform.',
+            'IEEE 2021 Startup Competition Top 10 Finalist.',
+            'Recipient of Kedaireka Matching Fund grant.',
+            'Built web app with Vue.js & Laravel in collaboration with Sasikirana KoreoLab.'
         ],
-        projectKeywords: ['Ensiklotari', 'Bujangga', 'Maida Clinic']
+        projectKeywords: ['Ensiklotari', 'Bujangga']
     },
     'klosing': {
-        name: 'Klosing.id',
-        type: 'Hybrid',
+        name: 'KlosingId',
+        type: 'Fulltime',
         job: 'Fullstack Engineer',
-        since: 'May 2021',
-        until: 'May 2022',
+        since: '05/2021',
+        until: '05/2022',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/6585/6585728.png',
         description: [
-            'Developed CMS and Landing Page Editor.',
-            'Boosted SME operational efficiency by 65%.',
+            'Developed Customer Management System & drag-and-drop landing page editor.',
+            'Boosted SME operational efficiency by 65% & adoption by 60%.',
+            'Built using Vue.js, Laravel, and MySQL.'
         ],
         projectKeywords: ['Klosing']
     },
     'notiva': {
         name: 'CV Notiva Indonesia',
         type: 'Internship',
-        job: 'Frontend Engineer',
-        since: 'Jan 2021',
-        until: 'June 2021',
+        job: 'Intern Frontend Engineer',
+        since: '01/2021',
+        until: '06/2021',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/919/919836.png',
         description: [
-            'Built Notiva CMS Admin Dashboard.',
-            'Automated content workflows.',
+            'Designed & built Notiva CMS Admin Dashboard.',
+            'Automated content workflows reducing manual effort by 40%.',
+            'Integrated real-time analytics for operational tracking.'
         ],
         projectKeywords: ['Notiva']
     }

@@ -155,7 +155,7 @@
                     <ul class="space-y-1">
                         <li v-for="(list, index) in lists" :key="index">
                             <span
-                                class="text-xl font-bold transition-all duration-300 block px-4 py-4 rounded-2xl flex items-center justify-between group"
+                                class="text-xl font-bold transition-all duration-300 block px-4 py-4 rounded-2xl items-center justify-between group"
                                 :class="isActive(list.link) ? 'text-slate-900 bg-slate-50' : 'text-slate-400'"
                                 @click="handleMobileLinkClick(list.link)"
                             >

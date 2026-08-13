@@ -31,15 +31,19 @@
             </span>
         </a>
 
-        <a href="/MAHARDIKA_KESSUMA_DENIE_cv.pdf" target="_blank" class="group relative mt-2">
-             <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/40 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 animate-pulse-slow">
+        <button 
+          @click.prevent="openCvModal('/cv_mahardikakdenie.pdf')" 
+          type="button" 
+          class="group relative mt-2 text-left focus:outline-none"
+        >
+             <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/40 flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 animate-pulse-slow cursor-pointer">
                 <span class="font-bold text-xs">CV</span>
             </div>
              <span class="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl">
-                Download CV
+                View CV / Resume
                 <span class="absolute left-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-600 transform rotate-45"></span>
             </span>
-        </a>
+        </button>
 
     </div>
 </template>
@@ -48,6 +52,9 @@
 import linkedin from '@/assets/linkedin.svg';
 import github from '@/assets/github.svg';
 import email from '@/assets/email.svg';
+import { useCvModal } from '~/composables/useCvModal';
+
+const { openCvModal } = useCvModal();
 </script>
 
 <style scoped>

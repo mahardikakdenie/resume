@@ -1,8 +1,12 @@
 <template>
 	<div class="min-h-screen relative bg-slate-50 overflow-hidden font-poppins selection:bg-purple-200 selection:text-purple-900">
+        <!-- Custom Flash Splash Loading Screen -->
+        <FlashLoadingScreen />
+
         <div class="fixed inset-0 z-0 pointer-events-none">
             <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-200/30 blur-[100px] animate-pulse"></div>
             <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-200/30 blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+            <SnowEffect />
         </div>
 
 		<Navbar />
@@ -15,6 +19,7 @@
         </main>
 		
         <Footer />
+        <CvModal />
 
         <transition
             enter-active-class="transition ease-out duration-300"

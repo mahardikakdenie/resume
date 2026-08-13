@@ -401,5 +401,33 @@
     "reality": "realitas digital.",
     "start_conversation": "Mulai Obrolan",
     "email_directly": "Atau email saya langsung"
+  },
+  "github": {
+    "badge": "AKTIVITAS LIVE GITHUB & METRIK KODE",
+    "title_prefix": "Transparansi Engineering & ",
+    "title_highlight": "Kontribusi Aktif",
+    "subtitle": "Metrik real-time, distribusi bahasa pemrograman, dan pembaruan open-source langsung dari API GitHub.",
+    "metrics": {
+      "repos": "Repositori Publik",
+      "repos_desc": "Repositori yang dibuat & dikelola",
+      "stars": "Total Bintang",
+      "stars_desc": "Apresiasi dari komunitas developer",
+      "followers": "Pengikut",
+      "followers_desc": "Engineer & recruiter yang mengikuti",
+      "forks": "Total Fork",
+      "forks_desc": "Fork repositori oleh komunitas"
+    },
+    "languages": {
+      "title": "Distribusi Bahasa Pemrograman Utama",
+      "based_on": "Komposisi Kode Utama"
+    },
+    "activity": {
+      "title": "Komit & Aktivitas Terkini"
+    },
+    "repos": {
+      "title": "Repositori Publik Unggulan",
+      "view_all": "Lihat Semua di GitHub"
+    },
+    "cta_button": "Kunjungi mahardikakdenie di GitHub"
   }
 }

@@ -401,5 +401,33 @@
     "reality": "digital reality.",
     "start_conversation": "Start a Conversation",
     "email_directly": "Or email me directly"
+  },
+  "github": {
+    "badge": "LIVE GITHUB ACTIVITY & CODE METRICS",
+    "title_prefix": "Engineering Transparency & ",
+    "title_highlight": "Active Contributions",
+    "subtitle": "Real-time metrics, language distribution, and open-source updates fetched directly from GitHub API.",
+    "metrics": {
+      "repos": "Public Repos",
+      "repos_desc": "Repositories created & maintained",
+      "stars": "Stars Earned",
+      "stars_desc": "Community appreciation stars",
+      "followers": "Followers",
+      "followers_desc": "Engineers & recruiters following",
+      "forks": "Forks Earned",
+      "forks_desc": "Repository forks by community"
+    },
+    "languages": {
+      "title": "Top Tech Stack Breakdown",
+      "based_on": "Primary Codebase Distribution"
+    },
+    "activity": {
+      "title": "Recent Commits & Events"
+    },
+    "repos": {
+      "title": "Featured Public Repositories",
+      "view_all": "View All on GitHub"
+    },
+    "cta_button": "Visit mahardikakdenie on GitHub"
   }
 }

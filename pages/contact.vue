@@ -206,6 +206,8 @@ import { ref } from 'vue';
 
 const { t } = useI18n();
 
+const TARGET_EMAIL = 'dikamahar884@gmail.com';
+
 const form = ref({
     firstName: '',
     lastName: '',
@@ -227,7 +229,7 @@ const contactMethods = [
   },
   {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg', 
-    value: 'dikamahar884@gmail.com',
+    value: TARGET_EMAIL,
     title: 'Business Email',
     iconBg: 'bg-red-100/50',
     type: 'email'
@@ -244,11 +246,11 @@ const contactMethods = [
 const getLink = (method: any): string => {
   switch (method.type) {
     case 'whatsapp':
-      return `https://wa.me/${method.value.replace(/\D/g,  '')}`
+      return `https://wa.me/${method.value.replace(/\D/g, '')}`
     case 'email':
       return `mailto:${method.value}`
     case 'telegram':
-      return `https://t.me/${method.value.replace('@',  '')}`
+      return `https://t.me/${method.value.replace('@', '')}`
     default:
       return '#'
   }
@@ -261,21 +263,49 @@ const copyText = (text: string) => {
 };
 
 const handleSubmit = () => {
+    if (!form.value.firstName || !form.value.lastName || !form.value.email || !form.value.message) {
+        return;
+    }
+
     isSubmitting.value = true;
 
-    // Simulate API Call
+    const senderFullName = `${form.value.firstName.trim()} ${form.value.lastName.trim()}`;
+    const subjectText = `[Hire Inquiry] Message from ${senderFullName}`;
+    
+    const bodyText = [
+        `Name: ${senderFullName}`,
+        `Sender Email: ${form.value.email.trim()}`,
+        `----------------------------------------`,
+        `Message:`,
+        `${form.value.message.trim()}`,
+        `----------------------------------------`,
+        `Sent via Portfolio Contact Form`
+    ].join('\n\n');
+
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(TARGET_EMAIL)}&su=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+    const mailtoUrl = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+    const newWindow = window.open(gmailComposeUrl, '_blank');
+
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        window.location.href = mailtoUrl;
+    }
+
     setTimeout(() => {
         isSubmitting.value = false;
         isSent.value = true;
         
-        // Reset form
-        form.value = { firstName: '', lastName: '', email: '', message: '' };
+        form.value = { 
+            firstName: '', 
+            lastName: '', 
+            email: '', 
+            message: '' 
+        };
         
-        // Hide success message after 5 seconds
         setTimeout(() => {
             isSent.value = false;
         }, 5000);
-    }, 1500);
+    }, 600);
 };
 
 useSeoMeta({

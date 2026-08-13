@@ -1,104 +1,105 @@
 <template>
   <div class="min-h-screen py-16 md:py-28 relative overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-500">
-    <!-- Ambient Dynamic Background Glowing Orbs -->
+    <!-- Ambient Animated Light Theme Background Orbs & High-tech Pattern Overlay -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-      <div class="absolute top-[-10%] left-[-10%] w-[650px] h-[650px] bg-purple-500/10 dark:bg-purple-600/15 rounded-full blur-[140px] animate-pulse"></div>
-      <div class="absolute bottom-[-10%] right-[-10%] w-[650px] h-[650px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[140px] animate-pulse" style="animation-delay: 2s"></div>
-      <div class="absolute top-[35%] right-[25%] w-[450px] h-[450px] bg-pink-500/10 dark:bg-pink-600/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 4s"></div>
-      <!-- Radial Grid Pattern Overlay -->
-      <div class="absolute inset-0 opacity-[0.04] dark:opacity-[0.07]" :style="{ backgroundImage: 'radial-gradient(#a855f7 0.75px, transparent 0.75px)', backgroundSize: '24px 24px' }"></div>
+      <!-- Soft Light Gradient Orbs -->
+      <div class="absolute top-[-10%] left-[-10%] w-[650px] h-[650px] bg-gradient-to-br from-purple-400/20 via-indigo-300/15 to-transparent rounded-full blur-[130px] animate-pulse-slow"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[650px] h-[650px] bg-gradient-to-tl from-blue-400/20 via-pink-300/15 to-transparent rounded-full blur-[130px] animate-pulse-slow" style="animation-delay: 3s"></div>
+      <div class="absolute top-[40%] left-[20%] w-[500px] h-[500px] bg-gradient-to-r from-pink-400/15 to-purple-400/15 rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 6s"></div>
+      
+      <!-- Subtle Light Grid Pattern Overlay -->
+      <div class="absolute inset-0 opacity-[0.05] dark:opacity-[0.08]" :style="{ backgroundImage: 'radial-gradient(#9333ea 0.8px, transparent 0.8px)', backgroundSize: '32px 32px' }"></div>
     </div>
 
     <div class="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl relative z-10">
       
       <!-- Asymmetric Executive Hero Layout -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 sm:mb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 sm:mb-24">
         
         <!-- Left Hero Content Column -->
         <div class="lg:col-span-7 text-left" data-aos="fade-right">
           <!-- Live Status Badge -->
-          <div class="inline-flex items-center gap-3 bg-slate-900/90 dark:bg-slate-800/90 backdrop-blur-md text-white px-5 py-2 rounded-full border border-slate-700/50 shadow-xl mb-8 transition-all hover:scale-105 cursor-default">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+          <div class="inline-flex items-center gap-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl text-slate-800 dark:text-white px-5 py-2.5 rounded-full border border-purple-200 dark:border-purple-500/30 shadow-lg shadow-purple-500/5 mb-8 transition-all hover:scale-105 cursor-default group">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
-            <span class="text-[11px] font-black uppercase tracking-[0.25em] text-blue-300">
-              {{ $t('experience_page.badge') || 'CAREER CHRONICLE & TRACK RECORD' }}
+            <span class="text-[11px] font-black uppercase tracking-[0.25em] text-purple-700 dark:text-purple-300">
+              {{ $t('experience_page.badge') || 'CAREER CHRONICLE & IMPACT TRACK RECORD' }}
             </span>
           </div>
 
           <!-- Headline Title -->
           <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 dark:text-white leading-[0.95] tracking-tight mb-8">
             {{ $t('experience_page.title_1') || 'Professional' }}<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 uppercase">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 uppercase animate-gradient-text">
               {{ $t('experience_page.title_2') || 'Experience' }}
             </span>
           </h1>
 
           <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-normal mb-10">
-            A comprehensive track record of full-time engineering roles, technical leadership, contract systems development, and entrepreneurial ventures.
+            A comprehensive record of full-stack engineering excellence, system architecture, enterprise leadership, and product innovations shipped to production.
           </p>
 
           <!-- Interactive Action CTA Buttons -->
           <div class="flex flex-wrap items-center gap-4">
             <button
               @click="scrollToTimeline"
-              class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-black text-xs uppercase tracking-[0.15em] shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+              class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-black text-xs uppercase tracking-[0.15em] shadow-lg shadow-purple-600/25 hover:shadow-purple-600/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3 cursor-pointer group"
             >
               <span>Explore Timeline</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </button>
 
             <NuxtLink
               to="/contact"
-              class="px-8 py-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-black text-xs uppercase tracking-[0.15em] shadow-md hover:shadow-xl hover:border-purple-300 dark:hover:border-purple-500/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3"
+              class="px-8 py-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-black text-xs uppercase tracking-[0.15em] shadow-md hover:shadow-xl hover:border-purple-300 dark:hover:border-purple-500/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3"
             >
               <span>Get In Touch</span>
-              <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </NuxtLink>
           </div>
         </div>
 
-        <!-- Right Column: Executive Career Dashboard Card -->
+        <!-- Right Column: Light Theme Executive Career Dashboard Card (Without Top Hat Line) -->
         <div class="lg:col-span-5" data-aos="fade-left">
-          <div class="relative bg-slate-900/90 dark:bg-slate-900/95 backdrop-blur-2xl rounded-3xl p-8 border border-purple-500/30 shadow-2xl overflow-hidden group">
-            <!-- Background Ambient Glow -->
-            <div class="absolute -right-16 -top-16 w-48 h-48 bg-purple-600/20 rounded-full blur-3xl group-hover:bg-purple-600/35 transition-all duration-500 pointer-events-none"></div>
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+          <div class="relative bg-white/90 dark:bg-slate-900/95 backdrop-blur-2xl rounded-3xl p-8 border border-purple-200/80 dark:border-purple-500/30 shadow-xl shadow-purple-500/5 overflow-hidden group hover:border-purple-400/80 transition-colors duration-300">
+            <!-- Background Ambient Soft Glow -->
+            <div class="absolute -right-16 -top-16 w-48 h-48 bg-purple-400/20 rounded-full blur-3xl group-hover:bg-purple-400/35 transition-all duration-500 pointer-events-none"></div>
 
             <!-- Header Badge inside Dashboard -->
-            <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-800">
+            <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-200/80 dark:border-slate-800">
               <div class="flex items-center gap-3">
-                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
-                <span class="text-xs font-black uppercase tracking-widest text-emerald-400">Available For Engineering Roles</span>
+                <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                <span class="text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Available For Engineering Roles</span>
               </div>
-              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Summary</span>
+              <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest">Summary</span>
             </div>
 
             <!-- Stats Matrix Grid -->
             <div class="grid grid-cols-2 gap-4 mb-8">
-              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/50">
-                <div class="text-3xl font-black text-blue-400">4+</div>
-                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">Years Commercial</div>
+              <div class="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50 hover:border-purple-400/50 transition-colors">
+                <div class="text-3xl font-black text-blue-600 dark:text-blue-400">4+</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Years Commercial</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/50">
-                <div class="text-3xl font-black text-purple-400">7+</div>
-                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">Orgs & Clients</div>
+              <div class="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50 hover:border-purple-400/50 transition-colors">
+                <div class="text-3xl font-black text-purple-600 dark:text-purple-400">7+</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Orgs & Clients</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/50">
-                <div class="text-3xl font-black text-pink-400">25+</div>
-                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">Products Shipped</div>
+              <div class="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50 hover:border-purple-400/50 transition-colors">
+                <div class="text-3xl font-black text-pink-600 dark:text-pink-400">25+</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Products Shipped</div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/50">
-                <div class="text-3xl font-black text-emerald-400">100%</div>
-                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">High-Impact Delivery</div>
+              <div class="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50 hover:border-purple-400/50 transition-colors">
+                <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400">100%</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">High-Impact Delivery</div>
               </div>
             </div>
 
@@ -106,7 +107,7 @@
             <div>
               <div class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3">Core Stack Focus</div>
               <div class="flex flex-wrap gap-2">
-                <span v-for="tech in ['Next.js', 'Vue.js', 'NestJS', 'Flutter', 'Docker', 'Redis', 'TypeScript']" :key="tech" class="px-3 py-1 rounded-xl bg-slate-800 text-purple-300 text-xs font-semibold border border-slate-700">
+                <span v-for="tech in ['Next.js', 'Vue.js', 'NestJS', 'Flutter', 'Docker', 'Redis', 'TypeScript']" :key="tech" class="px-3 py-1 rounded-xl bg-purple-50 dark:bg-slate-800 text-purple-700 dark:text-purple-300 text-xs font-bold border border-purple-200/60 dark:border-slate-700 hover:border-purple-400 transition-colors">
                   {{ tech }}
                 </span>
               </div>
@@ -116,74 +117,24 @@
 
       </div>
 
-      <!-- Segmented Controller Filter Switcher -->
-      <div id="timeline-section" data-aos="fade-up" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 rounded-3xl p-4 sm:p-5 mb-10 shadow-xl shadow-slate-900/5">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950/60 flex items-center justify-center text-purple-600 dark:text-purple-400">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v25a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider">Career Filter</h3>
-              <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Filter timeline by employment type</p>
-            </div>
-          </div>
-
-          <!-- Segment Tabs -->
-          <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none">
-            <button
-              v-for="type in filterTypes"
-              :key="type.id"
-              @click="selectedType = type.id"
-              :class="[
-                'px-4 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap flex items-center gap-2 border cursor-pointer',
-                selectedType === type.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-purple-500 text-white shadow-md shadow-purple-500/20 scale-105'
-                  : 'bg-slate-100/80 dark:bg-slate-800/80 border-slate-200/60 dark:border-slate-700/60 text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-slate-100'
-              ]"
-            >
-              <span>{{ type.label }}</span>
-              <span
-                :class="[
-                  'px-2 py-0.5 rounded-full text-[10px] font-black',
-                  selectedType === type.id ? 'bg-white/20 text-white' : 'bg-slate-200/80 dark:bg-slate-700/80 text-slate-500 dark:text-slate-400'
-                ]"
-              >
-                {{ getRoleCount(type.id) }}
-              </span>
-            </button>
-          </div>
-
+      <!-- Timeline Section Anchor Header -->
+      <div id="timeline-section" class="scroll-mt-28 mb-12 text-center" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100/80 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 text-xs font-black uppercase tracking-widest mb-3">
+          <span>Career Journey</span>
         </div>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+          Milestones & Experience Timeline
+        </h2>
       </div>
 
-      <!-- Active Filter Context Ribbon -->
-      <div v-if="selectedType !== 'all'" class="mb-8 flex items-center justify-between px-6 py-3 rounded-2xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200/50 dark:border-purple-800/50 text-purple-700 dark:text-purple-300 text-xs font-bold">
-        <span>Showing <strong class="text-purple-900 dark:text-purple-100">{{ filteredExperiences.length }}</strong> experience(s) matching filter: <span class="uppercase tracking-widest font-black">{{ selectedType }}</span></span>
-        <button @click="selectedType = 'all'" class="text-purple-600 dark:text-purple-400 hover:underline uppercase text-[10px] font-black tracking-wider cursor-pointer">Reset Filter</button>
-      </div>
-
-      <!-- Timeline Component (Untouched) -->
-      <Timeline :experiences="filteredExperiences" />
+      <!-- Timeline Component -->
+      <Timeline :experiences="experiences" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-
-const selectedType = ref('all');
-
-const filterTypes = [
-  { id: 'all', label: 'All Roles' },
-  { id: 'fulltime', label: 'Fulltime' },
-  { id: 'contract', label: 'Contract' },
-  { id: 'founder', label: 'Founder' },
-  { id: 'internship', label: 'Internship' }
-];
+import { ref } from 'vue';
 
 const experiences = ref([
   {
@@ -300,16 +251,6 @@ const experiences = ref([
   }
 ]);
 
-const getRoleCount = (typeId: string): number => {
-  if (typeId === 'all') return experiences.value.length;
-  return experiences.value.filter(exp => exp.type.toLowerCase().includes(typeId)).length;
-};
-
-const filteredExperiences = computed(() => {
-  if (selectedType.value === 'all') return experiences.value;
-  return experiences.value.filter(exp => exp.type.toLowerCase().includes(selectedType.value));
-});
-
 const scrollToTimeline = () => {
   const el = document.getElementById('timeline-section');
   if (el) {
@@ -319,11 +260,23 @@ const scrollToTimeline = () => {
 </script>
 
 <style scoped>
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.08); }
 }
-.scrollbar-none {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: gradientText 4s ease infinite;
 }
 </style>

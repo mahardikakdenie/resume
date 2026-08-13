@@ -7,6 +7,19 @@
     "docs": "Docs",
     "hire_me": "Hire Me"
   },
+  "splash": {
+    "welcome_title": "Welcome to Mahardika's Personal Workspace",
+    "welcome_subtitle": "Architecting Scalable SaaS & High-Performance Digital Solutions",
+    "status_init": "Initializing Core Architecture...",
+    "status_loading": "Loading Technical Assets...",
+    "status_ready": "System Ready"
+  },
+  "banner": {
+    "years_exp": "5+ Years Experience",
+    "companies_served": "Multiple Companies & Clients",
+    "headline": "Engineering as an Art Form. Let's Dance with Complexity.",
+    "quote": "Software engineering is not merely writing code—it is the art of transforming intricate business challenges into seamless, scalable, and high-impact digital experiences."
+  },
   "hero": {
     "role": "Software Engineer | Building Scalable Web & Mobile Apps",
     "title_1": "Engineering",
@@ -27,7 +40,12 @@
     "description_2": "Passionate about robust infrastructure, clean code, and intuitive user experiences.",
     "stats_years": "Years Exp.",
     "stats_projects": "Projects Delivered",
-    "stats_gpa": "GPA Score"
+    "stats_gpa": "GPA Score",
+    "highlight_1_title": "Scalable Architecture",
+    "highlight_1_desc": "Multi-tenant SaaS & high-performance APIs",
+    "highlight_2_title": "Productivity Driven",
+    "highlight_2_desc": "50% real-time system speed optimization",
+    "status_available": "Open for Opportunities"
   },
   "common": {
     "back": "Back",

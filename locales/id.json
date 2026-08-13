@@ -7,6 +7,19 @@
     "docs": "Dokumentasi",
     "hire_me": "Hubungi Saya"
   },
+  "splash": {
+    "welcome_title": "Selamat Datang di Personal Website Mahardika",
+    "welcome_subtitle": "Merancang SaaS Skalabel & Solusi Digital Performa Tinggi",
+    "status_init": "Menginisialisasi Arsitektur Utama...",
+    "status_loading": "Memuat Aset Teknikal...",
+    "status_ready": "Sistem Siap"
+  },
+  "banner": {
+    "years_exp": "5+ Tahun Pengalaman",
+    "companies_served": "Berbagai Perusahaan & Klien",
+    "headline": "Rekayasa Sebagai Seni. Mari Berdansa dengan Kompleksitas.",
+    "quote": "Software engineering bukan sekadar menulis baris kode—ini adalah seni mengubah tantangan bisnis kompleks menjadi pengalaman digital yang tangguh, skalabel, dan berdampak tinggi."
+  },
   "hero": {
     "role": "Software Engineer | Membangun Aplikasi Web & Mobile Skalabel",
     "title_1": "Membangun",
@@ -27,7 +40,12 @@
     "description_2": "Berdedikasi tinggi pada infrastruktur yang kuat, kode yang bersih, dan pengalaman pengguna yang intuitif.",
     "stats_years": "Tahun Pengal.",
     "stats_projects": "Proyek Selesai",
-    "stats_gpa": "Skor IPK"
+    "stats_gpa": "Skor IPK",
+    "highlight_1_title": "Arsitektur Skalabel",
+    "highlight_1_desc": "SaaS multi-tenant & API performa tinggi",
+    "highlight_2_title": "Berorientasi Performa",
+    "highlight_2_desc": "Optimasi kecepatan sistem real-time hingga 50%",
+    "status_available": "Terbuka untuk Peluang"
   },
   "common": {
     "back": "Kembali",

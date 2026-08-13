@@ -51,6 +51,14 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxtjs/tailwindcss", "nuxt-aos", "@nuxt/content", "@nuxtjs/i18n"],
   i18n: {
+    bundle: {
+      strictMessage: false,
+      escapeHtml: false
+    },
+    compilation: {
+      strictMessage: false,
+      escapeHtml: false
+    },
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'id', iso: 'id-ID', file: 'id.json', name: 'Bahasa Indonesia' }

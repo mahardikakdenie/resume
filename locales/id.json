@@ -15,7 +15,7 @@
     "status_ready": "Sistem Siap"
   },
   "banner": {
-    "years_exp": "5+ Tahun Pengalaman",
+    "years_exp": "{years} Pengalaman",
     "companies_served": "Berbagai Perusahaan & Klien",
     "headline": "Rekayasa Sebagai Seni. Mari Berdansa dengan Kompleksitas.",
     "quote": "Software engineering bukan sekadar menulis baris kode—ini adalah seni mengubah tantangan bisnis kompleks menjadi pengalaman digital yang tangguh, skalabel, dan berdampak tinggi."
@@ -25,7 +25,7 @@
     "title_1": "Membangun",
     "title_2": "Bisnis Anda",
     "title_3": "Skalabilitas",
-    "description": "Saya {name}. Software Engineer berpengalaman 5 tahun dalam membangun aplikasi web & mobile performa tinggi menggunakan React, Next.js, Flutter, NestJS, dan arsitektur backend skalabel.",
+    "description": "Saya {name}. Software Engineer berpengalaman {years} dalam membangun aplikasi web & mobile performa tinggi menggunakan React, Next.js, Flutter, NestJS, dan arsitektur backend skalabel.",
     "view_portfolio": "Lihat Studi Kasus",
     "download_cv": "Resume Teknis",
     "badge_1": "Mitra Teknis Strategis",
@@ -36,7 +36,7 @@
     "title_1": "Menyelesaikan Tantangan Bisnis.",
     "title_2": "Saya memberikan ",
     "title_italic": "Hasil.",
-    "description_1": "Halo, saya {name}. Software Engineer serbaguna dengan pengalaman 5 tahun membangun aplikasi web dan mobile berkinerja tinggi menggunakan React, Next.js, Flutter, dan arsitektur backend yang dapat ditingkatkan. Spesialis dalam menghadirkan platform SaaS multi-tenant, mengoptimalkan sistem real-time (meningkatkan produktivitas hingga 50%), dan mendirikan startup kultural-teknologi peraih penghargaan.",
+    "description_1": "Halo, saya {name}. Software Engineer serbaguna dengan pengalaman {years} membangun aplikasi web dan mobile berkinerja tinggi menggunakan React, Next.js, Flutter, dan arsitektur backend yang dapat ditingkatkan. Spesialis dalam menghadirkan platform SaaS multi-tenant, mengoptimalkan sistem real-time (meningkatkan produktivitas hingga 50%), dan mendirikan startup kultural-teknologi peraih penghargaan.",
     "description_2": "Berdedikasi tinggi pada infrastruktur yang kuat, kode yang bersih, dan pengalaman pengguna yang intuitif.",
     "stats_years": "Tahun Pengal.",
     "stats_projects": "Proyek Selesai",
@@ -390,7 +390,96 @@
     "whos_next_title": "Who's Next?",
     "whos_next_subtitle": "Babak Berikutnya Dimulai Di Sini",
     "whos_next_philosophy": "Karir selalu memiliki dinamika tak terduga, tetapi setiap tantangan adalah pijakan untuk kebangkitan yang lebih kuat. Perjalanan saya belum selesai—siap untuk perusahaan berikutnya dalam mengukir karya luar biasa bersama.",
-    "whos_next_cta": "Mari Berkolaborasi"
+    "whos_next_cta": "Mari Berkolaborasi",
+    "back_to_experiences": "Kembali ke Pengalaman",
+    "key_responsibilities": "Tanggung Jawab Utama & Dampak",
+    "delivered_projects": "Proyek yang Diselesaikan",
+    "jobs": {
+      "friendsure": {
+        "job": "Fullstack Engineer",
+        "type": "Penuh Waktu",
+        "until": "Sekarang",
+        "location": "Jakarta, Indonesia",
+        "description": [
+          "Mengembangkan portal manajemen tiket real-time menggunakan <strong>Next.js, TypeScript, WebSockets, dan Redis</strong>, berhasil menggantikan layanan pihak ketiga dan meniadakan biaya lisensi hingga 100%.",
+          "Merancang arsitektur backend Microservices yang skalabel menggunakan <strong>NestJS</strong>, mengoptimalkan kueri SQL kompleks, dan menerapkan parsing data standar ISO untuk meminimalisasi tingkat kegagalan API.",
+          "Mengembangkan aplikasi asuransi mobile lintas platform menggunakan <strong>Flutter</strong> untuk manajemen polis dan klaim asuransi yang responsif.",
+          "Membangun aplikasi web berkinerja tinggi yang SEO-friendly menggunakan <strong>React dan Next.js</strong>, mempercepat akuisisi klien dan memberikan pengalaman pengguna yang mulus.",
+          "Melakukan kontainerisasi komponen aplikasi dengan <strong>Docker</strong> dan mengorkestrasi deployment via <strong>Kubernetes</strong> untuk memastikan ketersediaan tinggi di atas infrastruktur yang andal.",
+          "Mendesain <strong>AI Monitoring Dashboard</strong> komprehensif berbasis React dan TypeScript untuk memantau performa LLM, konsumsi token, dan biaya operasional secara real-time.",
+          "Mengotomatiskan alur kerja developer dengan mengintegrasikan <strong>GitHub Apps dan Webhooks</strong> untuk sinkronisasi aktivitas GitHub dan status tiket secara instan."
+        ]
+      },
+      "ordivo": {
+        "job": "Fullstack Engineer",
+        "type": "Penuh Waktu",
+        "until": "12/2024",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Membangun dashboard penjual real-time menggunakan <strong>Vue.js dan Nuxt.js</strong>, menyajikan analisis penjualan instan yang mempercepat alur kerja harian dan meningkatkan produktivitas penjual sebesar 40%.",
+          "Memimpin perombakan UI/UX komprehensif pada corong transaksi dan halaman landas, mengoptimalkan perjalanan pengguna dan meningkatkan interaksi pengguna sebesar 30%.",
+          "Merancang kerangka pengujian otomatis end-to-end (E2E) menggunakan <strong>Cypress</strong> untuk transaksi inti, memangkas waktu deteksi dan resolusi bug hingga 50%.",
+          "Mengembangkan 10+ tema toko online responsif, termasuk tata letak bergaya TikTok yang meningkatkan adopsi platform di kalangan demografi muda sebesar 25%.",
+          "Memimpin pengembangan sistem order grosir (B2B) untuk meningkatkan retensi merchant dan mendorong pertumbuhan rata-rata nilai pesanan sebesar 20%.",
+          "Mengoptimalkan Ostock Admin Dashboard dan Portal Pelanggan menggunakan <strong>Vue.js, Laravel, dan MongoDB</strong>, mengatasi utang teknis dan memangkas latensi sistem sebesar 30%."
+        ]
+      },
+      "dpupr": {
+        "job": "Fullstack Engineer",
+        "type": "Kontrak",
+        "until": "01/2024",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "<strong>Aplikasi Presensi Real-Time:</strong> Membangun aplikasi kehadiran berbasis web real-time menggunakan <strong>Vue.js, Laravel, dan MySQL</strong>, memangkas pemrosesan data kehadiran manual sebesar 75% melalui otomatisasi laporan.",
+          "<strong>Dashboard Silandak – Sistem Pemantau Infrastruktur:</strong> Mengembangkan dashboard pemantauan infrastruktur jalan dengan <strong>Vue.js, Laravel, dan MongoDB</strong> untuk wawasan data yang cepat.",
+          "Menyajikan laporan interaktif dan mengoptimalkan logika backend, meningkatkan kecepatan penarikan data sebesar 70%."
+        ]
+      },
+      "icreativelabs": {
+        "job": "Fullstack Engineer",
+        "type": "Penuh Waktu",
+        "until": "11/2022",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "<strong>Developer Perangkat Lunak PT Pos Indonesia:</strong> Mengembangkan Dashboard Reporting System real-time dengan visualisasi data interaktif, meningkatkan efisiensi pelaporan internal sebesar 70%.",
+          "<strong>Floucloud CMS:</strong> Membangun dashboard CMS mirip WordPress dengan antarmuka bersih untuk manajemen konten yang mudah.",
+          "Mengoptimalkan arsitektur backend menggunakan <strong>Laravel & MySQL</strong>, mengurangi waktu muat halaman sebesar 70%."
+        ]
+      },
+      "ensiklotari": {
+        "job": "Full-Stack Engineer & Pendiri",
+        "type": "Founder",
+        "until": "09/2023",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Mendirikan Ensiklotari.id, platform digital untuk pelestarian budaya tari Indonesia melalui kelas tari online interaktif.",
+          "Terpilih sebagai <strong>Top 10 Finalis</strong> kompetisi Startup IEEE 2021.",
+          "Memperoleh dana hibah **Kedaireka Matching Fund** untuk pengembangan produk dan pembuatan konten tari.",
+          "Membangun platform menggunakan <strong>Vue.js dan Laravel</strong> untuk pengalaman kelas digital yang responsif."
+        ]
+      },
+      "klosing": {
+        "job": "Fullstack Engineer",
+        "type": "Penuh Waktu",
+        "until": "05/2022",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Mengembangkan Customer Management System dan editor landing page drag-and-drop, meningkatkan efisiensi UMKM sebesar 65% dan adopsi pengguna sebesar 60%.",
+          "Mengintegrasikan alat pemasaran dan fitur desain interaktif untuk meningkatkan keterlibatan merchant.",
+          "Membangun platform dengan **Vue.js, Laravel, dan MySQL** untuk performa dan skalabilitas tinggi."
+        ]
+      },
+      "notiva": {
+        "job": "Intern Frontend Engineer",
+        "type": "Magang",
+        "until": "06/2021",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Merancang dan membangun Dashboard Admin CMS Notiva untuk mempermudah pengelolaan konten artikel.",
+          "Mengotomatiskan alur kerja konten, mengurangi beban kerja manual sebesar 40%, serta mengintegrasikan analisis analitik real-time."
+        ]
+      }
+    }
   },
   "cta": {
     "badge": "Terbuka untuk Peluang",

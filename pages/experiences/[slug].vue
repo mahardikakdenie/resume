@@ -12,7 +12,7 @@
         <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
         </div>
-        Back to Experiences
+        {{ $t('experience_page.back_to_experiences', 'Back to Experiences') }}
       </button>
 
       <div v-if="experience">
@@ -50,7 +50,7 @@
             <div class="lg:col-span-5" data-aos="fade-right" data-aos-delay="100">
                 <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
-                    Key Responsibilities & Impact
+                    {{ $t('experience_page.key_responsibilities', 'Key Responsibilities & Impact') }}
                 </h3>
 
                 <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg relative overflow-hidden">
@@ -61,7 +61,7 @@
                             class="flex gap-4 group"
                         >
                             <div class="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-                                <span class="text-xs font-bold">{{ i }}</span>
+                                <span class="text-xs font-bold">{{ Number(i) + 1 }}</span>
                             </div>
                             <p class="text-slate-600 leading-relaxed text-sm pt-1" v-html="point"></p>
                         </div>
@@ -72,7 +72,7 @@
             <div class="lg:col-span-7" data-aos="fade-left" data-aos-delay="200">
                 <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     <span class="w-2 h-8 bg-blue-500 rounded-full"></span>
-                    Delivered Projects
+                    {{ $t('experience_page.delivered_projects', 'Delivered Projects') }}
                 </h3>
 
                 <div v-if="relatedProjects.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -90,7 +90,7 @@
                                 />
                              </div>
                              <div v-else class="w-full h-full flex items-center justify-center bg-slate-50 text-slate-300">
-                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                 <svg xmlns="http://www.w3.org/2050/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                              </div>
 
                              <span class="absolute top-2 right-2 px-2 py-1 bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider rounded text-slate-700">
@@ -98,46 +98,31 @@
                              </span>
                          </div>
 
-                         <div class="flex-grow">
-                             <h4 class="font-bold text-slate-900 mb-1 line-clamp-1 group-hover:text-purple-600 transition-colors">
-                                {{ project.name }}
-                             </h4>
-                             <div v-if="project.tools" class="flex flex-wrap gap-1 mb-3">
-                                <span v-for="tool in project.tools.slice(0,3)" :key="tool" class="text-[10px] px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded">
-                                    {{ tool }}
-                                </span>
+                         <div class="flex-grow flex flex-col justify-between">
+                             <div>
+                                 <h4 class="text-sm font-bold text-slate-850 group-hover:text-purple-650 transition-colors line-clamp-1 mb-1">{{ project.name }}</h4>
+                                 <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-4">{{ project.description }}</p>
                              </div>
-                             <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-4">
-                                {{ project.description }}
-                             </p>
+                             
+                             <div class="flex items-center justify-between text-[11px] font-bold text-slate-400">
+                                 <span>{{ project.role }}</span>
+                                 <NuxtLink :to="`/project#project-section`" class="text-purple-600 hover:text-purple-700 flex items-center gap-0.5">
+                                     View &rarr;
+                                 </NuxtLink>
+                             </div>
                          </div>
-
-                         <a 
-                            v-if="project.url"
-                            :href="project.url" 
-                            target="_blank"
-                            class="mt-auto w-full py-2 flex items-center justify-center gap-2 rounded-lg bg-slate-900 text-white text-xs font-bold hover:bg-purple-600 transition-colors"
-                         >
-                            View Details
-                         </a>
                     </div>
                 </div>
-
-                <div v-else class="bg-white rounded-3xl p-8 border border-dashed border-slate-300 text-center">
-                    <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-                    </div>
-                    <p class="text-slate-500 font-medium">Internal confidential projects or not listed publicly.</p>
+                
+                <div v-else class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+                    <span class="text-3xl mb-2">📂</span>
+                    <h4 class="text-sm font-bold text-slate-800">No Projects Linked</h4>
+                    <p class="text-xs text-slate-400 mt-1">This experience is focused on internal infrastructure & private codebases.</p>
                 </div>
             </div>
 
         </div>
       </div>
-
-      <div v-else class="text-center py-20">
-          <h2 class="text-2xl font-bold text-slate-400">Experience Not Found</h2>
-      </div>
-
     </div>
   </div>
 </template>
@@ -145,13 +130,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { projects } from '@/lib/static'; // Mengambil data project global
+import { useI18n } from 'vue-i18n';
+import { projects } from '~/lib/static';
 
 const route = useRoute();
 const slug = route.params.slug as string;
+const { t, tm, te } = useI18n();
 
 // 1. DATA PENGALAMAN (Master Data)
-// Kita definisikan ulang data experience di sini agar bisa di-link-kan dengan keyword project
 const experiencesMap: Record<string, any> = {
     'friendsure': {
         name: 'PT Friendsure Technology Indonesia',
@@ -199,11 +185,11 @@ const experiencesMap: Record<string, any> = {
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/2942/2942544.png',
         description: [
-            'Built real-time web attendance app using Vue.js, Laravel, MySQL (75% faster data processing).',
-            'Developed Silandak Dashboard for infrastructure monitoring with Vue.js, Laravel, MongoDB.',
-            'Delivered interactive reports & backend optimizations boosting data retrieval speed by 70%.'
+            'Built a real-time web-based attendance app using Vue.js, Laravel, MySQL.',
+            'Developed Silandak Dashboard (Infrastructure Monitoring System) using Vue.js, Laravel, MongoDB.',
+            'Optimized queries & reporting dashboards (+70% load speeds).'
         ],
-        projectKeywords: ['Attendance', 'Silandak', 'Dinas']
+        projectKeywords: ['Silandak', 'Attendance']
     },
     'icreativelabs': {
         name: 'Icreativelabs - PT Idekreatif Menusa Teknologi',
@@ -214,27 +200,27 @@ const experiencesMap: Record<string, any> = {
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/4205/4205106.png',
         description: [
-            'Developed real-time Dashboard Reporting System for PT Pos Indonesia (+70% reporting efficiency).',
-            'Built Floucloud CMS dashboard using Vue & Laravel with WordPress-like capabilities.',
-            'Optimized backend architecture reducing page load times by 70%.'
+            'PT Pos Indonesia Software Developer: Developed interactive Dashboard Reporting System.',
+            'Floucloud CMS: Built CMS Content dashboard UI and scaled data structures.',
+            'Optimized backend workflows using Laravel & MySQL (-70% load times).'
         ],
-        projectKeywords: ['Floucloud', 'Pos Indonesia']
+        projectKeywords: ['Pos Indonesia', 'Floucloud']
     },
     'ensiklotari': {
         name: 'Ensiklotari',
-        type: 'Founder & Builder',
-        job: 'Full-Stack Engineer',
+        type: 'Founder',
+        job: 'Full-Stack Engineer & Founder',
         since: '07/2021',
         until: '09/2023',
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/3665/3665939.png',
         description: [
-            'Founded Ensiklotari.id digital cultural preservation platform.',
+            'Preserving Indonesian dance culture via interactive online classes.',
             'IEEE 2021 Startup Competition Top 10 Finalist.',
-            'Recipient of Kedaireka Matching Fund grant.',
-            'Built web app with Vue.js & Laravel in collaboration with Sasikirana KoreoLab.'
+            'Received Matching Fund Kedaireka grant support.',
+            'Built complete platform using Vue.js & Laravel.'
         ],
-        projectKeywords: ['Ensiklotari', 'Bujangga']
+        projectKeywords: ['Ensiklotari']
     },
     'klosing': {
         name: 'KlosingId',
@@ -245,9 +231,9 @@ const experiencesMap: Record<string, any> = {
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/6585/6585728.png',
         description: [
-            'Developed Customer Management System & drag-and-drop landing page editor.',
-            'Boosted SME operational efficiency by 65% & adoption by 60%.',
-            'Built using Vue.js, Laravel, and MySQL.'
+            'Developed CMS and page builder editor with drag-and-drop elements.',
+            'Integrated external marketing systems and scaled workflows.',
+            'Crafted highly modular Vue & Laravel APIs.'
         ],
         projectKeywords: ['Klosing']
     },
@@ -260,31 +246,52 @@ const experiencesMap: Record<string, any> = {
         location: 'Bandung, Indonesia',
         logo: 'https://cdn-icons-png.flaticon.com/512/919/919836.png',
         description: [
-            'Designed & built Notiva CMS Admin Dashboard.',
-            'Automated content workflows reducing manual effort by 40%.',
-            'Integrated real-time analytics for operational tracking.'
+            'Designed and built the Notiva CMS Admin Dashboard, streamlining content management across platforms.',
+            'Automated content workflows, reducing manual effort by 40%, and integrated real-time analytics for better decision-making.'
         ],
         projectKeywords: ['Notiva']
     }
 };
 
-const experience = computed(() => experiencesMap[slug]);
+const getLocalizedDescription = (itemSlug: string, fallback: string[]): string[] => {
+  if (te(`experience_page.jobs.${itemSlug}.description`)) {
+    const list = tm(`experience_page.jobs.${itemSlug}.description`) as any;
+    if (Array.isArray(list) && list.length > 0) {
+      return list;
+    }
+  }
+  return fallback;
+};
 
-// 2. FILTER PROJECTS LOGIC
-// Mencari project di static.ts yang nama/deskripsinya mengandung keyword perusahaan
+// 2. RETRIEVE ACTIVE EXPERIENCE BY SLUG (Mapped with translations)
+const experience = computed(() => {
+    const base = experiencesMap[slug];
+    if (!base) return null;
+    return {
+        ...base,
+        job: t(`experience_page.jobs.${slug}.job`, base.job),
+        type: t(`experience_page.jobs.${slug}.type`, base.type),
+        until: t(`experience_page.jobs.${slug}.until`, base.until),
+        location: t(`experience_page.jobs.${slug}.location`, base.location),
+        description: getLocalizedDescription(slug, base.description)
+    };
+});
+
+// 3. RELATED PROJECTS
 const relatedProjects = computed(() => {
-    if (!experience.value || !experience.value.projectKeywords) return [];
+    const activeExp = experiencesMap[slug];
+    if (!activeExp || !activeExp.projectKeywords) return [];
     
     return projects.filter(proj => {
-        // Cek apakah nama project atau deskripsi mengandung salah satu keyword
-        return experience.value.projectKeywords.some((keyword: string) => 
-            proj.name.toLowerCase().includes(keyword.toLowerCase()) || 
-            (proj.description && proj.description.toLowerCase().includes(keyword.toLowerCase()))
-        );
+        return activeExp.projectKeywords.some((kw: string) => {
+            const matchTitle = proj.name.toLowerCase().includes(kw.toLowerCase());
+            const matchDesc = proj.description.toLowerCase().includes(kw.toLowerCase());
+            return matchTitle || matchDesc;
+        });
     });
 });
 
 const handleImageError = (e: Event) => {
-    (e.target as HTMLElement).style.display = 'none'; // Sembunyikan gambar rusak
+  (e.target as HTMLImageElement).src = 'https://cdn-icons-png.flaticon.com/512/3061/3061341.png';
 };
 </script>

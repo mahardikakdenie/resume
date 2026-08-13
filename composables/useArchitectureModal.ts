@@ -160,6 +160,44 @@ js.Publish("TELEMETRY.METRICS", []byte("load_spike_detected"))`,
         icon: 'Layers'
       }
     ]
+  },
+  {
+    id: 'multitenant-saas',
+    title: 'Multi-Tenant Enterprise SaaS Architecture',
+    tagline: 'Isolated tenant schematics with dynamic connection pooling & RLS security',
+    baseRps: 28000,
+    p99Latency: 11,
+    cacheHitRatio: 96.5,
+    nodes: [
+      {
+        id: 'tenant-router',
+        name: 'Subdomain Tenant Resolver',
+        role: 'Dynamic Tenant Routing',
+        technology: 'Node.js Express Middleware',
+        status: 'optimal',
+        latencyMs: 2.5,
+        description: 'Extracts request subdomains, verifies tenant active subscription tier, and attaches tenant Context DB connection pool.',
+        codeSnippet: `export const tenantContext = (req, res, next) => {
+  const tenantId = req.headers['x-tenant-id'] || req.subdomains[0];
+  req.dbPool = getTenantDatabasePool(tenantId);
+  next();
+};`,
+        icon: 'Shield'
+      },
+      {
+        id: 'rls-postgres',
+        name: 'PostgreSQL Row-Level Security',
+        role: 'Isolated Tenant Storage',
+        technology: 'PostgreSQL 15 + Prisma RLS',
+        status: 'healthy',
+        latencyMs: 8.4,
+        description: 'Enforces strictly isolated tenant data boundaries at the SQL engine level using Row-Level Security policies.',
+        codeSnippet: `CREATE POLICY tenant_isolation_policy ON organization_data
+  FOR ALL
+  USING (tenant_id = current_setting('app.current_tenant_id'));`,
+        icon: 'Database'
+      }
+    ]
   }
 ]
 

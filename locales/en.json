@@ -15,7 +15,7 @@
     "status_ready": "System Ready"
   },
   "banner": {
-    "years_exp": "5+ Years Experience",
+    "years_exp": "{years} Experience",
     "companies_served": "Multiple Companies & Clients",
     "headline": "Engineering as an Art Form. Let's Dance with Complexity.",
     "quote": "Software engineering is not merely writing code—it is the art of transforming intricate business challenges into seamless, scalable, and high-impact digital experiences."
@@ -25,7 +25,7 @@
     "title_1": "Engineering",
     "title_2": "Business Growth",
     "title_3": "Scalable",
-    "description": "I'm {name}. Versatile Software Engineer with 5 years of experience building high-performance web and mobile applications using React, Next.js, Flutter, NestJS, and scalable backend architectures.",
+    "description": "I'm {name}. Versatile Software Engineer with {years} of experience building high-performance web and mobile applications using React, Next.js, Flutter, NestJS, and scalable backend architectures.",
     "view_portfolio": "Review Case Studies",
     "download_cv": "Technical Resume",
     "badge_1": "Strategic Tech Partner",
@@ -36,7 +36,7 @@
     "title_1": "Solving Business Challenges.",
     "title_2": "I deliver ",
     "title_italic": "Results.",
-    "description_1": "Hi, I'm {name}. Versatile Software Engineer with 5 years of experience building high-performance web and mobile applications using React, Next.js, Flutter, and scalable backend architectures. Specialized in delivering multi-tenant SaaS platforms, optimizing real-time systems (boosting productivity by 50%), and founding an award-winning cultural-tech startup.",
+    "description_1": "Hi, I'm {name}. Versatile Software Engineer with {years} of experience building high-performance web and mobile applications using React, Next.js, Flutter, and scalable backend architectures. Specialized in delivering multi-tenant SaaS platforms, optimizing real-time systems (boosting productivity by 50%), and founding an award-winning cultural-tech startup.",
     "description_2": "Passionate about robust infrastructure, clean code, and intuitive user experiences.",
     "stats_years": "Years Exp.",
     "stats_projects": "Projects Delivered",
@@ -390,7 +390,96 @@
     "whos_next_title": "Who's Next?",
     "whos_next_subtitle": "The Next Chapter Starts Here",
     "whos_next_philosophy": "Careers are full of unexpected turns, but every setback is just a setup for a greater comeback. My journey isn't finished—I'm ready for the next ambitious team to write the next chapter together.",
-    "whos_next_cta": "Let's Build Together"
+    "whos_next_cta": "Let's Build Together",
+    "back_to_experiences": "Back to Experiences",
+    "key_responsibilities": "Key Responsibilities & Impact",
+    "delivered_projects": "Delivered Projects",
+    "jobs": {
+      "friendsure": {
+        "job": "Fullstack Engineer",
+        "type": "Fulltime",
+        "until": "Present",
+        "location": "Jakarta, Indonesia",
+        "description": [
+          "Engineered a real-time ticket management portal using <strong>Next.js, TypeScript, WebSockets, and Redis</strong>, successfully replacing third-party tools and reducing software licensing expenses by 100%.",
+          "Architected scalable backend Microservices using <strong>NestJS</strong>, optimizing complex SQL queries and enforcing ISO-standard data parsing to significantly reduce API error rates.",
+          "Developed a cross-platform mobile insurance app using <strong>Flutter</strong>, delivering an intuitive user interface for efficient policy and claim management.",
+          "Built high-performance, SEO-friendly web applications using <strong>React and Next.js</strong>, leveraging modern rendering strategies to accelerate client acquisition and ensure a seamless UX.",
+          "Containerized application components with <strong>Docker</strong> and orchestrated deployments via <strong>Kubernetes</strong>, ensuring high availability and scalable delivery within a robust infrastructure.",
+          "Designed a comprehensive <strong>AI Monitoring Dashboard</strong> using React and TypeScript to track real-time LLM performance, token consumption, and operational costs.",
+          "Automated developer workflows by integrating <strong>GitHub Apps and Webhooks</strong>, enabling seamless synchronization between GitHub activities and ticket statuses."
+        ]
+      },
+      "ordivo": {
+        "job": "Fullstack Engineer",
+        "type": "Fulltime",
+        "until": "12/2024",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Engineered a real-time seller dashboard using <strong>Vue.js and Nuxt.js</strong>, delivering actionable sales analytics that accelerated daily workflows and boosted seller productivity by 40%.",
+          "Spearheaded comprehensive UI/UX revamps across the platform's funnel and landing pages, optimizing user journeys and driving a 30% increase in overall user engagement.",
+          "Architected robust end-to-end (E2E) automated testing frameworks using <strong>Cypress</strong> for core transaction workflows, slashing bug detection and resolution time by over 50% and ensuring high platform stability.",
+          "Developed 10+ customizable, highly responsive storefront themes, including a high-converting TikTok-inspired layout that accelerated platform adoption among younger demographics by 25%.",
+          "Led the end-to-end development of the Wholesale Order System, introducing a B2B feature designed to improve merchant retention and drive a 20% growth in average order value.",
+          "Scaled and optimized the Ostock Admin Dashboard and Customer Portal utilizing <strong>Vue.js, Laravel, and MongoDB</strong>, proactively resolving critical technical debt and reducing system latency by 30% to ensure a seamless user experience."
+        ]
+      },
+      "dpupr": {
+        "job": "Fullstack Engineer",
+        "type": "Contract",
+        "until": "01/2024",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "<strong>Real-Time Attendance App:</strong> Built a real-time, web-based attendance application using <strong>Vue.js, Laravel, and MySQL</strong>, reducing manual data processing time by 75% through automation and instant reporting.",
+          "<strong>Silandak Dashboard – Infrastructure Monitoring System:</strong> Developed an infrastructure monitoring dashboard with <strong>Vue.js, Laravel, and MongoDB</strong>, providing real-time insights into system performance.",
+          "Delivered interactive reports and optimized backend logic, improving data retrieval speed by 70%."
+        ]
+      },
+      "icreativelabs": {
+        "job": "Fullstack Engineer",
+        "type": "Fulltime",
+        "until": "11/2022",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "<strong>PT Pos Indonesia Software Developer:</strong> Developed a real-time Dashboard Reporting System with interactive data visualizations, improving internal reporting efficiency by 70%.",
+          "<strong>Floucloud CMS:</strong> Built a WordPress-like CMS dashboard with a clean and intuitive user interface for content management.",
+          "Optimized backend architecture using <strong>Laravel & MySQL</strong>, resulting in a 70% reduction in page load times, enhancing system scalability and maintainability."
+        ]
+      },
+      "ensiklotari": {
+        "job": "Full-Stack Engineer & Founder",
+        "type": "Founder",
+        "until": "09/2023",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Founded Ensiklotari.id, a digital platform dedicated to preserving Indonesian dance culture through interactive online dance classes.",
+          "Recognized as a <strong>Top 10 Finalist</strong> in the IEEE 2021 Startup Competition.",
+          "Received <strong>Kedaireka Matching Fund</strong> to support product development and content creation.",
+          "Built the platform using <strong>Vue.js and Laravel</strong>, ensuring a responsive and user-friendly experience."
+        ]
+      },
+      "klosing": {
+        "job": "Fullstack Engineer",
+        "type": "Fulltime",
+        "until": "05/2022",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Developed a Customer Management System and landing page editor with drag-and-drop features, boosting SME operational efficiency by 65% and user adoption by 60%.",
+          "Integrated marketing tools and implemented interactive design elements, significantly improving user engagement.",
+          "Built using <strong>Vue.js, Laravel, and MySQL</strong>, ensuring high scalability, performance, and usability."
+        ]
+      },
+      "notiva": {
+        "job": "Intern Frontend Engineer",
+        "type": "Internship",
+        "until": "06/2021",
+        "location": "Bandung, Indonesia",
+        "description": [
+          "Designed and built the Notiva CMS Admin Dashboard, streamlining content management across platforms.",
+          "Automated content workflows, reducing manual effort by 40%, and integrated real-time analytics for better decision-making."
+        ]
+      }
+    }
   },
   "cta": {
     "badge": "Open for Opportunities",

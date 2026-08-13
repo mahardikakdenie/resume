@@ -20,7 +20,7 @@
       <button 
         @click="handleOpenArchitecture"
         class="flex items-center gap-2 px-3.5 py-2 rounded-full hover:bg-purple-50 transition-all text-xs font-bold text-slate-600 hover:text-purple-700 group"
-        title="Explore System Architecture & Benchmarks"
+        title="Explore System Architecture & Load Benchmarks"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-600 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -34,7 +34,7 @@
       <button 
         @click="handleOpenAiRecruiter"
         class="flex items-center gap-2 px-3.5 py-2 rounded-full hover:bg-purple-50 transition-all text-xs font-bold text-slate-600 hover:text-purple-700 group relative"
-        title="Open AI Recruiter & Tech Architecture Explorer"
+        title="Open Recruiter AI & Candidate Fast-Track"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />

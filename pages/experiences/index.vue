@@ -83,7 +83,7 @@
             <!-- Stats Matrix Grid -->
             <div class="grid grid-cols-2 gap-4 mb-8">
               <div class="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/50 hover:border-purple-400/50 transition-colors">
-                <div class="text-3xl font-black text-blue-600 dark:text-blue-400">4+</div>
+                <div class="text-3xl font-black text-blue-600 dark:text-blue-400">{{ yearsFormatted }}</div>
                 <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Years Commercial</div>
               </div>
 
@@ -135,6 +135,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useExperienceYears } from '~/composables/useExperienceYears';
+
+const { yearsFormatted } = useExperienceYears(2021);
 
 const experiences = ref([
   {

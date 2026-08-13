@@ -10,7 +10,7 @@
     >
       <div 
         v-if="isOpen" 
-        class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-xl"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/40 backdrop-blur-xl"
         @click.self="handleClose"
       >
         <transition
@@ -23,29 +23,29 @@
         >
           <div 
             v-if="isOpen"
-            class="relative w-full max-w-6xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl shadow-purple-950/50 overflow-hidden flex flex-col max-h-[92vh] text-slate-100"
+            class="relative w-full max-w-6xl bg-gradient-to-br from-slate-50 via-white to-purple-50/40 border border-slate-200/80 rounded-3xl shadow-2xl shadow-purple-900/10 overflow-hidden flex flex-col max-h-[92vh] text-slate-800"
           >
             <!-- Modal Header -->
-            <div class="px-6 py-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
+            <div class="px-6 py-5 border-b border-slate-200/80 flex items-center justify-between bg-white/80 backdrop-blur-md">
               <div class="flex items-center gap-3">
-                <div class="p-2.5 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
+                <div class="p-2.5 rounded-2xl bg-purple-50 border border-purple-200 text-purple-700 shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 </div>
                 <div>
-                  <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                  <h2 class="text-lg font-extrabold text-slate-900 flex items-center gap-2">
                     System Architecture & Benchmark Playground
-                    <span class="px-2 py-0.5 text-[10px] font-black uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full">Interactive Sandbox</span>
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-800 border border-purple-200 rounded-full">Interactive Sandbox</span>
                   </h2>
-                  <p class="text-xs text-slate-400">Explore high-throughput topology blueprints, dynamic latency benchmarks, and production backend code patterns.</p>
+                  <p class="text-xs text-slate-500 font-medium">Explore high-throughput topology blueprints, dynamic latency benchmarks, and production backend code patterns.</p>
                 </div>
               </div>
 
               <!-- Close Button -->
               <button 
                 @click="handleClose"
-                class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all"
+                class="p-2 rounded-xl text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-all"
                 title="Close Modal (Esc)"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,32 +59,32 @@
               <!-- Top Controls: Preset Selection & RPS Load Test Simulator -->
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <!-- Preset Switcher -->
-                <div class="lg:col-span-2 p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col justify-between">
-                  <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Select Architecture Blueprint</div>
+                <div class="lg:col-span-2 p-4 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                  <div class="text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-2">Select Architecture Blueprint</div>
                   <div class="flex flex-wrap gap-2">
                     <button
                       v-for="preset in presets"
                       :key="preset.id"
                       @click="selectPreset(preset.id)"
                       :class="[
-                        'px-4 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border',
+                        'px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 border',
                         selectedPresetId === preset.id
-                          ? 'bg-purple-600 text-white border-purple-400 shadow-lg shadow-purple-600/30'
-                          : 'bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200'
+                          ? 'bg-purple-600 text-white border-purple-500 shadow-md shadow-purple-500/20'
+                          : 'bg-slate-100/80 text-slate-600 border-slate-200 hover:bg-slate-200/60 hover:text-slate-900'
                       ]"
                     >
-                      <span class="w-2 h-2 rounded-full" :class="selectedPresetId === preset.id ? 'bg-white animate-pulse' : 'bg-slate-600'"></span>
+                      <span class="w-2 h-2 rounded-full" :class="selectedPresetId === preset.id ? 'bg-white animate-pulse' : 'bg-slate-400'"></span>
                       {{ preset.title }}
                     </button>
                   </div>
-                  <p class="text-xs text-slate-400 italic mt-3">{{ currentPreset.tagline }}</p>
+                  <p class="text-xs text-slate-500 italic font-medium mt-3">{{ currentPreset.tagline }}</p>
                 </div>
 
                 <!-- Live Traffic Load Simulator -->
-                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col justify-between">
+                <div class="p-4 rounded-2xl bg-white/80 border border-slate-200/80 shadow-sm flex flex-col justify-between">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Simulated Traffic Load</span>
-                    <span class="text-xs font-extrabold text-amber-400">{{ currentRpsLoad.toLocaleString() }} RPS</span>
+                    <span class="text-xs font-extrabold text-slate-500 uppercase tracking-wider">Simulated Traffic Load</span>
+                    <span class="text-xs font-black text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">{{ currentRpsLoad.toLocaleString() }} RPS</span>
                   </div>
                   <div class="grid grid-cols-3 gap-2 my-2">
                     <button
@@ -94,16 +94,16 @@
                       :class="[
                         'py-1.5 px-2 rounded-lg text-xs font-bold transition-all border',
                         currentRpsLoad === load 
-                          ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-sm'
-                          : 'bg-slate-900 text-slate-400 border-slate-800 hover:bg-slate-800'
+                          ? 'bg-amber-500 text-white border-amber-600 shadow-sm'
+                          : 'bg-slate-100/80 text-slate-600 border-slate-200 hover:bg-slate-200/60 hover:text-slate-900'
                       ]"
                     >
                       {{ load >= 1000 ? load / 1000 + 'k' : load }} RPS
                     </button>
                   </div>
-                  <div class="text-[11px] text-slate-400 flex items-center justify-between pt-1">
-                    <span>p99 Latency: <strong class="text-emerald-400">{{ simulatedMetrics.latencyMs }}ms</strong></span>
-                    <span>Cache Hit: <strong class="text-purple-400">{{ simulatedMetrics.cacheHitRatio }}%</strong></span>
+                  <div class="text-[11px] text-slate-600 font-medium flex items-center justify-between pt-1">
+                    <span>p99 Latency: <strong class="text-emerald-700 font-extrabold">{{ simulatedMetrics.latencyMs }}ms</strong></span>
+                    <span>Cache Hit: <strong class="text-purple-700 font-extrabold">{{ simulatedMetrics.cacheHitRatio }}%</strong></span>
                   </div>
                 </div>
               </div>
@@ -111,18 +111,18 @@
               <!-- Interactive Architecture Canvas & Telemetry Grid -->
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <!-- Topology Nodes Interactive Canvas (Left Column) -->
-                <div class="lg:col-span-7 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 relative min-h-[380px] flex flex-col justify-between">
-                  <div class="flex items-center justify-between border-b border-slate-800/60 pb-3 mb-4">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                <div class="lg:col-span-7 p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-md min-h-[380px] flex flex-col justify-between">
+                  <div class="flex items-center justify-between border-b border-slate-200/80 pb-3 mb-4">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
                       Interactive Topology Flow (Click Node to Inspect)
                     </span>
-                    <span class="text-[11px] text-purple-400 bg-purple-950/40 px-2 py-0.5 rounded border border-purple-800/40">
+                    <span class="text-[11px] text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200 font-bold">
                       {{ currentPreset.nodes.length }} Microservices Linked
                     </span>
                   </div>
 
-                  <!-- Animated SVG Connection Cable Lines -->
+                  <!-- Topology Nodes List -->
                   <div class="relative space-y-4 z-10">
                     <div
                       v-for="(node, idx) in currentPreset.nodes"
@@ -131,8 +131,8 @@
                       :class="[
                         'p-4 rounded-xl border transition-all duration-200 cursor-pointer flex items-center justify-between group',
                         activeNodeId === node.id 
-                          ? 'bg-purple-950/40 border-purple-500/80 shadow-lg shadow-purple-500/10 translate-x-1' 
-                          : 'bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:bg-slate-900'
+                          ? 'bg-purple-50 border-purple-300 shadow-md shadow-purple-500/10 translate-x-1' 
+                          : 'bg-slate-50/80 border-slate-200/80 hover:border-purple-300 hover:bg-slate-100/80'
                       ]"
                     >
                       <div class="flex items-center gap-3">
@@ -140,27 +140,27 @@
                           :class="[
                             'w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm border transition-transform group-hover:scale-105',
                             activeNodeId === node.id 
-                              ? 'bg-purple-600 text-white border-purple-400' 
-                              : 'bg-slate-800 text-purple-300 border-slate-700'
+                              ? 'bg-purple-600 text-white border-purple-500' 
+                              : 'bg-slate-200 text-purple-700 border-slate-300'
                           ]"
                         >
                           0{{ idx + 1 }}
                         </div>
                         <div>
-                          <div class="text-sm font-bold text-white group-hover:text-purple-300 transition-colors flex items-center gap-2">
+                          <div class="text-sm font-bold text-slate-900 group-hover:text-purple-700 transition-colors flex items-center gap-2">
                             {{ node.name }}
-                            <span v-if="activeNodeId === node.id" class="text-[10px] px-1.5 py-0.2 rounded bg-purple-500/30 text-purple-300 font-normal">Active</span>
+                            <span v-if="activeNodeId === node.id" class="text-[10px] px-1.5 py-0.2 rounded bg-purple-200 text-purple-800 font-bold">Active</span>
                           </div>
-                          <div class="text-xs text-slate-400">{{ node.technology }}</div>
+                          <div class="text-xs text-slate-500 font-medium">{{ node.technology }}</div>
                         </div>
                       </div>
 
                       <div class="flex items-center gap-4">
                         <div class="text-right">
-                          <div class="text-xs font-bold text-emerald-400">{{ node.latencyMs }}ms avg</div>
-                          <div class="text-[10px] text-slate-500">{{ node.role }}</div>
+                          <div class="text-xs font-bold text-emerald-600">{{ node.latencyMs }}ms avg</div>
+                          <div class="text-[10px] text-slate-400 font-semibold">{{ node.role }}</div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
@@ -169,28 +169,28 @@
                 </div>
 
                 <!-- Inspector & Code Panel (Right Column) -->
-                <div class="lg:col-span-5 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between space-y-4">
-                  <div>
-                    <div class="flex items-center justify-between border-b border-slate-800/60 pb-3 mb-3">
-                      <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Node Details & Code Inspector</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold uppercase">
+                <div class="lg:col-span-5 p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-md flex flex-col justify-between space-y-4">
+                  <div v-if="currentNode">
+                    <div class="flex items-center justify-between border-b border-slate-200/80 pb-3 mb-3">
+                      <span class="text-xs font-extrabold text-purple-700 uppercase tracking-wider">Node Details & Code Inspector</span>
+                      <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold uppercase">
                         {{ currentNode.status }}
                       </span>
                     </div>
 
                     <!-- Active Node Info -->
                     <div class="space-y-2 mb-4">
-                      <h3 class="text-base font-bold text-white">{{ currentNode.name }}</h3>
-                      <p class="text-xs text-slate-300 leading-relaxed">{{ currentNode.description }}</p>
+                      <h3 class="text-base font-extrabold text-slate-900">{{ currentNode.name }}</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed font-medium">{{ currentNode.description }}</p>
                     </div>
 
                     <!-- Code Snippet Container -->
-                    <div class="relative rounded-xl bg-slate-900 border border-slate-800 overflow-hidden">
-                      <div class="px-3 py-1.5 bg-slate-950/60 border-b border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                    <div class="relative rounded-xl bg-slate-900 border border-slate-800 overflow-hidden shadow-inner">
+                      <div class="px-3 py-1.5 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between text-[11px] text-slate-300 font-mono">
                         <span>Production Implementation</span>
                         <button 
                           @click="copyCode(currentNode.codeSnippet)" 
-                          class="hover:text-purple-300 transition-colors flex items-center gap-1"
+                          class="hover:text-purple-300 transition-colors flex items-center gap-1 font-bold"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -198,19 +198,19 @@
                           <span>{{ copied ? 'Copied!' : 'Copy Code' }}</span>
                         </button>
                       </div>
-                      <pre class="p-3 text-[11px] font-mono text-purple-200/90 overflow-x-auto custom-scrollbar max-h-48"><code>{{ currentNode.codeSnippet }}</code></pre>
+                      <pre class="p-3 text-[11px] font-mono text-purple-200 overflow-x-auto custom-scrollbar max-h-48"><code>{{ currentNode.codeSnippet }}</code></pre>
                     </div>
                   </div>
 
                   <!-- Quick Telemetry Stats -->
-                  <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/60">
-                    <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-center">
-                      <div class="text-[10px] text-slate-400 uppercase font-bold">Node Latency</div>
-                      <div class="text-sm font-extrabold text-emerald-400 mt-0.5">{{ currentNode.latencyMs }} ms</div>
+                  <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-200/80">
+                    <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center shadow-xs">
+                      <div class="text-[10px] text-slate-500 uppercase font-bold">Node Latency</div>
+                      <div class="text-sm font-black text-emerald-600 mt-0.5" v-if="currentNode">{{ currentNode.latencyMs }} ms</div>
                     </div>
-                    <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-center">
-                      <div class="text-[10px] text-slate-400 uppercase font-bold">System Health</div>
-                      <div class="text-sm font-extrabold text-purple-400 mt-0.5">{{ simulatedMetrics.healthScore }}</div>
+                    <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center shadow-xs">
+                      <div class="text-[10px] text-slate-500 uppercase font-bold">System Health</div>
+                      <div class="text-sm font-black text-purple-600 mt-0.5">{{ simulatedMetrics.healthScore }}</div>
                     </div>
                   </div>
                 </div>
@@ -218,12 +218,12 @@
             </div>
 
             <!-- Modal Footer -->
-            <div class="px-6 py-4 bg-slate-950/90 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <div class="px-6 py-4 bg-slate-100/80 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-600 font-medium">
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>System Architecture Simulator Ready</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-semibold">System Architecture Simulator Ready</span>
               </div>
-              <div class="text-[11px] text-slate-500 font-mono">
+              <div class="text-[11px] text-slate-400 font-mono font-semibold">
                 Press ESC to exit playground
               </div>
             </div>
@@ -312,7 +312,7 @@ onUnmounted(() => {
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 </style>

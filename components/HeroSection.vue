@@ -109,7 +109,7 @@
              <span class="text-lg">⚡</span>
              <div>
                <p class="text-[9px] font-black text-slate-400 uppercase tracking-wider">Experience</p>
-               <p class="text-xs font-black text-slate-800">5+ Years</p>
+               <p class="text-xs font-black text-slate-800">{{ yearsFormatted }} Years</p>
              </div>
            </div>
 
@@ -135,8 +135,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useCvModal } from '~/composables/useCvModal'
+import { useExperienceYears } from '~/composables/useExperienceYears'
 
 const { openCvModal } = useCvModal()
+const { yearsFormatted } = useExperienceYears(2021)
 
 // --- Role Typewriter State & Config ---
 const rolesList = [
@@ -152,7 +154,7 @@ let isRoleDeleting = false
 let roleTimer = null
 
 // --- Description Typewriter State & Config ---
-const fullDescriptionText = "I'm Mahardika. Versatile Software Engineer with 5 years of experience building high-performance web and mobile applications using React, Next.js, Flutter, NestJS, and scalable backend architectures."
+const fullDescriptionText = `I'm Mahardika. Versatile Software Engineer with ${yearsFormatted.value} of experience building high-performance web and mobile applications using React, Next.js, Flutter, NestJS, and scalable backend architectures.`
 const typedDescText = ref('')
 let descCharIndex = 0
 let isDescDeleting = false

@@ -92,7 +92,7 @@
             <!-- Description Paragraphs -->
             <div class="space-y-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium mb-8">
               <p>
-                {{ $t('about.description_1', { name: 'Mahardika Kessuma Denie', years: '5+' }) }}
+                {{ $t('about.description_1', { name: 'Mahardika Kessuma Denie', years: yearsFormatted }) }}
               </p>
               <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base">
                 {{ $t('about.description_2', { percent: '40%' }) }}
@@ -142,7 +142,7 @@
               <div class="relative p-5 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-700 text-white shadow-lg shadow-purple-600/25 hover:shadow-xl hover:shadow-purple-600/40 transform hover:-translate-y-1.5 transition-all duration-300 group/stat overflow-hidden">
                 <div class="absolute -right-2 -bottom-2 w-16 h-16 bg-white/10 rounded-full blur-xl group-hover/stat:scale-150 transition-transform duration-500"></div>
                 <div class="flex items-center justify-between mb-2">
-                  <span class="text-3xl font-black tracking-tight">5+</span>
+                  <span class="text-3xl font-black tracking-tight">{{ yearsFormatted }}</span>
                   <span class="text-lg opacity-80">⏳</span>
                 </div>
                 <p class="text-[10px] font-black uppercase tracking-widest text-purple-100/90 leading-tight">
@@ -185,7 +185,10 @@
 
 <script setup>
 import { projects } from '~/lib/static'
+import { useExperienceYears } from '~/composables/useExperienceYears'
+
 const { t } = useI18n()
+const { yearsFormatted } = useExperienceYears(2021)
 </script>
 
 <style scoped>

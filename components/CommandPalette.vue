@@ -185,7 +185,7 @@ const rawCommands: CommandItem[] = [
   
   // Quick Actions
   { id: 'act-architecture', title: 'Explore System Architecture & Benchmarks', subtitle: 'Interactive microservices topology, latency graphs, & load tests', category: 'Quick Actions', icon: DocumentIcon, badge: 'SYSTEM', action: () => useArchitectureModal().openModal() },
-  { id: 'act-ai-recruiter', title: 'Open AI Recruiter & System Architecture', subtitle: 'Fast-track candidate evaluation & tech topology', category: 'Quick Actions', icon: DocumentIcon, badge: 'AI', action: () => useAiRecruiter().openRecruiterModal() },
+  { id: 'act-ai-recruiter', title: 'Open AI Recruiter & Hiring Assistant', subtitle: 'Fast-track candidate evaluation & role compatibility', category: 'Quick Actions', icon: DocumentIcon, badge: 'AI', action: () => useAiRecruiter().openRecruiterModal() },
   { id: 'act-cv', title: 'Preview & Download CV / Resume', subtitle: 'Open interactive PDF resume viewer', category: 'Quick Actions', icon: DocumentIcon, badge: 'PDF', action: () => openCvModal('/cv_mahardikakdenie.pdf') },
   { id: 'act-lang', title: 'Switch Language (ID / EN)', subtitle: 'Toggle language between English & Indonesian', category: 'Quick Actions', icon: GlobeIcon, badge: 'i18n', action: () => setLocale(locale.value === 'en' ? 'id' : 'en') },
   { id: 'act-github', title: 'Visit GitHub Profile', subtitle: 'Check repositories & open source projects', category: 'Quick Actions', icon: FolderIcon, badge: 'External', action: () => window.open('https://github.com/mahardikakdenie', '_blank') },

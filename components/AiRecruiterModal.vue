@@ -35,10 +35,10 @@
                 </div>
                 <div>
                   <div class="flex items-center gap-2">
-                    <h3 class="text-lg font-black tracking-tight text-white">Recruiter AI & Architecture Explorer</h3>
-                    <span class="px-2 py-0.5 text-[9px] font-black uppercase tracking-widest bg-purple-500/20 text-purple-300 border border-purple-400/30 rounded-full">v2.4</span>
+                    <h3 class="text-lg font-black tracking-tight text-white">Recruiter AI & Hiring Assistant</h3>
+                    <span class="px-2 py-0.5 text-[9px] font-black uppercase tracking-widest bg-purple-500/20 text-purple-300 border border-purple-400/30 rounded-full">Fast-Track</span>
                   </div>
-                  <p class="text-xs text-slate-300 font-medium">Instant technical insights & architecture breakdown for hiring leads</p>
+                  <p class="text-xs text-slate-300 font-medium">Instant technical insights & role compatibility evaluation for tech recruiters</p>
                 </div>
               </div>
 
@@ -65,20 +65,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
-                  Recruiter Fast-Track
-                </button>
-
-                <button 
-                  @click="activeTab = 'architecture'"
-                  :class="[
-                    'px-4 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 whitespace-nowrap',
-                    activeTab === 'architecture' ? 'bg-purple-600 text-white shadow-md shadow-purple-600/20' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-                  ]"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                  System Architecture
+                  Candidate Q&A Fast-Track
                 </button>
 
                 <button 
@@ -91,7 +78,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Role Matchmaker
+                  Role & Stack Matchmaker
                 </button>
               </div>
 
@@ -106,12 +93,21 @@
               
               <!-- TAB 1: RECRUITER FAST-TRACK -->
               <div v-if="activeTab === 'assistant'" class="space-y-6">
-                <!-- Preset Question Chips -->
-                <div>
-                  <label class="block text-xs font-black uppercase tracking-wider text-slate-400 mb-2.5">Select Recruiter Inquiry Preset:</label>
+                <!-- Search & Preset Selection -->
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <label class="block text-xs font-black uppercase tracking-wider text-slate-400">Select Recruiter Inquiry Preset:</label>
+                    <input 
+                      v-model="searchQuery" 
+                      type="text" 
+                      placeholder="Search questions or keywords..." 
+                      class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 w-60"
+                    />
+                  </div>
+
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     <button
-                      v-for="query in recruiterQueries"
+                      v-for="query in filteredQueries"
                       :key="query.id"
                       @click="currentQueryId = query.id"
                       :class="[
@@ -130,7 +126,7 @@
                 </div>
 
                 <!-- Answer Display Card -->
-                <div class="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-md space-y-4">
+                <div v-if="activeQuery" class="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-md space-y-4">
                   <div class="flex items-center gap-2">
                     <div class="w-7 h-7 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-black text-xs">
                       AI
@@ -160,68 +156,17 @@
                 </div>
               </div>
 
-              <!-- TAB 2: SYSTEM ARCHITECTURE -->
-              <div v-else-if="activeTab === 'architecture'" class="space-y-6">
-                <!-- Topology Nodes Row -->
-                <div>
-                  <label class="block text-xs font-black uppercase tracking-wider text-slate-400 mb-2">Interactive Infrastructure Topology (Click to Inspect):</label>
-                  <div class="grid grid-cols-1 sm:grid-cols-5 gap-2">
-                    <button
-                      v-for="node in architectureNodes"
-                      :key="node.id"
-                      @click="selectedNodeId = node.id"
-                      :class="[
-                        'p-3 rounded-2xl text-center transition-all border flex flex-col items-center justify-center gap-1',
-                        selectedNodeId === node.id 
-                          ? 'bg-slate-900 text-white border-slate-900 shadow-md scale-105' 
-                          : 'bg-white text-slate-700 hover:bg-slate-100 border-slate-200'
-                      ]"
-                    >
-                      <span class="text-xs font-extrabold truncate w-full">{{ node.name }}</span>
-                      <span class="text-[9px] font-bold opacity-75 truncate w-full">{{ node.tech }}</span>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Node Details Panel -->
-                <div class="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-md space-y-4">
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
-                    <div>
-                      <span class="text-xs font-extrabold text-purple-600 uppercase tracking-widest">{{ activeNode.role }}</span>
-                      <h4 class="text-lg font-black text-slate-900">{{ activeNode.name }} ({{ activeNode.tech }})</h4>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <div class="px-3 py-1 rounded-xl bg-slate-100 text-slate-700 text-xs font-black">
-                        Latency: <span class="text-purple-600">{{ activeNode.latency }}</span>
-                      </div>
-                      <div class="px-3 py-1 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-black">
-                        {{ activeNode.throughput }}
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="text-xs text-slate-600 font-medium leading-relaxed">
-                    {{ activeNode.description }}
-                  </p>
-
-                  <div>
-                    <span class="block text-xs font-black uppercase tracking-wider text-slate-400 mb-2">Sample Architectural Code Implementation:</span>
-                    <pre class="p-4 rounded-2xl bg-slate-900 text-purple-300 font-mono text-xs overflow-x-auto border border-slate-800 leading-relaxed"><code>{{ activeNode.codeSnippet }}</code></pre>
-                  </div>
-                </div>
-              </div>
-
-              <!-- TAB 3: ROLE MATCHMAKER -->
+              <!-- TAB 2: ROLE MATCHMAKER -->
               <div v-else-if="activeTab === 'matcher'" class="space-y-6">
                 <!-- Score Banner -->
                 <div class="p-6 rounded-3xl bg-gradient-to-br from-purple-900 to-indigo-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
                   <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-purple-300">Candidate Role Fit</span>
                     <h4 class="text-xl font-black">Tech Stack Compatibility Score</h4>
-                    <p class="text-xs text-slate-300 mt-1 font-medium">Toggle your job requirements below to see compatibility</p>
+                    <p class="text-xs text-slate-300 mt-1 font-medium">Toggle your job requirements below to evaluate match rating</p>
                   </div>
                   <div class="flex items-center gap-3">
-                    <div class="w-20 h-20 rounded-full border-4 border-purple-400 flex items-center justify-center font-black text-2xl bg-purple-900/60 shadow-inner">
+                    <div class="w-20 h-20 rounded-full border-4 border-purple-400 flex items-center justify-center font-black text-2xl bg-purple-900/60 shadow-inner text-emerald-400">
                       {{ compatibilityScore }}%
                     </div>
                   </div>
@@ -294,13 +239,11 @@ const { openCvModal } = useCvModal()
 const {
   isOpen,
   activeTab,
-  selectedNodeId,
   currentQueryId,
-  recruiterQueries,
-  architectureNodes,
+  searchQuery,
+  filteredQueries,
   skillOptions,
   activeQuery,
-  activeNode,
   compatibilityScore,
   closeRecruiterModal,
   toggleSkillRequirement

@@ -27,7 +27,7 @@
             <svg class="w-3.5 h-3.5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            {{ exp.since }} - {{ exp.until }}
+            {{ exp.since }} - {{ $t(`experience_page.jobs.${exp.slug}.until`, exp.until) }}
           </span>
         </div>
 
@@ -37,11 +37,11 @@
             <svg class="w-3.5 h-3.5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            {{ exp.since }} - {{ exp.until }}
+            {{ exp.since }} - {{ $t(`experience_page.jobs.${exp.slug}.until`, exp.until) }}
           </span>
         </div>
 
-        <!-- Light Theme Glassmorphism Experience Card (Clean Top - No Top Accent Line/Hat) -->
+        <!-- Experience Card -->
         <div 
           @click="navigateToDetail(exp.slug)"
           class="w-[calc(100%-3.5rem)] md:w-5/12 ml-14 md:ml-0 p-6 sm:p-8 bg-white/90 dark:bg-slate-900/80 backdrop-blur-2xl rounded-3xl border border-slate-200/90 dark:border-slate-800 shadow-xl shadow-purple-500/5 hover:shadow-2xl hover:shadow-purple-500/15 hover:-translate-y-1.5 hover:border-purple-400/80 dark:hover:border-purple-500/50 transition-all duration-300 relative overflow-hidden cursor-pointer group/card"
@@ -65,7 +65,7 @@
                 {{ exp.name }}
               </h3>
               <p class="text-purple-600 dark:text-purple-400 font-extrabold text-sm sm:text-base mt-1 tracking-wide">
-                {{ exp.job }}
+                {{ $t(`experience_page.jobs.${exp.slug}.job`, exp.job) }}
               </p>
             </div>
             <div class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200/80 dark:border-slate-700/60 shrink-0 p-2 shadow-sm group-hover/card:scale-110 transition-transform duration-300">
@@ -80,17 +80,17 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
-              {{ exp.location }}
+              {{ $t(`experience_page.jobs.${exp.slug}.location`, exp.location) }}
             </span>
             <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/40 text-[10px] font-black uppercase tracking-wider">
-              {{ exp.type }}
+              {{ $t(`experience_page.jobs.${exp.slug}.type`, exp.type) }}
             </span>
           </div>
 
           <!-- Key Responsibilities Bullet List -->
           <ul class="space-y-3">
             <li 
-              v-for="(item, i) in exp.description" 
+              v-for="(item, i) in getLocalizedDescription(exp.slug, exp.description)" 
               :key="i" 
               class="flex gap-3 text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed font-normal"
             >
@@ -109,8 +109,10 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
+const { t, tm, te } = useI18n();
 
 defineProps<{
   experiences: {
@@ -125,6 +127,16 @@ defineProps<{
     description: string[];
   }[];
 }>();
+
+const getLocalizedDescription = (slug: string, fallback: string[]): string[] => {
+  if (te(`experience_page.jobs.${slug}.description`)) {
+    const list = tm(`experience_page.jobs.${slug}.description`) as any;
+    if (Array.isArray(list) && list.length > 0) {
+      return list;
+    }
+  }
+  return fallback;
+};
 
 const navigateToDetail = (slug: string) => {
   if (slug) {

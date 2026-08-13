@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'apple-mobile-web-app-title', content: 'Mahardika' },
         { name: 'description', content: 'Software Engineer with 5 years of expertise in building high-performance multi-tenant SaaS applications, real-time dashboards, and web/mobile systems using React, Next.js, Vue, NestJS, Flutter, and Laravel.' },
-        
+
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Mahardika Kessuma Denie' },

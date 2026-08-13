@@ -1,11 +1,11 @@
 <template>
-	<div class="min-h-screen relative bg-slate-50 overflow-hidden font-poppins selection:bg-purple-200 selection:text-purple-900">
+	<div class="min-h-screen relative bg-slate-50 dark:bg-[#0B0F17] text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-hidden font-poppins selection:bg-purple-200 selection:text-purple-900 dark:selection:bg-purple-900/60 dark:selection:text-purple-100">
         <!-- Custom Flash Splash Loading Screen -->
         <FlashLoadingScreen />
 
         <div class="fixed inset-0 z-0 pointer-events-none">
-            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-200/30 blur-[100px] animate-pulse"></div>
-            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-200/30 blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-200/30 dark:bg-purple-950/30 blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-200/30 dark:bg-indigo-950/30 blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
             <SnowEffect />
         </div>
 
@@ -38,7 +38,7 @@
             <button 
                 v-show="showBackToTop"
                 @click="scrollToTop"
-                class="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-white text-purple-600 shadow-xl border border-purple-100 hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
+                class="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-white dark:bg-slate-900 text-purple-600 dark:text-purple-400 shadow-xl border border-purple-100 dark:border-slate-800 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
                 aria-label="Back to top"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

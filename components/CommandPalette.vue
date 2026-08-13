@@ -10,7 +10,7 @@
     >
       <div 
         v-if="isOpen" 
-        class="fixed inset-0 z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-900/60 backdrop-blur-md"
+        class="fixed inset-0 z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-900/60 dark:bg-slate-950/80 backdrop-blur-md"
         @click.self="closePalette"
       >
         <transition
@@ -23,10 +23,10 @@
         >
           <div 
             v-if="isOpen"
-            class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[80vh]"
+            class="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden flex flex-col max-h-[80vh]"
           >
             <!-- Search Input Bar -->
-            <div class="relative flex items-center px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+            <div class="relative flex items-center px-6 py-4 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -34,14 +34,14 @@
                 ref="searchInput"
                 v-model="searchQuery"
                 type="text"
-                placeholder="Type a command or search pages, skills, projects..."
-                class="w-full bg-transparent text-slate-800 placeholder-slate-400 text-base font-medium focus:outline-none"
+                placeholder="Type a command or search pages, skills, themes..."
+                class="w-full bg-transparent text-slate-800 dark:text-slate-100 placeholder-slate-400 text-base font-medium focus:outline-none"
                 @keydown.down.prevent="navigateDown"
                 @keydown.up.prevent="navigateUp"
                 @keydown.enter.prevent="selectActiveItem"
                 @keydown.esc="closePalette"
               />
-              <kbd class="hidden sm:inline-block px-2 py-1 text-[10px] font-bold text-slate-400 bg-white border border-slate-200 rounded-md shadow-xs ml-2">
+              <kbd class="hidden sm:inline-block px-2 py-1 text-[10px] font-bold text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-xs ml-2">
                 ESC
               </kbd>
             </div>
@@ -49,7 +49,7 @@
             <!-- Command List -->
             <div class="overflow-y-auto p-4 space-y-4 custom-scrollbar">
               <div v-if="filteredGroups.length === 0" class="py-12 text-center text-slate-400">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-3 text-slate-300 dark:text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <p class="text-sm font-medium">No results found for "{{ searchQuery }}"</p>
@@ -60,7 +60,7 @@
                 :key="group.category" 
                 class="space-y-1"
               >
-                <div class="px-3 py-1 text-[11px] font-black uppercase tracking-wider text-slate-400">
+                <div class="px-3 py-1 text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
                   {{ group.category }}
                 </div>
                 <div
@@ -71,28 +71,28 @@
                   @mouseenter="selectedIndex = item.flatIndex"
                   :class="[
                     'flex items-center justify-between px-4 py-3 rounded-2xl cursor-pointer transition-all duration-150',
-                    selectedIndex === item.flatIndex ? 'bg-purple-50 text-purple-900 border border-purple-100 shadow-xs' : 'text-slate-700 hover:bg-slate-50'
+                    selectedIndex === item.flatIndex ? 'bg-purple-50 dark:bg-purple-950/50 text-purple-900 dark:text-purple-200 border border-purple-100 dark:border-purple-800/50 shadow-xs' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50'
                   ]"
                 >
                   <div class="flex items-center gap-3">
                     <div 
                       :class="[
                         'w-9 h-9 rounded-xl flex items-center justify-center transition-colors',
-                        selectedIndex === item.flatIndex ? 'bg-purple-600 text-white shadow-md shadow-purple-500/20' : 'bg-slate-100 text-slate-600'
+                        selectedIndex === item.flatIndex ? 'bg-purple-600 text-white shadow-md shadow-purple-500/20' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'
                       ]"
                     >
                       <component :is="item.icon" class="h-4 w-4" />
                     </div>
                     <div>
                       <div class="text-sm font-bold leading-tight">{{ item.title }}</div>
-                      <div class="text-xs text-slate-400 font-normal mt-0.5">{{ item.subtitle }}</div>
+                      <div class="text-xs text-slate-400 dark:text-slate-400 font-normal mt-0.5">{{ item.subtitle }}</div>
                     </div>
                   </div>
                   <div class="flex items-center gap-2">
-                    <span v-if="item.badge" class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-slate-100 text-slate-600">
+                    <span v-if="item.badge" class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                       {{ item.badge }}
                     </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-300 dark:text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -101,19 +101,19 @@
             </div>
 
             <!-- Footer Info -->
-            <div class="px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <div class="px-6 py-3 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400">
               <div class="flex items-center gap-3">
                 <span class="flex items-center gap-1">
-                  <kbd class="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-bold text-slate-600">↑</kbd>
-                  <kbd class="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-bold text-slate-600">↓</kbd>
+                  <kbd class="px-1.5 py-0.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-[10px] font-bold text-slate-600 dark:text-slate-300">↑</kbd>
+                  <kbd class="px-1.5 py-0.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-[10px] font-bold text-slate-600 dark:text-slate-300">↓</kbd>
                   <span>Navigate</span>
                 </span>
                 <span class="flex items-center gap-1">
-                  <kbd class="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-bold text-slate-600">↵</kbd>
+                  <kbd class="px-1.5 py-0.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-[10px] font-bold text-slate-600 dark:text-slate-300">↵</kbd>
                   <span>Select</span>
                 </span>
               </div>
-              <div class="text-[11px] font-semibold text-purple-600">
+              <div class="text-[11px] font-semibold text-purple-600 dark:text-purple-400">
                 Mahardika Kessuma Denie
               </div>
             </div>
@@ -131,11 +131,13 @@ import { useCommandPalette } from '~/composables/useCommandPalette'
 import { useCvModal } from '~/composables/useCvModal'
 import { useAiRecruiter } from '~/composables/useAiRecruiter'
 import { useArchitectureModal } from '~/composables/useArchitectureModal'
+import { useTheme } from '~/composables/useTheme'
 
 const router = useRouter()
 const { isOpen, closePalette } = useCommandPalette()
 const { openCvModal } = useCvModal()
 const { locale, setLocale } = useI18n()
+const { setTheme } = useTheme()
 
 const searchQuery = ref('')
 const selectedIndex = ref(0)
@@ -163,6 +165,12 @@ const MailIcon = () => h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'c
 const GlobeIcon = () => h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
   h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' })
 ])
+const SunIcon = () => h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
+  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z' })
+])
+const MoonIcon = () => h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
+  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' })
+])
 
 interface CommandItem {
   id: string
@@ -183,6 +191,11 @@ const rawCommands: CommandItem[] = [
   { id: 'nav-docs', title: 'Browse Documentation', subtitle: 'Architecture guides & code notes', category: 'Navigation', icon: DocumentIcon, action: () => router.push('/documentation') },
   { id: 'nav-contact', title: 'Get in Touch / Contact', subtitle: 'Direct message & email form', category: 'Navigation', icon: MailIcon, action: () => router.push('/contact') },
   
+  // Theme Controls
+  { id: 'theme-dark', title: 'Switch to Dark Theme Mode', subtitle: 'Luxury deep obsidian mode with vibrant ambient glow', category: 'Theme', icon: MoonIcon, badge: 'Dark', action: () => setTheme('dark') },
+  { id: 'theme-light', title: 'Switch to Light Theme Mode', subtitle: 'Crisp porcelain slate white mode with violet highlights', category: 'Theme', icon: SunIcon, badge: 'Light', action: () => setTheme('light') },
+  { id: 'theme-system', title: 'Use System Theme Preference', subtitle: 'Automatically synchronize theme with OS settings', category: 'Theme', icon: GlobeIcon, badge: 'System', action: () => setTheme('system') },
+
   // Quick Actions
   { id: 'act-architecture', title: 'Explore System Architecture & Benchmarks', subtitle: 'Interactive microservices topology, latency graphs, & load tests', category: 'Quick Actions', icon: DocumentIcon, badge: 'SYSTEM', action: () => useArchitectureModal().openModal() },
   { id: 'act-ai-recruiter', title: 'Open AI Recruiter & Hiring Assistant', subtitle: 'Fast-track candidate evaluation & role compatibility', category: 'Quick Actions', icon: DocumentIcon, badge: 'AI', action: () => useAiRecruiter().openRecruiterModal() },

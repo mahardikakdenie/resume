@@ -5,7 +5,7 @@
     >
         <!-- Top Scroll Progress Indicator Bar -->
         <div 
-            class="w-full h-0.5 bg-slate-200/20 absolute top-0 left-0 right-0 overflow-hidden pointer-events-none"
+            class="w-full h-0.5 bg-slate-200/20 dark:bg-slate-800/40 absolute top-0 left-0 right-0 overflow-hidden pointer-events-none"
             :class="{ 'opacity-100': isScrolled, 'opacity-0': !isScrolled }"
         >
             <div 
@@ -20,7 +20,7 @@
             class="relative flex items-center transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] pointer-events-auto"
             :class="[
                 isScrolled 
-                ? 'w-[95%] md:w-[92%] max-w-[840px] px-3.5 md:px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-2xl border border-white/60 shadow-[0_10px_30px_-5px_rgba(147,51,234,0.08),0_20px_40px_-15px_rgba(15,23,42,0.1)] saturate-[1.8] ring-1 ring-slate-900/5' 
+                ? 'w-[95%] md:w-[92%] max-w-[840px] px-3.5 md:px-5 py-2.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border border-white/60 dark:border-slate-800/80 shadow-[0_10px_30px_-5px_rgba(147,51,234,0.08),0_20px_40px_-15px_rgba(15,23,42,0.1)] saturate-[1.8] ring-1 ring-slate-900/5 dark:ring-white/10' 
                 : 'w-full max-w-7xl px-4 md:px-8 py-6 md:py-8 bg-transparent'
             ]"
         >
@@ -45,14 +45,14 @@
                     <!-- Animated Brand Label -->
                     <div class="flex items-center gap-2 overflow-hidden">
                         <span 
-                            class="font-black tracking-tighter transition-all duration-500 whitespace-nowrap text-slate-900"
+                            class="font-black tracking-tighter transition-all duration-500 whitespace-nowrap text-slate-900 dark:text-white"
                             :class="[isScrolled ? 'text-sm md:text-base' : 'text-xl md:text-2xl']"
                         >
                             Mahardika
                         </span>
                         <span 
                             v-if="!isScrolled"
-                            class="hidden lg:inline-block px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-widest bg-purple-100/80 text-purple-700 rounded-full border border-purple-200/50"
+                            class="hidden lg:inline-block px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-widest bg-purple-100/80 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 rounded-full border border-purple-200/50 dark:border-purple-800/50"
                         >
                             Dev
                         </span>
@@ -62,9 +62,9 @@
                 <!-- Desktop Menu & Controls -->
                 <div class="hidden md:flex items-center">
                     <!-- Navigation Pills -->
-                    <ul class="flex items-center gap-0.5 relative px-1 py-1 rounded-full bg-slate-900/[0.03] border border-slate-900/[0.02]">
+                    <ul class="flex items-center gap-0.5 relative px-1 py-1 rounded-full bg-slate-900/[0.03] dark:bg-white/[0.05] border border-slate-900/[0.02] dark:border-white/[0.05]">
                         <div 
-                            class="absolute h-[85%] bg-slate-900 shadow-[0_8px_16px_rgba(15,23,42,0.25)] transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] rounded-full z-0"
+                            class="absolute h-[85%] bg-slate-900 dark:bg-purple-600 shadow-[0_8px_16px_rgba(15,23,42,0.25)] transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] rounded-full z-0"
                             :style="highlightStyle"
                         ></div>
                         <li 
@@ -76,7 +76,7 @@
                         >
                             <span
                                 :class="[
-                                    activeHighlightIndex === index ? 'text-white' : 'text-slate-600 hover:text-slate-900',
+                                    activeHighlightIndex === index ? 'text-white' : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white',
                                     isScrolled ? 'px-3 md:px-3.5 py-1.5' : 'px-4 md:px-5 py-2',
                                     'text-[10px] font-extrabold cursor-pointer transition-all duration-500 uppercase tracking-[0.18em] block relative'
                                 ]"
@@ -88,29 +88,29 @@
                     </ul>
 
                     <div 
-                        class="w-px bg-slate-200/70 transition-all duration-500" 
+                        class="w-px bg-slate-200/70 dark:bg-slate-800 transition-all duration-500" 
                         :class="[isScrolled ? 'h-4 mx-2.5 md:mx-3' : 'h-5 mx-4 md:mx-5']"
                     ></div>
 
                     <!-- Command Palette Search Button -->
                     <button 
                         @click="openPalette"
-                        class="flex items-center gap-1.5 rounded-full bg-slate-100/80 border border-slate-200/70 text-slate-600 hover:text-purple-600 hover:border-purple-300 hover:bg-white transition-all text-xs font-semibold pointer-events-auto shadow-xs group/search"
+                        class="flex items-center gap-1.5 rounded-full bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-300 hover:bg-white dark:hover:bg-slate-800 transition-all text-xs font-semibold pointer-events-auto shadow-xs group/search"
                         :class="[isScrolled ? 'px-2.5 py-1 mr-2' : 'px-3.5 py-1.5 mr-3']"
                         title="Search Commands (Ctrl+K)"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-purple-600 group-hover/search:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-purple-600 dark:text-purple-400 group-hover/search:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                         <span class="text-[10px] font-extrabold uppercase tracking-wider hidden lg:inline">Search</span>
-                        <kbd class="px-1.5 py-0.5 text-[9px] font-black bg-white text-slate-400 border border-slate-200 rounded shadow-2xs">⌘K</kbd>
+                        <kbd class="px-1.5 py-0.5 text-[9px] font-black bg-white dark:bg-slate-900 text-slate-400 dark:text-slate-400 border border-slate-200 dark:border-slate-700 rounded shadow-2xs">⌘K</kbd>
                     </button>
 
                     <!-- Language Switcher -->
                     <button 
                         @click="toggleLocale"
-                        class="flex items-center justify-center rounded-full bg-slate-50 border border-slate-200/80 text-slate-600 hover:text-purple-600 hover:border-purple-300 transition-all pointer-events-auto group/lang shadow-xs"
-                        :class="[isScrolled ? 'w-8 h-8 mr-2' : 'w-9 h-9 md:w-10 md:h-10 mr-3']"
+                        class="flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-slate-600 dark:text-slate-300 hover:text-purple-600 hover:border-purple-300 transition-all pointer-events-auto group/lang shadow-xs mr-2 md:mr-3"
+                        :class="[isScrolled ? 'w-8 h-8' : 'w-9 h-9 md:w-10 md:h-10']"
                         :title="locale === 'en' ? 'Switch to Indonesia' : 'Switch to English'"
                     >
                         <div class="w-4 h-4 md:w-5 md:h-5 rounded-full overflow-hidden transition-transform duration-300 group-hover/lang:scale-110 shadow-2xs">
@@ -132,28 +132,37 @@
                         </div>
                     </button>
 
+                    <!-- Theme Switcher -->
+                    <div class="mr-3">
+                        <ThemeToggle :is-scrolled="isScrolled" />
+                    </div>
+
                     <!-- Hire Me Button -->
                     <button 
                         class="group relative inline-flex items-center justify-center overflow-hidden rounded-full transition-all duration-500 active:scale-95 shadow-md hover:shadow-purple-500/30"
                         :class="[isScrolled ? 'px-4 py-1.5' : 'px-5 md:px-6 py-2.5']"
                         @click="$router.push('/contact')"
                     >
-                        <div class="absolute inset-0 bg-slate-900 group-hover:bg-purple-600 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 bg-slate-900 dark:bg-purple-600 group-hover:bg-purple-600 dark:group-hover:bg-purple-500 transition-colors duration-500"></div>
                         <span class="relative z-10 text-[10px] font-black text-white uppercase tracking-[0.2em]">{{ $t('nav.hire_me') }}</span>
                     </button>
                 </div>
 
                 <!-- Mobile Toggle Button -->
-                <button 
-                    @click="isMobileMenuOpen = true" 
-                    class="md:hidden flex items-center justify-center rounded-full transition-all bg-slate-900 text-white shadow-md active:scale-95"
-                    :class="[isScrolled ? 'w-8 h-8 mr-0' : 'w-10 h-10 mr-1']"
-                    aria-label="Toggle Navigation Menu"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 8h16M4 16h16" />
-                    </svg>
-                </button>
+                <div class="flex items-center gap-2 md:hidden">
+                    <ThemeToggle :is-scrolled="isScrolled" />
+
+                    <button 
+                        @click="isMobileMenuOpen = true" 
+                        class="flex items-center justify-center rounded-full transition-all bg-slate-900 dark:bg-slate-800 text-white shadow-md active:scale-95"
+                        :class="[isScrolled ? 'w-8 h-8' : 'w-10 h-10']"
+                        aria-label="Toggle Navigation Menu"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 8h16M4 16h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </nav>
 
@@ -164,7 +173,7 @@
         >
             <!-- Backdrop -->
             <div 
-                class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500"
+                class="absolute inset-0 bg-slate-900/60 dark:bg-slate-950/80 backdrop-blur-sm transition-opacity duration-500"
                 @click="isMobileMenuOpen = false"
             ></div>
             
@@ -177,12 +186,12 @@
                 leave-from-class="translate-y-0"
                 leave-to-class="translate-y-full"
             >
-                <div class="absolute bottom-0 inset-x-0 bg-white rounded-t-[3rem] p-8 pb-12 shadow-[0_-20px_50px_rgba(0,0,0,0.15)]">
-                    <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-8" @click="isMobileMenuOpen = false"></div>
+                <div class="absolute bottom-0 inset-x-0 bg-white dark:bg-slate-900 rounded-t-[3rem] p-8 pb-12 shadow-[0_-20px_50px_rgba(0,0,0,0.3)] border-t border-slate-100 dark:border-slate-800">
+                    <div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-8" @click="isMobileMenuOpen = false"></div>
                     
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Navigation Menu</h3>
-                        <button @click="isMobileMenuOpen = false" class="w-9 h-9 flex items-center justify-center bg-slate-100 rounded-full text-slate-800 hover:bg-slate-200 transition-colors">
+                        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">Navigation Menu</h3>
+                        <button @click="isMobileMenuOpen = false" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -193,11 +202,11 @@
                         <li v-for="(list, index) in lists" :key="index">
                             <span
                                 class="text-lg font-bold transition-all duration-300 flex px-4 py-3.5 rounded-2xl items-center justify-between group cursor-pointer"
-                                :class="isActive(list.link) ? 'text-purple-600 bg-purple-50/70 border border-purple-100/80 font-black' : 'text-slate-600 hover:bg-slate-50'"
+                                :class="isActive(list.link) ? 'text-purple-600 dark:text-purple-400 bg-purple-50/70 dark:bg-purple-950/40 border border-purple-100/80 dark:border-purple-900/50 font-black' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50'"
                                 @click="handleMobileLinkClick(list.link)"
                             >
                                 <span class="tracking-tight">{{ $t(list.label) }}</span>
-                                <svg v-if="isActive(list.link)" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
+                                <svg v-if="isActive(list.link)" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                 </svg>
                             </span>
@@ -209,7 +218,7 @@
                             v-for="loc in locales" :key="loc.code"
                             @click="setLocale(loc.code)"
                             :class="[
-                                locale === loc.code ? 'bg-slate-900 text-white border-slate-900 shadow-md' : 'bg-slate-50 text-slate-500 border-slate-200/80',
+                                locale === loc.code ? 'bg-slate-900 dark:bg-purple-600 text-white border-slate-900 dark:border-purple-600 shadow-md' : 'bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border-slate-200/80 dark:border-slate-700',
                                 'py-3.5 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all flex flex-col items-center gap-2 border group/mobile-lang'
                             ]"
                         >

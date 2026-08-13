@@ -1,211 +1,94 @@
 <template>
-  <footer class="relative z-10 bg-slate-950 text-slate-300 pt-20 pb-10 overflow-hidden text-left border-t border-slate-800/60">
-    <!-- Glow Divider Bar -->
-    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div>
-    
-    <!-- Ambient Background Light Orbs -->
-    <div class="absolute top-0 left-1/4 -translate-x-1/2 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-0 right-1/4 translate-x-1/2 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <footer class="relative bg-white dark:bg-[#080C14] border-t border-slate-100 dark:border-slate-800/80 pt-20 pb-12 overflow-hidden transition-colors duration-500">
+    <!-- Ambient Background Glows -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-gradient-to-tr from-purple-500/5 via-indigo-500/5 to-blue-500/5 dark:from-purple-950/20 dark:via-indigo-950/20 dark:to-cyan-950/10 blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <!-- Main Content Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-100 dark:border-slate-800/60">
         
-        <!-- Column 1: Brand & Bio -->
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <div class="relative group">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl blur opacity-50 group-hover:opacity-100 transition duration-300"></div>
-              <img src="/logo.svg" alt="Mahardika Logo" class="relative w-10 h-10 rounded-xl bg-slate-900 p-1.5 shadow-md border border-slate-700/50" />
+        <!-- Brand Info Column -->
+        <div class="md:col-span-5 space-y-6 text-left">
+          <div class="flex items-center gap-3 cursor-pointer group" @click="$router.push('/')">
+            <div class="w-10 h-10 rounded-2xl bg-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform">
+              <img src="/logo.svg" alt="Logo" class="w-6 h-6 object-contain" />
             </div>
-            <span class="text-2xl font-black tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-purple-200">
-              Mahardika
+            <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
+              Mahardika<span class="text-purple-600 dark:text-purple-400">.</span>
             </span>
           </div>
 
-          <p class="text-sm leading-relaxed text-slate-400 font-normal">
-            {{ $t('footer.description') }}
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-sm font-medium">
+            Building high-performance multi-tenant SaaS applications, real-time dashboards, and resilient microservices architectures.
           </p>
 
-          <!-- Status Availability Badge -->
-          <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span>Available for new projects</span>
-          </div>
-
-          <!-- Social Media Icons -->
-          <div class="flex items-center space-x-3 pt-2">
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 pt-2">
             <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              class="group relative p-2.5 bg-slate-900/80 border border-slate-800 rounded-xl hover:border-purple-500/50 hover:bg-purple-600/20 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+              href="https://github.com/mahardikakdenie" 
+              target="_blank"
+              class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-300 dark:hover:border-purple-500 transition-all shadow-xs"
+              title="GitHub"
             >
-              <img :src="linkedinImage" class="w-4 h-4 filter invert opacity-70 group-hover:opacity-100 transition-opacity" alt="LinkedIn" />
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
             </a>
             <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              class="group relative p-2.5 bg-slate-900/80 border border-slate-800 rounded-xl hover:border-purple-500/50 hover:bg-purple-600/20 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+              href="https://www.linkedin.com/in/mahardikakdenie/" 
+              target="_blank"
+              class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 hover:border-purple-300 dark:hover:border-purple-500 transition-all shadow-xs"
+              title="LinkedIn"
             >
-              <img :src="githubImage" class="w-4 h-4 filter invert opacity-70 group-hover:opacity-100 transition-opacity" alt="GitHub" />
-            </a>
-            <a 
-              href="mailto:hello@mahardika.dev" 
-              aria-label="Email Contact"
-              class="group relative p-2.5 bg-slate-900/80 border border-slate-800 rounded-xl hover:border-purple-500/50 hover:bg-purple-600/20 transition-all duration-300 hover:-translate-y-1 shadow-sm"
-            >
-              <img :src="emailImage" class="w-4 h-4 filter invert opacity-70 group-hover:opacity-100 transition-opacity" alt="Email" />
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
             </a>
           </div>
         </div>
 
-        <!-- Column 2: Quick Links -->
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-6 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-            {{ $t('footer.quick_links') }}
-          </h4>
-          <ul class="space-y-3.5 text-sm">
-            <li>
-              <router-link to="/" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200">
-                <span class="text-purple-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">›</span>
-                <span class="group-hover:translate-x-1 transition-transform duration-200">{{ $t('nav.about') }}</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/skills" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200">
-                <span class="text-purple-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">›</span>
-                <span class="group-hover:translate-x-1 transition-transform duration-200">{{ $t('nav.skills') }}</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/project" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200">
-                <span class="text-purple-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">›</span>
-                <span class="group-hover:translate-x-1 transition-transform duration-200">{{ $t('nav.projects') }}</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/experiences" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200">
-                <span class="text-purple-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">›</span>
-                <span class="group-hover:translate-x-1 transition-transform duration-200">{{ $t('nav.experience') }}</span>
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/documentation" class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200">
-                <span class="text-purple-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">›</span>
-                <span class="group-hover:translate-x-1 transition-transform duration-200">{{ $t('nav.docs') }}</span>
-              </router-link>
-            </li>
+        <!-- Quick Links Column -->
+        <div class="md:col-span-3 text-left space-y-4">
+          <h4 class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">Quick Navigation</h4>
+          <ul class="space-y-2.5 text-xs font-semibold">
+            <li><NuxtLink to="/" class="text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">About & Overview</NuxtLink></li>
+            <li><NuxtLink to="/skills" class="text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Tech Skills & Stack</NuxtLink></li>
+            <li><NuxtLink to="/experiences" class="text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Career Timeline</NuxtLink></li>
+            <li><NuxtLink to="/project" class="text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Featured Projects</NuxtLink></li>
+            <li><NuxtLink to="/documentation" class="text-slate-500 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Documentation</NuxtLink></li>
           </ul>
         </div>
 
-        <!-- Column 3: Services -->
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-6 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-            {{ $t('footer.services') }}
-          </h4>
-          <ul class="space-y-3.5 text-sm">
-            <li class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span class="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-purple-400 group-hover:scale-150 transition-all duration-200"></span>
-              <span>{{ $t('footer.web_dev') }}</span>
-            </li>
-            <li class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span class="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-purple-400 group-hover:scale-150 transition-all duration-200"></span>
-              <span>{{ $t('footer.mobile_dev') }}</span>
-            </li>
-            <li class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span class="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-purple-400 group-hover:scale-150 transition-all duration-200"></span>
-              <span>{{ $t('footer.ui_ux') }}</span>
-            </li>
-            <li class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 cursor-pointer">
-              <span class="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-purple-400 group-hover:scale-150 transition-all duration-200"></span>
-              <span>{{ $t('footer.system_arch') }}</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Contact Info Card -->
-        <div class="bg-slate-900/50 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm relative overflow-hidden group hover:border-purple-500/40 transition-colors duration-300">
-          <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
-          
-          <h4 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-4 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-            {{ $t('footer.get_in_touch') }}
-          </h4>
-          
-          <div class="space-y-4">
-            <div>
-              <span class="text-xs text-slate-500 uppercase tracking-wider block mb-1">Location</span>
-              <p class="text-sm font-medium text-slate-300 flex items-center gap-2">
-                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                Jakarta, Indonesia
-              </p>
+        <!-- Contact & Status Column -->
+        <div class="md:col-span-4 text-left space-y-4">
+          <h4 class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white">Availability</h4>
+          <div class="p-4 rounded-2xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-100/80 dark:border-purple-900/50 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span class="text-xs font-extrabold text-slate-900 dark:text-slate-100">Open for Opportunities</span>
             </div>
-
-            <div>
-              <span class="text-xs text-slate-500 uppercase tracking-wider block mb-1">Direct Contact</span>
-              <a 
-                href="mailto:hello@mahardika.dev" 
-                class="text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1.5 group/mail"
-              >
-                hello@mahardika.dev
-                <span class="group-hover/mail:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-normal font-medium">
+              Available for full-time senior software engineering roles, technical advisory, and high-impact SaaS development.
+            </p>
           </div>
         </div>
 
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p class="text-center md:text-left">
-          &copy; {{ new Date().getFullYear() }} Mahardika Kessuma Denie. {{ $t('footer.rights_reserved') }}
+      <!-- Copyright & Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-400 dark:text-slate-500">
+        <p>© {{ new Date().getFullYear() }} Mahardika Kessuma Denie. All rights reserved.</p>
+        <p class="flex items-center gap-1">
+          Built with <span class="text-purple-600 dark:text-purple-400 font-bold">Nuxt 3</span> & <span class="text-purple-600 dark:text-purple-400 font-bold">Tailwind CSS</span>
         </p>
-
-        <div class="flex items-center gap-6">
-          <span class="hover:text-slate-300 transition-colors cursor-pointer">{{ $t('footer.privacy_policy') }}</span>
-          <span class="w-1 h-1 rounded-full bg-slate-800"></span>
-          <span class="hover:text-slate-300 transition-colors cursor-pointer">{{ $t('footer.terms_of_service') }}</span>
-          <span class="w-1 h-1 rounded-full bg-slate-800"></span>
-          <!-- Back to top button -->
-          <button 
-            @click="scrollToTop" 
-            aria-label="Scroll to top"
-            class="group p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-purple-500/50 hover:bg-purple-600/20 transition-all duration-300"
-          >
-            <svg class="w-4 h-4 transform group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-            </svg>
-          </button>
-        </div>
       </div>
+
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import linkedinImage from '@/assets/linkedin.svg';
-import githubImage from '@/assets/github.svg';
-import emailImage from '@/assets/email.svg';
-
-const scrollToTop = () => {
-  if (typeof window !== 'undefined') {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-};
 </script>
+

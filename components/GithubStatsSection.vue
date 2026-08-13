@@ -211,7 +211,7 @@
           </div>
 
 
-          <!-- 2. 12-Month Contribution Calendar Heatmap (Compact & Responsive) -->
+          <!-- 2. Contribution Heatmap Calendar (1-Year Dynamic Month Filter & Clean Grid UI) -->
           <div class="p-5 sm:p-6 rounded-3xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800 shadow-xl shadow-emerald-500/5 dark:shadow-emerald-950/20 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -232,9 +232,9 @@
               <div class="overflow-x-auto custom-heatmap-scrollbar pb-3 pt-1">
                 <div class="min-w-[580px] flex flex-col gap-1.5">
                   
-                  <!-- Month Header Labels (Jan - Dec) -->
+                  <!-- Dynamic 12 Month Header Sequence (Current Month last year -> Current Month this year) -->
                   <div class="grid grid-cols-12 text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-wider pl-6">
-                    <span v-for="m in monthsList" :key="m">{{ m }}</span>
+                    <span v-for="m in dynamicMonthsList" :key="m">{{ m }}</span>
                   </div>
 
                   <div class="flex items-center gap-2">
@@ -265,7 +265,12 @@
                 <div class="text-slate-600 dark:text-slate-400">
                   <span v-if="activeCellIndex !== null && stats.contributionGrid[activeCellIndex]" class="text-emerald-600 dark:text-emerald-400 font-extrabold flex items-center gap-1.5">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Day #{{ activeCellIndex + 1 }}: Level {{ stats.contributionGrid[activeCellIndex].level }} Activity
+                    <template v-if="stats.contributionGrid[activeCellIndex].date">
+                      {{ formatDate(stats.contributionGrid[activeCellIndex].date) }}: {{ stats.contributionGrid[activeCellIndex].count || (stats.contributionGrid[activeCellIndex].level * 3) }} contributions
+                    </template>
+                    <template v-else>
+                      Day #{{ activeCellIndex + 1 }}: Level {{ stats.contributionGrid[activeCellIndex].level }} Activity
+                    </template>
                   </span>
                   <span v-else class="text-slate-400 dark:text-slate-500 text-[11px] font-semibold">
                     Hover over cells for activity details
@@ -491,8 +496,25 @@ const { stats, pending, formatRelativeTime } = useGithubStats();
 const hoveredPointIndex = ref<number | null>(null);
 const activeCellIndex = ref<number | null>(null);
 
-// Month labels for contribution heatmap calendar header
-const monthsList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// Dynamic 12-Month sequence (Current Month last year -> Current Month this year)
+const dynamicMonthsList = computed(() => {
+  const allMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const currentMonthIdx = new Date().getMonth(); // 0-indexed (e.g. 7 for Aug)
+  const list: string[] = [];
+
+  for (let i = 11; i >= 0; i--) {
+    const monthIdx = (currentMonthIdx - i + 12) % 12;
+    list.push(allMonths[monthIdx]);
+  }
+  return list;
+});
+
+// Format ISO date string into human readable string: "Aug 13, 2026"
+const formatDate = (dateStr: string): string => {
+  if (!dateStr) return '';
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
 
 // Cell background colors for contribution levels supporting light and dark themes
 const getCellColor = (level: number): string => {
@@ -522,7 +544,7 @@ const peakDay = computed(() => {
 // Calculate total commits from contribution grid
 const totalGridContributions = computed(() => {
   if (!stats.value?.contributionGrid?.length) return 0;
-  return stats.value.contributionGrid.reduce((sum, cell) => sum + cell.level * 3, 0);
+  return stats.value.contributionGrid.reduce((sum, cell) => sum + (cell.count || cell.level * 3), 0);
 });
 
 // Map weekly activity metrics to SVG coordinates
@@ -530,11 +552,10 @@ const chartPoints = computed(() => {
   if (!stats.value?.weeklyActivity?.length) return [];
   const list = stats.value.weeklyActivity;
   const count = list.length;
-  const maxVal = Math.max(...list.map((p) => p.count), 5); // default min 5 for height scaling
+  const maxVal = Math.max(...list.map((p) => p.count), 5);
 
   return list.map((pt, idx) => {
     const x = (idx / (count - 1)) * 500;
-    // Inverted Y coordinate since SVG (0,0) is top-left
     const y = 170 - (pt.count / maxVal) * 130;
     return { x, y, day: pt.day, count: pt.count };
   });
@@ -556,7 +577,6 @@ const linePath = computed(() => {
     path += ` C ${cpX1} ${cpY1}, ${cpX2} ${cpY2}, ${p1.x} ${p1.y}`;
   }
 
-  // Close path to ground for linear gradient fill
   return `${path} L ${pts[pts.length - 1].x} 200 L ${pts[0].x} 200 Z`;
 });
 

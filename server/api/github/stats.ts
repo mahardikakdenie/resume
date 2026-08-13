@@ -66,7 +66,9 @@ export interface WeeklyActivityPoint {
 }
 
 export interface ContributionGridPoint {
+  date: string;
   level: number; // 0 (empty) to 4 (high density)
+  count: number;
 }
 
 export interface GithubStatsResponse {
@@ -101,20 +103,39 @@ const LANGUAGE_COLORS: Record<string, string> = {
 
 const DEFAULT_COLOR = '#10b981';
 
-// Generate mock contribution grid data (53 weeks * 7 days = 371 squares)
+// Generate dynamic 1-year contribution grid data (52 weeks * 7 days = 364 days counting back from today)
 const generateMockGrid = (): ContributionGridPoint[] => {
   const grid: ContributionGridPoint[] = [];
-  // Seed random distribution with higher density on weekdays
-  for (let i = 0; i < 371; i++) {
-    const isWeekend = i % 7 === 0 || i % 7 === 6;
+  const today = new Date();
+  const totalDays = 52 * 7; // 364 days
+
+  for (let i = totalDays - 1; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+
+    const dayOfWeek = d.getDay();
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
     const rand = Math.random();
     let level = 0;
+    let count = 0;
+
     if (isWeekend) {
       level = rand > 0.85 ? Math.floor(rand * 3) : 0;
     } else {
-      level = rand > 0.4 ? Math.floor(rand * 5) : 0;
+      level = rand > 0.35 ? Math.floor(rand * 4) + 1 : 0;
     }
-    grid.push({ level });
+
+    if (level === 1) count = Math.floor(Math.random() * 2) + 1;
+    else if (level === 2) count = Math.floor(Math.random() * 3) + 3;
+    else if (level === 3) count = Math.floor(Math.random() * 4) + 6;
+    else if (level === 4) count = Math.floor(Math.random() * 6) + 10;
+
+    grid.push({
+      date: dateStr,
+      level,
+      count,
+    });
   }
   return grid;
 };

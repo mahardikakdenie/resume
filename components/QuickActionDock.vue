@@ -16,6 +16,21 @@
 
       <div class="w-px h-4 bg-slate-200"></div>
 
+      <!-- AI Recruiter Button -->
+      <button 
+        @click="handleOpenAiRecruiter"
+        class="flex items-center gap-2 px-3.5 py-2 rounded-full hover:bg-purple-50 transition-all text-xs font-bold text-slate-600 hover:text-purple-700 group relative"
+        title="Open AI Recruiter & Tech Architecture Explorer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <span class="hidden sm:inline">AI Recruiter</span>
+        <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+      </button>
+
+      <div class="w-px h-4 bg-slate-200"></div>
+
       <!-- Developer Console Button -->
       <button 
         @click="handleToggleConsole"
@@ -80,16 +95,23 @@ import { useCommandPalette } from '~/composables/useCommandPalette'
 import { useCvModal } from '~/composables/useCvModal'
 import { useDeveloperConsole } from '~/composables/useDeveloperConsole'
 import { useSoundEffects } from '~/composables/useSoundEffects'
+import { useAiRecruiter } from '~/composables/useAiRecruiter'
 
 const router = useRouter()
 const { openPalette } = useCommandPalette()
 const { openCvModal } = useCvModal()
 const { toggleConsole } = useDeveloperConsole()
 const { isMuted, toggleMute, playClick } = useSoundEffects()
+const { openRecruiterModal } = useAiRecruiter()
 
 const handleOpenPalette = () => {
   playClick()
   openPalette()
+}
+
+const handleOpenAiRecruiter = () => {
+  playClick()
+  openRecruiterModal()
 }
 
 const handleToggleConsole = () => {

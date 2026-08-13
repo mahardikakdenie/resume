@@ -24,6 +24,7 @@
         <QuickActionDock />
         <DeveloperConsoleDrawer />
         <ProjectCaseStudyModal />
+        <AiRecruiterModal />
 
         <transition
             enter-active-class="transition ease-out duration-300"

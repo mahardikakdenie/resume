@@ -129,8 +129,8 @@ import { ref, computed, watch, nextTick, onMounted, onUnmounted, h } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCommandPalette } from '~/composables/useCommandPalette'
 import { useCvModal } from '~/composables/useCvModal'
-
 import { useAiRecruiter } from '~/composables/useAiRecruiter'
+import { useArchitectureModal } from '~/composables/useArchitectureModal'
 
 const router = useRouter()
 const { isOpen, closePalette } = useCommandPalette()
@@ -184,6 +184,7 @@ const rawCommands: CommandItem[] = [
   { id: 'nav-contact', title: 'Get in Touch / Contact', subtitle: 'Direct message & email form', category: 'Navigation', icon: MailIcon, action: () => router.push('/contact') },
   
   // Quick Actions
+  { id: 'act-architecture', title: 'Explore System Architecture & Benchmarks', subtitle: 'Interactive microservices topology, latency graphs, & load tests', category: 'Quick Actions', icon: DocumentIcon, badge: 'SYSTEM', action: () => useArchitectureModal().openModal() },
   { id: 'act-ai-recruiter', title: 'Open AI Recruiter & System Architecture', subtitle: 'Fast-track candidate evaluation & tech topology', category: 'Quick Actions', icon: DocumentIcon, badge: 'AI', action: () => useAiRecruiter().openRecruiterModal() },
   { id: 'act-cv', title: 'Preview & Download CV / Resume', subtitle: 'Open interactive PDF resume viewer', category: 'Quick Actions', icon: DocumentIcon, badge: 'PDF', action: () => openCvModal('/cv_mahardikakdenie.pdf') },
   { id: 'act-lang', title: 'Switch Language (ID / EN)', subtitle: 'Toggle language between English & Indonesian', category: 'Quick Actions', icon: GlobeIcon, badge: 'i18n', action: () => setLocale(locale.value === 'en' ? 'id' : 'en') },

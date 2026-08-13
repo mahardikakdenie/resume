@@ -25,6 +25,7 @@
         <DeveloperConsoleDrawer />
         <ProjectCaseStudyModal />
         <AiRecruiterModal />
+        <ArchitecturePlaygroundModal />
 
         <transition
             enter-active-class="transition ease-out duration-300"

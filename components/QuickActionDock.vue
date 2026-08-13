@@ -16,6 +16,20 @@
 
       <div class="w-px h-4 bg-slate-200"></div>
 
+      <!-- Architecture Playground Button -->
+      <button 
+        @click="handleOpenArchitecture"
+        class="flex items-center gap-2 px-3.5 py-2 rounded-full hover:bg-purple-50 transition-all text-xs font-bold text-slate-600 hover:text-purple-700 group"
+        title="Explore System Architecture & Benchmarks"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-600 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+        <span class="hidden sm:inline">Architecture</span>
+      </button>
+
+      <div class="w-px h-4 bg-slate-200"></div>
+
       <!-- AI Recruiter Button -->
       <button 
         @click="handleOpenAiRecruiter"
@@ -96,6 +110,7 @@ import { useCvModal } from '~/composables/useCvModal'
 import { useDeveloperConsole } from '~/composables/useDeveloperConsole'
 import { useSoundEffects } from '~/composables/useSoundEffects'
 import { useAiRecruiter } from '~/composables/useAiRecruiter'
+import { useArchitectureModal } from '~/composables/useArchitectureModal'
 
 const router = useRouter()
 const { openPalette } = useCommandPalette()
@@ -103,10 +118,16 @@ const { openCvModal } = useCvModal()
 const { toggleConsole } = useDeveloperConsole()
 const { isMuted, toggleMute, playClick } = useSoundEffects()
 const { openRecruiterModal } = useAiRecruiter()
+const { openModal: openArchitectureModal } = useArchitectureModal()
 
 const handleOpenPalette = () => {
   playClick()
   openPalette()
+}
+
+const handleOpenArchitecture = () => {
+  playClick()
+  openArchitectureModal()
 }
 
 const handleOpenAiRecruiter = () => {
